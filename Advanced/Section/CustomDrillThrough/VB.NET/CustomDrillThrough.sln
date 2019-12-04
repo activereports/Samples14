@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CustomDrillThrough", "CustomDrillThrough\CustomDrillThrough.vbproj", "{9007814B-F0C2-46FE-BF2F-6F6D0C8A5E90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9007814B-F0C2-46FE-BF2F-6F6D0C8A5E90}.Debug|x86.ActiveCfg = Debug|x86
+		{9007814B-F0C2-46FE-BF2F-6F6D0C8A5E90}.Debug|x86.Build.0 = Debug|x86
+		{9007814B-F0C2-46FE-BF2F-6F6D0C8A5E90}.Release|x86.ActiveCfg = Release|x86
+		{9007814B-F0C2-46FE-BF2F-6F6D0C8A5E90}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8B8AFED-A87D-4EBF-A2E7-9BFA81AC7EED}
+	EndGlobalSection
+EndGlobal

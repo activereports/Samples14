@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapGallery", "Map Gallery\MapGallery.csproj", "{462D9309-8E92-47F7-827F-24D3DB242DDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{462D9309-8E92-47F7-827F-24D3DB242DDB}.Debug|x86.ActiveCfg = Debug|x86
+		{462D9309-8E92-47F7-827F-24D3DB242DDB}.Debug|x86.Build.0 = Debug|x86
+		{462D9309-8E92-47F7-827F-24D3DB242DDB}.Release|x86.ActiveCfg = Release|x86
+		{462D9309-8E92-47F7-827F-24D3DB242DDB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EC622A7-5D48-41B4-9D27-74E1039ACFA5}
+	EndGlobalSection
+EndGlobal

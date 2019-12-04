@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="C#" ShowParamUI="0" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="groupHeader1" Height="360" DataField="orders.OrderID" GroupKeepTogether="2" BackStyle="1" BackColor="13882323">
+      <Control Type="AR.Label" Name="lblOrderID" Left="0" Top="0" Width="1440" Height="360" Caption="Order ID" Style="font-family: Arial; font-size: 11pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtOrderID" DataField="orders.OrderID" Left="1440" Top="0" Width="1440" Height="360" Text="OrderID" Style="font-family: Arial; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblOrderDate" Left="3209.76" Top="0" Width="1440" Height="360" Caption="Order Date" Style="font-family: Arial; font-size: 11pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtOrderDate" DataField="OrderDate" Left="4799.521" Top="0" Width="1440" Height="360" Text="OrderDate" OutputFormat="MM/dd/yy" Style="font-family: Arial; ddo-char-set: 1" />
+    </Section>
+    <Section Type="GroupHeader" Name="groupHeader2" Height="1290.24" GroupKeepTogether="2" BackColor="16777215">
+      <Control Type="AR.Subreport" Name="subCustomers" Left="0" Top="0" Width="8640" Height="720" />
+      <Control Type="AR.Label" Name="lblProductID" Left="4230.72" Top="930.2401" Width="1440" Height="360" Caption="Product ID" Style="font-family: Arial; font-size: 11pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblQuantity" Left="5984.64" Top="930.2401" Width="1440" Height="360" Caption="Quantity" Style="font-family: Arial; font-size: 11pt; font-weight: bold; ddo-char-set: 1" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="360.0005" BackStyle="1" BackColor="16777184" KeepTogether="1">
+      <Control Type="AR.Field" Name="txtProductID" DataField="ProductID" Left="4230.72" Top="0" Width="1440" Height="360" Text="ProductID" Style="font-family: Arial; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtQuantity" DataField="Quantity" Left="5984.64" Top="0" Width="1440" Height="360" Text="Quantity" Style="font-family: Arial; ddo-char-set: 1" />
+    </Section>
+    <Section Type="GroupFooter" Name="groupFooter2" Visible="0" Height="360" BackColor="16777215" />
+    <Section Type="GroupFooter" Name="groupFooter1" Visible="0" Height="360" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.MDB;Persist Security Info=False" SQL="Select Top 10 * from orders inner join [order details] on orders.orderID = [order details].orderID where orders.employeeID = &lt;%employeeID%&gt; Order By orders.OrderID" />
+  </DataSources>
+  <Script><![CDATA[
+int i = 0;
+
+
+public void Detail_Format()
+{
+	if(i % 2 == 0)
+	{
+		rpt.Sections["Detail"].BackColor = System.Drawing.Color.Azure;
+	}
+	
+	else
+	{
+		rpt.Sections["Detail"].BackColor = System.Drawing.Color.AntiqueWhite;
+	}
+	
+	i++;
+}
+
+
+
+
+public void ActiveReport_ReportStart()
+{
+	var _subReport = new GrapeCity.ActiveReports.SectionReport();
+	_subReport.LoadLayout(System.IO.Path.GetFullPath(System.IO.Path.GetFullPath(@"..\..\rptNestedChildSub.rpx")));
+	subCustomers.Report = _subReport;
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

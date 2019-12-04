@@ -1,0 +1,223 @@
+<?xml version="1.0" standalone="yes"?>
+<countries>    
+  <country name="Bangladesh">
+    <Year recordYear="2010">
+		<Population>151616777</Population>
+		<KGOilPerCapita>200.65</KGOilPerCapita>
+		<ElectrickwhPerCapita>240.67</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>153405612</Population>
+		<KGOilPerCapita>205.96</KGOilPerCapita>
+		<ElectrickwhPerCapita>258.48</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>155257387</Population>
+		<KGOilPerCapita>213.43</KGOilPerCapita>
+		<ElectrickwhPerCapita>275.70</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>157157394</Population>
+		<KGOilPerCapita>215.52</KGOilPerCapita>
+		<ElectrickwhPerCapita>293.02</ElectrickwhPerCapita>
+	</Year>
+  </country>
+  <country name="Brazil">
+    <Year recordYear="2010">
+		<Population>198614208</Population>
+		<KGOilPerCapita>1338.59</KGOilPerCapita>
+		<ElectrickwhPerCapita>2339.44</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>200517584</Population>
+		<KGOilPerCapita>1346.65</KGOilPerCapita>
+		<ElectrickwhPerCapita>2394.40</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>202401584</Population>
+		<KGOilPerCapita>1391.91</KGOilPerCapita>
+		<ElectrickwhPerCapita>2463.28</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>204259377</Population>
+		<KGOilPerCapita>1437.80</KGOilPerCapita>
+		<ElectrickwhPerCapita>2529.30</ElectrickwhPerCapita>
+	</Year>
+  </country>
+  <country name="China">
+    <Year recordYear="2010">
+		<Population>1337705000</Population>
+		<KGOilPerCapita>1845.74</KGOilPerCapita>
+		<ElectrickwhPerCapita>2943.59</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>1344130000</Population>
+		<KGOilPerCapita>1994.40</KGOilPerCapita>
+		<ElectrickwhPerCapita>3298.00</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>1350695000</Population>
+		<KGOilPerCapita>2079.12</KGOilPerCapita>
+		<ElectrickwhPerCapita>3474.98</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>1357380000</Population>
+		<KGOilPerCapita>2226.27</KGOilPerCapita>
+		<ElectrickwhPerCapita>3762.08</ElectrickwhPerCapita>
+	</Year>
+  </country>
+  <country name="India">
+    <Year recordYear="2010">
+		<Population>1230984504</Population>
+		<KGOilPerCapita>562.70</KGOilPerCapita>
+		<ElectrickwhPerCapita>643.88</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>1247446011</Population>
+		<KGOilPerCapita>574.32</KGOilPerCapita>
+		<ElectrickwhPerCapita>698.43</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>1263589639</Population>
+		<KGOilPerCapita>595.10</KGOilPerCapita>
+		<ElectrickwhPerCapita>724.49</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>1279498874</Population>
+		<KGOilPerCapita>606.05</KGOilPerCapita>
+		<ElectrickwhPerCapita>765.00</ElectrickwhPerCapita>
+	</Year>
+  </country>
+  <country name="Indonesia">
+    <Year recordYear="2010">
+		<Population>241613126</Population>
+		<KGOilPerCapita>866.83</KGOilPerCapita>
+		<ElectrickwhPerCapita>636.55</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>244808254</Population>
+		<KGOilPerCapita>838.65</KGOilPerCapita>
+		<ElectrickwhPerCapita>680.68</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>248037853</Population>
+		<KGOilPerCapita>854.07</KGOilPerCapita>
+		<ElectrickwhPerCapita>718.68</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>251268276</Population>
+		<KGOilPerCapita>850.25</KGOilPerCapita>
+		<ElectrickwhPerCapita>787.68</ElectrickwhPerCapita>
+	</Year>
+  </country>
+  <country name="Japan">
+    <Year recordYear="2010">
+		<Population>128070000</Population>
+		<KGOilPerCapita>3895.68</KGOilPerCapita>
+		<ElectrickwhPerCapita>8337.13</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>127817277</Population>
+		<KGOilPerCapita>3614.38</KGOilPerCapita>
+		<ElectrickwhPerCapita>7841.46</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>127561489</Population>
+		<KGOilPerCapita>3543.27</KGOilPerCapita>
+		<ElectrickwhPerCapita>7752.72</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>127338621</Population>
+		<KGOilPerCapita>3570.44</KGOilPerCapita>
+		<ElectrickwhPerCapita>7835.60</ElectrickwhPerCapita>
+	</Year>
+  </country>
+  <country name="Nigeria">
+	<Year recordYear="2010">
+		<Population>159424742</Population>
+		<KGOilPerCapita>752.52</KGOilPerCapita>
+		<ElectrickwhPerCapita>135.64</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>163770669</Population>
+		<KGOilPerCapita>775.04</KGOilPerCapita>
+		<ElectrickwhPerCapita>149.31</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>168240403</Population>
+		<KGOilPerCapita>796.63</KGOilPerCapita>
+		<ElectrickwhPerCapita>155.85</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>172816517</Population>
+		<KGOilPerCapita>773.02</KGOilPerCapita>
+		<ElectrickwhPerCapita>141.87</ElectrickwhPerCapita>
+	</Year>
+  </country>
+  <country name="Pakistan">
+    <Year recordYear="2010">
+		<Population>170043918</Population>
+		<KGOilPerCapita>496.34</KGOilPerCapita>
+		<ElectrickwhPerCapita>466.57</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>173669648</Population>
+		<KGOilPerCapita>488.94</KGOilPerCapita>
+		<ElectrickwhPerCapita>456.67</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>177392252</Population>
+		<KGOilPerCapita>483.44</KGOilPerCapita>
+		<ElectrickwhPerCapita>451.70</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>181192646</Population>
+		<KGOilPerCapita>474.86</KGOilPerCapita>
+		<ElectrickwhPerCapita>449.97</ElectrickwhPerCapita>
+	</Year>
+  </country>
+  <country name="Russia">
+    <Year recordYear="2010">
+		<Population>142849449</Population>
+		<KGOilPerCapita>4827.81</KGOilPerCapita>
+		<ElectrickwhPerCapita>6409.90</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>142960868</Population>
+		<KGOilPerCapita>5057.52</KGOilPerCapita>
+		<ElectrickwhPerCapita>6485.76</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>143201676</Population>
+		<KGOilPerCapita>5174.40</KGOilPerCapita>
+		<ElectrickwhPerCapita>6617.14</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>143506911</Population>
+		<KGOilPerCapita>5093.06</KGOilPerCapita>
+		<ElectrickwhPerCapita>6539.21</ElectrickwhPerCapita>
+	</Year>
+	</country>
+  <country name="United States">
+    <Year recordYear="2010">
+		<Population>309346863</Population>
+		<KGOilPerCapita>7161.52</KGOilPerCapita>
+		<ElectrickwhPerCapita>13394.02</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2011">
+		<Population>311718857</Population>
+		<KGOilPerCapita>7029.25</KGOilPerCapita>
+		<ElectrickwhPerCapita>13240.48</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2012">
+		<Population>314102623</Population>
+		<KGOilPerCapita>6812.49</KGOilPerCapita>
+		<ElectrickwhPerCapita>12954.54</ElectrickwhPerCapita>
+	</Year>
+	<Year recordYear="2013">
+		<Population>316427395</Population>
+		<KGOilPerCapita>6915.84</KGOilPerCapita>
+		<ElectrickwhPerCapita>12988.26</ElectrickwhPerCapita>
+	</Year>
+  </country>
+</countries>

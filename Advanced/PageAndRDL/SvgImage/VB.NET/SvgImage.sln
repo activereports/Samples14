@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestDesignerPro", "TestDesignerPro\TestDesignerPro.vbproj", "{B5218EE0-3574-437D-8BDA-EAC21C53055A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SvgDesigner", "SvgDesigner\SvgDesigner.vbproj", "{B612201D-4B4D-4549-81E7-CE9454189360}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SvgImage", "SvgImage\SvgImage.vbproj", "{881A23B4-CA09-48FF-A711-CE837DFB4AD1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestViewer", "TestViewer\TestViewer.vbproj", "{818B9ECD-D878-4164-BAC0-476B955C5A12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B612201D-4B4D-4549-81E7-CE9454189360}.Debug|x86.ActiveCfg = Debug|x86
+		{B612201D-4B4D-4549-81E7-CE9454189360}.Debug|x86.Build.0 = Debug|x86
+		{B612201D-4B4D-4549-81E7-CE9454189360}.Release|x86.ActiveCfg = Release|x86
+		{B612201D-4B4D-4549-81E7-CE9454189360}.Release|x86.Build.0 = Release|x86
+		{881A23B4-CA09-48FF-A711-CE837DFB4AD1}.Debug|x86.ActiveCfg = Debug|x86
+		{881A23B4-CA09-48FF-A711-CE837DFB4AD1}.Debug|x86.Build.0 = Debug|x86
+		{881A23B4-CA09-48FF-A711-CE837DFB4AD1}.Release|x86.ActiveCfg = Release|x86
+		{881A23B4-CA09-48FF-A711-CE837DFB4AD1}.Release|x86.Build.0 = Release|x86
+		{B5218EE0-3574-437D-8BDA-EAC21C53055A}.Debug|x86.ActiveCfg = Debug|x86
+		{B5218EE0-3574-437D-8BDA-EAC21C53055A}.Debug|x86.Build.0 = Debug|x86
+		{B5218EE0-3574-437D-8BDA-EAC21C53055A}.Release|x86.ActiveCfg = Release|x86
+		{B5218EE0-3574-437D-8BDA-EAC21C53055A}.Release|x86.Build.0 = Release|x86
+		{818B9ECD-D878-4164-BAC0-476B955C5A12}.Debug|x86.ActiveCfg = Debug|x86
+		{818B9ECD-D878-4164-BAC0-476B955C5A12}.Debug|x86.Build.0 = Debug|x86
+		{818B9ECD-D878-4164-BAC0-476B955C5A12}.Release|x86.ActiveCfg = Release|x86
+		{818B9ECD-D878-4164-BAC0-476B955C5A12}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1365A91-393A-43EC-BAC1-23E01C74B0E3}
+	EndGlobalSection
+EndGlobal

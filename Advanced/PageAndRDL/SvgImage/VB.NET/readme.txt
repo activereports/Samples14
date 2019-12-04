@@ -1,0 +1,1 @@
+﻿For running SvgImage sample restore NuGet packages and set TestViewer or TestDesignerPro as startup project.

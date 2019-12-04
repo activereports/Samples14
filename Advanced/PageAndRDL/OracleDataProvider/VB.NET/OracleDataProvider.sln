@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestDesignerPro", "TestDesignerPro\TestDesignerPro.vbproj", "{54F7013F-841F-467F-B871-3D831C73CBE8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "OracleDataProvider", "OracleDataProvider\OracleDataProvider.vbproj", "{13CD1951-6DF2-451C-A0A0-DD3C973BF632}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Designer-Debug|Mixed Platforms = Designer-Debug|Mixed Platforms
+		Designer-Debug|x86 = Designer-Debug|x86
+		Designer-Release|Mixed Platforms = Designer-Release|Mixed Platforms
+		Designer-Release|x86 = Designer-Release|x86
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Debug|x86.ActiveCfg = Debug|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Debug|x86.Build.0 = Debug|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Designer-Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Designer-Debug|Mixed Platforms.Build.0 = Debug|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Designer-Debug|x86.ActiveCfg = Debug|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Designer-Debug|x86.Build.0 = Debug|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Designer-Release|Mixed Platforms.ActiveCfg = Release|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Designer-Release|Mixed Platforms.Build.0 = Release|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Designer-Release|x86.ActiveCfg = Release|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Designer-Release|x86.Build.0 = Release|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Release|Mixed Platforms.Build.0 = Release|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Release|x86.ActiveCfg = Release|x86
+		{54F7013F-841F-467F-B871-3D831C73CBE8}.Release|x86.Build.0 = Release|x86
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Debug|x86.Build.0 = Debug|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Designer-Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Designer-Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Designer-Debug|x86.ActiveCfg = Debug|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Designer-Debug|x86.Build.0 = Debug|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Designer-Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Designer-Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Designer-Release|x86.ActiveCfg = Release|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Designer-Release|x86.Build.0 = Release|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Release|x86.ActiveCfg = Release|Any CPU
+		{13CD1951-6DF2-451C-A0A0-DD3C973BF632}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53790CDB-1FFD-4893-9362-7F4181FF7081}
+	EndGlobalSection
+EndGlobal

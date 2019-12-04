@@ -1,0 +1,129 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Body>
+		<Height>0.666667cm</Height>
+		<ReportItems>
+			<Table Name="Table1">
+				<DataSetName>Movies</DataSetName>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.666667cm</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox4">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Left</TextAlign>
+											</Style>
+											<Value>=Fields!MovieID.Value</Value>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox5">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Left</TextAlign>
+											</Style>
+											<Value>=Fields!Title.Value</Value>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox6">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+											</Style>
+											<Value>=Fields!MPAA.Value</Value>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Height>0.666667cm</Height>
+				<TableColumns>
+					<TableColumn>
+						<Width>2.2cm</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>6cm</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>3.8cm</Width>
+					</TableColumn>
+				</TableColumns>
+				<Width>12cm</Width>
+			</Table>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>12cm</Width>
+	<ReportParameters>
+		<ReportParameter Name="YearReleased">
+			<DataType>Integer</DataType>
+			<Prompt>Year Released</Prompt>
+			<Hidden>true</Hidden>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="MoviesDataSet">
+			<ConnectionProperties>
+				<DataProvider>OBJECT</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Movies">
+			<Fields>
+				<Field Name="MovieID">
+					<DataField>MovieID</DataField>
+				</Field>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="MPAA">
+					<DataField>MPAA</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>1</CommandText>
+				<DataSourceName>MoviesDataSet</DataSourceName>
+				<QueryParameters>
+					<QueryParameter Name="YearReleased">
+						<Value>=Parameters!YearReleased.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

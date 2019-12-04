@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215">
+      <Control Type="AR.Field" Name="textBox3" Left="0" Top="0" Width="7166.88" Height="288" Text="To view the DataSet with multiple tables using sub-reports" Style="background-color: LavenderBlush; font-size: 12pt; font-weight: bold" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="1755" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.Label" Name="Label1" Left="90" Top="90" Width="1710" Height="270" Caption="Customer ID:" Style="font-family: Arial; font-size: 11.25pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox1" DataField="CustomerID" Left="1977.12" Top="89.28" Width="3870" Height="270.72" Text="CustomerID" Style="font-family: Arial; font-size: 11.25pt; ddo-char-set: 1" />
+      <Control Type="AR.Subreport" Name="SubReport1" Left="90" Top="1260" Width="8459.278" Height="360" />
+      <Control Type="AR.Label" Name="Label2" Left="90" Top="900" Width="1710" Height="270.72" Caption="Order List:" Style="font-family: Arial; font-size: 11.25pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox2" DataField="CompanyName" Left="1977.12" Top="449.28" Width="3870" Height="270.72" Text="CompanyName" Style="font-family: Arial; font-size: 11.25pt; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label3" Left="89.28" Top="449.28" Width="1887.84" Height="270.72" Caption="Company Name:" Style="font-family: Arial; font-size: 11.25pt; font-weight: bold; ddo-char-set: 1" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215">
+      <Control Type="AR.ReportInfo" Name="reportInfo1" Left="2880" Top="72" Width="2966.401" Height="288" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[GrapeCity.ActiveReports.SectionReport _subRpt;
+
+public void Detail_Format()
+{
+	//Create a DataView from the Orders table in the DataSet.
+	System.Data.DataSet ds = new System.Data.DataSet();
+	ds = (DataSet) rpt.DataSource;
+	System.Data.DataView dv = new System.Data.DataView(ds.Tables["Orders"]);
+	dv.RowFilter = "CustomerID='" + TextBox1.Text + "'";
+
+	//Orders data to bind to the report.
+		
+	_subRpt.DataSource = dv;
+		   
+	//Show the Orders report in the SubReport1 control.	
+	SubReport1.Report = _subRpt;
+}
+
+
+
+public void ActiveReport_ReportStart()
+{
+	_subRpt = new GrapeCity.ActiveReports.SectionReport();
+	_subRpt.LoadLayout(System.IO.Path.GetFullPath(@"..\..\rptUnboundDSSub.rpx"));
+	reportInfo1.FormatString = "Page {PageNumber} of {PageCount}";	
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

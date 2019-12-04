@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsStyles>
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 204; " />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; ddo-char-set: 204; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; ddo-char-set: 204; " />
+    <Style Name="Heading3" Value="font-weight: bold; background-color: DarkSalmon; color: Maroon; ddo-char-set: 204; font-size: 11pt; " />
+    <Style Name="DetailRecord" Value="font-family: Arial; text-decoration: none; color: Black; background-color: PeachPuff; ddo-char-set: 204; font-size: 10pt; " />
+    <Style Name="ReportTitle" Value="font-family: Arial; font-style: normal; text-decoration: none; font-size: 22pt; ddo-char-set: 204; background-color: Brown; font-weight: bold; color: #FFFFFF; " />
+  </StyleSheet>
+</ActiveReportsStyles>

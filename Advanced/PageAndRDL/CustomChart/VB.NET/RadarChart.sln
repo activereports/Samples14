@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestDesignerPro", "TestDesignerPro\TestDesignerPro.vbproj", "{BAA22C77-BE46-4F4F-84E6-0806BC0E6EF9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestViewer", "TestViewer\TestViewer.vbproj", "{36737342-F0F4-4E92-9A0A-E8795ABF22AD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RadarChart", "RadarChart\RadarChart.vbproj", "{71D02C99-6667-40C8-AB86-4C23FDEF71EF}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RadarDesigner", "RadarDesigner\RadarDesigner.vbproj", "{39E21EE8-B672-4F3C-A36F-8A876287B31C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAA22C77-BE46-4F4F-84E6-0806BC0E6EF9}.Debug|x86.ActiveCfg = Debug|x86
+		{BAA22C77-BE46-4F4F-84E6-0806BC0E6EF9}.Debug|x86.Build.0 = Debug|x86
+		{BAA22C77-BE46-4F4F-84E6-0806BC0E6EF9}.Release|x86.ActiveCfg = Release|x86
+		{BAA22C77-BE46-4F4F-84E6-0806BC0E6EF9}.Release|x86.Build.0 = Release|x86
+		{36737342-F0F4-4E92-9A0A-E8795ABF22AD}.Debug|x86.ActiveCfg = Debug|x86
+		{36737342-F0F4-4E92-9A0A-E8795ABF22AD}.Debug|x86.Build.0 = Debug|x86
+		{36737342-F0F4-4E92-9A0A-E8795ABF22AD}.Release|x86.ActiveCfg = Release|x86
+		{36737342-F0F4-4E92-9A0A-E8795ABF22AD}.Release|x86.Build.0 = Release|x86
+		{71D02C99-6667-40C8-AB86-4C23FDEF71EF}.Debug|x86.ActiveCfg = Debug|x86
+		{71D02C99-6667-40C8-AB86-4C23FDEF71EF}.Debug|x86.Build.0 = Debug|x86
+		{71D02C99-6667-40C8-AB86-4C23FDEF71EF}.Release|x86.ActiveCfg = Release|x86
+		{71D02C99-6667-40C8-AB86-4C23FDEF71EF}.Release|x86.Build.0 = Release|x86
+		{39E21EE8-B672-4F3C-A36F-8A876287B31C}.Debug|x86.ActiveCfg = Debug|x86
+		{39E21EE8-B672-4F3C-A36F-8A876287B31C}.Debug|x86.Build.0 = Debug|x86
+		{39E21EE8-B672-4F3C-A36F-8A876287B31C}.Release|x86.ActiveCfg = Release|x86
+		{39E21EE8-B672-4F3C-A36F-8A876287B31C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C659A684-11C7-4FF1-959E-913DA90BEBC2}
+	EndGlobalSection
+EndGlobal

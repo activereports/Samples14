@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8640" MaxPages="10" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="0" BackColor="16777215" />
+    <Section Type="GroupHeader" Name="ghOrderID" Height="915" DataField="OrderID" GroupKeepTogether="1" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.Field" Name="TextBox1" DataField="OrderID" Left="1379.52" Top="89.28001" Width="1440" Height="288" Text="OrderID" />
+      <Control Type="AR.Field" Name="TextBox6" Left="90" Top="90" Width="1289.52" Height="288" Text="OrderID:" Style="color: DarkGreen; font-size: 11.25pt; font-weight: bold; text-decoration: none" PaddingLeft="2" />
+      <Control Type="AR.Field" Name="lblProductID" Left="1170" Top="540" Width="1440" Height="288" Text="ProductID" Style="color: ForestGreen; font-size: 11.25pt; font-weight: bold; text-decoration: underline" />
+      <Control Type="AR.Field" Name="lblUnitPrice" Left="2700" Top="540" Width="1440" Height="288" Text="UnitPrice" Style="color: ForestGreen; font-size: 11.25pt; font-weight: bold; text-decoration: underline" />
+      <Control Type="AR.Field" Name="lblQuantity" Left="4230" Top="540" Width="1440" Height="288" Text="Quantity" Style="color: ForestGreen; font-size: 11.25pt; font-weight: bold; text-decoration: underline" />
+      <Control Type="AR.Field" Name="lblDiscount" Left="5760" Top="540" Width="1440" Height="288" Text="Discount" Style="color: ForestGreen; font-size: 11.25pt; font-weight: bold; text-decoration: underline" />
+      <Control Type="AR.Field" Name="lblExtendedPrice" Left="7290" Top="540" Width="1890" Height="288" Text="Extended Price" Style="color: ForestGreen; font-size: 11.25pt; font-weight: bold; text-decoration: underline" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="495" BackColor="16777215" KeepTogether="1" CanShrink="1">
+      <Control Type="AR.Field" Name="txtProductID" DataField="ProductID" Left="1170" Top="0" Width="1440" Height="288" Text="ProductID" />
+      <Control Type="AR.Field" Name="txtUnitPrice" DataField="UnitPrice" Left="2700" Top="0" Width="1440" Height="288" Text="UnitPrice" OutputFormat="$#,##0.00" />
+      <Control Type="AR.Field" Name="txtQuantity" DataField="Quantity" Left="4230" Top="0" Width="1440" Height="288" Text="Quantity" />
+      <Control Type="AR.Field" Name="txtDiscount" DataField="Discount" Left="5760" Top="0" Width="1440" Height="288" Text="Discount" />
+      <Control Type="AR.Field" Name="txtExtendedPrice" DataField="ExtendedPrice" Left="7290" Top="0" Width="1890" Height="288" Text="Extended Price" OutputFormat="$#,##0.00" />
+    </Section>
+    <Section Type="GroupFooter" Name="gfOrderID" Height="464" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.Field" Name="lblTotalExtendedPrice" Left="5760" Top="0" Width="1440" Height="288" Text="Total:" Style="color: DarkGreen; font-size: 11.25pt; font-weight: bold; text-decoration: underline" PaddingLeft="2" />
+      <Control Type="AR.Field" Name="txtTotalExtendedPrice" DataField="ExtendedPrice" Left="7290" Top="0" Width="1890" Height="288" Text="Total Ext. Price" OutputFormat="$#,##0.00" SummaryType="3" SummaryRunning="1" SummaryGroup="ghOrderID" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="825" BackColor="16777215">
+      <Control Type="AR.Label" Name="lblMaxPagesSet" Left="90" Top="90" Width="8910.001" Height="630" Caption="*Note: MaxPages is set to 10 so you only get 10 pages.  There are aprox 200 pages if you let the report run to completion." Style="color: Silver; font-size: 9.75pt; font-style: italic; font-weight: bold" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.MDB" SQL="SELECT * FROM [Order Details] ORDER BY OrderID" />
+  </DataSources>
+  <Script><![CDATA[using System;
+using System.Globalization;
+
+public void ActiveReport_DataInitialize()
+{
+	rpt.Fields.Add("ExtendedPrice");
+}
+
+
+public bool ActiveReport_FetchData(bool eof)
+{
+	// Gather the value to be calculated from the bound data base.
+	double quantity = Convert.ToDouble(rpt.Fields["Quantity"].Value, CultureInfo.CurrentCulture);
+	double unitPrice = Convert.ToDouble(rpt.Fields["UnitPrice"].Value, CultureInfo.CurrentCulture);
+	double discount = Convert.ToDouble(rpt.Fields["Discount"].Value, CultureInfo.CurrentCulture);
+
+	// Perform the calculation for the calculated field.
+	rpt.Fields["ExtendedPrice"].Value = ((quantity * unitPrice) - (quantity * unitPrice * discount));
+	return eof;
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

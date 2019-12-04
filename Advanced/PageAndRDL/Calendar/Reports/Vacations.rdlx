@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<PageHeader>
+		<Height>0.375in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Textbox Name="txtReportInfo">
+				<CanGrow>true</CanGrow>
+				<Height>0.375in</Height>
+				<Value>Employee Vacations</Value>
+				<Style>
+					<FontFamily>Microsoft Sans Serif</FontFamily>
+					<FontSize>16pt</FontSize>
+					<FontWeight>400</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Width>6.5in</Width>
+			</Textbox>
+		</ReportItems>
+	</PageHeader>
+	<Body>
+		<Height>3.875in</Height>
+		<ReportItems>
+			<CustomReportItem Name="Calendar1">
+				<Type>Calendar</Type>
+				<Left>0.125in</Left>
+				<Width>6.25in</Width>
+				<Height>3.75in</Height>
+				<ZIndex>1</ZIndex>
+				<CustomProperties>
+					<CustomProperty>
+						<Name>calendar:MonthTitle.Format</Name>
+						<Value>MMMM yyyy</Value>
+					</CustomProperty>
+				</CustomProperties>
+				<CustomData>
+					<DataSetName>Vacations</DataSetName>
+					<DataRowGroupings>
+						<DataGroupings>
+							<DataGrouping>
+								<CustomProperties>
+									<CustomProperty>
+										<Name>calendar:Event.StartDate</Name>
+										<Value>=Fields!StartDate.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.EndDate</Name>
+										<Value>=Fields!EndDate.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.Value</Name>
+										<Value>=Fields!EmployeeName.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.FontFamily</Name>
+										<Value>Microsoft Sans Serif</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.FontWeight</Name>
+										<Value>Bold</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.Backcolor</Name>
+										<Value>DeepSkyBlue</Value>
+									</CustomProperty>
+								</CustomProperties>
+							</DataGrouping>
+						</DataGroupings>
+					</DataRowGroupings>
+				</CustomData>
+			</CustomReportItem>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<PageHeight>11in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>6.5in</Width>
+	<DataSources>
+		<DataSource Name="Employees">
+			<ConnectionProperties>
+				<ConnectString>XmlData = &lt;Vacations&gt;  &lt;Vacation&gt;    &lt;EmployeeName&gt;Lewis Bossert&lt;/EmployeeName&gt;    &lt;StartDate&gt;2015-02-5&lt;/StartDate&gt;    &lt;EndDate&gt;2015-02-13&lt;/EndDate&gt;  &lt;/Vacation&gt;  &lt;Vacation&gt;    &lt;EmployeeName&gt;Yehoshua Constantino&lt;/EmployeeName&gt;    &lt;StartDate&gt;2015-03-10&lt;/StartDate&gt;    &lt;EndDate&gt;2015-03-25&lt;/EndDate&gt;  &lt;/Vacation&gt;  &lt;Vacation&gt;    &lt;EmployeeName&gt;Taesoon Garrick&lt;/EmployeeName&gt;    &lt;StartDate&gt;2015-03-10&lt;/StartDate&gt;    &lt;EndDate&gt;2015-03-17&lt;/EndDate&gt;  &lt;/Vacation&gt;  &lt;Vacation&gt;    &lt;EmployeeName&gt;Fern Langevin&lt;/EmployeeName&gt;    &lt;StartDate&gt;2015-05-8&lt;/StartDate&gt;    &lt;EndDate&gt;2015-05-19&lt;/EndDate&gt;  &lt;/Vacation&gt;  &lt;Vacation&gt;    &lt;EmployeeName&gt;Harland Pier&lt;/EmployeeName&gt;    &lt;StartDate&gt;2015-06-06&lt;/StartDate&gt;    &lt;EndDate&gt;2015-06-26&lt;/EndDate&gt;  &lt;/Vacation&gt;  &lt;Vacation&gt;    &lt;EmployeeName&gt;Tung Kronenberg&lt;/EmployeeName&gt;    &lt;StartDate&gt;2015-07-14&lt;/StartDate&gt;    &lt;EndDate&gt;2015-07-31&lt;/EndDate&gt;  &lt;/Vacation&gt;&lt;/Vacations&gt;</ConnectString>
+				<DataProvider>XML</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Vacations">
+			<Fields>
+				<Field Name="EmployeeName">
+					<DataField>EmployeeName</DataField>
+				</Field>
+				<Field Name="StartDate">
+					<DataField>StartDate</DataField>
+				</Field>
+				<Field Name="EndDate">
+					<DataField>EndDate</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>//Vacation</CommandText>
+				<DataSourceName>Employees</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

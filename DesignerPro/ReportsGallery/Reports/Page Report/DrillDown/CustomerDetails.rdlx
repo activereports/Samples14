@@ -1,0 +1,324 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">CustomerDetails.rdlx</dd:Name>
+	<Body>
+		<Height>11in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Table Name="Table1">
+								<DataSetName>Orders</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>0.25in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox1">
+															<Value>Order ID</Value>
+															<Style>
+																<BackgroundColor>Lavender</BackgroundColor>
+																<Color>DarkSlateBlue</Color>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Left</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox3">
+															<Value>Employee ID</Value>
+															<Style>
+																<BackgroundColor>Lavender</BackgroundColor>
+																<Color>DarkSlateBlue</Color>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Left</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox10">
+															<Value>Order Date</Value>
+															<Style>
+																<BackgroundColor>Lavender</BackgroundColor>
+																<Color>DarkSlateBlue</Color>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox13">
+															<Value>Shipped Date</Value>
+															<Style>
+																<BackgroundColor>Lavender</BackgroundColor>
+																<Color>DarkSlateBlue</Color>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox2">
+															<Value>Shipped Via</Value>
+															<Style>
+																<BackgroundColor>Lavender</BackgroundColor>
+																<Color>DarkSlateBlue</Color>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.25in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Action>
+																<Drillthrough>
+																	<Parameters>
+																		<Parameter Name="OrderID">
+																			<Value>=Fields!OrderID.Value</Value>
+																		</Parameter>
+																	</Parameters>
+																	<ReportName>OrderDetails.rdlx</ReportName>
+																</Drillthrough>
+															</Action>
+															<Value>=Fields!OrderID.Value</Value>
+															<Style>
+																<Color>Blue</Color>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Left</TextAlign>
+																<TextDecoration>Underline</TextDecoration>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox6">
+															<Value>=Fields!EmployeeID.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Left</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox11">
+															<Value>=(Fields!OrderDate.Value).ToShortDateString()</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox14">
+															<Value>=(Fields!ShippedDate.Value).ToShortDateString()</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox5">
+															<Value>=Fields!ShipVia.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<Height>0.4947917in</Height>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">8.229167in</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">6.5in</dd:FixedWidth>
+								<TableColumns>
+									<TableColumn>
+										<Width>1.197026in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.027053in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.197026in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.54058in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.538315in</Width>
+									</TableColumn>
+								</TableColumns>
+								<Top>0.52in</Top>
+								<Width>6.5in</Width>
+								<ZIndex>1</ZIndex>
+							</Table>
+							<Textbox Name="TextBox8">
+								<Height>0.52in</Height>
+								<Value>="Orders for " + Fields!CompanyName.Value</Value>
+								<Style>
+									<Color>DarkSlateBlue</Color>
+									<FontSize>18pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Center</TextAlign>
+								</Style>
+								<Width>6.4974in</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox7">
+								<Height>0.25in</Height>
+								<Value>="Customer ID: " + Fields!CustomerID.Value</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Center</TextAlign>
+								</Style>
+								<Top>8.75in</Top>
+								<Width>6.4974in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>Orders</DataSetName>
+				<Grouping Name="FixedPage1_Group">
+					<GroupExpressions>
+						<GroupExpression>=1</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>8.5in</Width>
+	<ReportParameters>
+		<ReportParameter Name="CustomerID">
+			<DataType>String</DataType>
+			<Prompt>CustomerID</Prompt>
+			<Hidden>true</Hidden>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="NWind">
+			<ConnectionProperties>
+				<DataProvider>OLEDB</DataProvider>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\NWIND.mdb</ConnectString>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Orders">
+			<Fields>
+				<Field Name="CustomerID">
+					<DataField>CustomerID</DataField>
+				</Field>
+				<Field Name="OrderID">
+					<DataField>OrderID</DataField>
+				</Field>
+				<Field Name="EmployeeID">
+					<DataField>EmployeeID</DataField>
+				</Field>
+				<Field Name="OrderDate">
+					<DataField>OrderDate</DataField>
+				</Field>
+				<Field Name="ShippedDate">
+					<DataField>ShippedDate</DataField>
+				</Field>
+				<Field Name="CompanyName">
+					<DataField>CompanyName</DataField>
+				</Field>
+				<Field Name="ContactName">
+					<DataField>ContactName</DataField>
+				</Field>
+				<Field Name="ShipVia">
+					<DataField>ShipVia</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>select Orders.CustomerID, OrderID, EmployeeID, OrderDate, ShippedDate, Customers.CompanyName, Customers.ContactName, Orders.ShipVia
+from Orders inner join Customers on Orders.CustomerID = Customers.CustomerID
+where Orders.CustomerID in (?)</CommandText>
+				<DataSourceName>NWind</DataSourceName>
+				<QueryParameters>
+					<QueryParameter Name="CustomerID">
+						<Value>=Parameters!CustomerID.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

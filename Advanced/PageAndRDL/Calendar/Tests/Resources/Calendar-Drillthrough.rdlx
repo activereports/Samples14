@@ -1,0 +1,85 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Body>
+		<Height>9.525cm</Height>
+		<ReportItems>
+			<CustomReportItem Name="Calendar1">
+				<Type>Calendar</Type>
+				<Top>1.905cm</Top>
+				<Left>3.175cm</Left>
+				<Width>3.5in</Width>
+				<Height>3in</Height>
+				<CustomData>
+					<DataSetName>DataSet1</DataSetName>
+					<DataRowGroupings>
+						<DataGroupings>
+							<DataGrouping>
+								<CustomProperties>
+									<CustomProperty>
+										<Name>calendar:Event.Value</Name>
+										<Value>=Fields!Value.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.EndDate</Name>
+										<Value>=Fields!EndTime.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.StartDate</Name>
+										<Value>=Fields!StartTime.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.Backcolor</Name>
+										<Value>=IIF(ToString(Fields!Value.Value).contains("..."), "Coral", "LightGreen")</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.FontSize</Name>
+										<Value>10pt</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.FontWeight</Name>
+										<Value>Bold</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.BorderColor</Name>
+										<Value>Red</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Action.Drillthrough</Name>
+										<Value>=Fields!Value.Value</Value>
+									</CustomProperty>
+								</CustomProperties>
+							</DataGrouping>
+						</DataGroupings>
+					</DataRowGroupings>
+				</CustomData>
+			</CustomReportItem>
+		</ReportItems>
+	</Body>
+	<Width>16cm</Width>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>Path=Calendar-Drillthrough.csv;Locale=en-US;TextQualifier=";ColumnsSeparator=,;RowsSeparator=\r\n;Columns=StartTime,EndTime,Value;JoinRowsSeparators=True;HasHeaders=True</ConnectString>
+				<DataProvider>CSV</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="StartTime">
+					<DataField>StartTime</DataField>
+				</Field>
+				<Field Name="EndTime">
+					<DataField>EndTime</DataField>
+				</Field>
+				<Field Name="Value">
+					<DataField>Value</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText/>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

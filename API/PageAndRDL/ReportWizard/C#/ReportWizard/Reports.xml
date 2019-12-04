@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<reports>
+	<report title="Genre Sales" filename="GenreSales.rdlx-master">
+		<fields>
+			<field name="SaleID" title="ID" width="1.4cm" datatype="number" />
+			<field name="Title" title="Title" width="8cm" datatype="text" />
+			<field name="YearReleased" title="Year Released" width="2.4cm" datatype="number" />
+			<field name="MPAA" title="MPAA" width="1.8cm" datatype="text" />
+			<field name="Quantity" title="Quantity" width="1.5cm" datatype="number" format="N0" summarizable="true" summaryFunction="Sum" />
+			<field name="Price" title="Price" width="1.8cm" datatype="number" format="$#,##0.00" summarizable="true" summaryFunction="Sum" />
+		</fields>
+	</report>
+	<report title="Store Sales by Year" filename="StoreSales.rdlx-master">
+		<fields>
+			<field name="SalesID" title="ID" width="1.4cm" datatype="number" />
+			<field name="SaleDate" title="Sale Date" width="2.1cm" datatype="number" format="d" />
+			<field name="Month" title="Month" width="1.4cm" datatype="number" />
+			<field name="Year" title="Year" width="1.4cm" datatype="number" />
+			<field name="Quantity" title="Quantity" width="1.5cm" datatype="number" format="N0" summarizable="true" summaryFunction="Sum" />
+			<field name="Price" title="Price" width="1.8cm" format="$#,##0.00" datatype="number" summarizable="true" summaryFunction="Sum" />
+			<field name="Discount" title="Discount" width="1.6cm" datatype="number" format="P2" />
+			<field name="StorePrice" title="Store Price" width="2cm" datatype="number" format="$#,##0.00" summarizable="true" summaryFunction="Sum" />
+			<field name="Profit" title="Profit" width="2cm" format="$#,##0.00" datatype="number" summarizable="true" summaryFunction="Sum" />
+		</fields>
+	</report>
+</reports>

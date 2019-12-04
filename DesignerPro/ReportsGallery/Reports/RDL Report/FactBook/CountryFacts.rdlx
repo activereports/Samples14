@@ -1,0 +1,663 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">CountryFacts.rdlx</dd:Name>
+	<Body>
+		<Height>5.625in</Height>
+		<ReportItems>
+			<List Name="CountryList">
+				<DataSetName>FactbookDataSet</DataSetName>
+				<Filters>
+					<Filter>
+						<FilterExpression>=Fields!CountryID.Value</FilterExpression>
+						<FilterValues>
+							<FilterValue>=Parameters!CountryID.Value</FilterValue>
+						</FilterValues>
+						<Operator>Equal</Operator>
+					</Filter>
+				</Filters>
+				<Grouping Name="list1_Details_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!CountryID.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+				<Height>5.5in</Height>
+				<Left>0.125in</Left>
+				<ReportItems>
+					<Textbox Name="CountryName">
+						<CanGrow>true</CanGrow>
+						<Height>0.375in</Height>
+						<Value>=Fields!CountryName.Value</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+							<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Width>4.375in</Width>
+					</Textbox>
+					<Image Name="CountryImage">
+						<Height>2.375in</Height>
+						<Left>0.125in</Left>
+						<Sizing>AutoSize</Sizing>
+						<Source>External</Source>
+						<Top>0.375in</Top>
+						<Value>="maps\" &amp; Fields!MapCode.Value &amp; "-map.gif"</Value>
+						<Width>5.25in</Width>
+					</Image>
+					<Rectangle Name="AreaGroup">
+						<Height>1in</Height>
+						<Left>4in</Left>
+						<Top>3.875in</Top>
+						<Width>1.875in</Width>
+						<ReportItems>
+							<Textbox Name="AreaTotal">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.75in</Left>
+								<Value>=Convert.ToDouble(Fields!TotalArea.Value)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<Format>N0</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.75in</Top>
+								<Width>1.125in</Width>
+							</Textbox>
+							<Textbox Name="AreaTitle">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Value>Area in Square Kilometers</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Center</TextAlign>
+								</Style>
+								<Width>1.875in</Width>
+							</Textbox>
+							<Textbox Name="AreaLand">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.75in</Left>
+								<Value>=Convert.ToDouble(Fields!LandArea.Value)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<Format>N0</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.25in</Top>
+								<Width>1.125in</Width>
+							</Textbox>
+							<Textbox Name="AreaWater">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.75in</Left>
+								<Value>=Convert.ToDouble(Fields!WaterArea.Value)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<Format>N0</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.5in</Top>
+								<Width>1.125in</Width>
+							</Textbox>
+							<Textbox Name="AreaTotalTitle">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.125in</Left>
+								<Value>Total:</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.75in</Top>
+								<Width>0.625in</Width>
+							</Textbox>
+							<Textbox Name="AreaLandTitle">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.125in</Left>
+								<Value>Land:</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.25in</Top>
+								<Width>0.625in</Width>
+							</Textbox>
+							<Textbox Name="AreaWaterTitle">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.125in</Left>
+								<Value>Water:</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.5in</Top>
+								<Width>0.625in</Width>
+							</Textbox>
+						</ReportItems>
+					</Rectangle>
+					<Rectangle Name="Rectangle1">
+						<Height>0.5in</Height>
+						<Left>0.125in</Left>
+						<Top>3.875in</Top>
+						<Width>3.875in</Width>
+						<ZIndex>2</ZIndex>
+						<ReportItems>
+							<Textbox Name="TextBox1">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Value>Highest Elevation</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Left</TextAlign>
+								</Style>
+								<Width>1.375in</Width>
+							</Textbox>
+							<Textbox Name="TextBox2">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Value>Lowest Elevation</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Left</TextAlign>
+								</Style>
+								<Top>0.25in</Top>
+								<Width>1.375in</Width>
+								<ZIndex>1</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox3">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>1.375in</Left>
+								<Value>=String.Format( "{0} @ {1:N0}m", Fields!ElevationHighestName.Value, Convert.ToDouble( Fields!ElevationHighestPoint.Value ) )</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Width>2.5in</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox4">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>1.375in</Left>
+								<Value>=String.Format( "{0} @ {1:N0}m", Fields!ElevationLowestName.Value, Convert.ToDouble( Fields!ElevationLowestPoint.Value ) )</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.25in</Top>
+								<Width>2.5in</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+						</ReportItems>
+					</Rectangle>
+					<Rectangle Name="Rectangle2">
+						<Height>1in</Height>
+						<Left>0.125in</Left>
+						<Top>2.75in</Top>
+						<Width>6in</Width>
+						<ZIndex>4</ZIndex>
+						<ReportItems>
+							<Textbox Name="TextBox5">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Value>Energy Production/Consumption</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Center</TextAlign>
+								</Style>
+								<Width>6in</Width>
+							</Textbox>
+							<Textbox Name="TextBox6">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Value>Production</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.5in</Top>
+								<Width>1in</Width>
+								<ZIndex>1</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox7">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Value>Consumption</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.75in</Top>
+								<Width>1in</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox8">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>1in</Left>
+								<Value>Electricity (KWh)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>0.25in</Top>
+								<Width>1.375in</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox9">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>1in</Left>
+								<Value>=Convert.ToDouble(Fields!ElectricityProduction.Value)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<Format>N0</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.5in</Top>
+								<Width>1.375in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox10">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>1in</Left>
+								<Value>=Convert.ToDouble(Fields!ElectricityConsumption.Value)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<Format>N0</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.75in</Top>
+								<Width>1.375in</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox11">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>2.625in</Left>
+								<Value>=Convert.ToDouble(Fields!OilProduction.Value)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<Format>N0</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<BorderColor>
+										<Default>=Theme.Colors(1,0)</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Left>Solid</Left>
+									</BorderStyle>
+								</Style>
+								<Top>0.5in</Top>
+								<Width>1.375in</Width>
+								<ZIndex>6</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox12">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>2.625in</Left>
+								<Value>=Convert.ToDouble(Fields!OilConsumption.Value)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<Format>N0</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<BorderColor>
+										<Default>=Theme.Colors(1,0)</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Left>Solid</Left>
+									</BorderStyle>
+								</Style>
+								<Top>0.75in</Top>
+								<Width>1.375in</Width>
+								<ZIndex>7</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox13">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>4.25in</Left>
+								<Value>=Convert.ToDouble(Fields!NaturalGasProduction.Value)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<Format>N0</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<BorderColor>
+										<Default>=Theme.Colors(1,0)</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Left>Solid</Left>
+									</BorderStyle>
+								</Style>
+								<Top>0.5in</Top>
+								<Width>1.5in</Width>
+								<ZIndex>8</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox14">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>4.25in</Left>
+								<Value>=Convert.ToDouble(Fields!NaturalGasConsumption.Value)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<Format>N0</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<BorderColor>
+										<Default>=Theme.Colors(1,0)</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Left>Solid</Left>
+									</BorderStyle>
+								</Style>
+								<Top>0.75in</Top>
+								<Width>1.5in</Width>
+								<ZIndex>9</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox18">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>2.625in</Left>
+								<Value>Oil (barrels/day)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderColor>
+										<Default>=Theme.Colors(1,0)</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Left>Solid</Left>
+									</BorderStyle>
+								</Style>
+								<Top>0.25in</Top>
+								<Width>1.375in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox19">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>4.25in</Left>
+								<Value>Natural Gas (Cu. M)</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderColor>
+										<Default>=Theme.Colors(1,0)</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Left>Solid</Left>
+									</BorderStyle>
+								</Style>
+								<Top>0.25in</Top>
+								<Width>1.5in</Width>
+								<ZIndex>11</ZIndex>
+							</Textbox>
+							<Image Name="Image1">
+								<Height>0.25in</Height>
+								<Left>2.375in</Left>
+								<MIMEType>image/png</MIMEType>
+								<Sizing>Fit</Sizing>
+								<Source>Database</Source>
+								<Top>0.25in</Top>
+								<Value>=IconSet("Flags", False, False, Convert.ToDouble(Fields!ElectricityProduction.Value) &lt; Convert.ToDouble(Fields!ElectricityConsumption.Value), False, False )</Value>
+								<Width>0.25in</Width>
+								<ZIndex>12</ZIndex>
+							</Image>
+							<Image Name="Image2">
+								<Height>0.25in</Height>
+								<Left>4in</Left>
+								<MIMEType>image/png</MIMEType>
+								<Sizing>Fit</Sizing>
+								<Source>Database</Source>
+								<Top>0.25in</Top>
+								<Value>=IconSet("Flags", False, False, Convert.ToDouble(Fields!OilProduction.Value) &lt; Convert.ToDouble(Fields!OilConsumption.Value), False, False )</Value>
+								<Width>0.25in</Width>
+								<ZIndex>12</ZIndex>
+							</Image>
+							<Image Name="Image3">
+								<Height>0.25in</Height>
+								<Left>5.75in</Left>
+								<MIMEType>image/png</MIMEType>
+								<Sizing>Fit</Sizing>
+								<Source>Database</Source>
+								<Top>0.25in</Top>
+								<Value>=IconSet("Flags", False, False, Convert.ToDouble(Fields!NaturalGasProduction.Value) &lt; Convert.ToDouble(Fields!NaturalGasConsumption.Value), False, False )</Value>
+								<Width>0.25in</Width>
+								<ZIndex>12</ZIndex>
+							</Image>
+						</ReportItems>
+					</Rectangle>
+				</ReportItems>
+				<Top>0.125in</Top>
+				<Width>6.125in</Width>
+			</List>
+		</ReportItems>
+	</Body>
+	<PageWidth>10in</PageWidth>
+	<Width>6.25in</Width>
+	<ReportParameters>
+		<ReportParameter Name="CountryID">
+			<DataType>String</DataType>
+			<Hidden>true</Hidden>
+			<DefaultValue>
+				<Values>
+					<Value>6d1ccac0-9b97-4142-b772-092311e1fae9</Value>
+				</Values>
+			</DefaultValue>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="FactbookDataSource">
+			<ConnectionProperties>
+				<DataProvider>XML</DataProvider>
+				<ConnectString>XmlDoc=..\..\..\..\..\Data\Factbook.xml</ConnectString>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="FactbookDataSet">
+			<Collation>Default</Collation>
+			<Fields>
+				<Field Name="CountryName">
+					<DataField>@name</DataField>
+				</Field>
+				<Field Name="MapCode">
+					<DataField>@map</DataField>
+				</Field>
+				<Field Name="LandArea">
+					<DataField>./AreaSqKm/Land</DataField>
+				</Field>
+				<Field Name="WaterArea">
+					<DataField>./AreaSqKm/Water</DataField>
+				</Field>
+				<Field Name="TotalArea">
+					<DataField>./AreaSqKm/Total</DataField>
+				</Field>
+				<Field Name="CountryID">
+					<DataField>@id</DataField>
+				</Field>
+				<Field Name="Population">
+					<DataField>./Population</DataField>
+				</Field>
+				<Field Name="ElectricityProduction">
+					<DataField>./ElectricityProductionKWh</DataField>
+				</Field>
+				<Field Name="ElectricityConsumption">
+					<DataField>./ElectricityConsumptionKWh</DataField>
+				</Field>
+				<Field Name="OilProduction">
+					<DataField>./OilProductionBblDay</DataField>
+				</Field>
+				<Field Name="OilConsumption">
+					<DataField>./OilConsumptionBblDay</DataField>
+				</Field>
+				<Field Name="NaturalGasProduction">
+					<DataField>./NaturalGasProductionCuM</DataField>
+				</Field>
+				<Field Name="NaturalGasConsumption">
+					<DataField>./NaturalGasConsumptionCuM</DataField>
+				</Field>
+				<Field Name="ElevationHighestName">
+					<DataField>./ElevationExtremesM/HighestPointName</DataField>
+				</Field>
+				<Field Name="ElevationHighestPoint">
+					<DataField>./ElevationExtremesM/HighestPointElevation</DataField>
+				</Field>
+				<Field Name="ElevationLowestName">
+					<DataField>./ElevationExtremesM/LowestPointName</DataField>
+				</Field>
+				<Field Name="ElevationLowestPoint">
+					<DataField>./ElevationExtremesM/LowestPointElevation</DataField>
+				</Field>
+			</Fields>
+			<Filters>
+				<Filter>
+					<FilterExpression>=Fields!CountryID.Value</FilterExpression>
+					<FilterValues>
+						<FilterValue>=Parameters!CountryID.Value</FilterValue>
+					</FilterValues>
+					<Operator>Equal</Operator>
+				</Filter>
+			</Filters>
+			<Query>
+				<CommandText>//country</CommandText>
+				<DataSourceName>FactbookDataSource</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>Theme</Name>
+			<Value>Factbook.rdlx-theme</Value>
+		</CustomProperty>
+	</CustomProperties>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Factbook.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="11664" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-size: 16pt; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic" />
+    <Style Name="Heading3" Value="font-size: 13pt; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="Detail" Name="Detail1" Height="2100.6" ColumnCount="3" ColumnDirection="1" ColumnSpacing="72" BackColor="16777215" KeepTogether="1" CanGrow="0">
+      <Control Type="AR.Shape" Name="Shape1" Left="0" Top="0" Width="3810.24" Height="1965" BackColor="16777215" LineColor="13882323" LineStyle="3" LineWeight="0.01" Shape="2" RoundingRadius="15" />
+      <Control Type="AR.Field" Name="txtContactName1" DataField="ContactName" Left="0" Top="119.52" Width="3674.88" Height="288" Text="txtContactName1" Style="font-size: 12pt; font-weight: bold; ddo-char-set: 1" PaddingLeft="5" />
+      <Control Type="AR.Barcode" Name="Barcode1" DataField="PostalCode" Left="165.6" Top="1389.6" Width="2985.12" Height="504" Text="Barcode1" QRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Field" Name="txtField11" DataField="Field1" Left="0" Top="407.52" Width="2880" Height="711.36" Text="txtField11" Style="ddo-shrink-to-fit: true" PaddingLeft="5" />
+      <Control Type="AR.Label" Name="Label1" Left="0" Top="1101.6" Width="3674.88" Height="288" Caption="Tracking" Style="font-size: 8pt; font-weight: bold; vertical-align: bottom; ddo-char-set: 1" PaddingLeft="5" />
+      <Control Type="AR.Barcode" Name="Barcode2" DataField="CustomerID" Left="2880" Top="407.52" Width="794.0001" Height="794.0001" BarStyle="24" Text="Barcode2" QRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\NWIND.mdb;Persist Security Info=False" SQL="Select * FROM Customers" />
+  </DataSources>
+  <CalculatedFields>
+    <Field Name="Field1" Formula="Address + &quot;\n&quot; +City + &quot; &quot; + PostalCode + &quot; \n&quot; + Country" FieldType="String" />
+  </CalculatedFields>
+  <Script><![CDATA[
+int i = 0;
+
+public void Detail1_Format()
+{
+/*	if(i % 2 == 0)
+	{
+		this.Detail1.BackColor = System.Drawing.Color.Beige;
+	}
+	
+	else
+	{
+		this.Detail1.BackColor = System.Drawing.Color.Bisque;	
+	}
+	
+	i++;*/
+	
+}
+
+
+
+
+]]></Script>
+  <PageSettings LeftMargin="288" RightMargin="288" TopMargin="720" BottomMargin="720" />
+  <Parameters />
+</ActiveReportsLayout>

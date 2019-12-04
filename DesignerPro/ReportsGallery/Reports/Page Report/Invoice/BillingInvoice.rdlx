@@ -1,0 +1,1050 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">BillingInvoice.rdlx</dd:Name>
+	<Body>
+		<Height>11in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<List Name="List1">
+								<DataSetName>Customers</DataSetName>
+								<Height>4.6in</Height>
+								<Left>0.1in</Left>
+								<PageBreakAtEnd>true</PageBreakAtEnd>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">9.3in</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">7.8in</dd:FixedWidth>
+								<ReportItems>
+									<Rectangle Name="Rectangle1">
+										<Height>3.542in</Height>
+										<Left>0.067in</Left>
+										<dd:RoundingRadius xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+											<Default>0in</Default>
+										</dd:RoundingRadius>
+										<Style>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>Solid</Default>
+											</BorderStyle>
+											<BorderWidth>
+												<Default>1.25pt</Default>
+											</BorderWidth>
+										</Style>
+										<Top>0.8in</Top>
+										<Width>4.186in</Width>
+										<ReportItems>
+											<Textbox Name="TextBox3">
+												<Height>0.275in</Height>
+												<Left>0.13in</Left>
+												<Value>=Fields!Subscriber.Value</Value>
+												<Style>
+													<FontSize>14.25pt</FontSize>
+													<VerticalAlign>Middle</VerticalAlign>
+												</Style>
+												<Top>0.245in</Top>
+												<Width>4in</Width>
+												<ZIndex>2</ZIndex>
+											</Textbox>
+											<Textbox Name="txtBarcode">
+												<Height>0.28in</Height>
+												<Left>0.425in</Left>
+												<Value>=Fields!BarCode.Value</Value>
+												<Style>
+													<FontSize>9pt</FontSize>
+													<TextAlign>Center</TextAlign>
+												</Style>
+												<Top>3in</Top>
+												<Width>2.06in</Width>
+												<ZIndex>8</ZIndex>
+											</Textbox>
+											<Textbox Name="txtAddress1">
+												<Height>0.68in</Height>
+												<Left>0.15in</Left>
+												<Value>=Fields!Address.Value</Value>
+												<Style>
+													<FontSize>9.75pt</FontSize>
+												</Style>
+												<Top>1.145833in</Top>
+												<Width>2.8in</Width>
+												<ZIndex>5</ZIndex>
+											</Textbox>
+											<Textbox Name="Label1">
+												<Height>0.2in</Height>
+												<Value> Company</Value>
+												<Style>
+													<Color>Red</Color>
+													<FontWeight>500</FontWeight>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>Solid</Bottom>
+													</BorderStyle>
+												</Style>
+												<Top>0.032812in</Top>
+												<Width>4.1853in</Width>
+												<ZIndex>1</ZIndex>
+											</Textbox>
+											<Textbox Name="txtPostalCode1">
+												<Height>0.2in</Height>
+												<Left>0.15in</Left>
+												<Value>="Postal Code: "+Fields!PostalCode.Value</Value>
+												<Style>
+													<FontSize>9.75pt</FontSize>
+												</Style>
+												<Top>0.906771in</Top>
+												<Width>2.1208in</Width>
+												<ZIndex>4</ZIndex>
+											</Textbox>
+											<CustomReportItem Name="Barcode1">
+												<Type>Barcode</Type>
+												<Top>2.56in</Top>
+												<Left>0.425in</Left>
+												<Width>2.06in</Width>
+												<Height>0.44in</Height>
+												<ZIndex>7</ZIndex>
+												<Style>
+													<FontFamily>Courier New</FontFamily>
+													<FontSize>8pt</FontSize>
+												</Style>
+												<CustomProperties>
+													<CustomProperty>
+														<Name>dd:QuietZone.Left</Name>
+														<Value>0in</Value>
+													</CustomProperty>
+													<CustomProperty>
+														<Name>dd:QuietZone.Right</Name>
+														<Value>0in</Value>
+													</CustomProperty>
+													<CustomProperty>
+														<Name>dd:Symbology</Name>
+														<Value>Ean128Fnc1</Value>
+													</CustomProperty>
+													<CustomProperty>
+														<Name>dd:Value</Name>
+														<Value>=Fields!BarCode.Value</Value>
+													</CustomProperty>
+												</CustomProperties>
+												<DataElementName>Barcode1</DataElementName>
+											</CustomReportItem>
+											<Textbox Name="Label2">
+												<Height>0.177in</Height>
+												<Value> Billing Address &amp; Name
+</Value>
+												<Style>
+													<Color>Red</Color>
+													<FontWeight>500</FontWeight>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>Solid</Bottom>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.55in</Top>
+												<Width>4.1853in</Width>
+												<ZIndex>3</ZIndex>
+											</Textbox>
+											<Textbox Name="txtName1">
+												<Height>0.3067in</Height>
+												<Left>0.15in</Left>
+												<Value>="Attention: "+Fields!Name.Value</Value>
+												<Style>
+													<FontSize>9.75pt</FontSize>
+												</Style>
+												<Top>1.86in</Top>
+												<Width>2.8in</Width>
+												<ZIndex>6</ZIndex>
+											</Textbox>
+											<Textbox Name="Label6">
+												<Height>0.18in</Height>
+												<Left>3.075in</Left>
+												<Value>Receipt Date</Value>
+												<Style>
+													<Color>Red</Color>
+													<FontSize>9.75pt</FontSize>
+													<TextAlign>Center</TextAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Default>Solid</Default>
+													</BorderStyle>
+												</Style>
+												<Top>2.17in</Top>
+												<Width>1.1083in</Width>
+												<ZIndex>9</ZIndex>
+											</Textbox>
+											<Line Name="Line1">
+												<Height>1.191667in</Height>
+												<Left>3.075in</Left>
+												<Style>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Default>Solid</Default>
+													</BorderStyle>
+												</Style>
+												<Top>2.35in</Top>
+												<Width>0in</Width>
+												<ZIndex>10</ZIndex>
+											</Line>
+										</ReportItems>
+									</Rectangle>
+									<Textbox Name="Label3">
+										<Height>0.238in</Height>
+										<Left>0.06666667in</Left>
+										<Value> Payment Form </Value>
+										<Style>
+											<Color>Red</Color>
+											<FontSize>14.25pt</FontSize>
+											<FontWeight>600</FontWeight>
+											<TextAlign>Center</TextAlign>
+											<dd:TextJustify xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DistributeAllLines</dd:TextJustify>
+											<dd:WrapMode xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">NoWrap</dd:WrapMode>
+										</Style>
+										<Top>0.074in</Top>
+										<Width>4.1833in</Width>
+										<ZIndex>3</ZIndex>
+									</Textbox>
+									<Line Name="Line8">
+										<Height>4.541667in</Height>
+										<Left>4.295833in</Left>
+										<Style>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>DashDotDot</Default>
+											</BorderStyle>
+										</Style>
+										<Width>0in</Width>
+										<ZIndex>10</ZIndex>
+									</Line>
+									<Rectangle Name="Rectangle2">
+										<Height>3.541667in</Height>
+										<Left>4.34in</Left>
+										<dd:RoundingRadius xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+											<TopLeft>0in</TopLeft>
+											<TopRight>0in</TopRight>
+											<BottomLeft>0in</BottomLeft>
+											<BottomRight>0in</BottomRight>
+										</dd:RoundingRadius>
+										<Style>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>Solid</Default>
+											</BorderStyle>
+											<BorderWidth>
+												<Default>1.25pt</Default>
+											</BorderWidth>
+										</Style>
+										<Top>0.8in</Top>
+										<Width>1.92711in</Width>
+										<ZIndex>1</ZIndex>
+										<ReportItems>
+											<Textbox Name="TextBox2">
+												<Height>0.148in</Height>
+												<Left>0.005in</Left>
+												<Value>Company</Value>
+												<Style>
+													<Color>Red</Color>
+													<FontSize>9pt</FontSize>
+													<PaddingLeft>2pt</PaddingLeft>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>Solid</Bottom>
+													</BorderStyle>
+												</Style>
+												<Top>0.008in</Top>
+												<Width>1.9221in</Width>
+												<ZIndex>1</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox11">
+												<Height>0.1497in</Height>
+												<Left>0.143229in</Left>
+												<Value>=Fields!Subscriber.Value</Value>
+												<Style>
+													<FontSize>8pt</FontSize>
+													<VerticalAlign>Middle</VerticalAlign>
+												</Style>
+												<Top>0.234375in</Top>
+												<Width>1.6211in</Width>
+												<ZIndex>2</ZIndex>
+											</Textbox>
+											<Line Name="Line19">
+												<Height>0in</Height>
+												<Style>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Default>Solid</Default>
+													</BorderStyle>
+												</Style>
+												<Top>2.369792in</Top>
+												<Width>1.920573in</Width>
+												<ZIndex>6</ZIndex>
+											</Line>
+											<Textbox Name="txtName2">
+												<Height>0.315in</Height>
+												<Left>0.1432292in</Left>
+												<Value>="Attention: "+Fields!Name.Value</Value>
+												<Style>
+													<FontSize>9.75pt</FontSize>
+												</Style>
+												<Top>1.969in</Top>
+												<Width>1.7148in</Width>
+												<ZIndex>8</ZIndex>
+											</Textbox>
+											<Textbox Name="txtAddress2">
+												<Height>0.515in</Height>
+												<Left>0.1432292in</Left>
+												<Value>=Fields!Address.Value</Value>
+												<Style>
+													<FontSize>9pt</FontSize>
+												</Style>
+												<Top>1.42in</Top>
+												<Width>1.7148in</Width>
+												<ZIndex>9</ZIndex>
+											</Textbox>
+											<Textbox Name="txtPostalCode2">
+												<Height>0.157in</Height>
+												<Left>0.1432292in</Left>
+												<Value>="Postal Code: "+Fields!PostalCode.Value</Value>
+												<Style>
+													<FontSize>9pt</FontSize>
+												</Style>
+												<Top>1.227in</Top>
+												<Width>1.7148in</Width>
+												<ZIndex>10</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox30">
+												<Height>0.127in</Height>
+												<Left>0.006510417in</Left>
+												<Value>Billing Address &amp; Name</Value>
+												<Style>
+													<Color>Red</Color>
+													<FontSize>6.5pt</FontSize>
+													<PaddingLeft>2pt</PaddingLeft>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>Solid</Bottom>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.959771in</Top>
+												<Width>1.9206in</Width>
+												<ZIndex>11</ZIndex>
+											</Textbox>
+											<Line Name="Line21">
+												<Height>0in</Height>
+												<Style>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Default>Solid</Default>
+													</BorderStyle>
+												</Style>
+												<Top>0.46875in</Top>
+												<Width>1.927083in</Width>
+											</Line>
+											<Textbox Name="TextBox1">
+												<Height>0.276in</Height>
+												<Left>0.087in</Left>
+												<Value>=Fields!BarCode.Value</Value>
+												<Style>
+													<FontSize>9pt</FontSize>
+													<TextAlign>Center</TextAlign>
+												</Style>
+												<Top>2.992in</Top>
+												<Width>1.771in</Width>
+												<ZIndex>8</ZIndex>
+											</Textbox>
+											<CustomReportItem Name="Barcode2">
+												<Type>Barcode</Type>
+												<Top>2.555in</Top>
+												<Left>0.087in</Left>
+												<Width>1.771in</Width>
+												<Height>0.437in</Height>
+												<ZIndex>7</ZIndex>
+												<Style>
+													<FontFamily>Courier New</FontFamily>
+													<FontSize>8pt</FontSize>
+												</Style>
+												<CustomProperties>
+													<CustomProperty>
+														<Name>dd:QuietZone.Left</Name>
+														<Value>0in</Value>
+													</CustomProperty>
+													<CustomProperty>
+														<Name>dd:QuietZone.Right</Name>
+														<Value>0in</Value>
+													</CustomProperty>
+													<CustomProperty>
+														<Name>dd:Symbology</Name>
+														<Value>Ean128Fnc1</Value>
+													</CustomProperty>
+													<CustomProperty>
+														<Name>dd:Value</Name>
+														<Value>=Fields!BarCode.Value</Value>
+													</CustomProperty>
+												</CustomProperties>
+												<DataElementName>Barcode2</DataElementName>
+											</CustomReportItem>
+											<Textbox Name="TextBox4">
+												<Height>0.315in</Height>
+												<Left>1.762996in</Left>
+												<Value>=Code._value(1, Fields!Price.Value)</Value>
+												<Style>
+													<FontSize>14.25pt</FontSize>
+													<TextAlign>Center</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>None</Bottom>
+														<Left>Dashed</Left>
+														<Right>Solid</Right>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.634062in</Top>
+												<Width>0.1637in</Width>
+												<ZIndex>3</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox5">
+												<Height>0.315in</Height>
+												<Left>1.093429in</Left>
+												<Value>=Code._value(5, Fields!Price.Value)</Value>
+												<Style>
+													<FontSize>14.25pt</FontSize>
+													<TextAlign>Center</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>None</Bottom>
+														<Left>Dashed</Left>
+														<Right>Dashed</Right>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.634062in</Top>
+												<Width>0.1637in</Width>
+												<ZIndex>3</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox6">
+												<Height>0.145in</Height>
+												<Left>0.928696in</Left>
+												<Value> AMOUNT $</Value>
+												<Style>
+													<Color>Red</Color>
+													<FontSize>8.25pt</FontSize>
+													<FontWeight>600</FontWeight>
+													<PaddingLeft>2pt</PaddingLeft>
+													<PaddingRight>2pt</PaddingRight>
+													<TextAlign>Justify</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+													<dd:TextJustify xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DistributeAllLines</dd:TextJustify>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Default>Solid</Default>
+														<Bottom>Solid</Bottom>
+														<Left>Solid</Left>
+														<Right>Dashed</Right>
+														<Top>None</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.482in</Top>
+												<Width>0.998in</Width>
+												<ZIndex>2</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox8">
+												<Height>0.315in</Height>
+												<Left>1.594529in</Left>
+												<Value>=Code._value(2, Fields!Price.Value)</Value>
+												<Style>
+													<FontSize>14.25pt</FontSize>
+													<TextAlign>Center</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>None</Bottom>
+														<Left>Dashed</Left>
+														<Right>Dashed</Right>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.634062in</Top>
+												<Width>0.1637in</Width>
+												<ZIndex>3</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox9">
+												<Height>0.315in</Height>
+												<Left>1.430829in</Left>
+												<Value>=Code._value(3, Fields!Price.Value)</Value>
+												<Style>
+													<FontSize>14.25pt</FontSize>
+													<TextAlign>Center</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>None</Bottom>
+														<Left>Dashed</Left>
+														<Right>Dashed</Right>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.634062in</Top>
+												<Width>0.1637in</Width>
+												<ZIndex>3</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox10">
+												<Height>0.315in</Height>
+												<Left>1.257129in</Left>
+												<Value>=Code._value(4, Fields!Price.Value)</Value>
+												<Style>
+													<FontSize>14.25pt</FontSize>
+													<TextAlign>Center</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>None</Bottom>
+														<Left>Dashed</Left>
+														<Right>Dashed</Right>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.634062in</Top>
+												<Width>0.1637in</Width>
+												<ZIndex>3</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox12">
+												<Height>0.315in</Height>
+												<Left>0.928696in</Left>
+												<Value>=Code._value(6, Fields!Price.Value)</Value>
+												<Style>
+													<FontSize>14.25pt</FontSize>
+													<TextAlign>Center</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>None</Bottom>
+														<Left>Solid</Left>
+														<Right>Dashed</Right>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.634062in</Top>
+												<Width>0.1637in</Width>
+												<ZIndex>3</ZIndex>
+											</Textbox>
+										</ReportItems>
+									</Rectangle>
+									<Textbox Name="txtPrice1_3">
+										<Height>0.315in</Height>
+										<Left>3.5963in</Left>
+										<Value>=Code._value(3,Fields!Price.Value)</Value>
+										<Style>
+											<FontSize>14.25pt</FontSize>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Bottom>None</Bottom>
+												<Left>Dashed</Left>
+												<Right>Dashed</Right>
+												<Top>Solid</Top>
+											</BorderStyle>
+										</Style>
+										<Top>0.485in</Top>
+										<Width>0.1637in</Width>
+										<ZIndex>6</ZIndex>
+									</Textbox>
+									<Textbox Name="txtPrice1_6">
+										<Height>0.315in</Height>
+										<Left>3.1073in</Left>
+										<Value>=Code._value(6,Fields!Price.Value)</Value>
+										<Style>
+											<FontSize>14.25pt</FontSize>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Bottom>None</Bottom>
+												<Left>Solid</Left>
+												<Right>Dashed</Right>
+												<Top>Solid</Top>
+											</BorderStyle>
+										</Style>
+										<Top>0.485in</Top>
+										<Width>0.16in</Width>
+										<ZIndex>6</ZIndex>
+									</Textbox>
+									<Textbox Name="txtPrice1_5">
+										<Height>0.315in</Height>
+										<Left>3.2689in</Left>
+										<Value>=Code._value(5,Fields!Price.Value)</Value>
+										<Style>
+											<FontSize>14.25pt</FontSize>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Bottom>None</Bottom>
+												<Left>Dashed</Left>
+												<Right>Dashed</Right>
+												<Top>Solid</Top>
+											</BorderStyle>
+										</Style>
+										<Top>0.485in</Top>
+										<Width>0.1637in</Width>
+										<ZIndex>6</ZIndex>
+									</Textbox>
+									<Textbox Name="txtPrice1_1">
+										<Height>0.315in</Height>
+										<Left>3.9237in</Left>
+										<Value>=Code._value(1, Fields!Price.Value)</Value>
+										<Style>
+											<FontSize>14.25pt</FontSize>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Bottom>None</Bottom>
+												<Left>Dashed</Left>
+												<Right>Solid</Right>
+												<Top>Solid</Top>
+											</BorderStyle>
+										</Style>
+										<Top>0.485in</Top>
+										<Width>0.1745in</Width>
+										<ZIndex>6</ZIndex>
+									</Textbox>
+									<Textbox Name="txtPrice1_4">
+										<Height>0.315in</Height>
+										<Left>3.4326in</Left>
+										<Value>=Code._value(4,Fields!Price.Value)</Value>
+										<Style>
+											<FontSize>14.25pt</FontSize>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Bottom>None</Bottom>
+												<Left>Dashed</Left>
+												<Right>Dashed</Right>
+												<Top>Solid</Top>
+											</BorderStyle>
+										</Style>
+										<Top>0.485in</Top>
+										<Width>0.1637in</Width>
+										<ZIndex>6</ZIndex>
+									</Textbox>
+									<Textbox Name="txtPrice1_2">
+										<Height>0.315in</Height>
+										<Left>3.76in</Left>
+										<Value>=Code._value(2,Fields!Price.Value)</Value>
+										<Style>
+											<FontSize>14.25pt</FontSize>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Bottom>None</Bottom>
+												<Left>Dashed</Left>
+												<Right>Dashed</Right>
+												<Top>Solid</Top>
+											</BorderStyle>
+										</Style>
+										<Top>0.485in</Top>
+										<Width>0.1637in</Width>
+										<ZIndex>6</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox28">
+										<Height>0.2in</Height>
+										<Left>4.51in</Left>
+										<Value>Payment</Value>
+										<Style>
+											<Color>Red</Color>
+											<FontSize>12pt</FontSize>
+											<TextAlign>Center</TextAlign>
+											<dd:TextJustify xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DistributeAllLines</dd:TextJustify>
+										</Style>
+										<Top>0.458in</Top>
+										<Width>1.542in</Width>
+										<ZIndex>22</ZIndex>
+									</Textbox>
+									<Line Name="Line28">
+										<Height>0in</Height>
+										<Left>0.04166667in</Left>
+										<Style>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>DashDotDot</Default>
+											</BorderStyle>
+										</Style>
+										<Top>4.541667in</Top>
+										<Width>7.729167in</Width>
+										<ZIndex>24</ZIndex>
+									</Line>
+									<Line Name="Line29">
+										<Height>4.541667in</Height>
+										<Left>6.322917in</Left>
+										<Style>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>DashDotDot</Default>
+											</BorderStyle>
+										</Style>
+										<Width>0in</Width>
+										<ZIndex>25</ZIndex>
+									</Line>
+									<Rectangle Name="Rectangle3">
+										<Height>3.5417in</Height>
+										<Left>6.378125in</Left>
+										<Style>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>Solid</Default>
+											</BorderStyle>
+											<BorderWidth>
+												<Default>1.25pt</Default>
+											</BorderWidth>
+										</Style>
+										<Top>0.8in</Top>
+										<Width>1.322917in</Width>
+										<ZIndex>2</ZIndex>
+										<ReportItems>
+											<Textbox Name="TextBox32">
+												<Height>0.118in</Height>
+												<Value>Name</Value>
+												<Style>
+													<Color>Red</Color>
+													<FontSize>7pt</FontSize>
+													<PaddingLeft>2pt</PaddingLeft>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>Solid</Bottom>
+														<Top>None</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.01in</Top>
+												<Width>1.3151in</Width>
+												<ZIndex>2</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox33">
+												<Height>0.315in</Height>
+												<Left>0.055in</Left>
+												<Value>=Fields!Name.Value</Value>
+												<Style>
+													<FontSize>9.75pt</FontSize>
+													<VerticalAlign>Middle</VerticalAlign>
+												</Style>
+												<Top>0.157in</Top>
+												<Width>0.984in</Width>
+												<ZIndex>3</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox34">
+												<Height>0.118in</Height>
+												<Value>Company</Value>
+												<Style>
+													<Color>Red</Color>
+													<FontSize>7pt</FontSize>
+													<PaddingLeft>2pt</PaddingLeft>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>Solid</Bottom>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>0.533in</Top>
+												<Width>1.3151in</Width>
+												<ZIndex>4</ZIndex>
+											</Textbox>
+											<Textbox Name="txtName3">
+												<Height>0.49in</Height>
+												<Left>0.055in</Left>
+												<Value>=Fields!Subscriber.Value</Value>
+												<Style>
+													<FontSize>9pt</FontSize>
+													<PaddingBottom>2pt</PaddingBottom>
+													<PaddingLeft>2pt</PaddingLeft>
+													<PaddingRight>2pt</PaddingRight>
+													<PaddingTop>2pt</PaddingTop>
+													<VerticalAlign>Middle</VerticalAlign>
+												</Style>
+												<Top>0.669in</Top>
+												<Width>1.1in</Width>
+												<ZIndex>5</ZIndex>
+											</Textbox>
+											<Textbox Name="txtPrice3">
+												<Height>0.2in</Height>
+												<Left>0.055in</Left>
+												<Value>="$"&amp;Split(Fields!Price.Value,".").Get(0)</Value>
+												<Style>
+													<FontSize>9.75pt</FontSize>
+													<TextAlign>Right</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+												</Style>
+												<Top>1.541in</Top>
+												<Width>0.945in</Width>
+												<ZIndex>6</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox35">
+												<Height>0.118in</Height>
+												<Value>Amount </Value>
+												<Style>
+													<Color>Red</Color>
+													<FontSize>7pt</FontSize>
+													<PaddingLeft>2pt</PaddingLeft>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>Solid</Bottom>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>1.277in</Top>
+												<Width>1.3151in</Width>
+												<ZIndex>4</ZIndex>
+											</Textbox>
+											<Shape Name="Shape1">
+												<Height>0.866in</Height>
+												<Left>0.231875in</Left>
+												<Style>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Default>Dashed</Default>
+													</BorderStyle>
+												</Style>
+												<Top>2.48in</Top>
+												<Width>0.866in</Width>
+												<ZIndex>7</ZIndex>
+												<dd:ShapeStyle xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Ellipse</dd:ShapeStyle>
+											</Shape>
+											<Textbox Name="TextBox38">
+												<Height>0.154in</Height>
+												<Left>0.05208333in</Left>
+												<Value>Date stamp </Value>
+												<Style>
+													<Color>Red</Color>
+													<FontSize>7pt</FontSize>
+													<TextAlign>Center</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+												</Style>
+												<Top>3.346in</Top>
+												<Width>1.2396in</Width>
+												<ZIndex>4</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox39">
+												<Height>0.125in</Height>
+												<Value>Signature</Value>
+												<Style>
+													<Color>Red</Color>
+													<FontSize>7pt</FontSize>
+													<PaddingLeft>2pt</PaddingLeft>
+													<TextAlign>Left</TextAlign>
+													<VerticalAlign>Middle</VerticalAlign>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Bottom>Solid</Bottom>
+														<Top>Solid</Top>
+													</BorderStyle>
+												</Style>
+												<Top>1.843in</Top>
+												<Width>1.3151in</Width>
+												<ZIndex>4</ZIndex>
+											</Textbox>
+											<Line Name="Line2">
+												<Height>0in</Height>
+												<Style>
+													<BorderColor>
+														<Default>Red</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Default>Solid</Default>
+													</BorderStyle>
+												</Style>
+												<Top>2.369792in</Top>
+												<Width>1.291667in</Width>
+												<ZIndex>9</ZIndex>
+											</Line>
+										</ReportItems>
+									</Rectangle>
+									<Textbox Name="TextBox41">
+										<Height>0.2in</Height>
+										<Left>6.501in</Left>
+										<Value>Receipt</Value>
+										<Style>
+											<Color>Red</Color>
+											<FontSize>12pt</FontSize>
+											<TextAlign>Center</TextAlign>
+										</Style>
+										<Top>0.458in</Top>
+										<Width>0.995in</Width>
+										<ZIndex>27</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox23">
+										<Height>0.145in</Height>
+										<Left>3.1073in</Left>
+										<Value> AMOUNT $</Value>
+										<Style>
+											<Color>Red</Color>
+											<FontSize>8.25pt</FontSize>
+											<FontWeight>600</FontWeight>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<TextAlign>Justify</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<dd:TextJustify xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DistributeAllLines</dd:TextJustify>
+											<BorderColor>
+												<Default>Red</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>Solid</Default>
+												<Bottom>Solid</Bottom>
+												<Left>Solid</Left>
+												<Right>Solid</Right>
+												<Top>Solid</Top>
+											</BorderStyle>
+										</Style>
+										<Top>0.335in</Top>
+										<Width>0.9909in</Width>
+										<ZIndex>5</ZIndex>
+									</Textbox>
+								</ReportItems>
+								<Top>0.1in</Top>
+								<Width>7.79in</Width>
+							</List>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<Grouping Name="FixedPage1_Group">
+					<GroupExpressions>
+						<GroupExpression>=1</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>0.5in</BottomMargin>
+	<Code>Public Function Color()
+	Return "Red"
+End Function
+
+Public Function _value(i As Int16, str As String) As String
+	str = str.Split(".")(0)
+	Dim strPrice As String = "******" + str
+	Dim strdata As String
+	
+	strdata = strPrice.Substring(strPrice.Length - i, 1)
+	Return strdata
+	
+End Function
+Public Function _RemoveDecimal(str As String) As String
+	str = str.Split(".")(0)
+	Return "$" + str
+	
+End Function</Code>
+	<LeftMargin>0.2in</LeftMargin>
+	<PageHeight>11in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<RightMargin>0.2in</RightMargin>
+	<TopMargin>0.5in</TopMargin>
+	<Width>8.5in</Width>
+	<DataSources>
+		<DataSource Name="NWIND">
+			<ConnectionProperties>
+				<DataProvider>OLEDB</DataProvider>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\NWIND.mdb</ConnectString>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Customers">
+			<Fields>
+				<Field Name="ID">
+					<DataField>ID</DataField>
+				</Field>
+				<Field Name="Subscriber">
+					<DataField>Subscriber</DataField>
+				</Field>
+				<Field Name="Name">
+					<DataField>Name</DataField>
+				</Field>
+				<Field Name="Address">
+					<DataField>Address</DataField>
+				</Field>
+				<Field Name="PostalCode">
+					<DataField>PostalCode</DataField>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price</DataField>
+				</Field>
+				<Field Name="Barcode">
+					<DataField>Barcode</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>Select Customers.CustomerID as ID, CompanyName as Subscriber, ContactName as Name, Address, PostalCode, Price, PostalCode as Barcode from Customers inner join (select CustomerID, sum(Freight) as Price from Orders group by CustomerID) as t on t.CustomerID=Customers.CustomerID</CommandText>
+				<DataSourceName>NWIND</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

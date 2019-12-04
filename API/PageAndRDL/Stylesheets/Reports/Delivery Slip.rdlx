@@ -1,0 +1,990 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Delivery Slip.rdlx</dd:Name>
+	<Body>
+		<Height>11.69in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Image Name="Image1">
+								<DataElementName>Image1</DataElementName>
+								<Height>0.95cm</Height>
+								<MIMEType>image/png</MIMEType>
+								<Sizing>FitProportional</Sizing>
+								<Source>Embedded</Source>
+								<Value>GCLogo1</Value>
+								<Width>5.4cm</Width>
+								<ZIndex>4</ZIndex>
+							</Image>
+							<Textbox Name="lblTitle">
+								<Height>1.5875cm</Height>
+								<Left>11.7475cm</Left>
+								<Value>=Theme.Constants("EnText")</Value>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Title</dd:StyleName>
+								</Style>
+								<Width>4.9515cm</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox2">
+								<Height>1.7cm</Height>
+								<Left>0.8989606cm</Left>
+								<Value>=IIF(Fields!BuildingName.Value &lt;&gt; "", Fields!BuildingName.Value &amp; vbcrlf , "") &amp; IIF(Fields!Address.Value &lt;&gt; "", Fields!Address.Value &amp; vbcrlf, "") &amp; Fields!City.Value &amp; " " &amp; Fields!State.Value &amp; " " &amp; Fields!PostalCode.Value</Value>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<Top>1.085in</Top>
+								<Width>6.6675cm</Width>
+								<ZIndex>8</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox3">
+								<Height>0.48cm</Height>
+								<Left>0.8989606cm</Left>
+								<Value>=Fields!CompanyName.Value</Value>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<Top>2.268402cm</Top>
+								<Width>6.67cm</Width>
+								<ZIndex>9</ZIndex>
+							</Textbox>
+							<Textbox Name="lblCompanyAddress">
+								<Height>1.6334cm</Height>
+								<Left>2.744094in</Left>
+								<Value>720 4th Avenue, Suite 220
+Kirkland WA 98033
+Phone: (425) 828-4440
+fax: (425) 828-4441</Value>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">PageHeaderAddress</dd:StyleName>
+								</Style>
+								<Width>4.76cm</Width>
+								<ZIndex>11</ZIndex>
+							</Textbox>
+							<Textbox Name="lblCompanyURL">
+								<Height>0.6cm</Height>
+								<Left>6.958541cm</Left>
+								<Value>www.grapecity.com</Value>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">PageHeaderCompanyName</dd:StyleName>
+								</Style>
+								<Top>1.6334cm</Top>
+								<Width>4.76cm</Width>
+								<ZIndex>15</ZIndex>
+							</Textbox>
+							<Textbox Name="lblCustomerID">
+								<Height>0.5cm</Height>
+								<Left>0.353921in</Left>
+								<Value>Customer ID</Value>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<Top>1.75in</Top>
+								<Width>2.164cm</Width>
+								<ZIndex>16</ZIndex>
+							</Textbox>
+							<Textbox Name="txtCustomerID">
+								<Height>0.5cm</Height>
+								<Left>1.208333in</Left>
+								<Value>=Fields!CustomerID.Value</Value>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<Top>1.75in</Top>
+								<Width>1.61cm</Width>
+								<ZIndex>17</ZIndex>
+							</Textbox>
+							<Textbox Name="txtYear">
+								<Height>0.5cm</Height>
+								<Left>3.228921in</Left>
+								<Value>=System.DateTime.Today.Year &amp; "/" &amp; System.DateTime.Today.Month &amp; "/" &amp; System.DateTime.Today.Day</Value>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<Top>1.75in</Top>
+								<Width>2.9375cm</Width>
+								<ZIndex>18</ZIndex>
+							</Textbox>
+							<Textbox Name="txtEstimateID">
+								<Height>0.5cm</Height>
+								<Left>5.353921in</Left>
+								<Value>="No. " &amp; Fields!EstimateID.Value</Value>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<Top>1.75in</Top>
+								<Width>2.305cm</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Table Name="Table2">
+								<DataSetName>DataSet1</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox10">
+															<Value>Product ID</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox11">
+															<Value>Product Name</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox12">
+															<Value>Units</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox13">
+															<Value>Price</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox15">
+															<Value>=Fields!ProductID.Value</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValue-Copy</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox16">
+															<Value>=Fields!ProductName.Value &amp; "(" &amp; Fields!Quantity.Value &amp; " license pack)"</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailValue-Copy</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox17">
+															<Value>=Fields!Unit.Value</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValue-Copy</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox18">
+															<Value>=Fields!ExtendedPrice.Value</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValue-Copy</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<Height>1.22cm</Height>
+								<Left>0.353921in</Left>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">5.5cm</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">15.14cm</dd:FixedWidth>
+								<dd:RepeatToFill xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:RepeatToFill>
+								<Style>
+									<BorderColor>
+										<Default>=Theme.Colors!Accent4</Default>
+									</BorderColor>
+								</Style>
+								<TableColumns>
+									<TableColumn>
+										<Width>1.83883cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>8.47493cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.222065cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.542475cm</Width>
+									</TableColumn>
+								</TableColumns>
+								<Top>7.5in</Top>
+								<Width>15.07828cm</Width>
+								<ZIndex>28</ZIndex>
+							</Table>
+							<Rectangle Name="Container1">
+								<Height>1.016cm</Height>
+								<Left>0.925419cm</Left>
+								<Top>4.2in</Top>
+								<Width>15.24cm</Width>
+								<ReportItems>
+									<Textbox Name="lblTotal">
+										<Height>0.9525cm</Height>
+										<Value>Total</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+										</Style>
+										<Width>3.4925cm</Width>
+										<ZIndex>16</ZIndex>
+									</Textbox>
+									<Textbox Name="txtTotalPrice">
+										<Height>0.9525cm</Height>
+										<Left>4.7625cm</Left>
+										<Value>=Sum(Fields!ExtendedPrice.Value)</Value>
+										<Style>
+											<Format>$#,##0.00</Format>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues</dd:StyleName>
+										</Style>
+										<Width>2.8575cm</Width>
+										<ZIndex>17</ZIndex>
+									</Textbox>
+									<Textbox Name="txtTax">
+										<Height>0.9525cm</Height>
+										<Left>8.5725cm</Left>
+										<Value>=Sum(Fields!ExtendedPrice.Value)*0.05</Value>
+										<Style>
+											<Format>$#,##0.00</Format>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues</dd:StyleName>
+										</Style>
+										<Width>2.54cm</Width>
+										<ZIndex>20</ZIndex>
+									</Textbox>
+									<Textbox Name="txtPretax">
+										<Height>0.9525cm</Height>
+										<Left>12.7cm</Left>
+										<Value>=Sum(Fields!ExtendedPrice.Value) + (Sum(Fields!ExtendedPrice.Value)*0.05)</Value>
+										<Style>
+											<Format>$#,##0.00</Format>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues</dd:StyleName>
+										</Style>
+										<Width>2.54cm</Width>
+										<ZIndex>21</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox6">
+										<Height>0.9525cm</Height>
+										<Left>11.1125cm</Left>
+										<Value>Grand Total</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings</dd:StyleName>
+										</Style>
+										<Width>1.5875cm</Width>
+										<ZIndex>19</ZIndex>
+									</Textbox>
+									<Textbox Name="lblTaxPrice1">
+										<Height>0.9525cm</Height>
+										<Left>7.62cm</Left>
+										<Value>Tax</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings</dd:StyleName>
+										</Style>
+										<Width>0.9525cm</Width>
+										<ZIndex>18</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox5">
+										<Height>0.9525cm</Height>
+										<Left>3.488542cm</Left>
+										<Value>Before Tax</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings</dd:StyleName>
+										</Style>
+										<Width>1.27cm</Width>
+										<ZIndex>22</ZIndex>
+									</Textbox>
+								</ReportItems>
+							</Rectangle>
+							<Rectangle Name="Container2">
+								<Height>4.7776in</Height>
+								<Style>
+									<BackgroundColor>WhiteSmoke</BackgroundColor>
+								</Style>
+								<Top>5.354331in</Top>
+								<Width>6.625in</Width>
+								<ZIndex>1</ZIndex>
+								<ReportItems>
+									<Textbox Name="TextBox25">
+										<Height>0.795cm</Height>
+										<Left>6.985cm</Left>
+										<Value>www.grapecity.com</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">PageHeaderCompanyName</dd:StyleName>
+										</Style>
+										<Top>1.799167cm</Top>
+										<Width>4.76cm</Width>
+										<ZIndex>13</ZIndex>
+									</Textbox>
+									<Image Name="Image4">
+										<DataElementName>Image4</DataElementName>
+										<Height>0.95cm</Height>
+										<MIMEType>image/png</MIMEType>
+										<Sizing>FitProportional</Sizing>
+										<Source>Embedded</Source>
+										<Value>GC logo</Value>
+										<Width>5.4cm</Width>
+										<ZIndex>2</ZIndex>
+									</Image>
+									<Textbox Name="TextBox35">
+										<Height>1.7979cm</Height>
+										<Left>4.625in</Left>
+										<Value>=Theme.Constants("EnText2")</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Title-Copy</dd:StyleName>
+										</Style>
+										<Width>4.9515cm</Width>
+										<ZIndex>3</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox33">
+										<Height>1.7979cm</Height>
+										<Left>2.75in</Left>
+										<Value>720 4th Avenue, Suite 220
+Kirkland WA 98033
+Phone: (425) 828-4440
+fax: (425) 828-4441</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">PageHeaderAddress</dd:StyleName>
+										</Style>
+										<Width>4.76cm</Width>
+										<ZIndex>24</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox19">
+										<Height>0.5cm</Height>
+										<Left>1.210937in</Left>
+										<Value>=Fields!Price.Value</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<Top>1.895833in</Top>
+										<Width>1.61cm</Width>
+										<ZIndex>15</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox21">
+										<Height>0.48cm</Height>
+										<Left>0.35392in</Left>
+										<Value>=Fields!CompanyName.Value</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<Top>1.020833in</Top>
+										<Width>6.67cm</Width>
+										<ZIndex>7</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox22">
+										<Height>0.5cm</Height>
+										<Left>5.35392in</Left>
+										<Value>="No. " &amp; Fields!EstimateID.Value</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<Top>1.895833in</Top>
+										<Width>2.305cm</Width>
+										<ZIndex>23</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox24">
+										<Height>0.5cm</Height>
+										<Left>3.22892in</Left>
+										<Value>=System.DateTime.Today.Year &amp; "/" &amp; System.DateTime.Today.Month &amp; "/" &amp; System.DateTime.Today.Day</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<Top>1.895833in</Top>
+										<Width>2.9375cm</Width>
+										<ZIndex>16</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox26">
+										<Height>0.5cm</Height>
+										<Left>0.35392in</Left>
+										<Value>Customer ID</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<Top>1.895833in</Top>
+										<Width>2.164cm</Width>
+										<ZIndex>14</ZIndex>
+									</Textbox>
+									<Textbox Name="TextBox27">
+										<Height>1.7425cm</Height>
+										<Left>0.35392in</Left>
+										<Value>=IIF(Fields!BuildingName.Value &lt;&gt; "", Fields!BuildingName.Value &amp; vbcrlf , "") &amp; IIF(Fields!Address.Value &lt;&gt; "", Fields!Address.Value &amp; vbcrlf, "") &amp; Fields!City.Value &amp; " " &amp; Fields!State.Value &amp; " " &amp; Fields!PostalCode.Value</Value>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<Top>1.208333in</Top>
+										<Width>6.6675cm</Width>
+										<ZIndex>6</ZIndex>
+									</Textbox>
+									<Rectangle Name="Container3">
+										<Height>1.016cm</Height>
+										<Left>0.364583in</Left>
+										<Style>
+											<BorderColor>
+												<Default>White</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>None</Default>
+											</BorderStyle>
+										</Style>
+										<Top>4.34375in</Top>
+										<Width>15.12cm</Width>
+										<ZIndex>25</ZIndex>
+										<ReportItems>
+											<Textbox Name="TextBox39">
+												<Height>0.9525cm</Height>
+												<Value>Total</Value>
+												<Style>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+												</Style>
+												<Width>3.4925cm</Width>
+												<ZIndex>2</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox41">
+												<Height>0.9525cm</Height>
+												<Left>1.885417in</Left>
+												<Value>=Sum(Fields!ExtendedPrice.Value)</Value>
+												<Style>
+													<Format>$#,##0.00</Format>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues-Copy</dd:StyleName>
+												</Style>
+												<Width>2.831cm</Width>
+												<ZIndex>4</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox43">
+												<Height>0.9525cm</Height>
+												<Left>3.385417in</Left>
+												<Value>=Sum(Fields!ExtendedPrice.Value)*0.05</Value>
+												<Style>
+													<Format>$#,##0.00</Format>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues-Copy</dd:StyleName>
+												</Style>
+												<Width>2.5135cm</Width>
+												<ZIndex>6</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox45">
+												<Height>0.9525cm</Height>
+												<Left>12.69996cm</Left>
+												<Value>=Sum(Fields!ExtendedPrice.Value) + (Sum(Fields!ExtendedPrice.Value)*0.05)</Value>
+												<Style>
+													<Format>$#,##0.00</Format>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues-Copy</dd:StyleName>
+												</Style>
+												<Width>2.286cm</Width>
+												<ZIndex>8</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox44">
+												<Height>0.9525cm</Height>
+												<Left>4.374984in</Left>
+												<Value>Grand Total</Value>
+												<Style>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings-Copy</dd:StyleName>
+												</Style>
+												<Width>1.5875cm</Width>
+												<ZIndex>7</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox42">
+												<Height>0.9525cm</Height>
+												<Left>3.010417in</Left>
+												<Value>Tax</Value>
+												<Style>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings-Copy</dd:StyleName>
+												</Style>
+												<Width>0.926cm</Width>
+												<ZIndex>5</ZIndex>
+											</Textbox>
+											<Textbox Name="TextBox40">
+												<Height>0.9525cm</Height>
+												<Left>3.4925cm</Left>
+												<Value>Before Tax</Value>
+												<Style>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings-Copy</dd:StyleName>
+												</Style>
+												<Width>1.27cm</Width>
+												<ZIndex>3</ZIndex>
+											</Textbox>
+										</ReportItems>
+									</Rectangle>
+								</ReportItems>
+							</Rectangle>
+							<Table Name="Table1">
+								<DataSetName>DataSet1</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox1">
+															<Value>Product ID</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Value>Product Name</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox7">
+															<Value>Units</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox8">
+															<Value>Price</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox9">
+															<Value>=Fields!ProductID.Value</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValues</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox14">
+															<Value>=Fields!ProductName.Value &amp; "(" &amp; Fields!Quantity.Value &amp; " license pack)"</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailValues</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox20">
+															<Value>=Fields!Unit.Value</Value>
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValues</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox23">
+															<Value>=Fields!ExtendedPrice.Value</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValues</dd:StyleName>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<Height>0.4791667in</Height>
+								<Left>0.3541667in</Left>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">5.5cm</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">15.14cm</dd:FixedWidth>
+								<dd:RepeatToFill xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:RepeatToFill>
+								<Style>
+									<BorderColor>
+										<Default>=Theme.Colors!Accent4</Default>
+									</BorderColor>
+								</Style>
+								<TableColumns>
+									<TableColumn>
+										<Width>1.862143cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>8.582377cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.250237cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.012481in</Width>
+									</TableColumn>
+								</TableColumns>
+								<Top>2.010417in</Top>
+								<Width>6.010417in</Width>
+								<ZIndex>26</ZIndex>
+							</Table>
+							<Line Name="lnDivider">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>DashDotDot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>0.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>5in</Top>
+								<Width>6.695197in</Width>
+								<ZIndex>29</ZIndex>
+							</Line>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>DataSet1</DataSetName>
+				<Grouping Name="FixedPage1_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!EstimateID.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>0.6879166cm</BottomMargin>
+	<LeftMargin>2cm</LeftMargin>
+	<PageHeight>11.69in</PageHeight>
+	<PageWidth>8.27in</PageWidth>
+	<RightMargin>2cm</RightMargin>
+	<TopMargin>0.9260417cm</TopMargin>
+	<Width>8.27in</Width>
+	<EmbeddedImages>
+		<EmbeddedImage Name="GCLogo1">
+			<ImageData>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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+		<EmbeddedImage Name="GC logo">
+			<ImageData>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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<dd:EmbeddedStyleSheets xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<EmbeddedStyleSheet Name="BaseStyle">
+			<Data>﻿&lt;dd:StyleSheet xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition"&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Blue&lt;/BackgroundColor&gt;
+    &lt;Color&gt;White&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;8.25pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;400&lt;/FontWeight&gt;
+    &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+    &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+    &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+    &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+    &lt;TextAlign&gt;Center&lt;/TextAlign&gt;
+    &lt;VerticalAlign&gt;Middle&lt;/VerticalAlign&gt;
+    &lt;dd:Name&gt;TextLabels&lt;/dd:Name&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;SteelBlue&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;Solid&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+    &lt;BorderWidth&gt;
+      &lt;Default&gt;1pt&lt;/Default&gt;
+    &lt;/BorderWidth&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;16pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;700&lt;/FontWeight&gt;
+    &lt;dd:Name&gt;Title&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Lavender&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;700&lt;/FontWeight&gt;
+    &lt;dd:Name&gt;TableHeading&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;SteelBlue&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;Solid&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Transparent&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Blue&lt;/Color&gt;
+    &lt;dd:Name&gt;FooterHeadings&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;SteelBlue&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;Solid&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;TextAlign&gt;Right&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;FooterValues&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;FooterHeadings&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;=""&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;PaddingLeft&gt;10pt&lt;/PaddingLeft&gt;
+    &lt;TextAlign&gt;Left&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;DetailValues&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;PaddingRight&gt;10pt&lt;/PaddingRight&gt;
+    &lt;TextAlign&gt;Right&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;DetailNumericValues&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;DetailValues&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Transparent&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;400&lt;/FontWeight&gt;
+    &lt;TextAlign&gt;Left&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;MasterValues&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;None&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Transparent&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;7pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;400&lt;/FontWeight&gt;
+    &lt;TextAlign&gt;Left&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;PageHeaderAddress&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;None&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Transparent&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;10pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;900&lt;/FontWeight&gt;
+    &lt;TextAlign&gt;Left&lt;/TextAlign&gt;
+    &lt;VerticalAlign&gt;Top&lt;/VerticalAlign&gt;
+    &lt;dd:Name&gt;PageHeaderCompanyName&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;None&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;DarkSeaGreen&lt;/BackgroundColor&gt;
+    &lt;dd:Name&gt;Title-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;Title&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;LightCyan&lt;/BackgroundColor&gt;
+    &lt;dd:Name&gt;TableHeading-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TableHeading&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;Solid&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;Color&gt;DarkSeaGreen&lt;/Color&gt;
+    &lt;dd:Name&gt;FooterHeadings-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;FooterHeadings&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;FooterValues-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;FooterValues&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;DetailValue-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;DetailValues&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+    &lt;PaddingRight&gt;10pt&lt;/PaddingRight&gt;
+    &lt;TextAlign&gt;Right&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;DetailNumericValue-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;DetailValue-Copy&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;MasterValues-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;MasterValues&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;PageHeaderAddress-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;PageHeaderAddress&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;PageHeaderCompanyName-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;PageHeaderCompanyName&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+&lt;/dd:StyleSheet&gt;</Data>
+		</EmbeddedStyleSheet>
+	</dd:EmbeddedStyleSheets>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>provider=Microsoft.Jet.OLEDB.4.0;data source=..\\..\\..\\..\\..\\..\\..\\Data\\Seikyu2.mdb;</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="EstimateID">
+					<DataField>EstimateID</DataField>
+				</Field>
+				<Field Name="ProductName">
+					<DataField>ProductName</DataField>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price</DataField>
+				</Field>
+				<Field Name="QuantityPerUnit">
+					<DataField>QuantityPerUnit</DataField>
+				</Field>
+				<Field Name="Quantity">
+					<DataField>Quantity</DataField>
+				</Field>
+				<Field Name="Unit">
+					<DataField>Unit</DataField>
+				</Field>
+				<Field Name="ExtendedPrice">
+					<DataField>ExtendedPrice</DataField>
+				</Field>
+				<Field Name="PostalCode">
+					<DataField>PostalCode</DataField>
+				</Field>
+				<Field Name="Address">
+					<DataField>Address</DataField>
+				</Field>
+				<Field Name="BuildingName">
+					<DataField>BuildingName</DataField>
+				</Field>
+				<Field Name="City">
+					<DataField>City</DataField>
+				</Field>
+				<Field Name="State">
+					<DataField>State</DataField>
+				</Field>
+				<Field Name="CompanyName">
+					<DataField>CompanyName</DataField>
+				</Field>
+				<Field Name="CustomerID">
+					<DataField>CustomerID</DataField>
+				</Field>
+				<Field Name="ProductID">
+					<DataField>ProductID</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT Estimate.EstimateID, Products.ProductName, Products.Price, [Quantity] &amp; ' * ' &amp; [Unit] AS QuantityPerUnit,[Quantity], [Unit],  [Quantity]*Products.Price AS ExtendedPrice, Customers.PostalCode, Customers.Address, Customers.BuildingName, Customers.City, Customers.State, Customers.CompanyName, Customers.CustomerID, Products.ProductID FROM (Customers INNER JOIN Estimate ON Customers.CustomerID = Estimate.CustomerID) INNER JOIN Products ON Estimate.ProductID = Products.ProductID ORDER BY Estimate.EstimateID </CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<dd:CollateBy xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">ValueIndex</dd:CollateBy>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Theme1.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+	<dd:ReportStyleSheet xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<StyleSheetSource>Embedded</StyleSheetSource>
+		<StyleSheetValue>BaseStyle</StyleSheetValue>
+	</dd:ReportStyleSheet>
+</Report>

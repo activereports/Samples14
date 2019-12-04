@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="7200" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215" />
+    <Section Type="Detail" Name="Detail" Height="508" BackStyle="1" BackColor="8421616" KeepTogether="1">
+      <Control Type="AR.Field" Name="txtProductName" DataField="ProductName" BorderBottomStyle="1" Left="89.28" Top="86.4" Width="3600" Height="360" Text="ProductName" Style="vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtUnitPrice" DataField="UnitPrice" BorderBottomStyle="1" Left="3689.28" Top="86.4" Width="1800" Height="360" Text="UnitPrice" OutputFormat="$#,##0" Style="vertical-align: middle" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Public Sub Detail_Format()
+	Detail.AddBookmark(CType(rpt.ParentReport.Sections("Detail").Controls("txtCategoryName"), TextBox).Text + "\" + txtProductName.Text)
+End Sub
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

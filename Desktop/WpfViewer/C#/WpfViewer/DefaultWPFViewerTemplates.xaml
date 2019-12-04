@@ -1,0 +1,1007 @@
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:AR="clr-namespace:GrapeCity.ActiveReports.Viewer.Wpf;assembly=GrapeCity.ActiveReports.Viewer.Wpf" xmlns:ViewModel="clr-namespace:GrapeCity.ActiveReports.ViewModel;assembly=GrapeCity.ActiveReports.Viewer.Wpf" xmlns:Converters="clr-namespace:GrapeCity.ActiveReports.Converters;assembly=GrapeCity.ActiveReports.Viewer.Wpf" xmlns:View="clr-namespace:GrapeCity.ActiveReports.Viewer.Wpf.View;assembly=GrapeCity.ActiveReports.Viewer.Wpf" xmlns:converters2="clr-namespace:GrapeCity.ActiveReports.Framework.Converters;assembly=GrapeCity.ActiveReports.Viewer.Wpf" xmlns:MultiPage="clr-namespace:GrapeCity.ActiveReports.Viewer.Wpf.View.MultiPage;assembly=GrapeCity.ActiveReports.Viewer.Wpf" xmlns:Framework="clr-namespace:GrapeCity.ActiveReports.Framework;assembly=GrapeCity.ActiveReports.Viewer.Wpf" xmlns:fwi="clr-namespace:GrapeCity.ActiveReports.Framework.Implementation;assembly=GrapeCity.ActiveReports.Viewer.Wpf" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:toolkit="clr-namespace:GrapeCity.ActiveReports.Viewer.Wpf.Framework.Toolkit;assembly=GrapeCity.ActiveReports.Viewer.Wpf" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:WPFViewer="clr-namespace:GrapeCity.ActiveReports.Samples.WPFViewer">
+  <WPFViewer:MyCommand x:Key="MyCommand" />
+  <Style TargetType="AR:Viewer">
+    <Setter Property="UseLayoutRounding" Value="True" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="AR:Viewer">
+          <Grid>
+            <Grid.Resources>
+              <AR:LocalResources x:Key="res" />
+              <!-- common settings -->
+              <!-- TODO extract common settings to separate XAML with dictionary-->
+              <Style x:Key="ViewerControlBorder" TargetType="Border">
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="CornerRadius" Value="2" />
+                <Setter Property="BorderBrush" Value="{x:Static SystemColors.ControlBrush}" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="Margin" Value="0,0,0,3" />
+              </Style>
+              <!-- value converters -->
+              <ViewModel:VisibilityConverter x:Key="VisibilityConverter" />
+              <Converters:ResourceImageConverter x:Key="ResourceImageConverter" />
+              <Converters:WaitToCursorConverter x:Key="WaitToCursorConverter" />
+            </Grid.Resources>
+            <Border x:Name="ViewerBorder" Style="{StaticResource ViewerControlBorder}" Cursor="{Binding ShowWaitMessage, Converter={StaticResource WaitToCursorConverter}}">
+              <Grid>
+                <DockPanel>
+                  <!-- main toolbar-->
+                  <View:MainToolbar x:Name="Toolbar" DockPanel.Dock="Top" DataContext="{Binding Toolbar}" />
+                  <!-- sidebar -->
+                  <TabControl x:Name="Sidebar" DockPanel.Dock="Left" AutomationProperties.AutomationId="SidebarTab" Visibility="{Binding SidebarCollapsed, Mode=OneWay, Converter={StaticResource VisibilityConverter}, ConverterParameter=Collapsed}" Width="{Binding SidebarWidth, Mode=TwoWay}" MinWidth="200" TabStripPlacement="Bottom" SelectedIndex="{Binding Sidebar.ActiveTabIndex, Mode=TwoWay}" BorderThickness="0">
+                    <TabControl.Resources>
+                      <Style TargetType="TabItem">
+                        <Setter Property="Template">
+                          <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                              <Border x:Name="Border" BorderThickness="1,1,1,1" BorderBrush="Transparent" Margin="0,3,7,0">
+                                <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="2,2,2,2" RecognizesAccessKey="True" />
+                              </Border>
+                              <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                  <Setter Property="Panel.ZIndex" Value="100" />
+                                  <Setter TargetName="Border" Property="BorderBrush" Value="CornflowerBlue" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True" SourceName="ContentSite">
+                                  <Setter TargetName="Border" Property="Background" Value="LightBlue" />
+                                </Trigger>
+                              </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                          </Setter.Value>
+                        </Setter>
+                      </Style>
+                      <Style x:Key="TabButtonImage" TargetType="Image">
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                        <Setter Property="Width" Value="16" />
+                        <Setter Property="Height" Value="16" />
+                        <Setter Property="FlowDirection" Value="LeftToRight" />
+                        <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant" />
+                      </Style>
+                      <Style TargetType="GroupBox">
+                        <Setter Property="Template">
+                          <Setter.Value>
+                            <ControlTemplate TargetType="GroupBox">
+                              <Grid>
+                                <Grid.RowDefinitions>
+                                  <RowDefinition Height="Auto" />
+                                  <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label Foreground="Black" Background="#25A0DA">
+                                  <ContentPresenter ContentSource="Header" />
+                                </Label>
+                                <ContentPresenter Grid.Row="1" />
+                              </Grid>
+                            </ControlTemplate>
+                          </Setter.Value>
+                        </Setter>
+                      </Style>
+                    </TabControl.Resources>
+                    <!-- thumbnails tab -->
+                    <TabItem Visibility="{Binding Sidebar.ThumbnailPanelVisible, Converter={StaticResource VisibilityConverter}}" IsEnabled="{Binding Sidebar.ThumbnailPanelEnabled}">
+                      <GroupBox Header="{Binding Sidebar.ThumbnailsPane.Text}" AutomationProperties.AutomationId="PageThumbnailsTab">
+                        <View:ThumbnailPanel x:Name="ThumbnailPanel" DataContext="{Binding Sidebar.ThumbnailsPane}" Grid.Row="1" />
+                      </GroupBox>
+                      <TabItem.Header>
+                        <Image Style="{StaticResource TabButtonImage}" AutomationProperties.AutomationId="ThumbnailsTabIconButton" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.ThumbnailsPanel}" ToolTip="{Binding Source={StaticResource res}, Path=Resources.ThumbnailsPanel_ToolTip}" />
+                      </TabItem.Header>
+                    </TabItem>
+                    <!-- TOC tab -->
+                    <TabItem Visibility="{Binding Sidebar.TocPanelVisible, Converter={StaticResource VisibilityConverter}}" IsEnabled="{Binding Sidebar.TocPanelEnabled}">
+                      <GroupBox Header="{Binding Sidebar.Toc.Text}" AutomationProperties.AutomationId="TOCTab">
+                        <View:TocPanel x:Name="TocPanel" DataContext="{Binding Sidebar.Toc}" Grid.Row="1" />
+                      </GroupBox>
+                      <TabItem.Header>
+                        <Image Style="{StaticResource TabButtonImage}" AutomationProperties.AutomationId="TOCTabIconButton" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.Bookmarpanel}" ToolTip="{Binding Source={StaticResource res}, Path=Resources.DocumentMapPanel_ToolTip}" />
+                      </TabItem.Header>
+                    </TabItem>
+                    <!-- search tab -->
+                    <TabItem Visibility="{Binding Sidebar.SearchPanelVisible, Converter={StaticResource VisibilityConverter}}" IsEnabled="{Binding Sidebar.SearchPanelEnabled}">
+                      <GroupBox Header="{Binding Sidebar.SearchPane.Text}" AutomationProperties.AutomationId="SearchResultsTab">
+                        <View:SearchPanel DataContext="{Binding Sidebar.SearchPane}" Grid.Row="1" />
+                      </GroupBox>
+                      <TabItem.Header>
+                        <Image Style="{StaticResource TabButtonImage}" AutomationProperties.AutomationId="SearchResultsTabIconButton" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.FindResultsPanel}" ToolTip="{Binding Source={StaticResource res}, Path=Resources.SearchPanel_ToolTip}" />
+                      </TabItem.Header>
+                    </TabItem>
+                    <!-- Parameters tab -->
+                    <TabItem Visibility="{Binding Sidebar.ParamsPanelVisible, Converter={StaticResource VisibilityConverter}}" IsEnabled="{Binding Sidebar.ParamsPanelEnabled}">
+                      <GroupBox Header="{Binding Sidebar.ParamsViewModel.Text}" AutomationProperties.AutomationId="ParametersTab">
+                        <View:ParametersPanel DataContext="{Binding Sidebar.ParamsViewModel}" />
+                      </GroupBox>
+                      <TabItem.Header>
+                        <Image Style="{StaticResource TabButtonImage}" AutomationProperties.AutomationId="ParametersTabIconButton" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.ParameterPanel}" ToolTip="{Binding Source={StaticResource res}, Path=Resources.ParametersPanel_ToolTip}" />
+                      </TabItem.Header>
+                    </TabItem>
+                  </TabControl>
+                  <!-- ... with its splitter -->
+                  <View:DockSplitter Visibility="{Binding SidebarCollapsed, Mode=OneWay, Converter={StaticResource VisibilityConverter}, ConverterParameter=Collapsed}" />
+                  <!-- sliding error pane -->
+                  <View:ErrorPanel DataContext="{Binding ErrorPane}" DockPanel.Dock="Top" />
+                  <Grid x:Name="ReportGrid" Row="2">
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="0" x:Name="SecondaryViewRow" />
+                      <RowDefinition Height="Auto" />
+                      <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <!-- report view -->
+                    <View:ReportViewer x:Name="SecondaryView" Grid.Row="0" DataContext="{Binding SecondaryReportPane}"></View:ReportViewer>
+                    <View:LoadingReportBanner Grid.Row="0" Visibility="{Binding ShowWaitMessage, Mode=OneWay, Converter={StaticResource VisibilityConverter}}" />
+                    <GridSplitter x:Name="ViewSplitter" Grid.Row="1" Height="4" ResizeDirection="Rows" HorizontalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />
+                    <View:ReportViewer x:Name="PrimaryView" Grid.Row="2" DataContext="{Binding PrimaryReportPane}"></View:ReportViewer>
+                    <View:LoadingReportBanner Grid.Row="2" Visibility="{Binding ShowWaitMessage, Mode=OneWay, Converter={StaticResource VisibilityConverter}}" />
+                  </Grid>
+                  <!-- floating message please wait -->
+                </DockPanel>
+              </Grid>
+            </Border>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:DockSplitter">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:DockSplitter">
+          <UserControl>
+            <Grid x:Name="LayoutRoot" Background="{x:Static SystemColors.ControlBrush}">
+              <Line X1="0" X2="0" Width="1" Height="10" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="Black" Y2="10" Name="VLine" AutomationProperties.AutomationId="VerticalDockSplitterLine" />
+              <Line X1="0" X2="10" Width="10" Height="1" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="Black" Y2="0" Name="HLine" AutomationProperties.AutomationId="HorisontalDockSplitterLine" />
+            </Grid>
+          </UserControl>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:ErrorPanel">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:ErrorPanel">
+          <Grid>
+            <Grid.Resources>
+              <!-- globals -->
+              <AR:LocalResources x:Key="res" />
+              <Converters:ResourceImageConverter x:Key="ResourceImageConverter" />
+              <Converters:ErrorInfoIconConverter x:Key="ErrorInfoIconConverter" />
+              <converters2:ExceptionInfoConverter x:Key="ExceptionInfoConverter" />
+              <converters2:ExceptionDetailsConverter x:Key="ExceptionDetailsConverter" />
+              <Converters:CommandConverter x:Key="CommandConverter" />
+              <Converters:ErrorInfoCollectionConverter x:Key="ErrorInfoCollectionConverter" />
+              <ViewModel:VisibilityConverter x:Key="VisibilityConverter" />
+              <!-- sliding panels -->
+              <Style x:Key="SlidingPanelBorder" TargetType="Border">
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="CornerRadius" Value="2" />
+                <Setter Property="Background" Value="LightGray" />
+                <Setter Property="BorderBrush" Value="DarkGray" />
+                <Setter Property="Padding" Value="3" />
+              </Style>
+              <Style x:Key="SlidingPanelButton" TargetType="ButtonBase">
+                <Setter Property="Margin" Value="4,0" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+              </Style>
+              <!-- sliding panels -->
+              <Style x:Key="CloseButton" TargetType="Button">
+                <Setter Property="Template">
+                  <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                      <Button Command="{TemplateBinding Command}" Margin="0" Padding="0" VerticalAlignment="Center" Height="22">
+                        <Border Margin="4,0" MaxWidth="14" CornerRadius="1">
+                          <Image Stretch="None" RenderOptions.BitmapScalingMode="Fant" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.closeerror}" />
+                        </Border>
+                      </Button>
+                    </ControlTemplate>
+                  </Setter.Value>
+                </Setter>
+              </Style>
+              <Style x:Key="ErrorMessageView" TargetType="ScrollViewer">
+                <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+                <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="DarkGray" />
+                <Setter Property="Background" Value="White" />
+              </Style>
+              <Style x:Key="ErrorMessageTreeView" TargetType="TreeView">
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="Background" Value="White" />
+              </Style>
+              <Converters:CommandAdapter x:Key="HideDialog" Command="{Binding HideDialog}" />
+            </Grid.Resources>
+            <Grid.InputBindings>
+              <KeyBinding Key="Escape" Command="{StaticResource HideDialog}" />
+            </Grid.InputBindings>
+            <Border DockPanel.Dock="Top" Style="{StaticResource SlidingPanelBorder}" Visibility="{Binding IsPanelVisible, Converter={StaticResource VisibilityConverter}}">
+              <Border.Resources>
+                <AR:LocalResources x:Key="res" />
+                <Converters:ResourceImageConverter x:Key="ResourceImageConverter" />
+              </Border.Resources>
+              <Grid>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <DockPanel Grid.Row="0">
+                  <Image Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.Attention}" Height="16" Margin="4,0" DockPanel.Dock="Left" Stretch="None" RenderOptions.BitmapScalingMode="Fant"></Image>
+                  <Button DockPanel.Dock="Right" Command="{Binding HidePanel, Converter={StaticResource CommandConverter}}" Style="{StaticResource CloseButton}" AutomationProperties.AutomationId="HideErrorPanelButton" />
+                  <Button Content="{Binding Source={StaticResource res}, Path=Resources.ErrorPanel_ShowDetailsButton}" Command="{Binding ShowDialog, Converter={StaticResource CommandConverter}}" DockPanel.Dock="Right" Style="{StaticResource SlidingPanelButton}" Visibility="{Binding IsDialogVisibleInvert, Converter={StaticResource VisibilityConverter}}" AutomationProperties.AutomationId="ShowDetailsErrorPanelButton" />
+                  <Button x:Name="HideDetailsButton" Content="{Binding Source={StaticResource res}, Path=Resources.ErrorPanel_HideDetailsButton}" Command="{Binding HideDialog, Converter={StaticResource CommandConverter}}" DockPanel.Dock="Right" Style="{StaticResource SlidingPanelButton}" Visibility="{Binding IsDialogVisible, Converter={StaticResource VisibilityConverter}}" AutomationProperties.AutomationId="HideDetailsErrorPanelButton" />
+                  <TextBlock Text="{Binding MessageText}" VerticalAlignment="Center" TextWrapping="NoWrap" TextTrimming="WordEllipsis" AutomationProperties.AutomationId="ErrorMessageTextErrorPanel" />
+                </DockPanel>
+                <Border Grid.Row="1" Visibility="{Binding IsDialogVisible, Converter={StaticResource VisibilityConverter}}" Height="200" Style="{StaticResource SlidingPanelBorder}">
+                  <DockPanel>
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+                      <Button Content="{Binding Source={StaticResource res}, Path=Resources.ErrorPanel_ClearAllButton}" Command="{Binding ClearErrors, Converter={StaticResource CommandConverter}}" Grid.Column="1" Padding="30,2" Margin="4" AutomationProperties.AutomationId="ClearAllErrorPanelButton" />
+                      <Button Content="{Binding Source={StaticResource res}, Path=Resources.ErrorPanel_CopyButton}" Command="{Binding Copy, Converter={StaticResource CommandConverter}}" Grid.Column="1" Padding="10,2" Margin="4" AutomationProperties.AutomationId="CopyErrorPanelButton" />
+                    </StackPanel>
+                    <Grid>
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="Auto " />
+                        <ColumnDefinition Width="*" />
+                      </Grid.ColumnDefinitions>
+                      <ScrollViewer Style="{StaticResource ErrorMessageView}" Grid.Column="0">
+                        <TreeView x:Name="ErrorsTree" ItemsSource="{Binding Errors, Converter={StaticResource ErrorInfoCollectionConverter}}" Style="{StaticResource ErrorMessageTreeView}">
+                          <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Exception}">
+                              <StackPanel Orientation="Horizontal">
+                                <Image RenderOptions.BitmapScalingMode="Fant" Source="{Binding Severity, Converter={StaticResource ErrorInfoIconConverter}}" HorizontalAlignment="Left" Margin="0,0,6,0" />
+                                <TextBlock Text="{Binding Exception, Converter={StaticResource ExceptionInfoConverter}}" />
+                              </StackPanel>
+                            </HierarchicalDataTemplate>
+                          </TreeView.ItemTemplate>
+                        </TreeView>
+                      </ScrollViewer>
+                      <GridSplitter Grid.Column="1" ResizeDirection="Columns" Height="Auto" Width="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                      <ScrollViewer x:Name="ExtendedInfoView" Style="{StaticResource ErrorMessageView}" Grid.Column="2">
+                        <TextBlock Text="{Binding ElementName=ErrorsTree,Path=SelectedItem.Exception, Converter={StaticResource ExceptionDetailsConverter}}" />
+                      </ScrollViewer>
+                    </Grid>
+                  </DockPanel>
+                </Border>
+              </Grid>
+            </Border>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:ReportViewer">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:ReportViewer">
+          <Grid>
+            <Grid.Resources>
+              <Converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
+              <ViewModel:VisibilityConverter x:Key="VisibilityConverter" />
+              <Converters:ViewTypeVisibilityConverter x:Key="ViewTypeVisibilityConverter" />
+            </Grid.Resources>
+            <!-- single page view container -->
+            <View:SinglePageViewer x:Name="SinglePageViewer" DataContext="{Binding SinglePageViewModel}" PageView="{Binding PageView}" Visibility="{Binding ViewType, Converter={StaticResource ViewTypeVisibilityConverter}, ConverterParameter=SinglePage}" AutomationProperties.AutomationId="SinglePageViewer" />
+		<!-- multi page view container -->
+		<View:MultiPageViewer x:Name="MultiPageViewer"
+			DataContext="{Binding MultiPageViewModel}"
+			Visibility="{Binding ViewType, Converter={StaticResource ViewTypeVisibilityConverter}, ConverterParameter=Continuous}"
+			AutomationProperties.AutomationId="MultiPageViewer"/>
+		<Border Background="{Binding GrayedAreaColor, Converter={StaticResource ColorToBrushConverter}}" Visibility="{Binding IsActive, Converter={StaticResource VisibilityConverter}, ConverterParameter=Collapsed}" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsHitTestVisible="False" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <!-- Zoomable view template -->
+  <Style TargetType="View:ZoomView">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:ZoomView">
+          <ScrollViewer x:Name="ScrollView">
+            <Grid x:Name="Grid" HorizontalAlignment="Center" VerticalAlignment="Center">
+              <ContentPresenter x:Name="Presenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+            </Grid>
+          </ScrollViewer>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <!-- single page view container -->
+  <Style TargetType="View:SinglePageViewer">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:SinglePageViewer">
+          <Grid Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}">
+            <Grid.Resources>
+              <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+              <AR:LocalResources x:Key="res" />
+              <Converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
+              <Converters:PageViewToCanvasConverter x:Key="PageViewToCanvasConverter" />
+              <Converters:ResourceImageConverter x:Key="ResourceImageConverter" />
+              <Converters:ViewTypeBooleanConverter x:Key="ViewTypeBooleanConverter" />
+            </Grid.Resources>
+            <View:ZoomView x:Name="ZoomView" HorizontalPadding="16" VerticalPadding="16" ItemSize="{Binding PageViewSize, RelativeSource={RelativeSource AncestorType=View:SinglePageViewer}}" Zoom="{Binding Zoom, Mode=TwoWay}" IsEnabled="{Binding ViewType, Converter={StaticResource ViewTypeBooleanConverter}, ConverterParameter=SinglePage}" ZoomMode="{Binding ZoomMode, Mode=OneWay}">
+              <Grid>
+                <Border x:Name="PageBorder" BorderBrush="Black" BorderThickness="{Binding PageBorderThickness, RelativeSource={RelativeSource AncestorType=View:SinglePageViewer}}" Visibility="{Binding IsUIEnabled, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}" Background="{Binding PaperColor, Converter={StaticResource ColorToBrushConverter}}" VerticalAlignment="Center" HorizontalAlignment="Center" AutomationProperties.AutomationId="SinglePagePageContainer">
+                  <Grid>
+                    <ContentControl x:Name="Content">
+                      <ContentControl.Content>
+                        <MultiBinding Converter="{StaticResource PageViewToCanvasConverter}">
+                          <Binding Path="PageView"></Binding>
+                          <Binding Path="RenderContext" RelativeSource="{RelativeSource AncestorType=View:SinglePageViewer}"></Binding>
+                          <Binding />
+                        </MultiBinding>
+                      </ContentControl.Content>
+                    </ContentControl>
+                    <ContentControl x:Name="HighlightPage" />
+                  </Grid>
+                </Border>
+              </Grid>
+            </View:ZoomView>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:ThumbnailView">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:ThumbnailView">
+          <Border x:Name="ThumbnailBorder" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Border.BorderBrush>
+              <SolidColorBrush Color="Transparent" />
+            </Border.BorderBrush>
+            <Border.Background>
+              <SolidColorBrush Color="Transparent" />
+            </Border.Background>
+            <Border.Style>
+              <Style>
+                <Style.Triggers>
+                  <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=View:ThumbnailView}}" Value="True">
+                    <DataTrigger.EnterActions>
+                      <BeginStoryboard>
+                        <Storyboard>
+                          <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{x:Static SystemColors.HighlightColor}" Duration="0:0:0.1" />
+                          <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{x:Static SystemColors.HighlightColor}" Duration="0:0:0.1" />
+                        </Storyboard>
+                      </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <DataTrigger.ExitActions>
+                      <BeginStoryboard>
+                        <Storyboard>
+                          <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="Transparent" Duration="0:0:0.1" />
+                          <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="Transparent" Duration="0:0:0.1" />
+                        </Storyboard>
+                      </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                  </DataTrigger>
+                </Style.Triggers>
+              </Style>
+            </Border.Style>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+              <Border Background="{Binding PaperBrush, RelativeSource={RelativeSource AncestorType=View:ThumbnailView}}" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black">
+                <Image HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="{Binding Image}" SnapsToDevicePixels="True" AutomationProperties.AutomationId="ThumbnailImage"></Image>
+              </Border>
+              <TextBlock TextAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="14" Text="{Binding Caption}">
+                <TextBlock.Foreground>
+                  <SolidColorBrush Color="{x:Static SystemColors.ControlTextColor}" />
+                </TextBlock.Foreground>
+                <TextBlock.Style>
+                  <Style>
+                    <Style.Triggers>
+                      <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=View:ThumbnailView}}" Value="True">
+                        <DataTrigger.EnterActions>
+                          <BeginStoryboard>
+                            <Storyboard>
+                              <ColorAnimation Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="{x:Static SystemColors.HighlightTextColor}" Duration="0:0:0.1" />
+                            </Storyboard>
+                          </BeginStoryboard>
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                          <BeginStoryboard>
+                            <Storyboard>
+                              <ColorAnimation Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="{x:Static SystemColors.ControlTextColor}" Duration="0:0:0.1" />
+                            </Storyboard>
+                          </BeginStoryboard>
+                        </DataTrigger.ExitActions>
+                      </DataTrigger>
+                    </Style.Triggers>
+                  </Style>
+                </TextBlock.Style>
+              </TextBlock>
+            </StackPanel>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <!-- Thumbnail panel template -->
+  <Style TargetType="View:ThumbnailPanel">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:ThumbnailPanel">
+          <DockPanel>
+            <DockPanel.Resources>
+              <AR:LocalResources x:Key="res" />
+              <Converters:ResourceImageConverter x:Key="ResourceImageConverter" />
+              <Converters:CommandConverter x:Key="CommandConverter" />
+              <Converters:ThumbnailItemCollectionConverter x:Key="ThumbnailItemCollectionConverter" />
+              <Converters:SizeConverter x:Key="SizeConverter" />
+              <Converters:ColorToBrushConverter x:Key="ColorToBrushConverter" />
+              <Style x:Key="ToolButtonImage" TargetType="Image">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant" />
+                <Setter Property="FlowDirection" Value="LeftToRight" />
+              </Style>
+              <Style x:Key="ToolButton" TargetType="ButtonBase">
+                <Style.Triggers>
+                  <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.5" />
+                  </Trigger>
+                </Style.Triggers>
+                <Setter Property="Margin" Value="1" />
+                <Setter Property="Width" Value="24" />
+                <Setter Property="Height" Value="24" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+                <Setter Property="Background" Value="Transparent" />
+              </Style>
+            </DockPanel.Resources>
+            <WrapPanel Orientation="Horizontal" DockPanel.Dock="Top">
+              <Button Command="{Binding ZoomOut, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="ZoomOutSidebarButton">
+                <Image Style="{StaticResource ToolButtonImage}" Margin="1,0" SnapsToDevicePixels="True" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_zoomout}" />
+              </Button>
+              <Button Command="{Binding ZoomIn, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="ZoomInSidebarButton">
+                <Image Style="{StaticResource ToolButtonImage}" Margin="1,0" SnapsToDevicePixels="True" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_zoomin}" />
+              </Button>
+            </WrapPanel>
+            <ScrollViewer Name="Scroll" HorizontalScrollBarVisibility="Auto" CanContentScroll="True" VerticalScrollBarVisibility="Auto" IsDeferredScrollingEnabled="True">
+              <Framework:Setup.Behaviors>
+                <fwi:ThumbnailsNavigationBehavior />
+              </Framework:Setup.Behaviors>
+              <MultiPage:VirtualViewsControl x:Name="Views" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" SelectedIndex="{Binding CurrentPageIndex, Mode=TwoWay}" Zoom="{Binding ZoomValue}" ItemSize="{Binding MaxPageSize, Converter={StaticResource SizeConverter}}" HorizontalPadding="10" VerticalPadding="24" ViewMode="Wrap" Pages="{Binding Pages, Converter={StaticResource ThumbnailItemCollectionConverter}}">
+                <MultiPage:VirtualViewsControl.ItemTemplate>
+                  <ControlTemplate>
+                    <View:ThumbnailView Margin="3" PaperBrush="{Binding DataContext.PaperColor, Converter={StaticResource ColorToBrushConverter}, RelativeSource={RelativeSource AncestorType=MultiPage:VirtualViewsControl}}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></View:ThumbnailView>
+                  </ControlTemplate>
+                </MultiPage:VirtualViewsControl.ItemTemplate>
+              </MultiPage:VirtualViewsControl>
+            </ScrollViewer>
+          </DockPanel>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:TocPanel">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:TocPanel">
+          <TreeView x:Name="TreeView" ItemsSource="{Binding Bookmarks.Nodes, Mode=OneWay}" fwi:TreeViewHelper.SelectedItem="{Binding SelectedNode, Mode=TwoWay}">
+            <Framework:Setup.Behaviors>
+              <fwi:MapTreeSelectedItem />
+            </Framework:Setup.Behaviors>
+            <TreeView.ItemContainerStyle>
+              <Style>
+                <Setter Property="TreeViewItem.IsExpanded" Value="{Binding Path=DataContext.Expanded, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=View:TocPanel }, Mode=OneWay}" />
+              </Style>
+            </TreeView.ItemContainerStyle>
+            <TreeView.ItemTemplate>
+              <HierarchicalDataTemplate DataType="model:TocTreeNode" ItemsSource="{Binding Nodes}">
+                <TextBlock Text="{Binding Path=Bookmark.Name}" />
+              </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+          </TreeView>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:SearchPanel">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:SearchPanel">
+          <DockPanel Margin="4,0" LastChildFill="True">
+            <DockPanel.Resources>
+              <AR:LocalResources x:Key="res" />
+              <Converters:CommandConverter x:Key="CommandConverter" />
+              <Converters:SearchResultCollectionConverter x:Key="SearchResultCollectionConverter" />
+              <Converters:CommandAdapter x:Key="FindAll" Command="{Binding FindAll}" />
+              <Converters:FindStatusToMessageVisibilityConverter x:Key="FindStatusToMessageVisibilityConverter" />
+            </DockPanel.Resources>
+            <TextBlock DockPanel.Dock="Top" Text="{Binding Source={StaticResource res}, Path=Resources.SearchPanel_SearchQuestion}" TextWrapping="Wrap" />
+            <TextBox DockPanel.Dock="Top" Text="{Binding SearchString, Mode=TwoWay}" AutomationProperties.AutomationId="SearchQueryTextBox" VerticalAlignment="Top" TextWrapping="NoWrap" Height="24">
+              <Framework:Setup.Behaviors>
+                <fwi:UpdateSourceOnKeyPress UpdateOn="AnyKey" />
+              </Framework:Setup.Behaviors>
+              <TextBox.InputBindings>
+                <KeyBinding Key="Enter" Command="{StaticResource FindAll}" />
+              </TextBox.InputBindings>
+            </TextBox>
+            <TextBlock DockPanel.Dock="Top" Text="{Binding Source={StaticResource res}, Path=Resources.SearchPanel_AdditionalCriteria}" TextWrapping="Wrap" Margin="0,10,0,0" />
+            <CheckBox Content="{Binding Source={StaticResource res}, Path=Resources.SearchPanel_WhileWord}" IsChecked="{Binding MatchWholeWord, Mode=TwoWay}" DockPanel.Dock="Top" Margin="4" AutomationProperties.AutomationId="WholeWordOnlyCheckBox"></CheckBox>
+            <CheckBox Content="{Binding Source={StaticResource res}, Path=Resources.SearchPanel_MatchCase}" IsChecked="{Binding MatchCase, Mode=TwoWay}" DockPanel.Dock="Top" Margin="4" AutomationProperties.AutomationId="MatchCaseCheckBox"></CheckBox>
+            <TextBlock DockPanel.Dock="Top" Text="{Binding Source={StaticResource res}, Path=Resources.SearchPanel_FindResults}" TextWrapping="Wrap" />
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" FlowDirection="RightToLeft">
+              <Button Content="{Binding Source={StaticResource res}, Path=Resources.SearchPanel_ClearButton}" Command="{Binding Clear, Converter={StaticResource CommandConverter}}" Margin="4" Width="64" AutomationProperties.AutomationId="ClearButton" />
+              <Button Content="{Binding Source={StaticResource res}, Path=Resources.SearchPanel_SearchButton}" Command="{StaticResource FindAll}" Margin="4" Width="64" AutomationProperties.AutomationId="SearchButton"></Button>
+            </StackPanel>
+            <Grid>
+              <ListBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding SearchResults, Converter={StaticResource SearchResultCollectionConverter}}" DisplayMemberPath="Text" SelectedIndex="{Binding CurrentSearchResultIndex, Mode=TwoWay}" AutomationProperties.AutomationId="SearchResultsList" />
+              <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="{Binding Source={StaticResource res}, Path=Resources.SearchPane_NothingFound}" Visibility="{Binding Status, Converter={StaticResource FindStatusToMessageVisibilityConverter}, Mode=OneWay}" Padding="4,4,4,4" />
+            </Grid>
+          </DockPanel>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:ParametersPanel">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:ParametersPanel">
+          <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <ScrollViewer.Resources>
+              <AR:LocalResources x:Key="res" />
+              <Converters:ParameterTypeToVisibilityConverter x:Key="ParameterTypeToVisibilityConverter" />
+              <Converters:ParameterViewToVisibilityConverter x:Key="ParameterViewToVisibilityConverter" />
+              <Converters:NegateConverter x:Key="NegateConverter" />
+              <Converters:CommandAdapter x:Key="RefreshReport" Command="{Binding RefreshReport}" />
+            </ScrollViewer.Resources>
+            <StackPanel>
+              <ItemsControl ItemsSource="{Binding Params}" MinWidth="170">
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate>
+                    <StackPanel Orientation="vertical">
+                      <!-- caption-->
+                      <TextBlock TextWrapping="Wrap" Text="{Binding Prompt, Mode=OneWay}" />
+                      <!-- parameter editor -->
+                      <View:MultivalueParameterEditor Visibility="{Binding ., Mode=OneWay, Converter={StaticResource ParameterViewToVisibilityConverter}, ConverterParameter=multivalueEditor}" />
+                      <View:MultilineParameterEditor Visibility="{Binding ., Mode=OneWay, Converter={StaticResource ParameterViewToVisibilityConverter},  ConverterParameter=multilineEditor}" />
+                      <View:ListParameterEditor Visibility="{Binding ., Mode=OneWay, Converter={StaticResource ParameterViewToVisibilityConverter}, ConverterParameter=comboBoxEditor}" />
+                      <StackPanel Orientation="Vertical" Visibility="{Binding ., Mode=OneWay, Converter={StaticResource ParameterViewToVisibilityConverter}, ConverterParameter=simpleEditor}">
+                        <View:TextBoxParameterEditor Visibility="{Binding ParameterType, Mode=OneWay, Converter={StaticResource ParameterTypeToVisibilityConverter},  ConverterParameter=textEditor}" />
+                        <View:BooleanParameterEditor Visibility="{Binding ParameterType, Mode=OneWay, Converter={StaticResource ParameterTypeToVisibilityConverter}, ConverterParameter=booleanEditor}" />
+                        <View:DateParameterEditor Visibility="{Binding ParameterType, Mode=OneWay, Converter={StaticResource ParameterTypeToVisibilityConverter}, ConverterParameter=dateEditor}" />
+                      </StackPanel>
+                      <!-- error text -->
+                      <TextBlock x:Name="errorTextBox" TextWrapping="Wrap" Text="{Binding ErrorText, Mode=OneWay}" Margin="0,5,0,0" FontSize="10" Foreground="Red" />
+                    </StackPanel>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.Template>
+                  <ControlTemplate>
+                    <StackPanel>
+                      <ItemsPresenter />
+                    </StackPanel>
+                  </ControlTemplate>
+                </ItemsControl.Template>
+              </ItemsControl>
+              <Button x:Name="ViewReportButton" AutomationProperties.AutomationId="ViewReportButton" Command="{StaticResource RefreshReport}" HorizontalAlignment="Right" Margin="0,8,0,0" Padding="8,2,8,2" Content="{Binding Source={StaticResource res}, Path=Resources.ParametersPanel_ViewReport}" />
+              <!-- invisible button for focusing -->
+              <Button x:Name="FocusCatcher" Height="0" Width="0" Background="Transparent"></Button>
+            </StackPanel>
+          </ScrollViewer>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:BooleanParameterEditor">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:BooleanParameterEditor">
+          <UserControl IsEnabled="{Binding Enabled, Mode=OneWay}">
+            <UserControl.Resources>
+              <AR:LocalResources x:Key="res" />
+              <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+              <Converters:NegateConverter x:Key="Negate" />
+            </UserControl.Resources>
+            <DockPanel>
+              <RadioButton Margin="0,2,0,2" Content="{Binding Source={StaticResource res}, Path=Resources.ParametersPanel_True}" IsChecked="{Binding Value, Mode=TwoWay}" IsEnabled="{Binding IsValueNull, Mode=OneWay, Converter={StaticResource Negate}}" AutomationProperties.AutomationId="TrueParametersRadioButton" />
+              <RadioButton Margin="5,2,0,2" Content="{Binding Source={StaticResource res}, Path=Resources.ParametersPanel_False}" IsChecked="{Binding Value, Mode=TwoWay, Converter={StaticResource Negate}}" IsEnabled="{Binding IsValueNull, Mode=OneWay, Converter={StaticResource Negate}}" AutomationProperties.AutomationId="FalseParametersRadioButton" />
+              <CheckBox HorizontalAlignment="Right" Margin="5,2,5,2" Content="{Binding Source={StaticResource res}, Path=Resources.ParametersPanel_Null}" IsChecked="{Binding IsValueNull, Mode=TwoWay}" Visibility="{Binding Nullable, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}" AutomationProperties.AutomationId="NullParametersCheckBox" />
+            </DockPanel>
+          </UserControl>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:DateParameterEditor">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:DateParameterEditor">
+          <UserControl IsEnabled="{Binding Enabled, Mode=OneWay}">
+            <UserControl.Resources>
+              <AR:LocalResources x:Key="res" />
+              <BooleanToVisibilityConverter x:Key="Visibility" />
+              <Converters:NegateConverter x:Key="Negate" />
+            </UserControl.Resources>
+            <DockPanel x:Name="ParentDockPanel">
+              <DatePicker x:Name="DatePicker" Margin="0 5 0 0" SelectedDateFormat="Long" SelectedDate="{Binding Value, Mode=TwoWay}" IsEnabled="{Binding ValueEnabled, Mode=OneWay}" AutomationProperties.AutomationId="DatePicker" />
+              <CheckBox DockPanel.Dock="Right" Margin="5,5,5,0" Content="{Binding Source={StaticResource res}, Path=Resources.ParametersPanel_Null}" IsChecked="{Binding IsValueNull, Mode=TwoWay}" Visibility="{Binding Nullable, Mode=OneWay, Converter={StaticResource Visibility}}" AutomationProperties.AutomationId="NullParametersCheckBox" />
+            </DockPanel>
+          </UserControl>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:ListParameterEditor">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:ListParameterEditor">
+          <UserControl IsEnabled="{Binding Enabled, Mode=OneWay}">
+            <UserControl.Resources>
+              <AR:LocalResources x:Key="res" />
+              <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+              <Converters:NegateConverter x:Key="Negate" />
+            </UserControl.Resources>
+            <DockPanel>
+              <CheckBox DockPanel.Dock="Right" Margin="5,5,5,0" Content="{Binding Source={StaticResource res}, Path=Resources.ParametersPanel_Null}" IsChecked="{Binding IsValueNull, Mode=TwoWay}" Visibility="{Binding Nullable, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+              <ComboBox Margin="0,5,0,0" SelectedValue="{Binding Value, Mode=TwoWay}" ItemsSource="{Binding Options, Mode=OneWay}" DisplayMemberPath="Label" SelectedValuePath="Value" IsEnabled="{Binding ValueEnabled, Mode=OneWay}" AutomationProperties.AutomationId="ParameterCombobox" />
+            </DockPanel>
+          </UserControl>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <!-- copy of TextBoxParameterEditor with a couple extra settings -->
+  <Style TargetType="View:MultilineParameterEditor">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:MultilineParameterEditor">
+          <UserControl IsEnabled="{Binding Enabled, Mode=OneWay}" Height="100">
+            <UserControl.Resources>
+              <AR:LocalResources x:Key="res" />
+              <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+              <Converters:NegateConverter x:Key="Negate" />
+            </UserControl.Resources>
+            <DockPanel>
+              <CheckBox DockPanel.Dock="Right" Margin="5,5,5,0" Content="{Binding Source={StaticResource res}, Path=Resources.ParametersPanel_Null}" IsChecked="{Binding IsValueNull, Mode=TwoWay}" Visibility="{Binding Nullable, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+              <TextBox Margin="0,5,0,0" TextWrapping="Wrap" Text="{Binding StringValue, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" IsEnabled="{Binding IsValueNull, Mode=OneWay, Converter={StaticResource Negate}}" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" AutomationProperties.AutomationId="MultilineParameterTextBox" />
+            </DockPanel>
+          </UserControl>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:MultivalueParameterEditor">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:MultivalueParameterEditor">
+          <UserControl IsEnabled="{Binding Enabled, Mode=OneWay}" MaxHeight="100">
+            <ListBox x:Name="OptionsBox" Margin="0,5,0,0" BorderThickness="1" SelectionMode="Single" ItemsSource="{Binding Options, Mode=OneWay}" AutomationProperties.AutomationId="MultivalueParametersList">
+              <ListBox.ItemTemplate>
+                <DataTemplate>
+                  <CheckBox ToolTip="{Binding Label, Mode=OneWay}" IsChecked="{Binding Selected, Mode=TwoWay}" Content="{Binding Label, Mode=OneWay}" />
+                </DataTemplate>
+              </ListBox.ItemTemplate>
+            </ListBox>
+          </UserControl>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:TextBoxParameterEditor">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:TextBoxParameterEditor">
+          <UserControl IsEnabled="{Binding Enabled, Mode=OneWay}">
+            <UserControl.Resources>
+              <AR:LocalResources x:Key="res" />
+              <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+              <Converters:NegateConverter x:Key="Negate" />
+            </UserControl.Resources>
+            <DockPanel>
+              <CheckBox DockPanel.Dock="Right" Margin="5,5,5,0" Content="{Binding Source={StaticResource res}, Path=Resources.ParametersPanel_Null}" IsChecked="{Binding IsValueNull, Mode=TwoWay}" Visibility="{Binding Nullable, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}" />
+              <TextBox Margin="0,5,0,0" TextWrapping="Wrap" Text="{Binding StringValue, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" IsEnabled="{Binding ValueEnabled}" AutomationProperties.AutomationId="TextBoxParameter" />
+            </DockPanel>
+          </UserControl>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:LoadingReportBanner">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:LoadingReportBanner">
+          <Grid Background="White">
+            <Grid.Resources>
+              <AR:LocalResources x:Key="res" />
+            </Grid.Resources>
+            <!-- floating message please wait -->
+            <Border x:Name="WaitMessageBox" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Background="Transparent">
+              <toolkit:GifImage x:Name="WaitMessageElement" IsHitTestVisible="False" Width="184" Height="204" GifSource="{Binding Source={StaticResource res}, Path=Resources.WaitNotification}"></toolkit:GifImage>
+            </Border>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:MainToolbar">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:MainToolbar">
+          <ToolBarTray IsLocked="True">
+            <ToolBar IsEnabled="{Binding IsUIEnabled, Mode=OneWay}">
+              <ToolBar.Resources>
+                <!-- globals -->
+                <Converters:CommandConverter x:Key="CommandConverter" />
+                <Converters:ResourceImageConverter x:Key="ResourceImageConverter" />
+                <AR:LocalResources x:Key="res" />
+                <ViewModel:VisibilityConverter x:Key="VisibilityConverter" />
+                <!-- Toolbar style -->
+                <Style x:Key="ToolButton" TargetType="ButtonBase">
+                  <Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="False">
+                      <Setter Property="Opacity" Value="0.5" />
+                    </Trigger>
+                  </Style.Triggers>
+                  <Setter Property="Margin" Value="1" />
+                  <Setter Property="Width" Value="22" />
+                  <Setter Property="Height" Value="22" />
+                  <Setter Property="BorderThickness" Value="1" />
+                  <Setter Property="BorderBrush" Value="Transparent" />
+                  <Setter Property="Background" Value="Transparent" />
+                  <Setter Property="ToolTipService.ShowOnDisabled" Value="True" />
+                </Style>
+                <Style x:Key="DropDownButton" TargetType="ToggleButton">
+                  <Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="False">
+                      <Setter Property="Opacity" Value="0.5" />
+                    </Trigger>
+                  </Style.Triggers>
+                  <Setter Property="Margin" Value="1" />
+                  <Setter Property="Width" Value="38" />
+                  <Setter Property="Height" Value="22" />
+                  <Setter Property="BorderThickness" Value="1" />
+                  <Setter Property="BorderBrush" Value="Transparent" />
+                  <Setter Property="Background" Value="Transparent" />
+                  <Setter Property="ToolTipService.ShowOnDisabled" Value="True" />
+                </Style>
+                <Style x:Key="ToolButtonImage" TargetType="Image">
+                  <Setter Property="HorizontalAlignment" Value="Center" />
+                  <Setter Property="VerticalAlignment" Value="Center" />
+                  <Setter Property="Width" Value="16"></Setter>
+                  <Setter Property="Height" Value="16"></Setter>
+                  <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant" />
+                  <Setter Property="FlowDirection" Value="LeftToRight" />
+                </Style>
+                <Style x:Key="PageNumberBox" TargetType="TextBox">
+                  <Setter Property="Margin" Value="4 0" />
+                  <Setter Property="Padding" Value="1" />
+                  <Setter Property="Width" Value="90" />
+                  <Setter Property="HorizontalAlignment" Value="Left" />
+                </Style>
+              </ToolBar.Resources>
+              <!--Sidebar button-->
+              <ToggleButton Name="buttonToggleSidebar" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="ToogleSidebarButton" IsChecked="{Binding SidebarVisible, Mode=TwoWay}" IsEnabled="{Binding IsUIEnabled, Mode=OneWay}" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_ToggleSidebar}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_toc}" />
+              </ToggleButton>
+              <Separator Name="PrintGroupSeparator" />
+              <!--Print button-->
+              <Button Name="PrintButton" Style="{StaticResource ToolButton}" Command="{Binding Print, Converter={StaticResource CommandConverter}}" AutomationProperties.AutomationId="PrintButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_Print}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_print}" />
+              </Button>
+               <!--GalleyMode button-->
+              <ToggleButton Name="GalleyModeButton" IsChecked="{Binding GalleyMode, Mode=OneWay}" Style="{StaticResource ToolButton}" Command="{Binding SetGalleyMode, Converter={StaticResource CommandConverter}}" AutomationProperties.AutomationId="GalleyModeButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_GalleyMode}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_GalleyMode}" />
+              </ToggleButton>
+              <Separator />
+              <!--Find button-->
+              <RadioButton Style="{StaticResource ToolButton}" GroupName="SidebarActivePane" IsEnabled="{Binding IsUIEnabled, Mode=OneWay}" AutomationProperties.AutomationId="ToolBarFindButton" IsChecked="{Binding SidebarSearchPaneActive, Mode=TwoWay}" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_Find}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_search}" />
+              </RadioButton>
+              <!-- zoom commands group -->
+              <Separator Name="ZoomGroupSeparator" />
+              <!--ZoomOut button-->
+              <Button Command="{Binding ZoomOut, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="ZoomOutButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_ZoomOut}">
+                <Image Style="{StaticResource ToolButtonImage}" Margin="1,0" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_zoomout}" />
+              </Button>
+              <!--ZoomIn btn-->
+              <Button Command="{Binding ZoomIn, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="ZoomInButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_ZoomIn}">
+                <Image Style="{StaticResource ToolButtonImage}" Margin="1,0" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_zoomin}" />
+              </Button>
+              <!--Zoom combobox-->
+              <View:ZoomComboBox Value="{Binding ZoomDoubleValue, Mode=TwoWay}" AutomationProperties.AutomationId="ZoomComboBox" ZoomMode="{Binding ZoomMode, Mode=TwoWay}" ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_ZoomValue}" />
+              <!-- /end of zoom commands group -->
+              <Separator />
+              <!--FitWidth btn-->
+              <ToggleButton IsChecked="{Binding IsFitWidth, Mode=TwoWay}" Style="{StaticResource ToolButton}" IsEnabled="{Binding IsUIEnabled, Mode=OneWay}" AutomationProperties.AutomationId="FitPageWidthButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_FitPageWidth}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_fitWidth}" />
+              </ToggleButton>
+              <!--FitPage btn-->
+              <ToggleButton IsChecked="{Binding IsFitPage, Mode=TwoWay}" Style="{StaticResource ToolButton}" IsEnabled="{Binding IsUIEnabled, Mode=OneWay}" AutomationProperties.AutomationId="FitWholePageButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_FitWholePage}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_fitPage}" />
+              </ToggleButton>
+		<Separator/>
+		<RadioButton IsChecked="{Binding IsSinglePage, Mode=TwoWay}"
+			GroupName="ViewType"
+			Style="{StaticResource ToolButton}"
+			IsEnabled="{Binding IsUIEnabled, Mode=OneWay}"
+			AutomationProperties.AutomationId="SinglePageViewButton"
+			ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_SinglePageView}">
+			<Image Style="{StaticResource ToolButtonImage}"
+				Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_singlepage}" />
+		</RadioButton>
+		<RadioButton IsChecked="{Binding IsContinuous, Mode=TwoWay}"
+			GroupName="ViewType"
+			Style="{StaticResource ToolButton}"
+			AutomationProperties.AutomationId="ContinuousViewButton"
+			IsEnabled="{Binding IsUIEnabled, Mode=OneWay}"
+			ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_ContinuousView}">
+			<Image Style="{StaticResource ToolButtonImage}"
+				Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_Continuous}" />
+		</RadioButton>
+		<View:MultipageSelectorButton ButtonStyleKey="{StaticResource DropDownButton}"
+			IsEnabled="{Binding IsUIEnabled, Mode=OneWay}"
+			AutomationProperties.AutomationId="MultiPageViewSelectionButton"
+			ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_MultipageView}">
+			<Image Style="{StaticResource ToolButtonImage}"
+				Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_multipage}" />
+		</View:MultipageSelectorButton>
+              <!-- Page navigation commands -->
+              <Separator Name="PageGroupSeparator" />
+              <!--FirstPage btn-->
+              <Button Command="{Binding GoFirstPage, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="FirstPageButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_FirstPage}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_firstpage}" />
+              </Button>
+              <!--PreviousPage btn-->
+              <Button Command="{Binding GoPreviousPage, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="PreviousPageButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_PreviousPage}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_previouspage}" />
+              </Button>
+              <!--CurrentPage textbox-->
+              <TextBox Name="CurPageTextArea" Style="{StaticResource PageNumberBox}" Text="{Binding CurrentPageAndCount, Mode=TwoWay}" TextAlignment="Center" VerticalAlignment="Center" IsEnabled="{Binding IsUIEnabled, Mode=OneWay}" AutomationProperties.AutomationId="CurrentPageTextBox" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_CurrentPageNumber}">
+                <Framework:Setup.Behaviors>
+                  <fwi:UpdateSourceOnKeyPress UpdateOn="EnterKey" />
+                </Framework:Setup.Behaviors>
+              </TextBox>
+              <!--NextPage btn-->
+              <Button Command="{Binding GoNextPage, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="NextPageButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_NextPage}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_nextpage}" />
+              </Button>
+              <!--LastPage btn-->
+              <Button Command="{Binding GoLastPage, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="LastPageButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_LastPage}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_lastpage}" />
+              </Button>
+              <!-- /end of page navigation commands -->
+              <Separator Name="NavigationGroupSeparator" />
+              <!--HistoryBack btn-->
+              <Button Command="{Binding GoHistoryBack, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="HistoryBackButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_Backward}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_Backward}" />
+              </Button>
+              <!--HistoryNext btn-->
+              <Button Command="{Binding GoHistoryNext, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="HistoryNextButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_Forward}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_forward}" />
+              </Button>
+              <Separator Name="DrillthroughNavigationGroupSeparator" Visibility="{Binding AllowBackToParent, Mode=OneWay, Converter={StaticResource VisibilityConverter}}" />
+              <!--BackToParent btn-->
+              <Button Command="{Binding BackToParentReport, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="BackToParentReportButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_BackToParentReport}" Visibility="{Binding AllowBackToParent, Mode=OneWay, Converter={StaticResource VisibilityConverter}}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_BackToParent}" />
+              </Button>
+              <Separator />
+              <!--Refresh btn-->
+              <Button Command="{Binding RefreshReport, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="RefreshButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_Refresh}" Visibility="{Binding AllowCancel, Mode=OneWay, Converter={StaticResource VisibilityConverter}, ConverterParameter=Collapsed}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.CmdIcon_Refresh}" />
+              </Button>
+              <!--Cancel btn-->
+              <Button Command="{Binding CancelLoading, Converter={StaticResource CommandConverter}}" Style="{StaticResource ToolButton}" AutomationProperties.AutomationId="CancelButton" ToolTipService.ToolTip="{Binding Source={StaticResource res}, Path=Resources.ToolbarTooltip_Cancel}" Visibility="{Binding AllowCancel, Mode=OneWay, Converter={StaticResource VisibilityConverter}}">
+                <Image Style="{StaticResource ToolButtonImage}" Source="{Binding Source={StaticResource res}, Converter={StaticResource ResourceImageConverter}, Path=Resources.Close}" />
+              </Button>
+              <Button Command="{StaticResource MyCommand}" Content="About Us" />
+            </ToolBar>
+          </ToolBarTray>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <!-- Zoom combobox template -->
+  <Style TargetType="View:ZoomComboBox">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:ZoomComboBox">
+          <ComboBox x:Name="ZoomBox" Height="20" IsEnabled="{Binding IsUIEnabled, Mode=OneWay}" IsEditable="True" VerticalContentAlignment="Center" Padding="4 0 3 0" IsTextSearchEnabled="False" />
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Converters:NegateConverter x:Key="InverseBoolConverter" />
+  <Style TargetType="View:DropDownButton">
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:DropDownButton">
+          <Grid x:Name="MainGrid" SnapsToDevicePixels="True">
+            <ToggleButton x:Name="PART_DropDownButton" Style="{Binding ButtonStyleKey, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="1" IsChecked="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" IsHitTestVisible="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InverseBoolConverter}}">
+              <Grid Background="#01000000">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <ContentPresenter Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="true" />
+                <Grid x:Name="arrowGlyph" IsHitTestVisible="False" Margin="4,3,2,3" Grid.Column="1">
+                  <Path x:Name="Arrow" Width="7" Height="4" Data="M 0,1 C0,1 0,0 0,0 0,0 3,0 3,0 3,0 3,1 3,1 3,1 4,1 4,1 4,1 4,0 4,0 4,0 7,0 7,0 7,0 7,1 7,1 7,1 6,1 6,1 6,1 6,2 6,2 6,2 5,2 5,2 5,2 5,3 5,3 5,3 4,3 4,3 4,3 4,4 4,4 4,4 3,4 3,4 3,4 3,3 3,3 3,3 2,3 2,3 2,3 2,2 2,2 2,2 1,2 1,2 1,2 1,1 1,1 1,1 0,1 0,1 z" Fill="#FF000000" />
+                </Grid>
+              </Grid>
+            </ToggleButton>
+            <Popup x:Name="PART_Popup" HorizontalOffset="1" VerticalOffset="1" AllowsTransparency="True" StaysOpen="False" Placement="Bottom" Focusable="False" IsOpen="{Binding IsChecked, ElementName=PART_DropDownButton}">
+              <Border BorderThickness="1" Background="LightGray" BorderBrush="Black">
+                <ContentPresenter Content="{TemplateBinding DropDownContent}" />
+              </Border>
+            </Popup>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter Property="Fill" TargetName="Arrow" Value="#AFAFAF" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="View:GridSizeEditor">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="View:GridSizeEditor" x:Name="rootControlTemplate">
+          <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="RootGrid" Background="#01000000">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"></RowDefinition>
+              <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ItemsControl ItemsSource="{Binding Path=Cells, RelativeSource={RelativeSource TemplatedParent}}">
+              <ItemsControl.ItemContainerStyle>
+                <Style TargetType="ContentPresenter">
+                  <Setter Property="Grid.Row" Value="{Binding Row}" />
+                  <Setter Property="Grid.Column" Value="{Binding Column}" />
+                </Style>
+              </ItemsControl.ItemContainerStyle>
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                  <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" toolkit:GridHelpers.RowCount="{Binding Path=MaximumRowCount, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=View:GridSizeEditor }}" toolkit:GridHelpers.ColumnCount="{Binding Path=MaximumColumnCount, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=View:GridSizeEditor }}" />
+                </ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+              <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                  <Rectangle x:Name="rect" Stroke="Black" Fill="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="4 4 4 0"></Rectangle>
+                  <DataTemplate.Triggers>
+                    <DataTrigger Binding="{Binding Path=IsHighlighted}" Value="True">
+                      <Setter Property="Fill" Value="CornflowerBlue" TargetName="rect"></Setter>
+                    </DataTrigger>
+                    <EventTrigger RoutedEvent="Control.MouseEnter" SourceName="rect">
+                      <EventTrigger.Actions>
+                        <BeginStoryboard>
+                          <Storyboard>
+                            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="DataContext.Highlight" FillBehavior="HoldEnd">
+                              <DiscreteBooleanKeyFrame KeyTime="0:0:0.0" Value="True" />
+                            </BooleanAnimationUsingKeyFrames>
+                          </Storyboard>
+                        </BeginStoryboard>
+                      </EventTrigger.Actions>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Control.MouseDown" SourceName="rect">
+                      <EventTrigger.Actions>
+                        <BeginStoryboard>
+                          <Storyboard>
+                            <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="DataContext.Selected" FillBehavior="HoldEnd">
+                              <DiscreteBooleanKeyFrame KeyTime="0:0:0.0" Value="True" />
+                            </BooleanAnimationUsingKeyFrames>
+                          </Storyboard>
+                        </BeginStoryboard>
+                      </EventTrigger.Actions>
+                    </EventTrigger>
+                  </DataTemplate.Triggers>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBlock x:Name="HintTextBlock" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding HintText, RelativeSource={RelativeSource TemplatedParent}}" />
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+              <Setter TargetName="HintTextBlock" Property="Text" Value="Cancel"></Setter>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

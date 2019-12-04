@@ -1,0 +1,294 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">StockList.rdlx</dd:Name>
+	<Body>
+		<Height>11in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Textbox Name="TextBox1">
+								<Height>0.375in</Height>
+								<Left>0.375in</Left>
+								<Value>STOCK LIST</Value>
+								<Style>
+									<FontSize>14pt</FontSize>
+									<FontStyle>Italic</FontStyle>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.2cm</Top>
+								<Width>4in</Width>
+							</Textbox>
+							<Table Name="Table1">
+								<DataSetName>StockList</DataSetName>
+								<Header>
+									<RepeatOnNewPage>true</RepeatOnNewPage>
+									<TableRows>
+										<TableRow>
+											<Height>0.79375cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox2">
+															<Value>Product Name</Value>
+															<Style>
+																<BackgroundColor>LightSkyBlue</BackgroundColor>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox3">
+															<Value>Quantity Per Unit</Value>
+															<Style>
+																<BackgroundColor>LightSkyBlue</BackgroundColor>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Value>Unit Price</Value>
+															<Style>
+																<BackgroundColor>LightSkyBlue</BackgroundColor>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox8">
+															<Value>Units In Stock</Value>
+															<Style>
+																<BackgroundColor>LightSkyBlue</BackgroundColor>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox10">
+															<Value>Units On Order</Value>
+															<Style>
+																<BackgroundColor>LightSkyBlue</BackgroundColor>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.3937008in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox5">
+															<Value>=Fields!ProductName.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox6">
+															<Value>=Fields!QuantityPerUnit.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox7">
+															<Value>=Fields!UnitPrice.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox9">
+															<Value>=Fields!UnitsInStock.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox11">
+															<Value>=Fields!UnitsOnOrder.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<Height>1.79375cm</Height>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">9.119668in</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">0cm</dd:FixedWidth>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<TableColumns>
+									<TableColumn>
+										<Width>4.199433cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>3.772135cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.412755in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.414258in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.416874in</Width>
+									</TableColumn>
+								</TableColumns>
+								<Top>1.4cm</Top>
+								<Width>7.3823in</Width>
+								<ZIndex>2</ZIndex>
+							</Table>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>StockList</DataSetName>
+				<Grouping Name="FixedPage1_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!CustomerID.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>0.4895833in</LeftMargin>
+	<RightMargin>0.3958333in</RightMargin>
+	<TopMargin>0.3125in</TopMargin>
+	<Width>8.5in</Width>
+	<DataSources>
+		<DataSource Name="StockList">
+			<ConnectionProperties>
+				<DataProvider>CSV</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="StockList">
+			<Fields>
+				<Field Name="ProductID">
+					<DataField>ProductID</DataField>
+				</Field>
+				<Field Name="ProductName">
+					<DataField>ProductName</DataField>
+				</Field>
+				<Field Name="SupplierID">
+					<DataField>SupplierID</DataField>
+				</Field>
+				<Field Name="CategoryID">
+					<DataField>CategoryID</DataField>
+				</Field>
+				<Field Name="QuantityPerUnit">
+					<DataField>QuantityPerUnit</DataField>
+				</Field>
+				<Field Name="UnitPrice">
+					<DataField>UnitPrice</DataField>
+				</Field>
+				<Field Name="UnitsInStock">
+					<DataField>UnitsInStock</DataField>
+				</Field>
+				<Field Name="UnitsOnOrder">
+					<DataField>UnitsOnOrder</DataField>
+				</Field>
+				<Field Name="ReorderLevel">
+					<DataField>ReorderLevel</DataField>
+				</Field>
+				<Field Name="Discontinued">
+					<DataField>Discontinued</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>$.Customers[*]</CommandText>
+				<DataSourceName>StockList</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

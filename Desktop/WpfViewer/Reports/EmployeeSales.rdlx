@@ -1,0 +1,415 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Body>
+		<Height>11in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Textbox Name="lblTitle">
+								<Height>0.5in</Height>
+								<Style>
+									<BackgroundColor>LightGrey</BackgroundColor>
+									<FontSize>24pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>0.063in</Top>
+								<Value>Sales By Employee</Value>
+								<Width>6.5in</Width>
+							</Textbox>
+							<Textbox Name="lblTotalSales">
+								<Height>0.188in</Height>
+								<Style>
+									<BackgroundColor>Black</BackgroundColor>
+									<Color>White</Color>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>1pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>1pt</PaddingTop>
+								</Style>
+								<Top>0.625in</Top>
+								<Value>Total Sales</Value>
+								<Width>0.875in</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="txtTotalSales">
+								<Height>0.188in</Height>
+								<Left>0.875in</Left>
+								<Style>
+									<BackgroundColor>Black</BackgroundColor>
+									<Color>Yellow</Color>
+									<FontSize>8.5pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<Format>$#,##0.00</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>0.625in</Top>
+								<Value>=Sum(Fields!Sales.Value)</Value>
+								<Width>1.313in</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="lblDate">
+								<Height>0.188in</Height>
+								<Left>2.197917in</Left>
+								<Style>
+									<BackgroundColor>Black</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.625in</Top>
+								<Value />
+								<Width>4.302083in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Table Name="Table1">
+								<DataSetName>Sales</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>0.25in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox1">
+															<Style>
+																<BackgroundColor>Black</BackgroundColor>
+																<Color>LightGrey</Color>
+																<FontSize>12pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+															<Value>Employee Name</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox2">
+															<Style>
+																<BackgroundColor>Black</BackgroundColor>
+																<Color>LightGrey</Color>
+																<FontSize>12pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+															<Value />
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox3">
+															<Style>
+																<BackgroundColor>Black</BackgroundColor>
+																<Color>LightGrey</Color>
+																<FontSize>12pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+															<Value>Total Sales</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox7">
+															<Style>
+																<BackgroundColor>Black</BackgroundColor>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+															<Value />
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.188in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Style>
+																<BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "Transparent", "LightGray")</BackgroundColor>
+																<FontSize>8.5pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>1pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>1pt</PaddingTop>
+															</Style>
+															<Value>=Fields!EmployeeName.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox5">
+															<Style>
+																<BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "Transparent", "LightGray")</BackgroundColor>
+																<FontSize>8.5pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>1pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>1pt</PaddingTop>
+															</Style>
+															<Value />
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox6">
+															<Style>
+																<BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "Transparent", "LightGray")</BackgroundColor>
+																<FontSize>8.5pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>1pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>1pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+															<Value>=Fields!Sales.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox8">
+															<Style>
+																<BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "Transparent", "LightGray")</BackgroundColor>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+															<Value />
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<Height>0.438in</Height>
+								<Left>0.0625in</Left>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">4.5in</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">6.364583in</dd:FixedWidth>
+								<TableColumns>
+									<TableColumn>
+										<Width>2.822513in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>0.184342in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.681211in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.676517in</Width>
+									</TableColumn>
+								</TableColumns>
+								<Top>3.614583in</Top>
+								<Width>6.364583in</Width>
+								<ZIndex>5</ZIndex>
+							</Table>
+							<Chart Name="Chart1">
+								<CategoryAxis>
+									<Axis>
+										<Style>
+											<BorderColor>
+												<Default>DarkGray</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>Solid</Default>
+											</BorderStyle>
+											<BorderWidth>
+												<Default>0.25pt</Default>
+											</BorderWidth>
+											<Color>White</Color>
+											<FontSize>8pt</FontSize>
+											<Format>""</Format>
+										</Style>
+										<Title />
+										<Visible>true</Visible>
+									</Axis>
+								</CategoryAxis>
+								<CategoryGroupings>
+									<CategoryGrouping>
+										<DynamicCategories>
+											<Grouping Name="Chart1_CategoryGroup1">
+												<GroupExpressions>
+													<GroupExpression>=Fields!EmployeeName.Value</GroupExpression>
+												</GroupExpressions>
+												<Label>=Fields!EmployeeName.Value</Label>
+											</Grouping>
+											<Label>=Fields!EmployeeName.Value</Label>
+										</DynamicCategories>
+									</CategoryGrouping>
+								</CategoryGroupings>
+								<ChartData>
+									<ChartSeries>
+										<DataPoints>
+											<DataPoint>
+												<DataLabel>
+													<Rotation>0</Rotation>
+													<Style>
+														<Color>White</Color>
+														<Format>$#,##0.00</Format>
+													</Style>
+													<Value>=Fields!Sales.Value</Value>
+													<Visible>true</Visible>
+												</DataLabel>
+												<DataValues>
+													<DataValue>
+														<Value>=Fields!Sales.Value</Value>
+													</DataValue>
+												</DataValues>
+												<Marker>
+													<Size>2cm</Size>
+												</Marker>
+												<Style>
+													<BackgroundColor>Red</BackgroundColor>
+													<BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+													<BackgroundGradientType>TopBottom</BackgroundGradientType>
+													<BorderColor>
+														<Default>Black</Default>
+													</BorderColor>
+													<BorderStyle>
+														<Default>Solid</Default>
+													</BorderStyle>
+												</Style>
+											</DataPoint>
+										</DataPoints>
+									</ChartSeries>
+								</ChartData>
+								<DataSetName>Sales</DataSetName>
+								<Height>2.6458in</Height>
+								<Label>=Fields!EmployeeName.Value</Label>
+								<Legend>
+									<Position>RightCenter</Position>
+									<Style>
+										<FontSize>8pt</FontSize>
+									</Style>
+									<dd:UseSmartSettings xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:UseSmartSettings>
+									<Visible>true</Visible>
+								</Legend>
+								<Palette>Default</Palette>
+								<PlotArea>
+									<Style>
+										<BackgroundColor>Gainsboro</BackgroundColor>
+										<BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+										<BackgroundGradientType>TopBottom</BackgroundGradientType>
+									</Style>
+								</PlotArea>
+								<PointWidth>40</PointWidth>
+								<SeriesGroupings>
+									<SeriesGrouping>
+										<StaticSeries>
+											<StaticMember>
+												<Label>Sales</Label>
+											</StaticMember>
+										</StaticSeries>
+									</SeriesGrouping>
+								</SeriesGroupings>
+								<Style>
+									<BackgroundColor>DarkGray</BackgroundColor>
+									<BackgroundGradientEndColor>WhiteSmoke</BackgroundGradientEndColor>
+									<BackgroundGradientType>TopBottom</BackgroundGradientType>
+									<Format>$#,##0.00</Format>
+								</Style>
+								<Subtype>Plain</Subtype>
+								<ThreeDProperties>
+									<Enabled>true</Enabled>
+									<Inclination>20</Inclination>
+									<Perspective>0</Perspective>
+									<ProjectionMode>Orthographic</ProjectionMode>
+									<Rotation>20</Rotation>
+									<Shading>Real</Shading>
+									<WallThickness>0</WallThickness>
+								</ThreeDProperties>
+								<Title>
+									<Caption>Sales by Employee for 1997</Caption>
+									<Style>
+										<FontFamily>Microsoft Sans Serif</FontFamily>
+										<FontWeight>700</FontWeight>
+										<TextAlign>Center</TextAlign>
+									</Style>
+								</Title>
+								<Top>0.833331in</Top>
+								<Type>Column</Type>
+								<Width>6.5in</Width>
+								<ZIndex>6</ZIndex>
+							</Chart>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>Sales</DataSetName>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>8.5in</Width>
+	<DataSources>
+		<DataSource Name="NWind">
+			<ConnectionProperties>
+				<DataProvider>OLEDB</DataProvider>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\NWIND.mdb</ConnectString>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Sales">
+			<Fields>
+				<Field Name="EmployeeName">
+					<DataField>EmployeeName</DataField>
+				</Field>
+				<Field Name="Sales">
+					<DataField>Sales</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT [LastName]+", "+[FirstName] AS EmployeeName, Sum([UnitPrice]*[Quantity]) AS Sales FROM (Employees INNER JOIN Orders ON Employees.EmployeeID = Orders.EmployeeID) INNER JOIN [Order Details] ON Orders.OrderID = [Order Details].OrderID GROUP BY LastName+", "+FirstName </CommandText>
+				<DataSourceName>NWind</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

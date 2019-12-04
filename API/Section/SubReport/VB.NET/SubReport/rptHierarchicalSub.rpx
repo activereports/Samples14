@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="ghOrders" Height="434" DataField="CustomerID" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.Label" Name="lblOrderDate" Left="3659.04" Top="0" Width="1440" Height="360" Caption="Order Date" Style="font-family: Arial; font-size: 12pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblOrderID" Left="5280.48" Top="0" Width="1440" Height="360" Caption="Order ID" Style="font-family: Arial; font-size: 12pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblFreight" Left="6855.839" Top="0" Width="1440" Height="360" Caption="Freight" Style="font-family: Arial; font-size: 12pt; font-weight: bold; text-align: right; ddo-char-set: 1" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="419.04" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.Field" Name="txtOrderDate" DataField="OrderDate" Left="3659.04" Top="59.04" Width="1440" Height="360" Text="Order Date" OutputFormat="yyyy/MM/dd" CanShrink="1" Style="font-family: Arial; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtOrderID" DataField="OrderID" Left="5280.48" Top="59.04" Width="1440" Height="360" Text="OrderID" CanShrink="1" Style="font-family: Arial; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtFreight" DataField="Freight" Left="6855.839" Top="59.04" Width="1440" Height="360" Text="Freight" OutputFormat="$#,##0.00" CanShrink="1" Style="font-family: Arial; text-align: right; vertical-align: middle; ddo-char-set: 1" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="360" BackColor="16777215" CanShrink="1" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Private i As Integer = 0
+
+Public Sub Detail_Format()
+	If i Mod 2 = 0 Then
+		rpt.Sections("Detail").BackColor = System.Drawing.Color.Azure
+	Else
+
+		rpt.Sections("Detail").BackColor = System.Drawing.Color.AntiqueWhite
+	End If
+
+	i += 1
+End Sub]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

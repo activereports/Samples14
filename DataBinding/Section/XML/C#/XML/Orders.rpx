@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="9360" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="Detail" Name="Detail" Height="599" BackStyle="1" BackColor="12648447" KeepTogether="1">
+      <Control Type="AR.Field" Name="txtOrderNumber" DataField="NUMBER" Left="0" Top="0" Width="1440" Height="270" Text="NUMBER" Style="ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="txtOrderDate" DataField="DATE" Left="1620" Top="0" Width="4140" Height="270" Text="DATE" Style="ddo-char-set: 0" />
+      <Control Type="AR.Subreport" Name="srptItems" DataField="ITEM" Left="0" Top="270" Width="9270" Height="270" />
+      <Control Type="AR.Label" Name="lblItems" Left="6120" Top="0" Width="1620" Height="270" Caption="Item Count" Style="ddo-char-set: 0" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <XmlDataSource FileURL="..\..\..\..\..\Data\customer.xml" Pattern="//ORDER" />
+  </DataSources>
+  <Script><![CDATA[/// <summary>
+/// Format Event
+/// ActiveReports event that is called for every section (Page Header/Footer,
+/// but before the section is rendered to a page.The Format event is the only event in which you can change
+/// the section's height. Use this section to set or change the properties of any controls or the section itself.
+/// Also use the Format event to pass information, such as an SQL String, to a Subreport.
+/// </summary>
+public void Detail_Format()
+{
+	//Get a count of the item nodes from the datasource
+	GrapeCity.ActiveReports.Data.XMLDataSource xmlDS = rpt.DataSource as GrapeCity.ActiveReports.Data.XMLDataSource;
+	if (xmlDS == null)
+	{
+		lblItems.Text = "0";
+		return;
+	}
+
+	//Get the item node list.
+	System.Xml.XmlNodeList nodeList = xmlDS.Field("ITEM", true) as System.Xml.XmlNodeList;
+	if (nodeList == null)
+	{
+		lblItems.Text = "0";
+		return;
+	}
+
+	//Set the lblItems.Text to the count of Item nodes.
+	lblItems.Text = string.Format(System.Globalization.CultureInfo.CurrentCulture, "Item Count: {0}", nodeList.Count);
+}
+
+
+/// <summary>
+/// ReportStart Event
+/// Use this event to initialize any objects or variables needed while running a report.
+/// Also use this event to set any Subreport control objects to a new instance 
+/// of the report assigned to the Subreport control.
+/// </summary>
+public void ActiveReport_ReportStart()
+{
+	var ordersItems = new GrapeCity.ActiveReports.SectionReport();
+	ordersItems.LoadLayout(System.IO.Path.GetFullPath("..\\..\\OrderItems.rpx"));
+	srptItems.Report = ordersItems;
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

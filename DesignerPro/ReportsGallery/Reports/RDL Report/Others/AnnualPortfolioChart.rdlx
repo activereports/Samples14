@@ -1,0 +1,491 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">AnnualPortfolioChart.rdlx</dd:Name>
+	<Body>
+		<Height>9.5in</Height>
+		<ReportItems>
+			<Rectangle Name="HeaderContainer">
+				<Height>1.3in</Height>
+				<Left>0.25in</Left>
+				<Top>0.1in</Top>
+				<Width>6.2in</Width>
+				<ZIndex>1</ZIndex>
+				<ReportItems>
+					<Textbox Name="TextBox9">
+						<CanGrow>true</CanGrow>
+						<Height>0.4in</Height>
+						<Left>0.1in</Left>
+						<Value>=First(Fields!CompanyName.Value, "DailyTrading")</Value>
+						<Style>
+							<FontFamily>Arial</FontFamily>
+							<FontSize>14pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>700</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.1in</Top>
+						<Width>3.2in</Width>
+					</Textbox>
+					<Textbox Name="TextBox12">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>3.3in</Left>
+						<Value>=First(Fields!Exchange.Value, "DailyTrading") + ": " + First(Fields!Ticker.Value, "DailyTrading")</Value>
+						<Style>
+							<FontFamily>Arial</FontFamily>
+							<FontSize>10pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Right</TextAlign>
+						</Style>
+						<Top>0.25in</Top>
+						<Width>2.6in</Width>
+						<ZIndex>1</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox15">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.1in</Left>
+						<Value>="Currency in " + First(Fields!Currency.Value, "DailyTrading")</Value>
+						<Style>
+							<FontFamily>Arial</FontFamily>
+							<FontSize>8pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>1.05in</Top>
+						<Width>2.7in</Width>
+						<ZIndex>2</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox18">
+						<CanGrow>true</CanGrow>
+						<Height>0.2in</Height>
+						<Left>0.1in</Left>
+						<Value>="Range (Quotes):   " + Min(Fields!Low.Value, "DailyTrading") + " - " + Max(Fields!High.Value, "DailyTrading")</Value>
+						<Style>
+							<FontFamily>Arial</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.5in</Top>
+						<Width>3.2in</Width>
+						<ZIndex>3</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox19">
+						<CanGrow>true</CanGrow>
+						<Height>0.2in</Height>
+						<Left>3.3in</Left>
+						<Value>="Trading:   " + Min(Fields!DayDate.Value, "DailyTrading") + " - " + Max(Fields!DayDate.Value, "DailyTrading")</Value>
+						<Style>
+							<FontFamily>Arial</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Right</TextAlign>
+						</Style>
+						<Top>0.5in</Top>
+						<Width>2.6in</Width>
+						<ZIndex>3</ZIndex>
+					</Textbox>
+					<Textbox Name="TextBox7">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.1in</Left>
+						<Value>="Range (Volume):   " + Min(Fields!Volume.Value, "DailyTrading") + " - " + Max(Fields!Volume.Value, "DailyTrading")</Value>
+						<Style>
+							<FontFamily>Arial</FontFamily>
+							<FontSize>9pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.7in</Top>
+						<Width>3.2in</Width>
+						<ZIndex>3</ZIndex>
+					</Textbox>
+				</ReportItems>
+			</Rectangle>
+			<Chart Name="AnnualStockPerformance">
+				<CategoryAxis>
+					<Axis>
+						<MajorInterval>22</MajorInterval>
+						<MajorTickMarks>Outside</MajorTickMarks>
+						<Margin>true</Margin>
+						<Max>=max(Fields!daydate.Value) + 10</Max>
+						<Min>=min(Fields!daydate.Value)</Min>
+						<Style>
+							<Color>Black</Color>
+							<FontFamily>Arial</FontFamily>
+							<FontSize>7pt</FontSize>
+							<FontStyle>Normal</FontStyle>
+							<FontWeight>400</FontWeight>
+							<Format>MMMM</Format>
+							<TextDecoration>None</TextDecoration>
+							<BorderColor>
+								<Default>DarkGray</Default>
+							</BorderColor>
+							<BorderStyle>
+								<Default>Solid</Default>
+							</BorderStyle>
+							<BorderWidth>
+								<Default>0.25pt</Default>
+							</BorderWidth>
+						</Style>
+						<Title>
+							<Position>Far</Position>
+						</Title>
+						<Visible>true</Visible>
+					</Axis>
+				</CategoryAxis>
+				<CategoryGroupings>
+					<CategoryGrouping>
+						<DynamicCategories>
+							<Grouping Name="AnnualStockPerformance_CategoryGroup1">
+								<GroupExpressions>
+									<GroupExpression>=Fields!DayDate.Value</GroupExpression>
+								</GroupExpressions>
+								<Label>=Fields!DayDate.Value</Label>
+							</Grouping>
+							<Label>=Fields!DayDate.Value</Label>
+							<Sorting>
+								<SortBy>
+									<Direction>Ascending</Direction>
+									<SortExpression>=Fields!DayDate.Value</SortExpression>
+								</SortBy>
+							</Sorting>
+						</DynamicCategories>
+					</CategoryGrouping>
+				</CategoryGroupings>
+				<ChartData>
+					<ChartSeries>
+						<DataPoints>
+							<DataPoint>
+								<DataLabel />
+								<DataValues>
+									<DataValue>
+										<Value>=Fields!Volume.Value</Value>
+									</DataValue>
+									<DataValue>
+										<Value>=Fields!High.Value</Value>
+									</DataValue>
+									<DataValue>
+										<Value>=Fields!Open.Value</Value>
+									</DataValue>
+									<DataValue>
+										<Value>=Fields!Close.Value</Value>
+									</DataValue>
+								</DataValues>
+								<Marker />
+							</DataPoint>
+						</DataPoints>
+						<dd:ValueAxisName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TradingVolume</dd:ValueAxisName>
+					</ChartSeries>
+					<ChartSeries>
+						<DataPoints>
+							<DataPoint>
+								<DataLabel />
+								<DataValues>
+									<DataValue>
+										<Value>=Fields!Close.Value</Value>
+									</DataValue>
+								</DataValues>
+								<Marker />
+								<Style>
+									<BackgroundColor>=""</BackgroundColor>
+									<BorderColor>
+										<Default>CadetBlue</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>0.75pt</Default>
+									</BorderWidth>
+								</Style>
+							</DataPoint>
+						</DataPoints>
+						<dd:Type xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Line</dd:Type>
+						<dd:ValueAxisName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TradingValue</dd:ValueAxisName>
+					</ChartSeries>
+				</ChartData>
+				<DataSetName>DailyTrading</DataSetName>
+				<Height>4.8in</Height>
+				<Legend>
+					<Position>RightCenter</Position>
+					<Style>
+						<FontSize>8pt</FontSize>
+					</Style>
+					<dd:UseSmartSettings xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:UseSmartSettings>
+				</Legend>
+				<Palette>Custom</Palette>
+				<PlotArea>
+					<Style>
+						<BackgroundColor>Transparent</BackgroundColor>
+					</Style>
+				</PlotArea>
+				<SeriesGroupings>
+					<SeriesGrouping>
+						<StaticSeries>
+							<StaticMember>
+								<Label>Trading Volume</Label>
+							</StaticMember>
+							<StaticMember>
+								<Label>TradingValue</Label>
+							</StaticMember>
+						</StaticSeries>
+					</SeriesGrouping>
+				</SeriesGroupings>
+				<Style>
+					<Format>=""</Format>
+				</Style>
+				<Subtype>Plain</Subtype>
+				<ThreeDProperties>
+					<Inclination>20</Inclination>
+					<ProjectionMode>Orthographic</ProjectionMode>
+					<Rotation>20</Rotation>
+					<Shading>Real</Shading>
+				</ThreeDProperties>
+				<Title>
+					<Caption>="Annual Stock Performance - " &amp; Parameters!TradingYear.Value</Caption>
+					<Style>
+						<Color>Black</Color>
+						<FontFamily>Arial</FontFamily>
+						<FontSize>8pt</FontSize>
+						<FontStyle>Normal</FontStyle>
+						<FontWeight>900</FontWeight>
+						<TextAlign>Center</TextAlign>
+					</Style>
+				</Title>
+				<Top>1.4in</Top>
+				<Type>Line</Type>
+				<dd:ChartCustomPaletteColors xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+					<dd:ChartCustomPaletteColor>SteelBlue</dd:ChartCustomPaletteColor>
+					<dd:ChartCustomPaletteColor>DodgerBlue</dd:ChartCustomPaletteColor>
+				</dd:ChartCustomPaletteColors>
+				<Width>10.4in</Width>
+				<ZIndex>4</ZIndex>
+				<dd:ChartAreas xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+					<ChartArea>
+						<ChartValueAxes>
+							<ChartAxis>
+								<Axis>
+									<Style>
+										<FontFamily>Arial</FontFamily>
+										<FontSize>7pt</FontSize>
+										<FontStyle>Normal</FontStyle>
+										<FontWeight>400</FontWeight>
+										<Format>n0</Format>
+										<TextDecoration>None</TextDecoration>
+										<BorderColor>
+											<Default>DarkGray</Default>
+										</BorderColor>
+										<BorderStyle>
+											<Default>Solid</Default>
+										</BorderStyle>
+										<BorderWidth>
+											<Default>0.25pt</Default>
+										</BorderWidth>
+									</Style>
+									<Title>
+										<Caption>Trading Value (US$)</Caption>
+									</Title>
+									<Visible>true</Visible>
+									<dd:Name>TradingValue</dd:Name>
+								</Axis>
+							</ChartAxis>
+							<ChartAxis>
+								<Axis>
+									<Style>
+										<FontSize>8pt</FontSize>
+										<Format>#,##0,,</Format>
+										<BorderColor>
+											<Default>DarkGray</Default>
+										</BorderColor>
+										<BorderStyle>
+											<Default>Solid</Default>
+										</BorderStyle>
+										<BorderWidth>
+											<Default>0.25pt</Default>
+										</BorderWidth>
+									</Style>
+									<Title>
+										<Caption>Trading Volume (Units in Millions)</Caption>
+									</Title>
+									<Visible>true</Visible>
+									<dd:Location>Opposite</dd:Location>
+									<dd:Name>TradingVolume</dd:Name>
+								</Axis>
+							</ChartAxis>
+						</ChartValueAxes>
+					</ChartArea>
+				</dd:ChartAreas>
+			</Chart>
+		</ReportItems>
+	</Body>
+	<PageHeight>8.5in</PageHeight>
+	<PageWidth>11in</PageWidth>
+	<Width>10.5in</Width>
+	<ReportParameters>
+		<ReportParameter Name="TradingYear">
+			<DataType>Integer</DataType>
+			<Prompt>Trading Year</Prompt>
+			<ValidValues>
+				<ParameterValues>
+					<ParameterValue>
+						<Label>2015</Label>
+						<Value>2015</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>2016</Label>
+						<Value>2016</Value>
+					</ParameterValue>
+				</ParameterValues>
+			</ValidValues>
+			<DefaultValue>
+				<Values>
+					<Value>2015</Value>
+				</Values>
+			</DefaultValue>
+		</ReportParameter>
+		<ReportParameter Name="Company">
+			<DataType>String</DataType>
+			<Prompt>Company</Prompt>
+			<ValidValues>
+				<DataSetReference>
+					<DataSetName>Company</DataSetName>
+					<LabelField>CompanyLookupLabel</LabelField>
+					<ValueField>Ticker</ValueField>
+				</DataSetReference>
+			</ValidValues>
+			<DefaultValue>
+				<Values>
+					<Value>ADBE</Value>
+				</Values>
+			</DefaultValue>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="Stocks">
+			<ConnectionProperties>
+				<DataProvider>XML</DataProvider>
+				<ConnectString>XmlDoc=..\..\..\..\..\Data\Stocks.xml</ConnectString>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DailyTrading">
+			<Fields>
+				<Field Name="Day">
+					<DataField>Day</DataField>
+				</Field>
+				<Field Name="Date">
+					<DataField>@Date</DataField>
+				</Field>
+				<Field Name="Open">
+					<DataField>@Open</DataField>
+				</Field>
+				<Field Name="High">
+					<DataField>@High</DataField>
+				</Field>
+				<Field Name="Low">
+					<DataField>@Low</DataField>
+				</Field>
+				<Field Name="Close">
+					<DataField>@Close</DataField>
+				</Field>
+				<Field Name="Volume">
+					<DataField>@Volume</DataField>
+				</Field>
+				<Field Name="CompanyName">
+					<DataField>../@Name</DataField>
+				</Field>
+				<Field Name="Ticker">
+					<DataField>../@Ticker</DataField>
+				</Field>
+				<Field Name="Exchange">
+					<DataField>../@Exchange</DataField>
+				</Field>
+				<Field Name="Currency">
+					<DataField>../@Currency</DataField>
+				</Field>
+				<Field Name="DayDate">
+					<Value>=ToDateTime(Fields!Date.Value)</Value>
+				</Field>
+				<Field Name="dblVolume">
+					<Value>=ToDouble(Fields!Volume.Value)</Value>
+				</Field>
+			</Fields>
+			<Filters>
+				<Filter>
+					<FilterExpression>=Year(Fields!DayDate.Value)</FilterExpression>
+					<FilterValues>
+						<FilterValue>=Parameters!TradingYear.Value</FilterValue>
+					</FilterValues>
+					<Operator>Equal</Operator>
+				</Filter>
+				<Filter>
+					<FilterExpression>=Fields!Ticker.Value</FilterExpression>
+					<FilterValues>
+						<FilterValue>=Parameters!Company.Value</FilterValue>
+					</FilterValues>
+					<Operator>Equal</Operator>
+				</Filter>
+			</Filters>
+			<Query>
+				<CommandText>//Stocks//Company//Day</CommandText>
+				<DataSourceName>Stocks</DataSourceName>
+			</Query>
+		</DataSet>
+		<DataSet Name="Company">
+			<Fields>
+				<Field Name="Company">
+					<DataField>Company</DataField>
+				</Field>
+				<Field Name="Name">
+					<DataField>@Name</DataField>
+				</Field>
+				<Field Name="Ticker">
+					<DataField>@Ticker</DataField>
+				</Field>
+				<Field Name="Exchange">
+					<DataField>@Exchange</DataField>
+				</Field>
+				<Field Name="CompanyLookupLabel">
+					<Value>=Fields!Name.Value + " (" + Fields!Exchange.Value + ":" + Fields!Ticker.Value +")"</Value>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>//Stocks//Company</CommandText>
+				<DataSourceName>Stocks</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>PaperOrientation</Name>
+			<Value>Landscape</Value>
+		</CustomProperty>
+	</CustomProperties>
+</Report>

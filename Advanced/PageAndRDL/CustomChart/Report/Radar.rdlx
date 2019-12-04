@@ -1,0 +1,80 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Body>
+		<Height>10cm</Height>
+		<ReportItems>
+			<CustomReportItem Name="MostExpensiveProductsChart">
+				<Type>RadarChart</Type>
+				<Top>1.5cm</Top>
+				<Left>4cm</Left>
+				<Width>8cm</Width>
+				<Height>8cm</Height>
+				<CustomProperties>
+					<CustomProperty>
+						<Name>DataSetName</Name>
+						<Value>MostExpensiveProducts</Value>
+					</CustomProperty>
+				</CustomProperties>
+				<CustomData>
+					<DataRowGroupings>
+						<DataGroupings>
+							<DataGrouping>
+								<CustomProperties>
+									<CustomProperty>
+										<Name>SeriesValue</Name>
+										<Value>=Fields!UnitPrice.Value</Value>
+									</CustomProperty>
+								</CustomProperties>
+							</DataGrouping>
+						</DataGroupings>
+					</DataRowGroupings>
+				</CustomData>
+			</CustomReportItem>
+			<Textbox Name="Header">
+				<CanGrow>true</CanGrow>
+				<Height>0.75cm</Height>
+				<Left>6.2cm</Left>
+				<Value>Most expensive products</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.6cm</Top>
+				<Width>4.4cm</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+		</ReportItems>
+	</Body>
+	<BottomMargin>2.5cm</BottomMargin>
+	<LeftMargin>2.5cm</LeftMargin>
+	<PageHeight>27.9cm</PageHeight>
+	<PageWidth>21.6cm</PageWidth>
+	<RightMargin>2.5cm</RightMargin>
+	<TopMargin>2.5cm</TopMargin>
+	<Width>16cm</Width>
+	<DataSources>
+		<DataSource Name="NWind">
+			<ConnectionProperties>
+				<DataProvider>OLEDB</DataProvider>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.mdb</ConnectString>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="MostExpensiveProducts">
+			<Fields>
+				<Field Name="TenMostExpensiveProducts">
+					<DataField>TenMostExpensiveProducts</DataField>
+				</Field>
+				<Field Name="UnitPrice">
+					<DataField>UnitPrice</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>select * from [Ten Most Expensive Products]</CommandText>
+				<DataSourceName>NWind</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

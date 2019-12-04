@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8640.722" MaxPages="100" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-style: normal; text-decoration: none; font-weight: normal; color: Black; font-size: 10pt; vertical-align: top; font-family: &quot;Arial&quot;; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-size: 12pt; font-weight: bold; ddo-char-set: 204" />
+    <Style Name="Heading2" Value="font-size: 14pt; font-weight: bold; ddo-char-set: 204" />
+    <Style Name="Heading3" Value="font-size: 12pt; font-weight: bold; font-style: italic; ddo-char-set: 204" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="ghOrderID" Height="1965" DataField="OrderID" RepeatStyle="4" ColumnLayout="0" BackColor="16777215" KeepTogether="1">
+      <Control Type="AR.Label" Name="Label5" BorderLeftStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="7200" Top="241.92" Width="1267.2" Height="1090.08" Caption="" ClassName="Heading1" Style="color: White; font-family: Arial; font-size: 10pt; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label6" Left="0" Top="1514.88" Width="1080" Height="450.72" Caption="Product ID" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label7" BorderLeftStyle="1" BorderLeftColor="16777215" Left="1080" Top="1514.88" Width="2880" Height="450.72" Caption="Product Name" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: center; text-justify: auto; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label8" BorderLeftStyle="1" BorderLeftColor="16777215" Left="3960" Top="1514.88" Width="989.2804" Height="450.72" Caption="Qty" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label9" BorderLeftStyle="1" BorderLeftColor="16777215" Left="4949.28" Top="1514.88" Width="1260" Height="450.72" Caption="Unit Price" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label10" BorderLeftStyle="1" BorderLeftColor="16777215" Left="6209.28" Top="1514.88" Width="989.2804" Height="450.72" Caption="Discount" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label11" BorderLeftStyle="1" BorderLeftColor="16777215" Left="7200" Top="1514.88" Width="1260" Height="450.72" Caption="Total Amount&#xD;&#xA;(Tax included)" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 8pt; text-align: center; vertical-align: top" />
+      <Control Type="AR.Label" Name="lblInvoice" Left="14.4" Top="0" Width="5564.16" Height="540" Caption="Purchase Orders" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 21.75pt; font-weight: bold; text-align: center" />
+      <Control Type="AR.Label" Name="Label1" BorderLeftStyle="1" BorderTopStyle="1" Left="14.40033" Top="643.68" Width="1349.28" Height="344.88" Caption="OrderID" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtOrderID" DataField="OrderID" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" Left="1363.68" Top="643.68" Width="1350.72" Height="343.44" Text="OrderID" CanGrow="0" Style="font-family: Arial; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label2" BorderLeftStyle="1" BorderTopStyle="1" BorderBottomStyle="1" Left="14.40033" Top="987.84" Width="1349.28" Height="342.72" Caption="Order Date" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtOrderDate" DataField="OrderDate" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="1363.68" Top="986.4" Width="1350.72" Height="344.16" Text="Order Date" OutputFormat="yyyy/MM/dd" CanGrow="0" Style="font-family: Arial; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label3" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" Left="2923.2" Top="645.12" Width="2655.36" Height="344.88" Caption="Company Name" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtCustomers_CompanyName1" DataField="Customers.CompanyName" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="2923.2" Top="987.84" Width="2655.36" Height="344.16" Text="CompanyName" Style="font-family: Arial; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label4" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="7200" Top="0" Width="1267.2" Height="240.48" Caption="Seal" ClassName="Heading1" Style="background-color: SlateBlue; color: White; font-family: Arial; font-size: 10pt; text-align: center; vertical-align: middle" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="450" RepeatToFill="1" BackColor="16777215" KeepTogether="1" CanGrow="0">
+      <Control Type="AR.Field" Name="txtProductID" DataField="ProductID" BorderLeftStyle="1" BorderTopStyle="1" Left="14.4" Top="0" Width="1065.6" Height="450.72" Text="ProductID" CanGrow="0" Style="font-family: Arial; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtProductname" DataField="ProductName" BorderLeftStyle="1" BorderTopStyle="1" Left="1080" Top="0" Width="2880" Height="450.72" Text="ProductName" CanGrow="0" Style="font-family: Arial; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtQty" DataField="Quantity" BorderLeftStyle="1" BorderTopStyle="1" Left="3960" Top="0" Width="989.2804" Height="450.72" Text="Qty" OutputFormat="###" CanGrow="0" Style="font-family: Arial; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtUnitPrice" DataField="UnitPrice" BorderLeftStyle="1" BorderTopStyle="1" Left="4949.28" Top="0" Width="1260" Height="450.72" Text="UnitPrice" OutputFormat="$#,##0" CanGrow="0" Style="font-family: Arial; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtDiscount" DataField="Discount" BorderLeftStyle="1" BorderTopStyle="1" Left="6210.72" Top="0" Width="989.2804" Height="450.72" Text="Discount" OutputFormat="0%" CanGrow="0" Style="font-family: Arial; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtExtended" DataField="ExtendedPrice2" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" Left="7200" Top="0" Width="1260" Height="450.72" Text="Extended" OutputFormat="$#,##0" CanGrow="0" Style="font-family: Arial; text-align: right; vertical-align: middle" />
+    </Section>
+    <Section Type="GroupFooter" Name="GFOrderID" Height="1274" ColumnLayout="0" BackColor="16777215" NewPage="2" KeepTogether="1" CanGrow="0">
+      <Control Type="AR.Field" Name="txtTotal" BorderRightStyle="1" BorderBottomStyle="1" Left="7198.56" Top="809.28" Width="1260" Height="360" Text="Total" OutputFormat="$#,##0" CanGrow="0" Style="font-family: Arial; text-align: right" />
+      <Control Type="AR.Label" Name="Label16" BorderLeftStyle="1" BorderLeftColor="16777215" Left="5760" Top="809.28" Width="1438.56" Height="360" Caption="Total" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: right" />
+      <Control Type="AR.Field" Name="txtFreight" DataField="Freight" BorderRightStyle="1" BorderBottomStyle="1" Left="7198.56" Top="449.28" Width="1260" Height="360" Text="Freight" OutputFormat="$#,##0" CanGrow="0" Style="font-family: Arial; text-align: right" SummaryType="3" SummaryGroup="ghOrderID" />
+      <Control Type="AR.Label" Name="Label15" BorderLeftStyle="1" BorderLeftColor="16777215" BorderBottomStyle="1" BorderBottomColor="16777215" Left="5760" Top="449.28" Width="1438.56" Height="360" Caption="Freight" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; text-align: right" />
+      <Control Type="AR.Field" Name="txtSubTotal" DataField="ExtendedPrice2" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="7198.56" Top="89.28" Width="1260" Height="360" Text="Subtotal" OutputFormat="$#,##0" CanGrow="0" Style="font-family: Arial; text-align: right" SummaryType="3" SummaryGroup="ghOrderID" />
+      <Control Type="AR.Label" Name="Label14" BorderLeftStyle="1" BorderLeftColor="16777215" BorderBottomStyle="1" BorderBottomColor="16777215" Left="5760" Top="89.28" Width="1438.56" Height="360" Caption="Subtotal" ClassName="Heading1" Style="background-color: SteelBlue; color: White; font-family: Arial; font-size: 10pt; font-weight: bold; text-align: right" />
+      <Control Type="AR.Line" Name="Line3" X1="0" Y1="0" X2="8467.2" Y2="0" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.MDB;Persist Security Info=False" SQL="SELECT * FROM Invoices &#xD;&#xA;ORDER BY Customers.CompanyName, OrderID" />
+  </DataSources>
+  <Script><![CDATA[public void ActiveReport_DataInitialize()
+{
+	rpt.Fields.Add("ExtendedPrice2");
+}
+
+
+public bool ActiveReport_FetchData(bool eof)
+{
+	rpt.Fields["ExtendedPrice2"].Value	= Convert.ToDouble(rpt.Fields["UnitPrice"].Value)	* Convert.ToDouble(rpt.Fields["Quantity"].Value)* (1 - Convert.ToDouble(rpt.Fields["Discount"].Value))* 1.05;
+	return eof;
+}
+
+
+public void GFOrderID_BeforePrint()
+{
+	this.txtTotal.Value	= Convert.ToDouble(this.txtFreight.Value)+ Convert.ToDouble(this.txtSubTotal.Value);
+}
+
+
+public void Detail_BeforePrint()
+{
+	if (Convert.ToDouble(this.txtDiscount.Value) == 0)
+	{
+		this.txtDiscount.Text = "";
+	}
+}
+
+
+public void ActiveReport_ReportStart()
+{
+	
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

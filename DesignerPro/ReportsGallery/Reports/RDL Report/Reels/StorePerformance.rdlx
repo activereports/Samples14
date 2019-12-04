@@ -1,0 +1,427 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<PageHeader>
+		<Height>0in</Height>
+		<ReportItems>
+			<CustomReportItem Name="ContentPlaceHolder1">
+				<Type>ContentPlaceHolder</Type>
+				<Width>4.875in</Width>
+				<Height>1in</Height>
+				<ZIndex>1</ZIndex>
+				<CustomProperties>
+					<CustomProperty>
+						<Name>ID</Name>
+						<Value>2</Value>
+					</CustomProperty>
+					<CustomProperty>
+						<Name>Text</Name>
+						<Value>Add page header</Value>
+					</CustomProperty>
+				</CustomProperties>
+				<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+					<ReportItems>
+						<Textbox Name="ReportTitle">
+							<CanGrow>true</CanGrow>
+							<Height>0.375in</Height>
+							<Style>
+								<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+								<FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+								<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+								<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<TextAlign>Left</TextAlign>
+							</Style>
+							<Value>Store Performance</Value>
+							<Width>2.25in</Width>
+						</Textbox>
+					</ReportItems>
+				</dd:Container>
+			</CustomReportItem>
+		</ReportItems>
+	</PageHeader>
+	<Body>
+		<Height>0in</Height>
+		<ReportItems>
+			<CustomReportItem Name="mainContent">
+				<Type>ContentPlaceHolder</Type>
+				<Width>6.510417in</Width>
+				<Height>2.5in</Height>
+				<CustomProperties>
+					<CustomProperty>
+						<Name>Text</Name>
+						<Value>Add content here</Value>
+					</CustomProperty>
+					<CustomProperty>
+						<Name>ID</Name>
+						<Value>1</Value>
+					</CustomProperty>
+				</CustomProperties>
+				<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+					<ReportItems>
+						<Table Name="storeSalesTable">
+							<DataSetName>StorePerformanceData</DataSetName>
+							<Header>
+								<TableRows>
+									<TableRow>
+										<Height>0.25in</Height>
+										<TableCells>
+											<TableCell>
+												<ReportItems>
+													<Textbox Name="storeNameHeader">
+														<CanGrow>true</CanGrow>
+														<Style>
+															<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+															<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+														</Style>
+														<Value>Store Name</Value>
+													</Textbox>
+												</ReportItems>
+											</TableCell>
+											<TableCell>
+												<ReportItems>
+													<Textbox Name="totalItemsHeader">
+														<CanGrow>true</CanGrow>
+														<Style>
+															<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+															<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<TextAlign>Right</TextAlign>
+														</Style>
+														<Value>Total Items</Value>
+													</Textbox>
+												</ReportItems>
+											</TableCell>
+											<TableCell>
+												<ReportItems>
+													<Textbox Name="grossSalesHeader">
+														<CanGrow>true</CanGrow>
+														<Style>
+															<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+															<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<TextAlign>Right</TextAlign>
+														</Style>
+														<Value>Gross Sales</Value>
+													</Textbox>
+												</ReportItems>
+											</TableCell>
+											<TableCell>
+												<ReportItems>
+													<Textbox Name="grossProfitHeader">
+														<CanGrow>true</CanGrow>
+														<Style>
+															<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+															<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<TextAlign>Right</TextAlign>
+														</Style>
+														<Value>Gross Profit</Value>
+													</Textbox>
+												</ReportItems>
+											</TableCell>
+											<TableCell>
+												<ReportItems>
+													<Textbox Name="iconsetImageHeader">
+														<CanGrow>true</CanGrow>
+														<Style>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+														</Style>
+														<Value />
+													</Textbox>
+												</ReportItems>
+											</TableCell>
+										</TableCells>
+									</TableRow>
+								</TableRows>
+							</Header>
+							<Details>
+								<TableRows>
+									<TableRow>
+										<Height>0.25in</Height>
+										<TableCells>
+											<TableCell>
+												<ReportItems>
+													<Textbox Name="storeName">
+														<CanGrow>true</CanGrow>
+														<Style>
+															<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+															<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+															<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+														</Style>
+														<Value>=Fields!StoreName.Value</Value>
+													</Textbox>
+												</ReportItems>
+											</TableCell>
+											<TableCell>
+												<ReportItems>
+													<Textbox Name="totalItems">
+														<CanGrow>true</CanGrow>
+														<Style>
+															<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+															<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+															<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+															<Format>G0</Format>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+														</Style>
+														<Value>=Fields!TotalItems.Value</Value>
+													</Textbox>
+												</ReportItems>
+											</TableCell>
+											<TableCell>
+												<ReportItems>
+													<Textbox Name="grossSales">
+														<CanGrow>true</CanGrow>
+														<Style>
+															<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+															<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+															<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+															<Format>$#0</Format>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+														</Style>
+														<Value>=Fields!GrossSales.Value</Value>
+													</Textbox>
+												</ReportItems>
+											</TableCell>
+											<TableCell>
+												<ReportItems>
+													<Textbox Name="grossProfit">
+														<CanGrow>true</CanGrow>
+														<Style>
+															<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+															<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+															<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+															<Format>$#0</Format>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+														</Style>
+														<Value>=Fields!GrossProfit.Value</Value>
+													</Textbox>
+												</ReportItems>
+											</TableCell>
+											<TableCell>
+												<ReportItems>
+													<Image Name="iconSet">
+														<MIMEType>image/png</MIMEType>
+														<Sizing>AutoSize</Sizing>
+														<Source>Database</Source>
+														<Value>=IconSet("Symbols2", (Fields!GrossProfit.Value &gt; (100 * Math.Round( (1.075 * Avg(Fields!GrossProfit.Value)) / 100))), False, (Fields!GrossProfit.Value &lt; (Math.Round(Avg(Fields!GrossProfit.Value) / 107.5) * 100)), False, False )</Value>
+													</Image>
+												</ReportItems>
+											</TableCell>
+										</TableCells>
+									</TableRow>
+								</TableRows>
+							</Details>
+							<Height>0.5in</Height>
+							<TableColumns>
+								<TableColumn>
+									<Width>0.9166667in</Width>
+								</TableColumn>
+								<TableColumn>
+									<Width>0.9166667in</Width>
+								</TableColumn>
+								<TableColumn>
+									<Width>0.9166667in</Width>
+								</TableColumn>
+								<TableColumn>
+									<Width>0.9166667in</Width>
+								</TableColumn>
+								<TableColumn>
+									<Width>0.3333333in</Width>
+								</TableColumn>
+							</TableColumns>
+							<Top>0.125in</Top>
+							<Width>4in</Width>
+						</Table>
+						<Rectangle Name="legendRectangle">
+							<Height>1in</Height>
+							<Left>4.25in</Left>
+							<RepeatWith>storeSalesTable</RepeatWith>
+							<Style>
+								<BorderStyle>
+									<Default>Solid</Default>
+								</BorderStyle>
+							</Style>
+							<Top>0.125in</Top>
+							<Width>2.260417in</Width>
+							<ZIndex>1</ZIndex>
+							<ReportItems>
+								<Textbox Name="legendHeader">
+									<CanGrow>true</CanGrow>
+									<Height>0.25in</Height>
+									<Style>
+										<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+										<FontSize>8pt</FontSize>
+										<FontWeight>700</FontWeight>
+										<PaddingBottom>2pt</PaddingBottom>
+										<PaddingLeft>2pt</PaddingLeft>
+										<PaddingRight>2pt</PaddingRight>
+										<PaddingTop>2pt</PaddingTop>
+										<TextAlign>Center</TextAlign>
+									</Style>
+									<Value>Icon Legend</Value>
+									<Width>2.260417in</Width>
+								</Textbox>
+								<Image Name="aboveExpectationsImage">
+									<Height>0.25in</Height>
+									<Left>0.125in</Left>
+									<MIMEType>image/png</MIMEType>
+									<Sizing>Fit</Sizing>
+									<Source>Database</Source>
+									<Top>0.25in</Top>
+									<Value>=IconSet("Symbols2", True, False, False, False, False )</Value>
+									<Width>0.25in</Width>
+									<ZIndex>1</ZIndex>
+								</Image>
+								<Image Name="belowExpectationsImage">
+									<Height>0.25in</Height>
+									<Left>0.125in</Left>
+									<MIMEType>image/png</MIMEType>
+									<Sizing>Fit</Sizing>
+									<Source>Database</Source>
+									<Top>0.625in</Top>
+									<Value>=IconSet("Symbols2", False, False, True, False, False )</Value>
+									<Width>0.25in</Width>
+									<ZIndex>2</ZIndex>
+								</Image>
+								<Textbox Name="aboveExpectationsHeader">
+									<CanGrow>true</CanGrow>
+									<Height>0.375in</Height>
+									<Left>0.5in</Left>
+									<Style>
+										<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+										<FontSize>8pt</FontSize>
+										<PaddingBottom>2pt</PaddingBottom>
+										<PaddingLeft>2pt</PaddingLeft>
+										<PaddingRight>2pt</PaddingRight>
+										<PaddingTop>2pt</PaddingTop>
+										<TextAlign>Right</TextAlign>
+									</Style>
+									<Top>0.25in</Top>
+									<Value>Profit Above Expectations</Value>
+									<Width>0.75in</Width>
+									<ZIndex>3</ZIndex>
+								</Textbox>
+								<Textbox Name="belowExpectationsLabel">
+									<CanGrow>true</CanGrow>
+									<Height>0.375in</Height>
+									<Left>0.5in</Left>
+									<Style>
+										<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+										<FontSize>8pt</FontSize>
+										<PaddingBottom>2pt</PaddingBottom>
+										<PaddingLeft>2pt</PaddingLeft>
+										<PaddingRight>2pt</PaddingRight>
+										<PaddingTop>2pt</PaddingTop>
+										<TextAlign>Right</TextAlign>
+									</Style>
+									<Top>0.625in</Top>
+									<Value>Profit Below Expectations</Value>
+									<Width>0.75in</Width>
+									<ZIndex>4</ZIndex>
+								</Textbox>
+								<Textbox Name="aboveExpectationsValue">
+									<CanGrow>true</CanGrow>
+									<Height>0.375in</Height>
+									<Left>1.25in</Left>
+									<Style>
+										<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+										<FontSize>8pt</FontSize>
+										<PaddingBottom>2pt</PaddingBottom>
+										<PaddingLeft>2pt</PaddingLeft>
+										<PaddingRight>2pt</PaddingRight>
+										<PaddingTop>2pt</PaddingTop>
+										<TextAlign>Right</TextAlign>
+									</Style>
+									<Top>0.25in</Top>
+									<Value>="&gt; " &amp; String.Format("{0:C0}", 100 * Math.Round( (1.075 * Avg(Fields!GrossProfit.Value)) / 100)</Value>
+									<Width>0.7395833in</Width>
+									<ZIndex>5</ZIndex>
+								</Textbox>
+								<Textbox Name="belowExpectationsValue">
+									<CanGrow>true</CanGrow>
+									<Height>0.375in</Height>
+									<Left>1.25in</Left>
+									<Style>
+										<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+										<FontSize>8pt</FontSize>
+										<PaddingBottom>2pt</PaddingBottom>
+										<PaddingLeft>2pt</PaddingLeft>
+										<PaddingRight>2pt</PaddingRight>
+										<PaddingTop>2pt</PaddingTop>
+										<TextAlign>Right</TextAlign>
+									</Style>
+									<Top>0.625in</Top>
+									<Value>="&lt; " &amp; String.Format("{0:C0}", (Math.Round(Avg(Fields!GrossProfit.Value) / 107.5) * 100))</Value>
+									<Width>0.7395833in</Width>
+									<ZIndex>5</ZIndex>
+								</Textbox>
+							</ReportItems>
+						</Rectangle>
+					</ReportItems>
+				</dd:Container>
+			</CustomReportItem>
+		</ReportItems>
+	</Body>
+	<Width>0in</Width>
+	<DataSets>
+		<DataSet Name="StorePerformanceData">
+			<Fields>
+				<Field Name="StoreName">
+					<DataField>StoreName</DataField>
+				</Field>
+				<Field Name="GrossSales">
+					<DataField>GrossSales</DataField>
+				</Field>
+				<Field Name="GrossProfit">
+					<DataField>GrossProfit</DataField>
+				</Field>
+				<Field Name="TotalItems">
+					<DataField>TotalItems</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT Store.StoreName, Sum([SaleDetails].[Quantity]*[SaleDetails].[Price]*(1-[SaleDetails].[Discount])) AS GrossSales, Sum(([SaleDetails].[Quantity]*[SaleDetails].[Price]*(1-[SaleDetails].[Discount]))-[Product].[StorePrice]) AS GrossProfit, Sum(SaleDetails.Quantity) AS TotalItems
+FROM Product INNER JOIN (Store INNER JOIN (Sale INNER JOIN SaleDetails ON Sale.SalesID = SaleDetails.SaleID) ON Store.StoreID = Sale.Store) ON Product.ProductID = SaleDetails.ProductID
+GROUP BY Store.StoreName;</CommandText>
+				<DataSourceName>Reels</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>MasterReport</Name>
+			<Value>ReelsConfidential.rdlx-master</Value>
+		</CustomProperty>
+	</CustomProperties>
+</Report>

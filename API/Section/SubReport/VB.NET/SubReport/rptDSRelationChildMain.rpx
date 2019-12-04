@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="6624" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="ghProducts" Height="538" UnderlayNext="1" DataField="ProductName" GroupKeepTogether="1" BackColor="16777215">
+      <Control Type="AR.Field" Name="txtProductName" DataField="ProductName" Left="0" Top="0" Width="2145.6" Height="270" Text="Product name" Style="color: Green; font-family: Arial; font-size: 9pt; font-weight: normal; ddo-char-set: 0" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="283.68" BackColor="16777215">
+      <Control Type="AR.Subreport" Name="SubReport1" Left="2145.6" Top="269.28" Width="4320" Height="269.28" />
+      <Control Type="AR.Label" Name="lblOrderID" Left="2145.6" Top="0" Width="1080" Height="270" Caption="Order ID" Style="background-color: Green; color: White; font-family: Arial; font-size: 9pt; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="lblUnitPrice" BorderLeftStyle="1" BorderLeftColor="16777215" Left="3225.6" Top="0" Width="1080" Height="270" Caption="Unit price" Style="background-color: Green; color: White; font-family: Arial; font-size: 9pt; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="lblQuantity" BorderLeftStyle="1" BorderLeftColor="16777215" Left="4305.6" Top="0" Width="1080" Height="270" Caption="Quantity" Style="background-color: Green; color: White; font-family: Arial; font-size: 9pt; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="lblDiscount" BorderLeftStyle="1" BorderLeftColor="16777215" Left="5385.6" Top="0" Width="1080" Height="270" Caption="Discount" Style="background-color: Green; color: White; font-family: Arial; font-size: 9pt; ddo-char-set: 0" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="240" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Private _subRpt As GrapeCity.ActiveReports.SectionReport
+Private _cnt As Integer
+
+Public Sub Detail_Format()
+	Dim drc As System.Data.DataRow() = CType(rpt.DataSource, System.Data.DataRow())
+	'Gets an array of child DataRow objects that are associated with the name of the relationship "ProductsOrderDetails" and set the DataSource of the sub-report.
+	_subRpt.DataSource = drc(_cnt).GetChildRows("ProductsOrderDetails")
+	SubReport1.Report = _subRpt
+	_cnt += 1
+End Sub
+
+
+
+Public Sub ActiveReport_ReportStart()
+	_cnt = 0
+	_subRpt = New GrapeCity.ActiveReports.SectionReport()
+	_subRpt.LoadLayout(System.IO.Path.GetFullPath("..\..\rptDSRelationChildSub.rpx"))
+End Sub]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

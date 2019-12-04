@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="9360" DocumentName="ActiveReports Document" ScriptLang="VB.NET" ShowParamUI="0" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="groupHeader1" Height="360" RepeatStyle="1" BackColor="16777215">
+      <Control Type="AR.Label" Name="lblOrderID" Left="0" Top="0" Width="1440" Height="360" Caption="Order ID" Style="color: Navy; font-size: 12pt; font-weight: bold; vertical-align: middle" PaddingLeft="2" />
+      <Control Type="AR.Label" Name="lblProductID" Left="1710" Top="0" Width="1440" Height="360" Caption="Product ID" Style="color: Navy; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblUnitPrice" Left="3420" Top="0" Width="1440" Height="360" Caption="Unit Price" Style="color: Navy; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblQuantity" Left="5130" Top="0" Width="1440" Height="360" Caption="Quantity" Style="color: Navy; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblDiscount" Left="6840" Top="0" Width="1440" Height="360" Caption="Discount" Style="color: Navy; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.CrossSectionBox" Name="cscBorder" Left="0" Top="360" Right="9360" Bottom="0" LineColor="8388736" LineWeight="3" BackColor="-2302756" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="288" BackColor="16777215">
+      <Control Type="AR.Field" Name="txtOrderID" DataField="OrderID" Left="0" Top="0" Width="1440" Height="288" Text="OrderID" Style="vertical-align: middle" PaddingLeft="2" />
+      <Control Type="AR.Field" Name="txtProductID" DataField="ProductID" Left="1710" Top="0" Width="1440" Height="288" Text="ProductID" Style="vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtUnitPrice" DataField="UnitPrice" Left="3420" Top="0" Width="1440" Height="288" Text="UnitPrice" Style="vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtQuantity" DataField="Quantity" Left="5130" Top="0" Width="1440" Height="288" Text="Quantity" Style="vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtDiscount" DataField="Discount" Left="6825" Top="0" Width="1440" Height="288" Text="Discount" Style="vertical-align: middle" />
+    </Section>
+    <Section Type="GroupFooter" Name="groupFooter1" Height="288" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.MDB" SQL="Select * from [order details] where orderID = &lt;%orderID||1%&gt; order by productid" />
+  </DataSources>
+  <PageSettings PaperSize="1" PaperWidth="12240" PaperHeight="15840" PaperName="" />
+  <Parameters />
+</ActiveReportsLayout>

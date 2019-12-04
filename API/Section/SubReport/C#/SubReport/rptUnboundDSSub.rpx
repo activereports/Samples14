@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8460" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+	<StyleSheet>
+		<Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+		<Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" Parent="Normal" />
+		<Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" Parent="Normal" />
+		<Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" Parent="Normal" />
+	</StyleSheet>
+	<Sections>
+		<Section Type="GroupHeader" Name="GroupHeader1" Height="360" BackColor="16777215">
+			<Control Type="AR.Label" Name="Label1" Left="90" Top="0" Width="1440" Height="360" Caption="Order ID" Style="font-family: Arial; ddo-char-set: 1" />
+			<Control Type="AR.Label" Name="Label2" Left="1710" Top="0" Width="1440" Height="360" Caption="Order Date" Style="font-family: Arial; ddo-char-set: 1" />
+			<Control Type="AR.Label" Name="Label3" Left="3330" Top="0" Width="1440" Height="360" Caption="Shipped Date" Style="font-family: Arial; ddo-char-set: 1" />
+			<Control Type="AR.Label" Name="Label4" Left="4950" Top="0" Width="1440" Height="360" Caption="Ship Via" Style="font-family: Arial; ddo-char-set: 1" />
+			<Control Type="AR.Label" Name="Label5" Left="6555" Top="0" Width="1440" Height="360" Caption="Freight" Style="font-family: Arial; ddo-char-set: 1" />
+		</Section>
+		<Section Type="Detail" Name="Detail" Height="479" BackStyle="1" BackColor="12648384">
+			<Control Type="AR.Field" Name="TextBox1" DataField="OrderID" Left="90" Top="90" Width="1440" Height="288" Text="OrderID" Style="font-family: Arial; ddo-char-set: 1" />
+			<Control Type="AR.Field" Name="TextBox2" DataField="OrderDate" Left="1709.28" Top="90" Width="1440" Height="288" Text="OrderDate" OutputFormat="MM/dd/yy" Style="font-family: Arial; ddo-char-set: 1" />
+			<Control Type="AR.Field" Name="TextBox3" DataField="ShippedDate" Left="3330" Top="90" Width="1440" Height="288" Text="ShippedDate" OutputFormat="MM/dd/yy" Style="font-family: Arial; ddo-char-set: 1" />
+			<Control Type="AR.Field" Name="TextBox4" DataField="ShipVia" Left="4950" Top="90" Width="1440" Height="288" Text="ShipVia" Style="font-family: Arial; ddo-char-set: 1" />
+			<Control Type="AR.Field" Name="TextBox5" DataField="Freight" Left="6570" Top="90" Width="1440" Height="288" Text="Freight" Style="font-family: Arial; ddo-char-set: 1" />
+		</Section>
+		<Section Type="GroupFooter" Name="GroupFooter1" Height="360" BackColor="16777215" />
+	</Sections>
+	<PageSettings />
+	<Parameters />
+</ActiveReportsLayout>

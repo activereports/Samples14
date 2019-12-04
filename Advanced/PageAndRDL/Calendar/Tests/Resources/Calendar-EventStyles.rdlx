@@ -1,0 +1,105 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Body>
+		<Height>6.375in</Height>
+		<ReportItems>
+			<CustomReportItem Name="Calendar1">
+				<Type>Calendar</Type>
+				<Top>0.25in</Top>
+				<Left>0.25in</Left>
+				<Width>6.375in</Width>
+				<Height>4.625in</Height>
+				<CustomData>
+					<DataSetName>DataSet1</DataSetName>
+					<DataRowGroupings>
+						<DataGroupings>
+							<DataGrouping>
+								<CustomProperties>
+									<CustomProperty>
+										<Name>calendar:Event.Value</Name>
+										<Value>=Fields!Value.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.EndDate</Name>
+										<Value>=Fields!EndTime.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.StartDate</Name>
+										<Value>=Fields!StartTime.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.FontFamily</Name>
+										<Value>Tahoma</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.FontColor</Name>
+										<Value>White</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.Backcolor</Name>
+										<Value>Navy</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.ImageSource</Name>
+										<Value>Embedded</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.MimeType</Name>
+										<Value>image/png</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.ImageValue</Name>
+										<Value>Pencil</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.TextAlign</Name>
+										<Value>Center</Value>
+									</CustomProperty>
+								</CustomProperties>
+							</DataGrouping>
+						</DataGroupings>
+					</DataRowGroupings>
+				</CustomData>
+			</CustomReportItem>
+		</ReportItems>
+		<Style>
+			<BackgroundImage>
+				<Source>Embedded</Source>
+				<Value />
+			</BackgroundImage>
+		</Style>
+	</Body>
+	<Width>6.875in</Width>
+	<EmbeddedImages>
+		<EmbeddedImage Name="Pencil">
+			<ImageData>iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAABGdBTUEAALGPC/xhBQAAAGNJREFUGFdjZGBoYEACjIyN0zPzM6YJAMWAElDEyMj4//9/bi6uGVkFCIkbczn+njcAymUnJwJJqAREFC4HMb8BWRTIhpnM0ABXiyTawLB84XygiRA5ZIcwAEVXLV+OIgR2JADALTf1eFiK4QAAAABJRU5ErkJggg==</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>Path=Calendar-AppointmentWrapping.csv;Locale=en-US;TextQualifier=";ColumnsSeparator=,;RowsSeparator=\r\n;Columns=StartTime,EndTime,Value;JoinRowsSeparators=True;HasHeaders=True</ConnectString>
+				<DataProvider>CSV</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="StartTime">
+					<DataField>StartTime</DataField>
+				</Field>
+				<Field Name="EndTime">
+					<DataField>EndTime</DataField>
+				</Field>
+				<Field Name="Value">
+					<DataField>Value</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText/>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

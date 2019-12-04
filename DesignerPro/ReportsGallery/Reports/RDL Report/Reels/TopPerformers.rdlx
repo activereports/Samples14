@@ -1,0 +1,1079 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<PageHeader>
+		<Height>1in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Image Name="Image1">
+				<Height>1in</Height>
+				<MIMEType>=Theme.Images!Logo.MIMEType</MIMEType>
+				<Sizing>FitProportional</Sizing>
+				<Source>Database</Source>
+				<Value>=Theme.Images!Logo.ImageData</Value>
+				<Width>1.5in</Width>
+			</Image>
+			<Textbox Name="TextBox24">
+				<CanGrow>true</CanGrow>
+				<Height>0.375in</Height>
+				<Left>1.625in</Left>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+					<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+					<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Top>0.125in</Top>
+				<Value>Best &amp; Worst Performers</Value>
+				<Width>4.03125in</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox35">
+				<CanGrow>true</CanGrow>
+				<Height>0.375in</Height>
+				<Left>1.625in</Left>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+					<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+					<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Top>0.5in</Top>
+				<Value>by Sales</Value>
+				<Width>4.03125in</Width>
+				<ZIndex>2</ZIndex>
+			</Textbox>
+		</ReportItems>
+	</PageHeader>
+	<Body>
+		<Height>3.375in</Height>
+		<ReportItems>
+			<Table Name="table2">
+				<DataSetName>Performers</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ColSpan>4</ColSpan>
+									<ReportItems>
+										<Textbox Name="textbox6">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>12pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+											<Value>="Worst selling performers (Bottom " &amp; Parameters!NumWorst.Value &amp; ")"</Value>
+											<ZIndex>19</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox10">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>18</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox12">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value>Movie Title</Value>
+											<ZIndex>17</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox14">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+											</Style>
+											<Value>Year Released</Value>
+											<ZIndex>16</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox15">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+											</Style>
+											<Value>Quantity</Value>
+											<ZIndex>15</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox16">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>3</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox19">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>2</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox20">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>1</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox21">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+							<Visibility>
+								<Hidden>true</Hidden>
+							</Visibility>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Footer>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox31">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>7</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox32">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>6</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox33">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>5</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox34">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>4</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Footer>
+				<Height>1.5in</Height>
+				<KeepTogether>true</KeepTogether>
+				<Left>0.21875in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>0.3645833in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>3.125in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.9583333in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.9583333in</Width>
+					</TableColumn>
+				</TableColumns>
+				<TableGroups>
+					<TableGroup>
+						<Header>
+							<TableRows>
+								<TableRow>
+									<Height>0.25in</Height>
+									<TableCells>
+										<TableCell>
+											<ColSpan>2</ColSpan>
+											<ReportItems>
+												<Textbox Name="WorstPerformerName">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Value>=First(Fields!FirstName.Value) &amp; " " &amp; First(Fields!LastName.Value)</Value>
+													<ZIndex>14</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="textbox25">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Value />
+													<ZIndex>13</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="textbox26">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+														<Format>N0</Format>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<TextAlign>Right</TextAlign>
+													</Style>
+													<Value>=Sum(Fields!Quantity.Value)</Value>
+													<ZIndex>12</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+									</TableCells>
+								</TableRow>
+							</TableRows>
+						</Header>
+						<Grouping Name="table2_Group1">
+							<Filters>
+								<Filter>
+									<FilterExpression>=Sum(Fields!Quantity.Value)</FilterExpression>
+									<FilterValues>
+										<FilterValue>=Parameters!NumWorst.Value</FilterValue>
+									</FilterValues>
+									<Operator>BottomN</Operator>
+								</Filter>
+							</Filters>
+							<GroupExpressions>
+								<GroupExpression>=Fields!MoviePersonID.Value</GroupExpression>
+							</GroupExpressions>
+						</Grouping>
+						<Sorting>
+							<SortBy>
+								<Direction>Descending</Direction>
+								<SortExpression>=Sum(Fields!Quantity.Value)</SortExpression>
+							</SortBy>
+						</Sorting>
+					</TableGroup>
+					<TableGroup>
+						<Header>
+							<TableRows>
+								<TableRow>
+									<Height>0.25in</Height>
+									<TableCells>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="textbox27">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Value />
+													<ZIndex>11</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="textbox28">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<BackgroundColor>=IIf( RowNumber( "table2_Group1" ) Mod 2 = 1, White, Code.ThemeBlueWhite )</BackgroundColor>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Value>=First(Fields!MovieTitle.Value)</Value>
+													<ZIndex>10</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="textbox29">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<BackgroundColor>=IIf( RowNumber( "table2_Group1" ) Mod 2 = 1, White, Code.ThemeBlueWhite )</BackgroundColor>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<TextAlign>Right</TextAlign>
+													</Style>
+													<Value>=First(Fields!YearReleased.Value)</Value>
+													<ZIndex>9</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="textbox30">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<BackgroundColor>=IIf( RowNumber( "table2_Group1" ) Mod 2 = 1, White, Code.ThemeBlueWhite )</BackgroundColor>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<TextAlign>Right</TextAlign>
+													</Style>
+													<Value>=Sum(Fields!Quantity.Value)</Value>
+													<ZIndex>8</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+									</TableCells>
+									<Visibility>
+										<Hidden>true</Hidden>
+										<ToggleItem>WorstPerformerName</ToggleItem>
+									</Visibility>
+								</TableRow>
+							</TableRows>
+						</Header>
+						<Grouping Name="table2_Group2">
+							<GroupExpressions>
+								<GroupExpression>=Fields!MovieID.Value</GroupExpression>
+							</GroupExpressions>
+						</Grouping>
+						<Sorting>
+							<SortBy>
+								<Direction>Descending</Direction>
+								<SortExpression>=Sum(Fields!Quantity.Value)</SortExpression>
+							</SortBy>
+						</Sorting>
+					</TableGroup>
+				</TableGroups>
+				<Top>1.625in</Top>
+				<Width>5.40625in</Width>
+				<ZIndex>1</ZIndex>
+			</Table>
+			<Table Name="table1">
+				<DataSetName>Performers</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ColSpan>4</ColSpan>
+									<ReportItems>
+										<Textbox Name="textbox1">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>12pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+											<Value>="Best selling performers (Top " &amp; Parameters!NumBest.Value &amp; ")"</Value>
+											<ZIndex>19</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox40">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>18</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox11">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value>Movie Title</Value>
+											<ZIndex>17</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox17">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+											</Style>
+											<Value>Year Released</Value>
+											<ZIndex>16</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox18">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+											</Style>
+											<Value>Quantity</Value>
+											<ZIndex>15</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox4">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>3</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox22">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>2</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox3">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>1</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox5">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+							<Visibility>
+								<Hidden>true</Hidden>
+							</Visibility>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Footer>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox7">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>7</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox8">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>6</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox9">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>5</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox23">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>4</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Footer>
+				<Height>1.5in</Height>
+				<Left>0.21875in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>0.3645833in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>3.135417in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.9583333in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.9479167in</Width>
+					</TableColumn>
+				</TableColumns>
+				<TableGroups>
+					<TableGroup>
+						<Header>
+							<TableRows>
+								<TableRow>
+									<Height>0.25in</Height>
+									<TableCells>
+										<TableCell>
+											<ColSpan>2</ColSpan>
+											<ReportItems>
+												<Textbox Name="PerformerName">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Value>=First(Fields!FirstName.Value) &amp; " " &amp; First(Fields!LastName.Value)</Value>
+													<ZIndex>14</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="textbox13">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Value />
+													<ZIndex>13</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="Quantity_1">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<BorderStyle>
+															<Right>None</Right>
+														</BorderStyle>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+														<Format>N0</Format>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<TextAlign>Right</TextAlign>
+													</Style>
+													<Value>=Sum(Fields!Quantity.Value)</Value>
+													<ZIndex>12</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+									</TableCells>
+								</TableRow>
+							</TableRows>
+						</Header>
+						<Grouping Name="table1_Group1">
+							<Filters>
+								<Filter>
+									<FilterExpression>=Sum(Fields!Quantity.Value)</FilterExpression>
+									<FilterValues>
+										<FilterValue>=Parameters!NumBest.Value</FilterValue>
+									</FilterValues>
+									<Operator>TopN</Operator>
+								</Filter>
+							</Filters>
+							<GroupExpressions>
+								<GroupExpression>=Fields!MoviePersonID.Value</GroupExpression>
+							</GroupExpressions>
+						</Grouping>
+						<Sorting>
+							<SortBy>
+								<Direction>Descending</Direction>
+								<SortExpression>=Sum(Fields!Quantity.Value)</SortExpression>
+							</SortBy>
+						</Sorting>
+					</TableGroup>
+					<TableGroup>
+						<Header>
+							<TableRows>
+								<TableRow>
+									<Height>0.25in</Height>
+									<TableCells>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="textbox2">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Value />
+													<ZIndex>11</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="MovieTitle">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<BackgroundColor>=IIf( RowNumber( "table1_Group1" ) Mod 2 = 1, White, Code.ThemeBlueWhite )</BackgroundColor>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Value>=First(Fields!MovieTitle.Value)</Value>
+													<ZIndex>10</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="YearReleased">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<BackgroundColor>=IIf( RowNumber( "table1_Group1" ) Mod 2 = 1, White, Code.ThemeBlueWhite )</BackgroundColor>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<TextAlign>Right</TextAlign>
+													</Style>
+													<Value>=First(Fields!YearReleased.Value)</Value>
+													<ZIndex>9</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="Quantity_3">
+													<CanGrow>true</CanGrow>
+													<Style>
+														<BackgroundColor>=IIf( RowNumber( "table1_Group1" ) Mod 2 = 1, White, Code.ThemeBlueWhite )</BackgroundColor>
+														<BorderStyle>
+															<Right>None</Right>
+														</BorderStyle>
+														<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<TextAlign>Right</TextAlign>
+													</Style>
+													<Value>=Sum(Fields!Quantity.Value)</Value>
+													<ZIndex>8</ZIndex>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+									</TableCells>
+									<Visibility>
+										<Hidden>true</Hidden>
+										<ToggleItem>PerformerName</ToggleItem>
+									</Visibility>
+								</TableRow>
+							</TableRows>
+						</Header>
+						<Grouping Name="table1_Group2">
+							<GroupExpressions>
+								<GroupExpression>=Fields!MovieID.Value</GroupExpression>
+							</GroupExpressions>
+						</Grouping>
+						<Sorting>
+							<SortBy>
+								<Direction>Descending</Direction>
+								<SortExpression>=Sum(Fields!Quantity.Value)</SortExpression>
+							</SortBy>
+						</Sorting>
+					</TableGroup>
+				</TableGroups>
+				<Width>5.40625in</Width>
+			</Table>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>5.6875in</Width>
+	<ReportParameters>
+		<ReportParameter Name="NumBest">
+			<AllowBlank>true</AllowBlank>
+			<DataType>Integer</DataType>
+			<Prompt>Number of Best Selling</Prompt>
+			<DefaultValue>
+				<Values>
+					<Value>20</Value>
+				</Values>
+			</DefaultValue>
+		</ReportParameter>
+		<ReportParameter Name="NumWorst">
+			<AllowBlank>true</AllowBlank>
+			<DataType>Integer</DataType>
+			<Prompt>Number of Worst Selling</Prompt>
+			<DefaultValue>
+				<Values>
+					<Value>5</Value>
+				</Values>
+			</DefaultValue>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="Reels">
+			<ConnectionProperties>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Reels.mdb</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Performers">
+			<Fields>
+				<Field Name="MoviePersonID">
+					<DataField>MoviePersonID</DataField>
+				</Field>
+				<Field Name="FirstName">
+					<DataField>FirstName</DataField>
+				</Field>
+				<Field Name="LastName">
+					<DataField>LastName</DataField>
+				</Field>
+				<Field Name="CrewTitleID">
+					<DataField>CrewTitleID</DataField>
+				</Field>
+				<Field Name="MovieID">
+					<DataField>MovieID</DataField>
+				</Field>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="YearReleased">
+					<DataField>YearReleased</DataField>
+				</Field>
+				<Field Name="Quantity">
+					<DataField>Quantity</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT MoviePerson.MoviePersonID, MoviePerson.FirstName, MoviePerson.LastName, CrewTitle.CrewTitleID, Movie.MovieID, Movie.Title, Movie.YearReleased, Sum(SaleDetails.Quantity) AS Quantity
+FROM (Product INNER JOIN SaleDetails ON Product.ProductID = SaleDetails.ProductID) INNER JOIN ((CrewTitle INNER JOIN (Movie INNER JOIN (MoviePerson INNER JOIN MovieCrew ON MoviePerson.MoviePersonID = MovieCrew.CastID) ON Movie.MovieID = MovieCrew.MovieID) ON CrewTitle.CrewTitleID = MovieCrew.TitleID) INNER JOIN MovieProduct ON Movie.MovieID = MovieProduct.MovieID) ON Product.ProductID = MovieProduct.ProductID
+WHERE (((CrewTitle.CrewTitleID)=1))
+GROUP BY MoviePerson.MoviePersonID, MoviePerson.FirstName, MoviePerson.LastName, CrewTitle.CrewTitleID, Movie.MovieID, Movie.Title, Movie.YearReleased
+ORDER BY MoviePerson.LastName</CommandText>
+				<DataSourceName>Reels</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>Theme</Name>
+			<Value>Reels.rdlx-theme</Value>
+		</CustomProperty>
+	</CustomProperties>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Reels.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

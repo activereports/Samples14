@@ -1,0 +1,5 @@
+StartTime(DateTime),EndTime(DateTime),Value(String)
+2007-12-05,2007-12-07,"Calendar.rdlx"
+2007-12-06,2007-12-07,"Calendar.rdlx"
+2007-12-07,2007-12-07,"Calendar.rdlx"
+2008-02-05,2008-03-07,"Calendar.rdlx"

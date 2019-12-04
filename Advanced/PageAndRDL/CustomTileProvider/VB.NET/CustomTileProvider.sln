@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestDesignerPro", "TestDesignerPro\TestDesignerPro.vbproj", "{1181F91D-5605-49E6-A28E-AF4029160EEE}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CustomTileProviders", "CustomTileProviders\CustomTileProviders.vbproj", "{E78B9209-319C-41F9-B449-A0E4B0A83705}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestViewer", "TestViewer\TestViewer.vbproj", "{790D27AF-56D6-4133-A4F5-2CBE00ED4CD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E78B9209-319C-41F9-B449-A0E4B0A83705}.Debug|x86.ActiveCfg = Debug|x86
+		{E78B9209-319C-41F9-B449-A0E4B0A83705}.Debug|x86.Build.0 = Debug|x86
+		{E78B9209-319C-41F9-B449-A0E4B0A83705}.Release|x86.ActiveCfg = Release|x86
+		{E78B9209-319C-41F9-B449-A0E4B0A83705}.Release|x86.Build.0 = Release|x86
+		{790D27AF-56D6-4133-A4F5-2CBE00ED4CD6}.Debug|x86.ActiveCfg = Debug|x86
+		{790D27AF-56D6-4133-A4F5-2CBE00ED4CD6}.Debug|x86.Build.0 = Debug|x86
+		{790D27AF-56D6-4133-A4F5-2CBE00ED4CD6}.Release|x86.ActiveCfg = Release|x86
+		{790D27AF-56D6-4133-A4F5-2CBE00ED4CD6}.Release|x86.Build.0 = Release|x86
+		{1181F91D-5605-49E6-A28E-AF4029160EEE}.Debug|x86.ActiveCfg = Debug|x86
+		{1181F91D-5605-49E6-A28E-AF4029160EEE}.Debug|x86.Build.0 = Debug|x86
+		{1181F91D-5605-49E6-A28E-AF4029160EEE}.Release|x86.ActiveCfg = Release|x86
+		{1181F91D-5605-49E6-A28E-AF4029160EEE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {469E36A5-FBDB-4879-A331-0E30A69C8ACC}
+	EndGlobalSection
+EndGlobal

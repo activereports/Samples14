@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblDataSet.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblDataSet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="lblDataSet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="lblDataSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 53</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblDataSet.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblDataSet.Text" xml:space="preserve">
+    <value>Creates a DataSet from the included Northwind sample database inside the Section Report object and uses the Fetch Data event to populate the internal Fields collection to populate the report.</value>
+  </data>
+  <data name="&gt;&gt;lblDataSet.Name" xml:space="preserve">
+    <value>lblDataSet</value>
+  </data>
+  <data name="&gt;&gt;lblDataSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDataSet.Parent" xml:space="preserve">
+    <value>tabDataSet</value>
+  </data>
+  <data name="&gt;&gt;lblDataSet.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnDataSet.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnDataSet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>742, 8</value>
+  </data>
+  <data name="btnDataSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 42</value>
+  </data>
+  <data name="btnDataSet.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDataSet.Text" xml:space="preserve">
+    <value>Build Report From DataSet</value>
+  </data>
+  <data name="&gt;&gt;btnDataSet.Name" xml:space="preserve">
+    <value>btnDataSet</value>
+  </data>
+  <data name="&gt;&gt;btnDataSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDataSet.Parent" xml:space="preserve">
+    <value>tabDataSet</value>
+  </data>
+  <data name="&gt;&gt;btnDataSet.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabDataSet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabDataSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>937, 75</value>
+  </data>
+  <data name="tabDataSet.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabDataSet.Text" xml:space="preserve">
+    <value>Unbound data with a  DataSet</value>
+  </data>
+  <data name="&gt;&gt;tabDataSet.Name" xml:space="preserve">
+    <value>tabDataSet</value>
+  </data>
+  <data name="&gt;&gt;tabDataSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabDataSet.Parent" xml:space="preserve">
+    <value>tabDataBinding</value>
+  </data>
+  <data name="&gt;&gt;tabDataSet.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnDataReader.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnDataReader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>590, 8</value>
+  </data>
+  <data name="btnDataReader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 45</value>
+  </data>
+  <data name="btnDataReader.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnDataReader.Text" xml:space="preserve">
+    <value>Build Report From DataReader</value>
+  </data>
+  <data name="&gt;&gt;btnDataReader.Name" xml:space="preserve">
+    <value>btnDataReader</value>
+  </data>
+  <data name="&gt;&gt;btnDataReader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDataReader.Parent" xml:space="preserve">
+    <value>tabDataReader</value>
+  </data>
+  <data name="&gt;&gt;btnDataReader.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblDataReader.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblDataReader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="lblDataReader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 57</value>
+  </data>
+  <data name="lblDataReader.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblDataReader.Text" xml:space="preserve">
+    <value>Creates a DataReader from the included Northwind sample database inside the ActiveReport object and uses the Fetch Data event to populate the internal Fields collection to populate the report.</value>
+  </data>
+  <data name="&gt;&gt;lblDataReader.Name" xml:space="preserve">
+    <value>lblDataReader</value>
+  </data>
+  <data name="&gt;&gt;lblDataReader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDataReader.Parent" xml:space="preserve">
+    <value>tabDataReader</value>
+  </data>
+  <data name="&gt;&gt;lblDataReader.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabDataReader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabDataReader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 75</value>
+  </data>
+  <data name="tabDataReader.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabDataReader.Text" xml:space="preserve">
+    <value>Unbound data with a DataReader</value>
+  </data>
+  <data name="&gt;&gt;tabDataReader.Name" xml:space="preserve">
+    <value>tabDataReader</value>
+  </data>
+  <data name="&gt;&gt;tabDataReader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabDataReader.Parent" xml:space="preserve">
+    <value>tabDataBinding</value>
+  </data>
+  <data name="&gt;&gt;tabDataReader.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblTextFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblTextFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="lblTextFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>574, 57</value>
+  </data>
+  <data name="lblTextFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblTextFile.Text" xml:space="preserve">
+    <value>Sets the Invoice.txt file as a datasource for the SectionReport object and uses the Fetch Data event to populate the internal Fields collection to populate the report.</value>
+  </data>
+  <data name="&gt;&gt;lblTextFile.Name" xml:space="preserve">
+    <value>lblTextFile</value>
+  </data>
+  <data name="&gt;&gt;lblTextFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTextFile.Parent" xml:space="preserve">
+    <value>tabTextFile</value>
+  </data>
+  <data name="&gt;&gt;lblTextFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnTextFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnTextFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>588, 8</value>
+  </data>
+  <data name="btnTextFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 42</value>
+  </data>
+  <data name="btnTextFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnTextFile.Text" xml:space="preserve">
+    <value>Build Report From Text File</value>
+  </data>
+  <data name="&gt;&gt;btnTextFile.Name" xml:space="preserve">
+    <value>btnTextFile</value>
+  </data>
+  <data name="&gt;&gt;btnTextFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnTextFile.Parent" xml:space="preserve">
+    <value>tabTextFile</value>
+  </data>
+  <data name="&gt;&gt;btnTextFile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabTextFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabTextFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 75</value>
+  </data>
+  <data name="tabTextFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabTextFile.Text" xml:space="preserve">
+    <value>Unbound data with a Text File</value>
+  </data>
+  <data name="&gt;&gt;tabTextFile.Name" xml:space="preserve">
+    <value>tabTextFile</value>
+  </data>
+  <data name="&gt;&gt;tabTextFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabTextFile.Parent" xml:space="preserve">
+    <value>tabDataBinding</value>
+  </data>
+  <data name="&gt;&gt;tabTextFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblArray.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblArray.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="lblArray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 58</value>
+  </data>
+  <data name="lblArray.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblArray.Text" xml:space="preserve">
+    <value>Creates a Data Array from the included Northwind sample text file inside the ActiveReport object and uses the Fetch Data event to populate the internal Fields collection to populate the report.</value>
+  </data>
+  <data name="&gt;&gt;lblArray.Name" xml:space="preserve">
+    <value>lblArray</value>
+  </data>
+  <data name="&gt;&gt;lblArray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblArray.Parent" xml:space="preserve">
+    <value>tabArray</value>
+  </data>
+  <data name="&gt;&gt;lblArray.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnArray.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnArray.Location" type="System.Drawing.Point, System.Drawing">
+    <value>590, 8</value>
+  </data>
+  <data name="btnArray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 43</value>
+  </data>
+  <data name="btnArray.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnArray.Text" xml:space="preserve">
+    <value>Build Report From Array</value>
+  </data>
+  <data name="&gt;&gt;btnArray.Name" xml:space="preserve">
+    <value>btnArray</value>
+  </data>
+  <data name="&gt;&gt;btnArray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnArray.Parent" xml:space="preserve">
+    <value>tabArray</value>
+  </data>
+  <data name="&gt;&gt;btnArray.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabArray.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabArray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 75</value>
+  </data>
+  <data name="tabArray.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabArray.Text" xml:space="preserve">
+    <value>Unbound data with a Data Array</value>
+  </data>
+  <data name="&gt;&gt;tabArray.Name" xml:space="preserve">
+    <value>tabArray</value>
+  </data>
+  <data name="&gt;&gt;tabArray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabArray.Parent" xml:space="preserve">
+    <value>tabDataBinding</value>
+  </data>
+  <data name="&gt;&gt;tabArray.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabDataBinding.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabDataBinding.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="tabDataBinding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabDataBinding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>945, 104</value>
+  </data>
+  <data name="tabDataBinding.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabDataBinding.Name" xml:space="preserve">
+    <value>tabDataBinding</value>
+  </data>
+  <data name="&gt;&gt;tabDataBinding.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabDataBinding.Parent" xml:space="preserve">
+    <value>pnlOptions</value>
+  </data>
+  <data name="&gt;&gt;tabDataBinding.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlOptions.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlOptions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>945, 104</value>
+  </data>
+  <data name="pnlOptions.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlOptions.Name" xml:space="preserve">
+    <value>pnlOptions</value>
+  </data>
+  <data name="&gt;&gt;pnlOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlOptions.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlOptions.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="arvMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="arvMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 104</value>
+  </data>
+  <data name="arvMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>945, 581</value>
+  </data>
+  <data name="arvMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;arvMain.Name" xml:space="preserve">
+    <value>arvMain</value>
+  </data>
+  <data name="&gt;&gt;arvMain.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Viewer.Win.Viewer, GrapeCity.ActiveReports.Viewer.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;arvMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;arvMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>945, 685</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 600</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Unbound Data Sample</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

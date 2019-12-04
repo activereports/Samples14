@@ -1,0 +1,177 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">CustomerOrdersCoupon.rdlx</dd:Name>
+	<Body>
+		<Height>1.75in</Height>
+		<ReportItems>
+			<Rectangle Name="Rectangle2">
+				<Height>1.75in</Height>
+				<Width>6.375in</Width>
+				<ReportItems>
+					<Rectangle Name="rectangle1">
+						<Height>1.625in</Height>
+						<Left>0.01041667in</Left>
+						<Style>
+							<BorderStyle>
+								<Default>Dashed</Default>
+							</BorderStyle>
+						</Style>
+						<Width>6.364583in</Width>
+						<ZIndex>1</ZIndex>
+						<ReportItems>
+							<Image Name="image2">
+								<Height>0.75in</Height>
+								<Left>0.2395833in</Left>
+								<MIMEType>=Theme.Images!Logo.MIMEType</MIMEType>
+								<Sizing>FitProportional</Sizing>
+								<Source>Database</Source>
+								<Top>0.125in</Top>
+								<Value>=Theme.Images!Logo.ImageData</Value>
+								<Width>1in</Width>
+								<ZIndex>3</ZIndex>
+							</Image>
+							<Textbox Name="textbox40">
+								<CanGrow>true</CanGrow>
+								<Height>0.625in</Height>
+								<Left>5.614583in</Left>
+								<Value>off</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+									<FontSize>28pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.125in</Top>
+								<Width>0.625in</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="textbox26">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.2395833in</Left>
+								<Value>Good thru March 31st, 2007</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>1in</Top>
+								<Width>2.25in</Width>
+								<ZIndex>1</ZIndex>
+							</Textbox>
+							<Textbox Name="textbox24">
+								<CanGrow>true</CanGrow>
+								<Height>0.75in</Height>
+								<Left>4.489583in</Left>
+								<Value>="$" &amp; Parameters!CouponAmount.Value</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+									<FontSize>36pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>0.125in</Top>
+								<Width>1.125in</Width>
+							</Textbox>
+							<Textbox Name="TextBox2">
+								<CanGrow>true</CanGrow>
+								<Height>0.375in</Height>
+								<Left>0.2395833in</Left>
+								<Value>Cannot be combined with any other offer or prior orders.  Coupon must be surrendered at time of sale</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>1.25in</Top>
+								<Width>3.875in</Width>
+								<ZIndex>7</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox3">
+								<CanGrow>true</CanGrow>
+								<Height>0.625in</Height>
+								<Left>1.239583in</Left>
+								<Value>="Take $" &amp; Parameters!CouponAmount.Value &amp; " off your next order at Reels."</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+									<FontSize>18pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Center</TextAlign>
+								</Style>
+								<Top>0.125in</Top>
+								<Width>3.25in</Width>
+								<ZIndex>8</ZIndex>
+							</Textbox>
+							<CustomReportItem Name="Barcode1">
+								<Type>Barcode</Type>
+								<Top>1.125in</Top>
+								<Left>4.739583in</Left>
+								<Width>1.5in</Width>
+								<Height>0.5in</Height>
+								<ZIndex>9</ZIndex>
+								<Style>
+									<TextAlign>Center</TextAlign>
+								</Style>
+								<CustomProperties>
+									<CustomProperty>
+										<Name>dd:QuietZone.Left</Name>
+										<Value>0in</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>dd:QuietZone.Right</Name>
+										<Value>0in</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>dd:CaptionLocation</Name>
+										<Value>Below</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>dd:DisplayChecksum</Name>
+										<Value>true</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>dd:Symbology</Name>
+										<Value>Code128C</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>dd:Value</Name>
+										<Value>="20070331" &amp; String.Format("{0:00}", Parameters!CouponAmount.Value)</Value>
+									</CustomProperty>
+								</CustomProperties>
+							</CustomReportItem>
+						</ReportItems>
+					</Rectangle>
+				</ReportItems>
+			</Rectangle>
+		</ReportItems>
+	</Body>
+	<Width>6.5in</Width>
+	<ReportParameters>
+		<ReportParameter Name="CouponAmount">
+			<DataType>Integer</DataType>
+			<Prompt>Coupon Amount</Prompt>
+			<DefaultValue>
+				<Values>
+					<Value>10</Value>
+				</Values>
+			</DefaultValue>
+		</ReportParameter>
+	</ReportParameters>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Reels.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

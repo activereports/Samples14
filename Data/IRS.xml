@@ -1,0 +1,42 @@
+
+
+<EMPLOYEES>
+
+<EMPLOYEE>
+          <A>1</A>
+          <B>0</B>
+          <C>1</C>
+          <D>1</D>
+          <E>0</E>
+          <F>0</F>
+          <G>2</G>
+          <H>5</H>
+          <NAME>John H</NAME>
+          <LAST_NAME>Doe</LAST_NAME>
+          <SSN>123-45-6789</SSN>
+          <ADDRESS>123 N. Home Street</ADDRESS>
+          <CITY>Anytown, ME 12345</CITY>
+          <MARITIAL_STATUS>SINGLE</MARITIAL_STATUS>
+          <LAST_NAME_DIFFERENT>NO</LAST_NAME_DIFFERENT>
+          <TOTAL_ALLOWANCES>5</TOTAL_ALLOWANCES>
+          <PAYCHECK_WITHHELD>0</PAYCHECK_WITHHELD>
+          <EXEMPT></EXEMPT>
+          <EMPLOYER_ADDRESS>Reels, 1 Corp. Plaza, Anytown, ME, 12345</EMPLOYER_ADDRESS>
+          <OFFICE_CODE></OFFICE_CODE>
+          <EIN>987-65-4321</EIN>
+</EMPLOYEE>
+</EMPLOYEES>
+
+
+
+
+
+
+
+
+
+
+          
+
+
+

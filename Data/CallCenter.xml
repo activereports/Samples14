@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CallCenter>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="CallCenter">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="Calls">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Targets" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="TargetHoldTime" type="xs:int" />
+                      <xs:element name="TargetDuration" type="xs:int" />
+                      <xs:element name="TargetAbandonments" type="xs:int" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="CallAverages" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="AvgHoldTime" type="xs:int" />
+                      <xs:element name="AvgCallDuration" type="xs:int" />
+                      <xs:element name="Abandonments" type="xs:int" />
+                    </xs:sequence>
+                    <xs:attribute name="Hour" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Utilization" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Capacity" type="xs:int" />
+                <xs:element name="Usage" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Volume" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CallCount">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Totals" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="Hour" type="xs:int" />
+                            <xs:element name="Day" type="xs:int" />
+                            <xs:element name="Month" type="xs:int" />
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Hourly" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:attribute name="Number" type="xs:int" />
+                          <xs:attribute name="Count" type="xs:int" />
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="OrderCount" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Totals" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="Hour" type="xs:int" />
+                            <xs:element name="Day" type="xs:int" />
+                            <xs:element name="Month" type="xs:int" />
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="Hourly" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:attribute name="Number" type="xs:int" />
+                          <xs:attribute name="Count" type="xs:int" />
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="CallSource" minOccurs="0" maxOccurs="1">
+                     <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Country" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="Name" />
+                              <xs:attribute name="Count" />
+                            </xs:complexType>
+                          </xs:element>
+                       </xs:sequence>
+                     </xs:complexType>
+                </xs:element>  
+            </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Calls>
+    <Targets>
+      <TargetHoldTime>60</TargetHoldTime>
+      <TargetDuration>300</TargetDuration>
+      <TargetAbandonments>200</TargetAbandonments>
+    </Targets>
+    <CallAverages Hour="1">
+      <AvgHoldTime>54</AvgHoldTime>
+      <AvgCallDuration>210</AvgCallDuration>
+      <Abandonments>14</Abandonments>
+    </CallAverages>
+    <CallAverages Hour="2">
+      <AvgHoldTime>52</AvgHoldTime>
+      <AvgCallDuration>153</AvgCallDuration>
+      <Abandonments>7</Abandonments>
+    </CallAverages>
+    <CallAverages Hour="3">
+      <AvgHoldTime>56</AvgHoldTime>
+      <AvgCallDuration>408</AvgCallDuration>
+      <Abandonments>28</Abandonments>
+    </CallAverages>
+    <CallAverages Hour="4">
+      <AvgHoldTime>63</AvgHoldTime>
+      <AvgCallDuration>777</AvgCallDuration>
+      <Abandonments>22</Abandonments>
+    </CallAverages>
+    <CallAverages Hour="5">
+      <AvgHoldTime>65</AvgHoldTime>
+      <AvgCallDuration>946</AvgCallDuration>
+      <Abandonments>44</Abandonments>
+    </CallAverages>
+    <CallAverages Hour="6">
+      <AvgHoldTime>55</AvgHoldTime>
+      <AvgCallDuration>727</AvgCallDuration>
+      <Abandonments>12</Abandonments>
+    </CallAverages>
+    <CallAverages Hour="7">
+      <AvgHoldTime>52</AvgHoldTime>
+      <AvgCallDuration>470</AvgCallDuration>
+      <Abandonments>5</Abandonments>
+    </CallAverages>
+    <CallAverages Hour="8">
+      <AvgHoldTime>55</AvgHoldTime>
+      <AvgCallDuration>318</AvgCallDuration>
+      <Abandonments>13</Abandonments>
+    </CallAverages>
+  </Calls>
+  <Utilization>
+    <Capacity>25</Capacity>
+    <Usage>22</Usage>
+  </Utilization>
+  <Volume>
+    <CallCount>
+      <Totals>
+        <Hour>347</Hour>
+        <Day>1665</Day>
+        <Month>24975</Month>
+      </Totals>
+      <Hourly Number="1" Count="185"/>
+      <Hourly Number="2" Count="304"/>
+      <Hourly Number="3" Count="184"/>
+      <Hourly Number="4" Count="347"/>
+      <Hourly Number="5" Count="285"/>
+      <Hourly Number="6" Count="360"/>
+    </CallCount>
+    <OrderCount>
+      <Totals>
+        <Hour>208</Hour>
+        <Day>960</Day>
+        <Month>15360</Month>
+      </Totals>
+      <Hourly Number="1" Count="108"/>
+      <Hourly Number="2" Count="136"/>
+      <Hourly Number="3" Count="96"/>
+      <Hourly Number="4" Count="277"/>
+      <Hourly Number="5" Count="108"/>
+      <Hourly Number="6" Count="235"/>
+    </OrderCount>
+    <CallSource>
+      <Country Name="United States" Count="5200"/>
+      <Country Name="Canada" Count="3000"/>
+      <Country Name="Australia" Count="612"/>
+      <Country Name="China" Count="654"/>
+      <Country Name="India" Count="646"/>
+      <Country Name="United Kingdom" Count="987"/>
+      <Country Name="Germany" Count="324"/>
+      <Country Name="Russia" Count="326"/>
+      <Country Name="Japan" Count="1322"/>
+      <Country Name="Austria" Count="213"/>
+      <Country Name="South Africa" Count="622"/>
+      <Country Name="Brazil" Count="321"/>
+      <Country Name="South Korea" Count="21"/>
+      <Country Name="Argentina" Count="213"/>
+      <Country Name="Spain" Count="321"/>
+      <Country Name="France" Count="564"/>
+      <Country Name="Italy" Count="216"/>
+      <Country Name="Ireland" Count="135"/>
+      <Country Name="Sweden" Count="143"/>
+      <Country Name="Finland" Count="195"/>
+    </CallSource>
+  </Volume>
+</CallCenter>

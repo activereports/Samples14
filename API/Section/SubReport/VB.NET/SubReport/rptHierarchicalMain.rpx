@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="8760.48" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215">
+      <Control Type="AR.Field" Name="textBox2" Left="164.16" Top="0" Width="8360.64" Height="288" Text="Hierarchical SubReport" Style="background-color: LavenderBlush; font-size: 12pt; font-weight: bold" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="1288.44" BackColor="16777215" KeepTogether="1" CanShrink="1">
+      <Control Type="AR.Field" Name="txtCustomerID" DataField="CustomerID" Left="89.28001" Top="105.12" Width="1919.52" Height="360" Text="CustomerID" CanShrink="1" Style="background-color: Lavender; color: Black; font-family: Arial; font-size: 12pt; font-weight: bold; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtCompanyName" DataField="CompanyName" Left="2008.8" Top="105.12" Width="6515.281" Height="360" Text="Company Name" CanShrink="1" Style="background-color: Lavender; color: Black; font-family: Arial; font-size: 12pt; font-weight: bold; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtAddress" DataField="Address" Left="89.28001" Top="465.12" Width="8435.52" Height="360" Text="Address" CanShrink="1" Style="background-color: Lavender; color: Black; font-family: Arial; font-size: 12pt; font-weight: bold; text-align: right; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Subreport" Name="Subreport1" DataField="CustomerOrders" Left="164.16" Top="825.12" Width="8360.641" Height="420.4799" />
+      <Control Type="AR.Shape" Name="shape1" Left="0" Top="0" Width="8654.4" Height="825.12" BackColor="16777215" RoundingRadius="9.99" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="825.12" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.ReportInfo" Name="reportInfo1" Left="2849.76" Top="72" Width="4079.52" Height="288" CanShrink="1" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Private _subRpt As GrapeCity.ActiveReports.SectionReport
+
+Public Sub ActiveReport_ReportStart()
+	Dim dS As New GrapeCity.ActiveReports.Data.OleDBDataSource()
+	dS.ConnectionString = "Provider=MSDataShape;Data Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\Nwind.mdb;Persist Security Info=False"
+	dS.SQL = "SHAPE {SELECT CustomerID, CompanyName, Address FROM Customers} APPEND ({SELECT CustomerID, OrderID, Freight, OrderDate, EmployeeID FROM Orders} AS CustomerOrders RELATE CustomerID TO CustomerID)"
+	rpt.DataSource = dS
+
+	reportInfo1.FormatString = "Page {PageNumber} of {PageCount}"
+	_subRpt = New GrapeCity.ActiveReports.SectionReport()
+	_subRpt.LoadLayout(System.IO.Path.GetFullPath("..\..\rptHierarchicalSub.rpx"))
+End Sub
+
+
+Public Sub Detail_BeforePrint()
+	shape1.Height = Detail.Height - 0.2F
+End Sub
+
+
+Public Sub ActiveReport_ReportEnd()
+	shape1.Height = 0
+End Sub
+
+
+Public Sub Detail_Format()
+	Subreport1.Report = _subRpt
+End Sub]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

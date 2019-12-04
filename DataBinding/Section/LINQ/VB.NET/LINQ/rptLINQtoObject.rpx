@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackStyle="1" BackColor="12648447">
+      <Control Type="AR.Field" Name="TextBox5" Left="630" Top="0" Width="1440" Height="288" Text="ID" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox6" Left="2250" Top="0" Width="1440" Height="288" Text="Name" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox7" Left="3960" Top="0" Width="1440" Height="288" Text="Age" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox8" Left="5760" Top="0" Width="1440" Height="288" Text="City" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="585" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox1" DataField="ID" Left="630" Top="90" Width="1440" Height="288" Text="ID" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox2" DataField="Name" Left="2250" Top="90" Width="1440" Height="288" Text="Name" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox3" DataField="Age" Left="3960" Top="90" Width="1440" Height="288" Text="Age" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox4" DataField="city" Left="5760" Top="90" Width="1440" Height="288" Text="city" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Imports System.Linq
+Structure Person
+	Public id As Integer
+	Public name As String
+	Public age As Integer
+	Public city As String
+End Structure
+
+    
+Sub ActiveReport_ReportStart
+	' To run the report.
+	Dim People As System.Collections.Generic.List(Of Person) = New System.Collections.Generic.List(Of Person)
+	' To run the report.
+		People.Add(New Person With {.id = 1, .name = "Jon Doe", .age = 25, .city = "New York"})	 
+		'
+		
+		People.Add(New Person With {.id = 2, .name = "Jane Doe", .age = 21, .city = "New York"})	 
+		'
+		
+		People.Add(New Person With {.id = 3, .name = "Robby", .age = 29, .city = "Boston"})	 
+		'
+		
+		People.Add(New Person With {.id = 4, .name = "Mike", .age = 30, .city = "Denver"})	 
+		'
+		
+		People.Add(New Person With {.id = 5, .name = "Lily", .age = 35, .city = "Denver"})	 
+		'
+		
+		People.Add(New Person With {.id = 6, .name = "Martha", .age = 55, .city = "Washington"})	 
+		'
+		
+		People.Add(New Person With {.id = 7, .name = "Harry", .age = 22, .city = "Washington"})	 
+		'
+		
+		People.Add(New Person With {.id = 8, .name = "Marshall", .age = 29, .city = "Chicago"})	 
+		'
+		
+		People.Add(New Person With {.id = 9, .name = "Temperance", .age = 32, .city = "Chicago"})	 
+		'
+		
+		People.Add(New Person With {.id = 10, .name = "Joseph", .age = 32, .city = "Austin"})	 
+	'
+	' To create a query. To sort in descending order of Age.
+	Dim data = People.OrderByDescending(Function(x) x.age).Select(Function(k) New With {.ID = k.id, .Name = k.name, .Age = k.age, .City = k.city}).ToList
+	rpt.DataSource = data
+End Sub]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

@@ -1,0 +1,120 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TeamList.rdlx</dd:Name>
+	<PageHeader>
+		<Height>0.5in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Textbox Name="TextBox2">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>2007 Team Statistics</Value>
+				<Style>
+					<Color>CornflowerBlue</Color>
+					<FontSize>12pt</FontSize>
+					<FontStyle>Italic</FontStyle>
+					<FontWeight>700</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Width>3.5in</Width>
+				<ZIndex>2</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox3">
+				<CanGrow>true</CanGrow>
+				<Height>0.188in</Height>
+				<Value>Click on a team name below to view statistics</Value>
+				<Style>
+					<Color>Gray</Color>
+					<FontSize>7pt</FontSize>
+					<FontStyle>Italic</FontStyle>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.25in</Top>
+				<Width>2.165in</Width>
+				<ZIndex>3</ZIndex>
+			</Textbox>
+		</ReportItems>
+	</PageHeader>
+	<Body>
+		<Columns>3</Columns>
+		<ColumnSpacing>0in</ColumnSpacing>
+		<Height>0.25in</Height>
+		<ReportItems>
+			<List Name="List1">
+				<DataSetName>Games</DataSetName>
+				<Grouping Name="List1_Detail_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!Team.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+				<Height>0.188in</Height>
+				<ReportItems>
+					<Textbox Name="TextBox1">
+						<Action>
+							<Drillthrough>
+								<Parameters>
+									<Parameter Name="Team">
+										<Value>=Fields!Team.Value</Value>
+									</Parameter>
+								</Parameters>
+								<ReportName>TeamStatisticsDashboard.rdlx</ReportName>
+							</Drillthrough>
+						</Action>
+						<CanGrow>true</CanGrow>
+						<Height>0.188in</Height>
+						<Value>=Fields!Team.Value</Value>
+						<Style>
+							<Color>Blue</Color>
+							<FontSize>8pt</FontSize>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextDecoration>Underline</TextDecoration>
+						</Style>
+						<Width>1.25in</Width>
+					</Textbox>
+				</ReportItems>
+				<Sorting>
+					<SortBy>
+						<Direction>Ascending</Direction>
+						<SortExpression>=Fields!Team.Value</SortExpression>
+					</SortBy>
+				</Sorting>
+				<Width>2.165in</Width>
+			</List>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>2.165in</Width>
+	<DataSources>
+		<DataSource Name="FootballStatistics">
+			<ConnectionProperties>
+				<ConnectString>XmlDoc=..\..\..\..\..\Data\FootballStatistics.xml</ConnectString>
+				<DataProvider>XML</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Games">
+			<Fields>
+				<Field Name="Team">
+					<DataField>./TeamName</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>//Game</CommandText>
+				<DataSourceName>FootballStatistics</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

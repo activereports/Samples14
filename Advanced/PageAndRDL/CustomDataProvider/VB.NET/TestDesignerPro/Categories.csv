@@ -1,0 +1,9 @@
+EmployeeID(int32),LastName,FirstName,Role,City
+1, James, Yolanda, Owner, Columbus
+7, Reed, Marvin, Manager, Newton
+9, Figg, Murray, Cashier, Columbus
+12, Snead, Lance, Store Keeper, Columbus
+15, Halm, Jeffry, Store Keeper, Columbus
+17, Hames, Alma, Store Keeper, Oak Bay
+18, Nicki, Aubrey, Store Keeper, Columbus
+24, Cliett, Vikki, Store Keeper, Newton

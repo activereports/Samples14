@@ -1,0 +1,343 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MovieCatalog.rdlx</dd:Name>
+	<PageHeader>
+		<Height>1in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Image Name="ReelsLogo">
+				<Height>1in</Height>
+				<MIMEType>=Theme.Images!Logo.MIMEType</MIMEType>
+				<Sizing>FitProportional</Sizing>
+				<Source>Database</Source>
+				<Value>=Theme.Images!Logo.ImageData</Value>
+				<Width>1.5in</Width>
+			</Image>
+			<Textbox Name="TextBox1">
+				<CanGrow>true</CanGrow>
+				<Height>0.5in</Height>
+				<Left>3.75in</Left>
+				<Value>Movie Catalog</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+					<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Width>2.260417in</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+		</ReportItems>
+	</PageHeader>
+	<Body>
+		<Height>3.25in</Height>
+		<ReportItems>
+			<List Name="List3">
+				<DataSetName>MovieDataSet</DataSetName>
+				<Grouping Name="List1_Detail_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!GenreName.Value</GroupExpression>
+					</GroupExpressions>
+					<Label>=Fields!GenreName.Value</Label>
+				</Grouping>
+				<Height>2in</Height>
+				<Left>0.005208333in</Left>
+				<ReportItems>
+					<Textbox Name="TextBox4">
+						<CanGrow>true</CanGrow>
+						<Height>0.375in</Height>
+						<Value>=Fields!GenreName.Value</Value>
+						<Style>
+							<Color>=Theme.Colors!Dark2</Color>
+							<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Center</TextAlign>
+						</Style>
+						<Top>0.125in</Top>
+						<Width>6in</Width>
+					</Textbox>
+					<List Name="MovieList">
+						<DataSetName>MovieDataSet</DataSetName>
+						<Grouping Name="MovieIDGroup">
+							<GroupExpressions>
+								<GroupExpression>=Fields!MovieID.Value</GroupExpression>
+							</GroupExpressions>
+						</Grouping>
+						<Height>1.25in</Height>
+						<PageBreakAtEnd>true</PageBreakAtEnd>
+						<ReportItems>
+							<Textbox Name="MovieTitle">
+								<CanGrow>true</CanGrow>
+								<Height>0.375in</Height>
+								<Value>=Fields!Title.Value</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>16pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<dd:HeadingLevel xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">2</dd:HeadingLevel>
+									<BorderStyle>
+										<Top>Solid</Top>
+									</BorderStyle>
+								</Style>
+								<Top>0.125in</Top>
+								<Width>6in</Width>
+								<ZIndex>9</ZIndex>
+							</Textbox>
+							<Textbox Name="ReleaseYear">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.1875in</Left>
+								<Value>="Released in: " &amp; Fields!YearReleased.Value &amp; ", " &amp; Fields!Country.Value</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.625in</Top>
+								<Width>3.4375in</Width>
+								<ZIndex>8</ZIndex>
+							</Textbox>
+							<Textbox Name="RatingLabel">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.1875in</Left>
+								<Value>User Rating:</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.875in</Top>
+								<Width>1in</Width>
+								<ZIndex>7</ZIndex>
+							</Textbox>
+							<Textbox Name="UserRating">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>1.1875in</Left>
+								<Value>=Fields!UserRating.Value</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+									<Format>N1</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.875in</Top>
+								<Width>0.3125in</Width>
+								<ZIndex>6</ZIndex>
+							</Textbox>
+							<Textbox Name="OutOfTenLabel">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>1.5in</Left>
+								<Value>out of 10</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.875in</Top>
+								<Width>0.625in</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Textbox Name="MpaaRating">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>3.875in</Left>
+								<Value>="The MPAA Rated this Film: " &amp; Fields!MPAA.Value</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>0.625in</Top>
+								<Width>2.1146in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="MovieLength">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>4.875in</Left>
+								<Value>="Length: " &amp; Fields!Length.Value &amp; " min"</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>0.875in</Top>
+								<Width>1.1146in</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+						</ReportItems>
+						<Top>0.625in</Top>
+						<Width>6in</Width>
+						<ZIndex>1</ZIndex>
+					</List>
+				</ReportItems>
+				<Top>0.875in</Top>
+				<Width>6in</Width>
+				<ZIndex>1</ZIndex>
+				<dd:ConsumeWhiteSpace xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">True</dd:ConsumeWhiteSpace>
+			</List>
+			<dd:TableOfContents Name="TableOfContents1" xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+				<Left>0.005208in</Left>
+				<Top>0.125in</Top>
+				<Width>5.875in</Width>
+				<Height>0.5in</Height>
+				<ZIndex>2</ZIndex>
+				<dd:Levels>
+					<dd:Level Name="Level1">
+						<Style>
+							<Color>=Theme.Colors!Dark2</Color>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<dd:LeadingChar>.</dd:LeadingChar>
+						</Style>
+					</dd:Level>
+					<dd:Level Name="Level2">
+						<Style>
+							<Color>=Theme.Colors!Dark1</Color>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingLeft>10pt</PaddingLeft>
+							<dd:LeadingChar>.</dd:LeadingChar>
+						</Style>
+					</dd:Level>
+				</dd:Levels>
+				<PageBreakAtEnd>true</PageBreakAtEnd>
+			</dd:TableOfContents>
+		</ReportItems>
+	</Body>
+	<PageFooter>
+		<Height>0.5in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Textbox Name="TextBox2">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>="Page " &amp; Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+					<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+					<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.125in</Top>
+				<Width>3.5in</Width>
+			</Textbox>
+		</ReportItems>
+	</PageFooter>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>6.010417in</Width>
+	<ConsumeContainerWhitespace>True</ConsumeContainerWhitespace>
+	<DataSources>
+		<DataSource Name="ReelsDataSource">
+			<ConnectionProperties>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Reels.mdb</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="MovieDataSet">
+			<Fields>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="GenreName">
+					<DataField>GenreName</DataField>
+				</Field>
+				<Field Name="MovieID">
+					<DataField>MovieID</DataField>
+				</Field>
+				<Field Name="Length">
+					<DataField>Length</DataField>
+				</Field>
+				<Field Name="YearReleased">
+					<DataField>YearReleased</DataField>
+				</Field>
+				<Field Name="UserRating">
+					<DataField>UserRating</DataField>
+				</Field>
+				<Field Name="MPAA">
+					<DataField>MPAA</DataField>
+				</Field>
+				<Field Name="Country">
+					<DataField>Country</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT Movie.Title, Genre.GenreName, Movie.MovieID, Movie.Length, Movie.YearReleased, Movie.UserRating, Movie.MPAA, Movie.Country
+FROM Genre INNER JOIN (Movie INNER JOIN MovieGenres ON Movie.MovieID = MovieGenres.MovieID) ON Genre.GenreID = MovieGenres.GenreID;</CommandText>
+				<DataSourceName>ReelsDataSource</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>Theme</Name>
+			<Value>Reels.rdlx-theme</Value>
+		</CustomProperty>
+	</CustomProperties>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Reels.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+	<DocumentMap xmlns="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<Source>All</Source>
+		<Levels>
+			<Level>
+				<NumberingStyle>UpperLatin</NumberingStyle>
+			</Level>
+			<Level />
+		</Levels>
+	</DocumentMap>
+</Report>

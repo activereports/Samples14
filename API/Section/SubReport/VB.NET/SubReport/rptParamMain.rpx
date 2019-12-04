@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215">
+      <Control Type="AR.Field" Name="textBox5" Left="0" Top="0" Width="4860" Height="288" Text="Use a parameter in the subreport" Style="background-color: LavenderBlush; font-size: 12pt; font-weight: bold" />
+    </Section>
+    <Section Type="GroupHeader" Name="ghSuppliers" Height="330.0001" DataField="Country" GroupKeepTogether="1" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox1" DataField="Country" Left="0" Top="0" Width="3120.48" Height="288" Text="Country" Style="background-color: Navy; color: White; font-family: Arial; font-size: 12pt; font-weight: bold; ddo-char-set: 1" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="1858" BackColor="16777215" KeepTogether="1" CanShrink="1">
+      <Control Type="AR.Field" Name="TextBox2" DataField="CompanyName" Left="90" Top="90" Width="3030.48" Height="288" Text="CompanyName" Style="font-family: Arial; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox3" DataField="ContactName" Left="3238.56" Top="89.28" Width="3241.44" Height="288" Text="ContactName" Style="font-family: Arial; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox4" DataField="Phone" Left="6570" Top="90" Width="2058.48" Height="288" Text="Phone" Style="font-family: Arial; ddo-char-set: 1" />
+      <Control Type="AR.Subreport" Name="SubReport1" Left="89.28" Top="493.92" Width="8539.2" Height="1260.72" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="360" BackColor="16777215" />
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215">
+      <Control Type="AR.ReportInfo" Name="reportInfo1" Left="2895.84" Top="72" Width="2880" Height="288" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Private _subRpt As GrapeCity.ActiveReports.SectionReport
+Public Sub Detail_Format()
+	SubReport1.Report = _subRpt
+End Sub
+
+
+Public Sub ActiveReport_ReportStart()
+	_subRpt = New GrapeCity.ActiveReports.SectionReport()
+	_subRpt.LoadLayout(System.IO.Path.GetFullPath("..\..\rptParamSub.rpx"))
+	Dim dS As New GrapeCity.ActiveReports.Data.OleDBDataSource()
+	dS.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\Nwind.mdb;Persist Security Info=False"
+	dS.SQL = "Select * from suppliers order by country"
+	rpt.DataSource = dS
+
+	reportInfo1.FormatString = "Page {PageNumber} of {PageCount}"
+End Sub]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

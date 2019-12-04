@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="9360" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+	<StyleSheet>
+		<Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 204" />
+		<Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; ddo-char-set: 204" />
+		<Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; ddo-char-set: 204" />
+		<Style Name="Heading3" Value="font-weight: bold; ddo-char-set: 204; font-size: 10pt" />
+		<Style Name="DetailRecord" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; color: Black; ddo-char-set: 204; font-size: 8pt" />
+		<Style Name="ReportTitle" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; color: Black; ddo-char-set: 204; font-size: 22pt" />
+	</StyleSheet>
+	<Sections>
+		<Section Type="ReportHeader" Name="ReportHeader" Height="0" BackColor="16777215" />
+		<Section Type="PageHeader" Name="PageHeader" Height="960.2836" BackColor="16777215" CanGrow="0">
+			<Control Type="AR.Label" Name="lblTitle" Left="14.74016" Top="90.14173" Width="9329.953" Height="540" Caption="Product Listing" ClassName="ReportTitle"/>
+		</Section>
+		<Section Type="GroupHeader" Name="groupHeaderCategory" Height="688.2401" DataField="CategoryID" BackColor="16777215">
+			<Control Type="AR.Label" Name="label2" Left="7544.692" Top="390.0473" Width="1800" Height="288" Caption="Unit Price" ClassName="Heading3" Style="text-align: right" />
+			<Control Type="AR.Label" Name="label1" Left="0" Top="390.0473" Width="7544.692" Height="288" Caption="Product Name" ClassName="Heading3" />
+			<Control Type="AR.Field" Name="textBox1" DataField="CategoryName" BorderBottomStyle="1" Left="0" Top="0" Width="9360" Height="390.0473" Text="Category" ClassName="Heading2" Style="font-size: 14.5pt" />
+			<Control Type="AR.Line" Name="line1" X1="30.24" Y1="678.24" X2="9345.24" Y2="678.24" />
+		</Section>
+		<Section Type="Detail" Name="Detail" Height="288" BackColor="16777215" KeepTogether="1">
+			<Control Type="AR.Field" Name="txtProductName1" DataField="ProductName" Left="14.4" Top="0" Width="7529.76" Height="288" Text="ProductName" CanShrink="1" Style="vertical-align: middle" />
+			<Control Type="AR.Field" Name="txtUnitPrice1" DataField="UnitPrice" Left="7544.161" Top="0" Width="1815.84" Height="288" Text="UnitPrice" OutputFormat="$#,##0.00" CanShrink="1" Style="text-align: right; vertical-align: middle" />
+		</Section>
+		<Section Type="GroupFooter" Name="groupFooterCategory" Height="465" BackColor="16777215">
+			<Control Type="AR.Field" Name="textBox2" DataField="ProductName" Left="3690.141" Top="0" Width="1470.819" Height="360" Text="ProductCount" ClassName="Heading3" Style="text-align: right" SummaryType="3" SummaryFunc="2" SummaryGroup="groupHeaderCategory" SummaryDistinct="CategoryID" />
+			<Control Type="AR.Label" Name="label3" Left="0" Top="0" Width="3690.141" Height="360" Caption="Total Number of Products" ClassName="Heading3" Style="text-align: right" />
+			<Control Type="AR.Line" Name="line2" X1="0" Y1="0" X2="9360" Y2="0" LineWeight="2" />
+		</Section>
+		<Section Type="PageFooter" Name="PageFooter" Height="288" BackColor="16777215" CanGrow="0">
+			<Control Type="AR.ReportInfo" Name="reportInfo1" Left="3780" Top="0" Width="3420" Height="285.0001" FormatString="{PageNumber} / {PageCount}" />
+		</Section>
+		<Section Type="ReportFooter" Name="ReportFooter" Height="1333" BackColor="16777215" KeepTogether="1">
+			<Control Type="AR.Label" Name="lblTotalNumber" Left="3690.72" Top="299.52" Width="3870" Height="360" Caption="Total Number of Products" Style="background-color: Transparent; font-size: 14.5pt" />
+			<Control Type="AR.Field" Name="txtProductCount" DataField="ProductName" Left="7560.72" Top="299.52" Width="1080" Height="360" Text="ProductCount" Style="font-size: 14.5pt; text-align: right" SummaryType="1" SummaryFunc="2" />
+			<Control Type="AR.Line" Name="lneReportFooter" X1="14.74016" Y1="0" X2="9270" Y2="0" LineWeight="2" />
+		</Section>
+	</Sections>
+	<DataSources>
+		<OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.MDB;Persist Security Info=False" SQL="Select Products.ProductName, Products.UnitPrice, Products.CategoryID, categories.CategoryName FROM Products, Categories WHERE Products.CategoryID = Categories.CategoryID Order By Categories.CategoryID;" />
+	</DataSources>
+	<PageSettings RightMargin="720" PaperSize="1" PaperWidth="11909" PaperHeight="16834" PaperName="" />
+	<Parameters />
+</ActiveReportsLayout>

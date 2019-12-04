@@ -1,0 +1,411 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">LifeExpectancyByGdpAndMedianAge.rdlx</dd:Name>
+	<Body>
+		<Height>2.834646in</Height>
+		<ReportItems>
+			<Textbox Name="TextBox7">
+				<CanGrow>true</CanGrow>
+				<Height>0.375in</Height>
+				<Left>0.125in</Left>
+				<Value>Average Life Expectancy by Median Age and GDP of Countries</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+					<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.125in</Top>
+				<Width>6.25in</Width>
+			</Textbox>
+			<Rectangle Name="Rectangle1">
+				<Height>1in</Height>
+				<Left>0.15748in</Left>
+				<Style>
+					<BackgroundColor>=Theme.Colors(1,2)</BackgroundColor>
+					<BorderColor>
+						<Default>=Theme.Colors(0,2)</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>Solid</Default>
+					</BorderStyle>
+				</Style>
+				<Top>1.653543in</Top>
+				<Width>3.375in</Width>
+				<ReportItems>
+					<Textbox Name="TextBox8">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>2.25in</Left>
+						<Value>=String.Format( "{0:N2}", StDev(Fields!LifeExpectancy.Value) )</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Right</TextAlign>
+						</Style>
+						<Top>0.125in</Top>
+						<Width>1in</Width>
+					</Textbox>
+					<Textbox Name="TextBox10">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.125in</Left>
+						<Value>Std. Deviation of Life Expectancy</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.125in</Top>
+						<Width>2.125in</Width>
+					</Textbox>
+					<Textbox Name="TextBox9">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.125in</Left>
+						<Value>Std. Deviation of Median Age</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.375in</Top>
+						<Width>2.125in</Width>
+					</Textbox>
+					<Textbox Name="TextBox11">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>2.25in</Left>
+						<Value>=String.Format( "{0:N2} years", StDev(Fields!MedianAge.Value) )</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<Format>N2</Format>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Right</TextAlign>
+						</Style>
+						<Top>0.375in</Top>
+						<Width>1in</Width>
+					</Textbox>
+					<Textbox Name="TextBox12">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.125in</Left>
+						<Value>Std. Deviation of GDP</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.625in</Top>
+						<Width>2.125in</Width>
+					</Textbox>
+					<Textbox Name="TextBox13">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>2.25in</Left>
+						<Value>=StDev(Fields!GDP.Value)</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<Format>$#,##0.00</Format>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Right</TextAlign>
+						</Style>
+						<Top>0.625in</Top>
+						<Width>2.8575cm</Width>
+					</Textbox>
+				</ReportItems>
+			</Rectangle>
+			<Tablix Name="Tablix1">
+				<TablixCorner>
+					<TablixCornerRows>
+						<TablixCornerRow>
+							<TablixCornerCell>
+								<CellContents>
+									<Textbox Name="TextBox14">
+										<CanGrow>true</CanGrow>
+										<Value>Displays the average life expectancy in years, given the age of the population and the country’s Gross Domestic Product.</Value>
+										<Style>
+											<BackgroundColor>LightYellow</BackgroundColor>
+											<FontFamily>Arial</FontFamily>
+											<FontSize>8pt</FontSize>
+											<FontStyle>Normal</FontStyle>
+											<FontWeight>400</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<Border>
+												<Style>Solid</Style>
+											</Border>
+										</Style>
+									</Textbox>
+									<ColSpan>2</ColSpan>
+									<RowSpan>2</RowSpan>
+								</CellContents>
+							</TablixCornerCell>
+							<TablixCornerCell />
+						</TablixCornerRow>
+						<TablixCornerRow>
+							<TablixCornerCell />
+							<TablixCornerCell />
+						</TablixCornerRow>
+					</TablixCornerRows>
+				</TablixCorner>
+				<TablixBody>
+					<TablixColumns>
+						<TablixColumn>
+							<Width>2.1543cm</Width>
+						</TablixColumn>
+					</TablixColumns>
+					<TablixRows>
+						<TablixRow>
+							<Height>0.7352938cm</Height>
+							<TablixCells>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="TextBox17">
+											<CanGrow>true</CanGrow>
+											<Value>=Avg(Fields!LifeExpectancy.Value)</Value>
+											<Style>
+												<BackgroundColor>=Theme.Colors(0,3)</BackgroundColor>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>N1</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+							</TablixCells>
+						</TablixRow>
+					</TablixRows>
+				</TablixBody>
+				<TablixColumnHierarchy>
+					<TablixMembers>
+						<TablixMember>
+							<TablixHeader>
+								<Size>0.288328in</Size>
+								<CellContents>
+									<Textbox Name="TextBox15">
+										<Value>Median Age</Value>
+										<Style>
+											<BackgroundColor>=Theme.Colors(0,3)</BackgroundColor>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<Border>
+												<Style>None</Style>
+											</Border>
+											<LeftBorder>
+												<Style>Solid</Style>
+											</LeftBorder>
+										</Style>
+									</Textbox>
+								</CellContents>
+							</TablixHeader>
+							<TablixMembers>
+								<TablixMember>
+									<Group Name="Tablix1_MedianAgeCategory1">
+										<GroupExpressions>
+											<GroupExpression>=Fields!MedianAgeCategory.Value</GroupExpression>
+										</GroupExpressions>
+									</Group>
+									<SortExpressions>
+										<SortExpression>
+											<Direction>Ascending</Direction>
+											<Value>=Fields!MedianAge.Value</Value>
+										</SortExpression>
+									</SortExpressions>
+									<TablixHeader>
+										<Size>0.288328in</Size>
+										<CellContents>
+											<Textbox Name="TextBox18">
+												<CanGrow>true</CanGrow>
+												<Value>=Fields!MedianAgeCategory.Value</Value>
+												<Style>
+													<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+													<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+													<FontStyle>Normal</FontStyle>
+													<FontWeight>600</FontWeight>
+													<PaddingBottom>2pt</PaddingBottom>
+													<PaddingLeft>2pt</PaddingLeft>
+													<PaddingRight>2pt</PaddingRight>
+													<PaddingTop>2pt</PaddingTop>
+													<TextAlign>Center</TextAlign>
+												</Style>
+											</Textbox>
+										</CellContents>
+									</TablixHeader>
+								</TablixMember>
+							</TablixMembers>
+						</TablixMember>
+					</TablixMembers>
+				</TablixColumnHierarchy>
+				<TablixRowHierarchy>
+					<TablixMembers>
+						<TablixMember>
+							<TablixHeader>
+								<Size>0.990566in</Size>
+								<CellContents>
+									<Textbox Name="TextBox16">
+										<Value>GDP of country</Value>
+										<Style>
+											<BackgroundColor>=Theme.Colors(0,3)</BackgroundColor>
+											<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+											<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+											<FontStyle>Normal</FontStyle>
+											<FontWeight>400</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<Border>
+												<Style>None</Style>
+											</Border>
+											<TopBorder>
+												<Style>Solid</Style>
+											</TopBorder>
+										</Style>
+									</Textbox>
+								</CellContents>
+							</TablixHeader>
+							<TablixMembers>
+								<TablixMember>
+									<Group Name="Tablix1_GDPCategory1">
+										<GroupExpressions>
+											<GroupExpression>=Fields!GDPCategory.Value</GroupExpression>
+										</GroupExpressions>
+									</Group>
+									<SortExpressions>
+										<SortExpression>
+											<Direction>Ascending</Direction>
+											<Value>=Fields!GDP.Value</Value>
+										</SortExpression>
+									</SortExpressions>
+									<TablixHeader>
+										<Size>0.91719in</Size>
+										<CellContents>
+											<Textbox Name="TextBox20">
+												<CanGrow>true</CanGrow>
+												<Value>=Fields!GDPCategory.Value</Value>
+												<Style>
+													<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+													<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+													<FontStyle>Normal</FontStyle>
+													<FontWeight>600</FontWeight>
+													<PaddingBottom>2pt</PaddingBottom>
+													<PaddingLeft>2pt</PaddingLeft>
+													<PaddingRight>2pt</PaddingRight>
+													<PaddingTop>2pt</PaddingTop>
+												</Style>
+											</Textbox>
+										</CellContents>
+									</TablixHeader>
+								</TablixMember>
+							</TablixMembers>
+						</TablixMember>
+					</TablixMembers>
+				</TablixRowHierarchy>
+				<DataSetName>FactbookDataSet</DataSetName>
+				<Top>1.6cm</Top>
+				<Left>0.4cm</Left>
+				<Height>2.2cm</Height>
+				<Width>7cm</Width>
+				<ZIndex>1</ZIndex>
+			</Tablix>
+		</ReportItems>
+	</Body>
+	<Width>6.535433in</Width>
+	<DataSources>
+		<DataSource Name="FactbookDataSource">
+			<ConnectionProperties>
+				<DataProvider>XML</DataProvider>
+				<ConnectString>XmlDoc=..\..\..\..\..\Data\Factbook.xml</ConnectString>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="FactbookDataSet">
+			<Collation>Default</Collation>
+			<Fields>
+				<Field Name="LifeExpectancyRaw">
+					<DataField>./LifeExpectancyAtBirthYears/Total</DataField>
+				</Field>
+				<Field Name="GDPRaw">
+					<DataField>./GDPPurchasingPowerParity</DataField>
+				</Field>
+				<Field Name="MedianAgeRaw">
+					<DataField>./MedianAgeYears/Total</DataField>
+				</Field>
+				<Field Name="LifeExpectancy">
+					<Value>=Convert.ToDouble(Fields!LifeExpectancyRaw.Value)</Value>
+				</Field>
+				<Field Name="MedianAge">
+					<Value>=Convert.ToDouble(Fields!MedianAgeRaw.Value)</Value>
+				</Field>
+				<Field Name="GDP">
+					<Value>=Convert.ToDouble(Fields!GDPRaw.Value) * 0.000001</Value>
+				</Field>
+				<Field Name="MedianAgeCategory">
+					<Value>=Choose( 1 + (Fields!MedianAge.Value / 10.0), "&lt; 10", "10 - 20", "20 - 30", "30 - 40", "40 - 50", "50 - 60", "60 - 70", "70 - 80", "80 - 90")</Value>
+				</Field>
+				<Field Name="GDPCategory">
+					<Value>=Switch(Fields!GDP.Value &lt; 10, "&lt; $10M", Fields!GDP.Value &lt; 100, "$10-100M", Fields!GDP.Value &lt; 1000, "$100M - 1B", Fields!GDP.Value &lt; 10000, "$1B - 10B", Fields!GDP.Value &lt; 100000, "$10B - 100B", Fields!GDP.Value &lt; 100000, "$100B - 1T", Fields!GDP.Value &gt;= 100000, "&gt;= $1T")</Value>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>//country[@name != 'World']</CommandText>
+				<DataSourceName>FactbookDataSource</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>Theme</Name>
+			<Value>Factbook.rdlx-theme</Value>
+		</CustomProperty>
+	</CustomProperties>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Factbook.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

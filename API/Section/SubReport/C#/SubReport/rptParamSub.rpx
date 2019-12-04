@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8539.2" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215" />
+    <Section Type="GroupHeader" Name="ghProducts" Height="450" DataField="CategoryName" BackStyle="1" BackColor="12632256">
+      <Control Type="AR.Field" Name="txtCategoryName" DataField="CategoryName" Left="89.28" Top="89.28" Width="2790" Height="360" Text="CategoryName" Style="font-family: Arial; vertical-align: middle; ddo-char-set: 1" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="540" BackStyle="1" BackColor="11186720">
+      <Control Type="AR.Field" Name="txtProductName" DataField="ProductName" Left="90" Top="90" Width="4950" Height="360" Text="ProductName" Style="font-family: Arial; vertical-align: middle; ddo-char-set: 1" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="0" BackColor="16777215" />
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\Nwind.mdb;Persist Security Info=False" SQL="SELECT * FROM products INNER JOIN categories ON products.categoryid = categories.categoryid WHERE products.supplierID = &lt;%SupplierID%&gt;" />
+  </DataSources>
+  <Script><![CDATA[public void ActiveReport_ReportStart()
+{
+	rpt.ShowParameterUI = false;
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

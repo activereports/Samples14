@@ -1,0 +1,2463 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">IRS-W4.rdlx</dd:Name>
+	<Body>
+		<Height>11in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Textbox Name="TextBox48">
+								<Height>0.3125in</Height>
+								<Left>1.4375in</Left>
+								<Value>• If you plan to itemize or claim adjustments to income and want to reduce your withholding, see the Deductions and Adjustments Worksheet on page 2.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>5.375in</Top>
+								<Width>5.625in</Width>
+							</Textbox>
+							<Textbox Name="TextBox1">
+								<Height>0.375in</Height>
+								<Value>Form W-4 (2012)</Value>
+								<Style>
+									<FontFamily>Arial Black</FontFamily>
+									<FontSize>16pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Width>2in</Width>
+							</Textbox>
+							<Textbox Name="TextBox24">
+								<Height>0.1875in</Height>
+								<Left>7in</Left>
+								<Value>=Fields!H.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderStyle>
+										<Bottom>Solid</Bottom>
+									</BorderStyle>
+								</Style>
+								<Top>5.1875in</Top>
+								<Width>0.5in</Width>
+							</Textbox>
+							<Line Name="Line1">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>2pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>0.375in</Top>
+								<Width>2.375in</Width>
+								<ZIndex>1</ZIndex>
+							</Line>
+							<Textbox Name="TextBox2">
+								<Height>0.1875in</Height>
+								<Left>3.875in</Left>
+								<Value>(Keep for your records.)</Value>
+								<Style>
+									<FontFamily>Arial Narrow</FontFamily>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.5in</Top>
+								<Width>1.875in</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox3">
+								<Height>0.1875in</Height>
+								<Left>2in</Left>
+								<Value>Personal Allowances Worksheet</Value>
+								<Style>
+									<FontFamily>Arial Narrow</FontFamily>
+									<FontWeight>700</FontWeight>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.5in</Top>
+								<Width>1.875in</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox23">
+								<Height>0.1875in</Height>
+								<Left>6.75in</Left>
+								<Value>H</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>5.1875in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox21">
+								<Height>0.1875in</Height>
+								<Value>H</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>5.1875in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox31">
+								<Height>0.1875in</Height>
+								<Left>6.75in</Left>
+								<Value>E</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.9375in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox29">
+								<Height>0.1875in</Height>
+								<Value>E</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.9375in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox40">
+								<Height>0.1875in</Height>
+								<Value>G</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>4.5in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox38">
+								<Height>0.1875in</Height>
+								<Left>6.75in</Left>
+								<Value>F</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>4.125in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox27">
+								<Height>0.1875in</Height>
+								<Left>6.75in</Left>
+								<Value>D</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.75in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox43">
+								<Height>0.1875in</Height>
+								<Left>6.75in</Left>
+								<Value>G</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>5in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox15">
+								<Height>0.1875in</Height>
+								<Left>6.75in</Left>
+								<Value>B</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.0625in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox19">
+								<Height>0.1875in</Height>
+								<Left>6.75in</Left>
+								<Value>C</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.5in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox6">
+								<Height>0.1875in</Height>
+								<Value>B</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox4">
+								<Height>0.1875in</Height>
+								<Left>6.75in</Left>
+								<Value>A</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.6875in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox25">
+								<Height>0.1875in</Height>
+								<Value>D</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.75in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox34">
+								<Height>0.1875in</Height>
+								<Value>F</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>4.125in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox8">
+								<Height>0.1875in</Height>
+								<Value>A</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.6875in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox17">
+								<Height>0.1875in</Height>
+								<Value>C</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.4375in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox5">
+								<Height>0.1875in</Height>
+								<Left>0.3125in</Left>
+								<Value>Enter "1" for yourself if no one else can claim you as a dependent</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.6875in</Top>
+								<Width>3.3125in</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox33">
+								<Height>0.1875in</Height>
+								<Left>0.3125in</Left>
+								<Value>Enter "1" if you have at least $1,900 of child or dependent care expenses for which you plan to claim a credit</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>4.125in</Top>
+								<Width>5.4375in</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox22">
+								<Height>0.1875in</Height>
+								<Left>0.3125in</Left>
+								<Value>(Note. Do not include child support payments. See Pub. 503, Child and Dependent Care Expenses, for details.)</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>4.3125in</Top>
+								<Width>6.3125in</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox26">
+								<Height>0.1875in</Height>
+								<Left>0.3125in</Left>
+								<Value>Enter number of depenents (other than your spouse or yourself) you will claim on your tax return</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.75in</Top>
+								<Width>4.8125in</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox30">
+								<Height>0.1875in</Height>
+								<Left>0.3125in</Left>
+								<Value>Enter "1" if you will file as head of household on your tax return (see conditions under Head of household above)</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.9375in</Top>
+								<Width>6.3125in</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox35">
+								<Height>0.1875in</Height>
+								<Left>0.3125in</Left>
+								<Value>Child Tax Credit (including additional child tax credit). See Pub. 972, Child Tax Credit, for more information.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>4.5in</Top>
+								<Width>6.3125in</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox18">
+								<Height>0.3125in</Height>
+								<Left>0.3125in</Left>
+								<Value>Enter "1" for your spouse. But, you may choose to enter "-0-" if you are married and have either a working spouse or more
+than one job.  (Entering "-0-" may help you avoid having too little tax withheld.)</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>3.4375in</Top>
+								<Width>6.4375in</Width>
+								<ZIndex>5</ZIndex>
+							</Textbox>
+							<Line Name="Line9">
+								<Height>0in</Height>
+								<Left>2.6875in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Dot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>9.3125in</Top>
+								<Width>2.625in</Width>
+								<ZIndex>6</ZIndex>
+							</Line>
+							<Line Name="Line8">
+								<Height>0in</Height>
+								<Left>3.625in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Dot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>2.875in</Top>
+								<Width>3.0625in</Width>
+								<ZIndex>6</ZIndex>
+							</Line>
+							<Line Name="Line6">
+								<Height>0in</Height>
+								<Left>4.25in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Dot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>3.6875in</Top>
+								<Width>2.4375in</Width>
+								<ZIndex>6</ZIndex>
+							</Line>
+							<Line Name="Line26">
+								<Height>0in</Height>
+								<Left>3.5in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Dot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>8.625in</Top>
+								<Width>2.625in</Width>
+								<ZIndex>6</ZIndex>
+							</Line>
+							<Line Name="Line7">
+								<Height>0in</Height>
+								<Left>5.125in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Dot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>3.9375in</Top>
+								<Width>1.5625in</Width>
+								<ZIndex>6</ZIndex>
+							</Line>
+							<Line Name="Line21">
+								<Height>0in</Height>
+								<Left>5.75in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Dot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>4.3125in</Top>
+								<Width>1in</Width>
+								<ZIndex>6</ZIndex>
+							</Line>
+							<Textbox Name="TextBox16">
+								<Height>0.1875in</Height>
+								<Left>7in</Left>
+								<Value>=Fields!B.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderStyle>
+										<Bottom>Solid</Bottom>
+									</BorderStyle>
+								</Style>
+								<Top>3.0625in</Top>
+								<Width>0.5in</Width>
+								<ZIndex>7</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox44">
+								<Height>0.1875in</Height>
+								<Left>7in</Left>
+								<Value>=Fields!G.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderStyle>
+										<Bottom>Solid</Bottom>
+									</BorderStyle>
+								</Style>
+								<Top>5in</Top>
+								<Width>0.5in</Width>
+								<ZIndex>7</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox7">
+								<Height>0.1875in</Height>
+								<Left>7in</Left>
+								<Value>=Fields!A.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderStyle>
+										<Bottom>Solid</Bottom>
+									</BorderStyle>
+								</Style>
+								<Top>2.6875in</Top>
+								<Width>0.5in</Width>
+								<ZIndex>7</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox20">
+								<Height>0.1875in</Height>
+								<Left>7in</Left>
+								<Value>=Fields!C.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderStyle>
+										<Bottom>Solid</Bottom>
+									</BorderStyle>
+								</Style>
+								<Top>3.5in</Top>
+								<Width>0.5in</Width>
+								<ZIndex>7</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox9">
+								<Height>0.1875in</Height>
+								<Left>0.3125in</Left>
+								<Value>Enter "1" if:</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3in</Top>
+								<Width>0.6875in</Width>
+								<ZIndex>8</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox14">
+								<Height>0.9375in</Height>
+								<Left>1.1875in</Left>
+								<Value>{</Value>
+								<Style>
+									<FontFamily>Arial Narrow</FontFamily>
+									<FontSize>56pt</FontSize>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+								</Style>
+								<Top>5.3125in</Top>
+								<Width>0.25in</Width>
+								<ZIndex>9</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox10">
+								<Height>0.5625in</Height>
+								<Left>6in</Left>
+								<Value>}</Value>
+								<Style>
+									<FontFamily>Arial Narrow</FontFamily>
+									<FontSize>31pt</FontSize>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+								</Style>
+								<Top>2.875in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>9</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox46">
+								<Height>0.5625in</Height>
+								<Left>1in</Left>
+								<Value>{</Value>
+								<Style>
+									<FontFamily>Arial Narrow</FontFamily>
+									<FontSize>31pt</FontSize>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+								</Style>
+								<Top>2.875in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>9</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox12">
+								<Height>0.1875in</Height>
+								<Left>1.1875in</Left>
+								<Value>• Your wages from a second job or your spouse's wages (or the total of both) are $1,500 or less.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>3.25in</Top>
+								<Width>4.8125in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox50">
+								<Height>0.1875in</Height>
+								<Left>5.4375in</Left>
+								<Value>Date</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.75in</Top>
+								<Width>0.3125in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox47">
+								<Height>0.3125in</Height>
+								<Left>0.3125in</Left>
+								<Value>• If your total income will be less than $61,000 ($90,000 if married), enter "2" for each eligible child; then less "1" if you have three to
+seven eligible children or less "2" if you have eight or more eligible children.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>4.6875in</Top>
+								<Width>6.5625in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox42">
+								<Height>0.5625in</Height>
+								<Left>0.3125in</Left>
+								<Value>For accuracy, complete all worksheets that apply.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>5.5in</Top>
+								<Width>0.875in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox13">
+								<Height>0.1875in</Height>
+								<Left>1.1875in</Left>
+								<Value>• You are married, have only one job, and your spouse does not work; or</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>3.0625in</Top>
+								<Width>4.5625in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox36">
+								<Height>0.1875in</Height>
+								<Left>1.1875in</Left>
+								<Value>• You are single and have only one job; or</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>2.875in</Top>
+								<Width>2.6875in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox109">
+								<Height>0.1875in</Height>
+								<Value>(This form is not valid unless you sign it.)</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.75in</Top>
+								<Width>2.0625in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox108">
+								<Height>0.1875in</Height>
+								<Value>Employee's signature</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.5625in</Top>
+								<Width>1.25in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox110">
+								<Height>0.1875in</Height>
+								<Left>4.5625in</Left>
+								<Value>Cat. No. 10220Q</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>10.3125in</Top>
+								<Width>1in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox49">
+								<Height>0.4375in</Height>
+								<Left>1.4375in</Left>
+								<Value>• If you are single and have more than one job or are married and you and your spouse both work and the combined earnings from all jobs exceed $40,000 ($10,000 if married), see the Two-Earners/Multiple Jobs Worksheet on page 2 to avoid having too little tax withheld.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>5.6875in</Top>
+								<Width>6in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox111">
+								<Height>0.1875in</Height>
+								<Left>6.5in</Left>
+								<Value>Form</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>10.3125in</Top>
+								<Width>0.3125in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox89">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>• This year I expect a refund of all federal income tax withheld because I expect ot have no tax liability.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9in</Top>
+								<Width>5.8125in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox45">
+								<Height>0.1875in</Height>
+								<Left>0.3125in</Left>
+								<Value>Add lines A through G and enter total here. (This may be different from the number of exemptions you claim on your tax return.)</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>5.1875in</Top>
+								<Width>6.375in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox41">
+								<Height>0.1875in</Height>
+								<Left>0.3125in</Left>
+								<Value>• If your total income will be between $61,000 and $84,000 ($90,000 and $119,000 if married), enter "1" for each eligible child</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>5in</Top>
+								<Width>6.25in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox77">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>I claim exemption from withholding for 2012, and I certify that I meet both of the following conditions for exemption</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.625in</Top>
+								<Width>5.6875in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox97">
+								<Height>0.1875in</Height>
+								<Value>For Privacy Act and Paperwork Reduction Act Notice, see page 2.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>10.3125in</Top>
+								<Width>3.625in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox112">
+								<Height>0.1875in</Height>
+								<Left>6.8125in</Left>
+								<Value>W-4</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>10.3125in</Top>
+								<Width>0.3125in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox95">
+								<Height>0.1875in</Height>
+								<Value>Under penalties of perjury, I declare that I have examined this certificate and, to the best of my knowledge and belief, it is true, correct, and complete.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.375in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox87">
+								<Height>0.1875in</Height>
+								<Left>1.4375in</Left>
+								<Value>• If neither of the above situations applies, stop here and enter the number from line H on line 5 of Form W-4 below.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>6.125in</Top>
+								<Width>5.8125in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox88">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>• Last year I had a right to a refund of all federal income tax withheld because I had no tax liability, and</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.8125in</Top>
+								<Width>5.8125in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox86">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>Additional amount, if any, you want withheld from each paycheck</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.4375in</Top>
+								<Width>3.25in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox94">
+								<Height>0.1875in</Height>
+								<Left>7.125in</Left>
+								<Value>(2012)</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>10.3125in</Top>
+								<Width>0.375in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox83">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>Total number of allowances you are claiming (from line H above or from the applicable worksheet on page 2)</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.25in</Top>
+								<Width>5.4375in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox93">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>If you meet both conditions, write "Exempt" here</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.1875in</Top>
+								<Width>2.4375in</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Line Name="Line5">
+								<Height>0in</Height>
+								<Left>6.1875in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Dot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>3.25in</Top>
+								<Width>0.5in</Width>
+								<ZIndex>11</ZIndex>
+							</Line>
+							<Line Name="Line4">
+								<Height>0in</Height>
+								<Left>6.5625in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Dot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>5.1875in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>12</ZIndex>
+							</Line>
+							<Textbox Name="TextBox11">
+								<Height>0.1875in</Height>
+								<Left>6.5625in</Left>
+								<Value>►</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>5.1875in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>13</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox39">
+								<Height>0.1875in</Height>
+								<Left>7in</Left>
+								<Value>=Fields!F.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderStyle>
+										<Bottom>Solid</Bottom>
+									</BorderStyle>
+								</Style>
+								<Top>4.125in</Top>
+								<Width>0.5in</Width>
+								<ZIndex>14</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox32">
+								<Height>0.1875in</Height>
+								<Left>7in</Left>
+								<Value>=Fields!E.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderStyle>
+										<Bottom>Solid</Bottom>
+									</BorderStyle>
+								</Style>
+								<Top>3.9375in</Top>
+								<Width>0.5in</Width>
+								<ZIndex>15</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox28">
+								<Height>0.1875in</Height>
+								<Left>7in</Left>
+								<Value>=Fields!D.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<BorderStyle>
+										<Bottom>Solid</Bottom>
+									</BorderStyle>
+								</Style>
+								<Top>3.75in</Top>
+								<Width>0.5in</Width>
+								<ZIndex>16</ZIndex>
+							</Textbox>
+							<Line Name="Line3">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Dash</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>0.75pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>6.4375in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>17</ZIndex>
+							</Line>
+							<Textbox Name="TextBox37">
+								<Height>0.1875in</Height>
+								<Left>1.40625in</Left>
+								<Value>Separate here and give Form W-4 to your employer. Keep the top part for your records.</Value>
+								<Style>
+									<BackgroundColor>White</BackgroundColor>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Center</TextAlign>
+								</Style>
+								<Top>6.3125in</Top>
+								<Width>4.6875in</Width>
+								<ZIndex>18</ZIndex>
+							</Textbox>
+							<Line Name="Line11">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>6.3125in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>19</ZIndex>
+							</Line>
+							<Textbox Name="TextBox100">
+								<Height>0.1875in</Height>
+								<Left>0.125in</Left>
+								<Value>1</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.125in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox68">
+								<Height>0.1875in</Height>
+								<Left>5.5625in</Left>
+								<Value>10</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.9375in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox72">
+								<Height>0.1875in</Height>
+								<Left>3.875in</Left>
+								<Value>3</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.5in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox67">
+								<Height>0.1875in</Height>
+								<Left>5.75in</Left>
+								<Value>Employer identification number (EIN)</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.9375in</Top>
+								<Width>1.5625in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox74">
+								<Height>0.1875in</Height>
+								<Left>4in</Left>
+								<Value>If your last name differs from that shown on your social security card,</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<LineHeight>5pt</LineHeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.875in</Top>
+								<Width>3in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox53">
+								<Height>0.1875in</Height>
+								<Left>6.5in</Left>
+								<Value>OMB No. 1545-0074</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>6.5625in</Top>
+								<Width>0.875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox63">
+								<Height>0.1875in</Height>
+								<Left>3.875in</Left>
+								<Value>Note. If married, but legally separated, or spouse is a nonresident alien, check the "Single" box.</Value>
+								<Style>
+									<FontSize>5pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.6875in</Top>
+								<Width>3.1875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox70">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>Home address (number and street or rural route)</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.5in</Top>
+								<Width>1.875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox106">
+								<Height>0.1875in</Height>
+								<Left>4.5625in</Left>
+								<Value>9</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.9375in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox51">
+								<Height>0.1875in</Height>
+								<Left>5.6875in</Left>
+								<Value>2</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.125in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox102">
+								<Height>0.1875in</Height>
+								<Left>0.125in</Left>
+								<Value>8</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.9375in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox105">
+								<Height>0.1875in</Height>
+								<Left>4.6875in</Left>
+								<Value>Office code (optional)</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.9375in</Top>
+								<Width>0.875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox73">
+								<Height>0.1875in</Height>
+								<Left>2.5625in</Left>
+								<Value>Last name</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.125in</Top>
+								<Width>1.3125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox103">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>Employe's name and address (Employer: Complete lines 8 and 10 only if sending to the IRS.)</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.9375in</Top>
+								<Width>3.5625in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox84">
+								<Height>0.1875in</Height>
+								<Left>6.125in</Left>
+								<Value>6</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.4375in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox56">
+								<Height>0.1875in</Height>
+								<Value>Form</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>6.6875in</Top>
+								<Width>0.25in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox76">
+								<Height>0.1875in</Height>
+								<Left>0.125in</Left>
+								<Value>7</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.625in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox96">
+								<Height>0.1875in</Height>
+								<Left>5.3125in</Left>
+								<Value>►</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<LineHeight>5pt</LineHeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>9.1875in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox81">
+								<Height>0.1875in</Height>
+								<Left>0.125in</Left>
+								<Value>5</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.25in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox98">
+								<Height>0.1875in</Height>
+								<Left>2.0625in</Left>
+								<Value>►</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<LineHeight>5pt</LineHeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>9.75in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox99">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>Your first name and middle initial</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.125in</Top>
+								<Width>1.3125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox78">
+								<Height>0.1875in</Height>
+								<Left>6.25in</Left>
+								<Value>$</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>8.4375in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox82">
+								<Height>0.1875in</Height>
+								<Left>6.125in</Left>
+								<Value>5</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.25in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox69">
+								<Height>0.1875in</Height>
+								<Left>3.875in</Left>
+								<Value>4</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.875in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox59">
+								<Height>0.1875in</Height>
+								<Left>5.75in</Left>
+								<Value>►</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<LineHeight>5pt</LineHeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>9.75in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox90">
+								<Height>0.1875in</Height>
+								<Left>7in</Left>
+								<Value>►</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<LineHeight>5pt</LineHeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>8.0625in</Top>
+								<Width>0.1875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox75">
+								<Height>0.1875in</Height>
+								<Left>4in</Left>
+								<Value>check here. You must call 1-800-772-1213 for a replacement card.</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<LineHeight>5pt</LineHeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.0625in</Top>
+								<Width>2.6875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox58">
+								<Height>0.25in</Height>
+								<Value>Department of the Treasury
+Internal Revenue Service</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>6.875in</Top>
+								<Width>1.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox91">
+								<Height>0.1875in</Height>
+								<Left>5.5in</Left>
+								<Value>7</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.1875in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox61">
+								<Height>0.1875in</Height>
+								<Left>5.8125in</Left>
+								<Value>Your social security number</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.125in</Top>
+								<Width>1.3125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox64">
+								<Height>0.1875in</Height>
+								<Left>0.25in</Left>
+								<Value>City or town, state, and ZIP code</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.875in</Top>
+								<Width>1.875in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox85">
+								<Height>0.1875in</Height>
+								<Left>0.125in</Left>
+								<Value>6</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.4375in</Top>
+								<Width>0.125in</Width>
+								<ZIndex>20</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox52">
+								<Height>0.3125in</Height>
+								<Left>1.125in</Left>
+								<Value>Employee's Withholding Allowance Certificate</Value>
+								<Style>
+									<FontSize>14pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Center</TextAlign>
+								</Style>
+								<Top>6.5in</Top>
+								<Width>5.25in</Width>
+								<ZIndex>21</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox57">
+								<Height>0.3125in</Height>
+								<Left>0.25in</Left>
+								<Value>W-4</Value>
+								<Style>
+									<FontFamily>Arial Black</FontFamily>
+									<FontSize>16pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>6.5625in</Top>
+								<Width>0.5625in</Width>
+								<ZIndex>21</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox54">
+								<Height>0.3125in</Height>
+								<Left>6.5625in</Left>
+								<Value>2012</Value>
+								<Style>
+									<FontFamily>Arial Black</FontFamily>
+									<FontSize>16pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>6.75in</Top>
+								<Width>0.6875in</Width>
+								<ZIndex>21</ZIndex>
+							</Textbox>
+							<Line Name="Line13">
+								<Height>0.625in</Height>
+								<Left>6.375in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>6.5in</Top>
+								<Width>0in</Width>
+								<ZIndex>22</ZIndex>
+							</Line>
+							<Line Name="Line15">
+								<Height>0.625in</Height>
+								<Left>1.125in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>6.5in</Top>
+								<Width>0in</Width>
+								<ZIndex>22</ZIndex>
+							</Line>
+							<Textbox Name="TextBox55">
+								<Height>0.3125in</Height>
+								<Left>1.25in</Left>
+								<Value>► Whether you are entitled to claim a certain number of allowances or exemption from withholding is subject to review by the IRS. Your employer may be required to send a copy of this form to the IRS.</Value>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>6.8125in</Top>
+								<Width>5.0625in</Width>
+								<ZIndex>23</ZIndex>
+							</Textbox>
+							<Line Name="Line17">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>7.125in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>24</ZIndex>
+							</Line>
+							<Textbox Name="TextBox62">
+								<Height>0.1875in</Height>
+								<Value>=Fields!CITY.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.0625in</Top>
+								<Width>3.75in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox65">
+								<Height>0.1875in</Height>
+								<Left>2.375in</Left>
+								<Value>=Fields!LAST_NAME.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.3125in</Top>
+								<Width>3.25in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox107">
+								<Height>0.1875in</Height>
+								<Left>4.5625in</Left>
+								<Value>=Fields!OFFICE_CODE.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>10.125in</Top>
+								<Width>1in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox60">
+								<Height>0.1875in</Height>
+								<Left>6.375in</Left>
+								<Value>=Fields!PAYCHECK_WITHHELD.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<Format>$#,##0.00</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>8.4375in</Top>
+								<Width>1.125in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox104">
+								<Height>0.1875in</Height>
+								<Value>=Fields!EMPLOYER_ADDRESS.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>10.125in</Top>
+								<Width>4.5625in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox66">
+								<Height>0.1875in</Height>
+								<Left>5.5625in</Left>
+								<Value>=Fields!EIN.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>10.125in</Top>
+								<Width>1.9375in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox92">
+								<Height>0.1875in</Height>
+								<Left>5.625in</Left>
+								<Value>=Fields!EXEMPT.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>9.1875in</Top>
+								<Width>1.875in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox79">
+								<Height>0.1875in</Height>
+								<Left>5.625in</Left>
+								<Value>=Fields!SSN.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.3125in</Top>
+								<Width>1.875in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox80">
+								<Height>0.1875in</Height>
+								<Left>6.25in</Left>
+								<Value>=Fields!TOTAL_ALLOWANCES.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>8.25in</Top>
+								<Width>1.25in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox71">
+								<Height>0.1875in</Height>
+								<Value>=Fields!ADDRESS.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.6875in</Top>
+								<Width>3.75in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox101">
+								<Height>0.1875in</Height>
+								<Value>=Fields!NAME.Value</Value>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.3125in</Top>
+								<Width>2.375in</Width>
+								<ZIndex>25</ZIndex>
+							</Textbox>
+							<Line Name="Line14">
+								<Height>0.375in</Height>
+								<Left>6.25in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>8.25in</Top>
+								<Width>0in</Width>
+								<ZIndex>26</ZIndex>
+							</Line>
+							<Line Name="Line23">
+								<Height>0.1875in</Height>
+								<Left>5.625in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>9.1875in</Top>
+								<Width>0in</Width>
+								<ZIndex>26</ZIndex>
+							</Line>
+							<Line Name="Line28">
+								<Height>0.375in</Height>
+								<Left>6.125in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>8.25in</Top>
+								<Width>0in</Width>
+								<ZIndex>26</ZIndex>
+							</Line>
+							<Line Name="Line18">
+								<Height>0.375in</Height>
+								<Left>2.375in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>7.125in</Top>
+								<Width>0in</Width>
+								<ZIndex>26</ZIndex>
+							</Line>
+							<Line Name="Line32">
+								<Height>0.1875in</Height>
+								<Left>5.5in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>9.1875in</Top>
+								<Width>0in</Width>
+								<ZIndex>26</ZIndex>
+							</Line>
+							<Line Name="Line30">
+								<Height>0in</Height>
+								<Left>5.5in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>9.1875in</Top>
+								<Width>2in</Width>
+								<ZIndex>26</ZIndex>
+							</Line>
+							<Line Name="Line22">
+								<Height>0.375in</Height>
+								<Left>5.625in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>7.125in</Top>
+								<Width>0in</Width>
+								<ZIndex>26</ZIndex>
+							</Line>
+							<Line Name="Line16">
+								<Height>0.75in</Height>
+								<Left>3.75in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>7.5in</Top>
+								<Width>0in</Width>
+								<ZIndex>26</ZIndex>
+							</Line>
+							<CheckBox Name="CheckBox2">
+								<Height>0.1875in</Height>
+								<Left>4.0625in</Left>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.5in</Top>
+								<Checked>=iif(Fields!MARITIAL_STATUS.Value = "SINGLE", TRUE, FALSE)</Checked>
+								<Text>Single</Text>
+								<Width>0.5in</Width>
+								<ZIndex>27</ZIndex>
+							</CheckBox>
+							<CheckBox Name="CheckBox3">
+								<Height>0.1875in</Height>
+								<Left>5.1875in</Left>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.5in</Top>
+								<Checked>=iif(Fields!MARITIAL_STATUS.Value = "SINGLE RATE", TRUE, FALSE)</Checked>
+								<Text>Married, but withhold at higher Single rate.</Text>
+								<Width>1.875in</Width>
+								<ZIndex>27</ZIndex>
+							</CheckBox>
+							<CheckBox Name="CheckBox1">
+								<Height>0.1875in</Height>
+								<Left>4.625in</Left>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>7.5in</Top>
+								<Checked>=iif(Fields!MARITIAL_STATUS.Value = "MARRIED", TRUE, FALSE)</Checked>
+								<Text>Married</Text>
+								<Width>0.5in</Width>
+								<ZIndex>27</ZIndex>
+							</CheckBox>
+							<Line Name="Line19">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>7.5in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>28</ZIndex>
+							</Line>
+							<Line Name="Line20">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>7.875in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>28</ZIndex>
+							</Line>
+							<CheckBox Name="CheckBox4">
+								<Height>0.1875in</Height>
+								<Left>7.25in</Left>
+								<Style>
+									<BackgroundColor>AliceBlue</BackgroundColor>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>8.0625in</Top>
+								<Checked>=iif(Fields!LAST_NAME_DIFFERENT.Value = "YES", TRUE, FALSE)</Checked>
+								<CheckAlignment>BottomLeft</CheckAlignment>
+								<Text>=Fields!D.Value</Text>
+								<Width>0.1875in</Width>
+								<ZIndex>29</ZIndex>
+							</CheckBox>
+							<Line Name="Line27">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>8.25in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>30</ZIndex>
+							</Line>
+							<Line Name="Line33">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>9.9375in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>30</ZIndex>
+							</Line>
+							<Line Name="Line31">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>9.375in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>30</ZIndex>
+							</Line>
+							<Line Name="Line12">
+								<Height>0in</Height>
+								<Left>6.125in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>8.625in</Top>
+								<Width>1.375in</Width>
+								<ZIndex>30</ZIndex>
+							</Line>
+							<Line Name="Line25">
+								<Height>0in</Height>
+								<Left>6.125in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>8.4375in</Top>
+								<Width>1.375in</Width>
+								<ZIndex>30</ZIndex>
+							</Line>
+							<Shape Name="Shape4">
+								<Height>0.5625in</Height>
+								<Left>6.25in</Left>
+								<Style>
+									<BackgroundColor>Gray</BackgroundColor>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>8.625in</Top>
+								<Width>1.25in</Width>
+								<ZIndex>31</ZIndex>
+								<dd:ShapeStyle xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Rectangle</dd:ShapeStyle>
+							</Shape>
+							<Line Name="Line24">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>10.3125in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>32</ZIndex>
+							</Line>
+							<Line Name="Line34">
+								<Height>0.375in</Height>
+								<Left>4.5625in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>9.9375in</Top>
+								<Width>0in</Width>
+								<ZIndex>33</ZIndex>
+							</Line>
+							<Line Name="Line29">
+								<Height>0.375in</Height>
+								<Left>5.5625in</Left>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>9.9375in</Top>
+								<Width>0in</Width>
+								<ZIndex>33</ZIndex>
+							</Line>
+							<Textbox Name="TextBox115">
+								<Height>2.5in</Height>
+								<Left>2.5625in</Left>
+								<Value>Complete all worksheets that apply. However, you may claim fewer (or zero) allowances. For regular wages, withholding must be based on allowances you claimed and may not be a flat amount or percentage of wages.
+
+Head of household. Generally, you can claim head of household filing status on your tax return only if you are unmarried and pay more than 50% of the costs of keeping up a home for yourself and your dependent(s) or other qualifying individuals. See Pub. 501, Exemptions, Standard Deduction, and Filing Information, for information.
+
+Tax credits. You can take projected tax credits into account in figuring your allowable number of withholding allowances. Credits for child or dependent care expenses and the child tax credit 
+may be claimed using the Personal Allowances Worksheet below. See Pub. 505 for information on converting your other credits into withholding allowances.
+
+Nonwage income. If you have a large amount of nonwage income, such as interest or dividends, consider making estimated tax payments using Form 1040-ES, Estimated Tax for Individuals. Otherwise, you may owe additional tax. If you have pension or annuity </Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+								</Style>
+								<Width>2.375in</Width>
+								<ZIndex>34</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox114">
+								<Height>2.125in</Height>
+								<Value>Purpose. Complete Form W-4 so that your employer can withhold the correct federal income tax from your pay. Consider completing a new Form W-4 each year and when your personal or financial situation changes.
+
+Exemption from withholding. If you are exempt, complete  only  lines 1, 2, 3, 4, and 7 and sign the form to validate it. Your exemption for 2012 expires February 18, 2013. See Pub. 505, Tax Withholding and Estimated Tax.
+
+Note. If another person can claim you as a dependent on his or her tax return, you cannot claim exemption from withholding if your income exceeds $950 and includes more than $300 of unearned
+income (for example, interest and dividends).
+
+Basic instructions. If you are not exempt, complete the Personal Allowances Worksheet below. The worksheets on page 2 further adjust your withholding allowances based on itemized
+deductions, certain credits, adjustments to income, or two-earners/multiple jobs situations.</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>1pt</PaddingTop>
+								</Style>
+								<Top>0.375in</Top>
+								<Width>2.375in</Width>
+								<ZIndex>34</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox113">
+								<Height>2.5in</Height>
+								<Left>5.125in</Left>
+								<Value>income, see Pub. 505 to find out if you should adjust your withholding on Form W-4 or W-4P.
+
+Two earners or multiple jobs. If you have a working spouse or more than one job, figure the total number of allowances you are entitled to claim on all jobs using worksheets from only one Form W-4. Your withholding usually will be most accurate when all allowances are claimed on the Form W-4 
+for the highest paying job and zero allowances are claimed on the others. See Pub. 505 for details.
+
+Nonresident alien. If you are a nonresident alien, see Notice 1392, Supplemental Form W-4 Instructions for Nonresident Aliens, before completing this form.
+
+Check your withholding. After your Form W-4 takes effect, use Pub. 505 to see how the amount you are having withheld compares to your projected total tax for 2012. See Pub. 505, especially if your earnings exceed $130,000 (Single) or $180,000 (Married).
+
+Future developments. The IRS has created a page on IRS.gov for information about Form W-4, at www.irs.gov/w4. Information about any future developments affecting Form W-4 (such as legislation enacted after we release it) will be posted on that page.</Value>
+								<Style>
+									<FontSize>6pt</FontSize>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+								</Style>
+								<Width>2.375in</Width>
+								<ZIndex>34</ZIndex>
+							</Textbox>
+							<Line Name="Line10">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>2.53125in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>35</ZIndex>
+							</Line>
+							<Line Name="Line2">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+								</Style>
+								<Top>2.6875in</Top>
+								<Width>7.5in</Width>
+								<ZIndex>36</ZIndex>
+							</Line>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>DataSet1</DataSetName>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>0.25in</BottomMargin>
+	<LeftMargin>0.5in</LeftMargin>
+	<PageHeight>11in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<RightMargin>0.5in</RightMargin>
+	<TopMargin>0.25in</TopMargin>
+	<Width>8.5in</Width>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>xmlDoc=..\..\..\..\..\Data\IRS.xml</ConnectString>
+				<DataProvider>XML</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="A">
+					<DataField>A</DataField>
+				</Field>
+				<Field Name="B">
+					<DataField>B</DataField>
+				</Field>
+				<Field Name="C">
+					<DataField>C</DataField>
+				</Field>
+				<Field Name="D">
+					<DataField>D</DataField>
+				</Field>
+				<Field Name="E">
+					<DataField>E</DataField>
+				</Field>
+				<Field Name="H">
+					<DataField>H</DataField>
+				</Field>
+				<Field Name="NAME">
+					<DataField>NAME</DataField>
+				</Field>
+				<Field Name="LAST_NAME">
+					<DataField>LAST_NAME</DataField>
+				</Field>
+				<Field Name="SSN">
+					<DataField>SSN</DataField>
+				</Field>
+				<Field Name="ADDRESS">
+					<DataField>ADDRESS</DataField>
+				</Field>
+				<Field Name="CITY">
+					<DataField>CITY</DataField>
+				</Field>
+				<Field Name="MARITIAL_STATUS">
+					<DataField>MARITIAL_STATUS</DataField>
+				</Field>
+				<Field Name="LAST_NAME_DIFFERENT">
+					<DataField>LAST_NAME_DIFFERENT</DataField>
+				</Field>
+				<Field Name="TOTAL_ALLOWANCES">
+					<DataField>TOTAL_ALLOWANCES</DataField>
+				</Field>
+				<Field Name="PAYCHECK_WITHHELD">
+					<DataField>PAYCHECK_WITHHELD</DataField>
+				</Field>
+				<Field Name="EXEMPT">
+					<DataField>EXEMPT</DataField>
+				</Field>
+				<Field Name="EMPLOYER_ADDRESS">
+					<DataField>EMPLOYER_ADDRESS</DataField>
+				</Field>
+				<Field Name="OFFICE_CODE">
+					<DataField>OFFICE_CODE</DataField>
+				</Field>
+				<Field Name="EIN">
+					<DataField>EIN</DataField>
+				</Field>
+				<Field Name="F">
+					<DataField>F</DataField>
+				</Field>
+				<Field Name="G">
+					<DataField>G</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>EMPLOYEES/EMPLOYEE</CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

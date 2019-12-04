@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="1634" BackColor="16777215">
+      <Control Type="AR.Label" Name="lblProductName" Left="90" Top="1170" Width="1710" Height="288" Caption="Product Name" Style="color: ForestGreen; font-size: 12pt; font-weight: bold; text-decoration: underline" PaddingLeft="2" />
+      <Control Type="AR.Label" Name="lblUnitPrice" Left="1890" Top="1170" Width="1440" Height="288" Caption="UnitPrice" Style="color: ForestGreen; font-size: 12pt; font-weight: bold; text-decoration: underline" PaddingLeft="2" />
+      <Control Type="AR.Label" Name="lblQuantity" Left="3420" Top="1170" Width="1440" Height="288" Caption="Quantity" Style="color: ForestGreen; font-size: 12pt; font-weight: bold; text-decoration: underline" PaddingLeft="2" />
+      <Control Type="AR.Label" Name="lblExtendedPrice" Left="4950" Top="1170" Width="1890" Height="288" Caption="Extended Price" Style="color: ForestGreen; font-size: 12pt; font-weight: bold; text-decoration: underline" PaddingLeft="2" />
+      <Control Type="AR.Label" Name="lblNote" Left="90" Top="90" Width="9180" Height="900" Caption="Note:  DataField expressions are handy for simple calculations within the same section using known Fields collection values.  They cannot however be used with the built in summary functions of ActiveReports for .NET.  To see how to format the DataField Expression, look at the DataField property of txtExtendedPrice in the Detail section." Style="color: Silver; font-size: 9pt; font-style: italic" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="464" BackColor="16777215">
+      <Control Type="AR.Field" Name="txtProductName" DataField="ProductName" Left="89.28001" Top="89.28001" Width="1710" Height="288" Text="txtProductName" />
+      <Control Type="AR.Field" Name="txtUnitPrice" DataField="UnitPrice" Left="1890" Top="90" Width="1440" Height="288" Text="txtUnitPrice" OutputFormat="$#,##0.00" />
+      <Control Type="AR.Field" Name="txtQuantity" DataField="Quantity" Left="3420" Top="90" Width="1440" Height="288" Text="txtQuantity" />
+      <Control Type="AR.Field" Name="txtExtendedPrice" DataField="=UnitPrice*Quantity" Left="4950" Top="90" Width="1890" Height="288" Text="txtExtendedPrice" OutputFormat="$#,##0.00" Style="font-weight: normal; text-decoration: underline; ddo-char-set: 1" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="225" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Imports System
+Imports System.Collections
+
+Private _index As Integer
+Private _details As System.Collections.ArrayList
+
+
+Private Class OrderDetail
+	Public Sub New(productName As String, unitPrice As Double, quantity As Integer)
+		Me.productName = productName
+		Me.unitPrice = unitPrice
+		Me.quantity = quantity
+	End Sub
+
+	Public productName As String
+	Public unitPrice As Double
+	Public quantity As Integer
+End Class
+
+
+''' <summary>
+''' DataInitialize Event
+''' Use it to add custom fields to the report's Fields collection. 
+''' ustom fields can be added to a bound report (one that uses a Data Control to connect and retrieve records)
+''' or an unbound report (one that does not depend on a data control to get its records).
+''' </summary>
+Public Sub ActiveReport_DataInitialize()
+	rpt.Fields.Add("ProductName")
+	rpt.Fields.Add("UnitPrice")
+	rpt.Fields.Add("Quantity")
+End Sub
+
+
+Public Function ActiveReport_FetchData(eof As Boolean) As Boolean
+	If _index >= _details.Count - 1 Then
+		eof = True
+		Return eof
+	Else
+		eof = False
+	End If
+
+	Dim row As OrderDetail = CType(_details(System.Threading.Interlocked.Increment(_index)), OrderDetail)
+
+	rpt.Fields("ProductName").Value = row.productName
+	rpt.Fields("UnitPrice").Value = row.unitPrice
+	rpt.Fields("Quantity").Value = row.quantity
+	Return eof
+End Function
+
+''' <summary>
+''' ReportStart event
+''' This event is raised every time when report to be start.
+''' </summary>	
+Public Sub ActiveReport_ReportStart()
+	'Test data
+	_details = New System.Collections.ArrayList()
+	_details.Add(New OrderDetail("A", 10.0, 2))
+	_details.Add(New OrderDetail("B", 0.12, 1))
+	_details.Add(New OrderDetail("C", 5.92, 3))
+
+	_index = -1
+End Sub
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

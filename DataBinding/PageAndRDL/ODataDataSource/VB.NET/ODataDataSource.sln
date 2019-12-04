@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ObjectDataSourceClient", "ObjectDataSourceClient\ObjectDataSourceClient.vbproj", "{DBF7408F-C828-49B3-8AB7-CF5C2162E96B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "JsonDataSourceClient", "JsonDataSourceClient\JsonDataSourceClient.vbproj", "{410690C2-3481-4046-8D6F-1F60FB955728}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ODataEndPoint", "ODataEndPoint\ODataEndPoint.vbproj", "{B5A3491C-4BAD-4E0C-8693-E9BEF0A6D92B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBF7408F-C828-49B3-8AB7-CF5C2162E96B}.Debug|x86.ActiveCfg = Debug|x86
+		{DBF7408F-C828-49B3-8AB7-CF5C2162E96B}.Debug|x86.Build.0 = Debug|x86
+		{DBF7408F-C828-49B3-8AB7-CF5C2162E96B}.Release|x86.ActiveCfg = Release|x86
+		{DBF7408F-C828-49B3-8AB7-CF5C2162E96B}.Release|x86.Build.0 = Release|x86
+		{410690C2-3481-4046-8D6F-1F60FB955728}.Debug|x86.ActiveCfg = Debug|x86
+		{410690C2-3481-4046-8D6F-1F60FB955728}.Debug|x86.Build.0 = Debug|x86
+		{410690C2-3481-4046-8D6F-1F60FB955728}.Release|x86.ActiveCfg = Release|x86
+		{410690C2-3481-4046-8D6F-1F60FB955728}.Release|x86.Build.0 = Release|x86
+		{B5A3491C-4BAD-4E0C-8693-E9BEF0A6D92B}.Debug|x86.ActiveCfg = Debug|x86
+		{B5A3491C-4BAD-4E0C-8693-E9BEF0A6D92B}.Debug|x86.Build.0 = Debug|x86
+		{B5A3491C-4BAD-4E0C-8693-E9BEF0A6D92B}.Release|x86.ActiveCfg = Release|x86
+		{B5A3491C-4BAD-4E0C-8693-E9BEF0A6D92B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B9CC36F-F45F-4C8D-B18E-2BD4F8D97629}
+	EndGlobalSection
+EndGlobal

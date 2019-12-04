@@ -1,0 +1,942 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.BottomToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainerToolbox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainerToolbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainerReportsLibrary.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainerReportsLibrary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainerReportsLibrary.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="arToolbox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="arToolbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="arToolbox.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>145, 20</value>
+  </data>
+  <data name="arToolbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 390</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="arToolbox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;arToolbox.Name" xml:space="preserve">
+    <value>arToolbox</value>
+  </data>
+  <data name="&gt;&gt;arToolbox.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Design.Toolbox.Toolbox, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;arToolbox.Parent" xml:space="preserve">
+    <value>splitContainerReportsLibrary.Panel1</value>
+  </data>
+  <data name="&gt;&gt;arToolbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Panel1.Name" xml:space="preserve">
+    <value>splitContainerReportsLibrary.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerReportsLibrary</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="reportsLibrary.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="reportsLibrary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="reportsLibrary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 122</value>
+  </data>
+  <data name="reportsLibrary.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;reportsLibrary.Name" xml:space="preserve">
+    <value>reportsLibrary</value>
+  </data>
+  <data name="&gt;&gt;reportsLibrary.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Design.ReportsLibrary.ReportsLibrary, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;reportsLibrary.Parent" xml:space="preserve">
+    <value>splitContainerReportsLibrary.Panel2</value>
+  </data>
+  <data name="&gt;&gt;reportsLibrary.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Panel2.Name" xml:space="preserve">
+    <value>splitContainerReportsLibrary.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerReportsLibrary</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerReportsLibrary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 516</value>
+  </data>
+  <data name="splitContainerReportsLibrary.SplitterDistance" type="System.Int32, mscorlib">
+    <value>390</value>
+  </data>
+  <data name="splitContainerReportsLibrary.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Name" xml:space="preserve">
+    <value>splitContainerReportsLibrary</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.Parent" xml:space="preserve">
+    <value>splitContainerToolbox.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerReportsLibrary.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Panel1.Name" xml:space="preserve">
+    <value>splitContainerToolbox.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerToolbox</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerDesigner.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainerDesigner.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainerGroupEditor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainerGroupEditor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainerGroupEditor.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="arDesigner.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="arDesigner.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="arPropertyGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="arPropertyGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="arPropertyGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 329</value>
+  </data>
+  <data name="arPropertyGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;arPropertyGrid.Name" xml:space="preserve">
+    <value>arPropertyGrid</value>
+  </data>
+  <data name="&gt;&gt;arPropertyGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PropertyGrid, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;arPropertyGrid.Parent" xml:space="preserve">
+    <value>splitContainerProperties.Panel2</value>
+  </data>
+  <data name="&gt;&gt;arPropertyGrid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="arDesigner.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 374</value>
+  </data>
+  <data name="arDesigner.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;arDesigner.Name" xml:space="preserve">
+    <value>arDesigner</value>
+  </data>
+  <data name="&gt;&gt;arDesigner.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Design.Designer, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;arDesigner.Parent" xml:space="preserve">
+    <value>splitContainerGroupEditor.Panel1</value>
+  </data>
+  <data name="&gt;&gt;arDesigner.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Panel1.Name" xml:space="preserve">
+    <value>splitContainerGroupEditor.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerGroupEditor</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupEditor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupEditor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 21</value>
+  </data>
+  <data name="groupEditor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="groupEditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 112</value>
+  </data>
+  <data name="groupEditor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupEditor.Name" xml:space="preserve">
+    <value>groupEditor</value>
+  </data>
+  <data name="&gt;&gt;groupEditor.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Design.GroupEditor.GroupEditor, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;groupEditor.Parent" xml:space="preserve">
+    <value>GroupEditorContainer</value>
+  </data>
+  <data name="&gt;&gt;groupEditor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupEditorToggleButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="GroupEditorToggleButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="GroupEditorToggleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 2</value>
+  </data>
+  <data name="GroupEditorToggleButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="GroupEditorToggleButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorToggleButton.Name" xml:space="preserve">
+    <value>GroupEditorToggleButton</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorToggleButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorToggleButton.Parent" xml:space="preserve">
+    <value>GroupEditorSeparator</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorToggleButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 0</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Group Editor</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>GroupEditorSeparator</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GroupEditorSeparator.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupEditorSeparator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="GroupEditorSeparator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="GroupEditorSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 20</value>
+  </data>
+  <data name="GroupEditorSeparator.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorSeparator.Name" xml:space="preserve">
+    <value>GroupEditorSeparator</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorSeparator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorSeparator.Parent" xml:space="preserve">
+    <value>GroupEditorContainer</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorSeparator.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GroupEditorContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupEditorContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 0</value>
+  </data>
+  <data name="GroupEditorContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="GroupEditorContainer.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="GroupEditorContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 134</value>
+  </data>
+  <data name="GroupEditorContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorContainer.Name" xml:space="preserve">
+    <value>GroupEditorContainer</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorContainer.Parent" xml:space="preserve">
+    <value>splitContainerGroupEditor.Panel2</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerGroupEditor.Panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 0, 4</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Panel2.Name" xml:space="preserve">
+    <value>splitContainerGroupEditor.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerGroupEditor</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerGroupEditor.Panel2MinSize" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="splitContainerGroupEditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 516</value>
+  </data>
+  <data name="splitContainerGroupEditor.SplitterDistance" type="System.Int32, mscorlib">
+    <value>374</value>
+  </data>
+  <data name="splitContainerGroupEditor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Name" xml:space="preserve">
+    <value>splitContainerGroupEditor</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.Parent" xml:space="preserve">
+    <value>splitContainerDesigner.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerGroupEditor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Panel1.Name" xml:space="preserve">
+    <value>splitContainerDesigner.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerDesigner</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerProperties.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainerProperties.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainerProperties.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="reportExplorer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="reportExplorer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="reportExplorer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="reportExplorer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 151</value>
+  </data>
+  <data name="reportExplorer.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;reportExplorer.Name" xml:space="preserve">
+    <value>reportExplorer</value>
+  </data>
+  <data name="&gt;&gt;reportExplorer.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Design.ReportExplorer.ReportExplorer, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;reportExplorer.Parent" xml:space="preserve">
+    <value>reportExplorerTabPage</value>
+  </data>
+  <data name="&gt;&gt;reportExplorer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="reportExplorerTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="reportExplorerTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="reportExplorerTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 157</value>
+  </data>
+  <data name="reportExplorerTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="reportExplorerTabPage.Text" xml:space="preserve">
+    <value>Report Explorer</value>
+  </data>
+  <data name="&gt;&gt;reportExplorerTabPage.Name" xml:space="preserve">
+    <value>reportExplorerTabPage</value>
+  </data>
+  <data name="&gt;&gt;reportExplorerTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;reportExplorerTabPage.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;reportExplorerTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="layerList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layerList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="layerList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 151</value>
+  </data>
+  <data name="layerList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layerList.Name" xml:space="preserve">
+    <value>layerList</value>
+  </data>
+  <data name="&gt;&gt;layerList.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Design.LayerList, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;layerList.Parent" xml:space="preserve">
+    <value>layersTabPage</value>
+  </data>
+  <data name="&gt;&gt;layerList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="layersTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="layersTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="layersTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 157</value>
+  </data>
+  <data name="layersTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="layersTabPage.Text" xml:space="preserve">
+    <value>Layers</value>
+  </data>
+  <data name="&gt;&gt;layersTabPage.Name" xml:space="preserve">
+    <value>layersTabPage</value>
+  </data>
+  <data name="&gt;&gt;layersTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;layersTabPage.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;layersTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 183</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>splitContainerProperties.Panel1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Panel1.Name" xml:space="preserve">
+    <value>splitContainerProperties.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerProperties</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Panel2.Name" xml:space="preserve">
+    <value>splitContainerProperties.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerProperties</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerProperties.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 516</value>
+  </data>
+  <data name="splitContainerProperties.SplitterDistance" type="System.Int32, mscorlib">
+    <value>183</value>
+  </data>
+  <data name="splitContainerProperties.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Name" xml:space="preserve">
+    <value>splitContainerProperties</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.Parent" xml:space="preserve">
+    <value>splitContainerDesigner.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerProperties.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Panel2.Name" xml:space="preserve">
+    <value>splitContainerDesigner.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerDesigner</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerDesigner.Size" type="System.Drawing.Size, System.Drawing">
+    <value>757, 516</value>
+  </data>
+  <data name="splitContainerDesigner.SplitterDistance" type="System.Int32, mscorlib">
+    <value>462</value>
+  </data>
+  <data name="splitContainerDesigner.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Name" xml:space="preserve">
+    <value>splitContainerDesigner</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.Parent" xml:space="preserve">
+    <value>splitContainerToolbox.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerDesigner.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Panel2.Name" xml:space="preserve">
+    <value>splitContainerToolbox.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerToolbox</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerToolbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>906, 516</value>
+  </data>
+  <data name="splitContainerToolbox.SplitterDistance" type="System.Int32, mscorlib">
+    <value>145</value>
+  </data>
+  <data name="splitContainerToolbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Name" xml:space="preserve">
+    <value>splitContainerToolbox</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.Parent" xml:space="preserve">
+    <value>toolStripContainer1.ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;splitContainerToolbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="toolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>906, 516</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ContentPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ContentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ContentPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ContentPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="toolStripContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.LeftToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="toolStripContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.RightToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="toolStripContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>906, 541</value>
+  </data>
+  <data name="toolStripContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="toolStripContainer1.Text" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.Name" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>404, 17</value>
+  </metadata>
+  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>891, 17</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 541</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>906, 22</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="openDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="openDialog.Filter" xml:space="preserve">
+    <value>All Report Files (*.rpx;*.rdl;*.rdlx;*.rdlx-master)|*.rpx;*.rdl;*.rdlx;*.rdlx-master|Section Report Files (*.rpx)|*.rpx|Page Report Files (*.rdlx)|*.rdlx|RDL Report Files (*.rdl;*.rdlx;*.rdlx-master)|*.rdl;*.rdlx;*.rdlx-master|All files (*.*)|*.*</value>
+  </data>
+  <metadata name="saveDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
+  <metadata name="GroupPanelVisibility.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>243, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>906, 563</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>EndUserDesigner</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openDialog.Name" xml:space="preserve">
+    <value>openDialog</value>
+  </data>
+  <data name="&gt;&gt;openDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveDialog.Name" xml:space="preserve">
+    <value>saveDialog</value>
+  </data>
+  <data name="&gt;&gt;saveDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupPanelVisibility.Name" xml:space="preserve">
+    <value>GroupPanelVisibility</value>
+  </data>
+  <data name="&gt;&gt;GroupPanelVisibility.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DesignerForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

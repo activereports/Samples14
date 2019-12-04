@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DefaultReportNameRpx" xml:space="preserve">
+    <value>Untitled.rpx</value>
+  </data>
+  <data name="DefaultReportNameRdlx" xml:space="preserve">
+    <value>Untitled.rdlx</value>
+  </data>
+  <data name="DefaultReportNameRdlxMaster" xml:space="preserve">
+    <value>Untitled.rdlx-master</value>
+  </data>
+  <data name="DesignerFormName" xml:space="preserve">
+    <value>DesignerForm</value>
+  </data>
+  <data name="DesignerFormTitle" xml:space="preserve">
+    <value>GrapeCity ActiveReports Report Designer</value>
+  </data>
+  <data name="DirtySign" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="ReportIsNotValid" xml:space="preserve">
+    <value>File {0} is not valid report file.</value>
+  </data>
+  <data name="EudUnsavedChangesMessage" xml:space="preserve">
+    <value>Save changes to '{0}'?</value>
+  </data>
+  <data name="EudUnsavedChangesTitle" xml:space="preserve">
+    <value>Unsaved Changes</value>
+  </data>
+  <data name="ExitText" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="NewText" xml:space="preserve">
+    <value>&amp;New...</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>&amp;Open...</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="SaveAs" xml:space="preserve">
+    <value>S&amp;ave as...</value>
+  </data>
+  <data name="SaveRpxFilter" xml:space="preserve">
+    <value>Section Report Files (*.rpx)|*.rpx</value>
+  </data>
+  <data name="SaveRdlxFilter" xml:space="preserve">
+    <value>Page Report Files (*.rdlx)|*.rdlx</value>
+  </data>
+  <data name="SaveRdlFilter" xml:space="preserve">
+    <value>RDL Report Files (*.rdlx)|*.rdlx</value>
+  </data>
+  <data name="TitleFormat" xml:space="preserve">
+    <value>{0}{1} - {2}</value>
+  </data>
+  <data name="CurrentSelection" xml:space="preserve">
+    <value>Current Selection: </value>
+  </data>
+  <data name="NoSelection" xml:space="preserve">
+    <value>No Selection</value>
+  </data>
+  <data name="DefaultGroup" xml:space="preserve">
+    <value>ActiveReports 13</value>
+  </data>
+  <data name="RpxExtension" xml:space="preserve">
+    <value>.rpx</value>
+  </data>
+  <data name="RdlExtension" xml:space="preserve">
+    <value>.rdl</value>
+  </data>
+  <data name="RdlxMasterExtension" xml:space="preserve">
+    <value>.rdlx-master</value>
+  </data>
+  <data name="RdlxExtension" xml:space="preserve">
+    <value>.rdlx</value>
+  </data>
+  <data name="SaveRdlxMasterFilter" xml:space="preserve">
+    <value>RDL Report Master Files (*.rdlx-master)|*.rdlx-master</value>
+  </data>
+  <data name="NewToolTip" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="OpenToolTip" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="SaveToolTip" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>&amp;About</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>&amp;Export</value>
+  </data>
+  <data name="DefaultReportNameRdl" xml:space="preserve">
+    <value>Untitled.rdlx</value>
+  </data>
+  <data name="HideGroupPanelToolTip" xml:space="preserve">
+    <value>Hide Group Editor</value>
+  </data>
+  <data name="ShowGroupPanelToolTip" xml:space="preserve">
+    <value>Show Group Editor</value>
+  </data>
+  <data name="OpenAsLibrary" xml:space="preserve">
+    <value>Open As Library</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="App" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\app.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdExport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\export.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdNewReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cmdnewreport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cmdopen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdSave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cmdsave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdSaveAs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cmdsaveas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExportText" xml:space="preserve">
+    <value>&amp;Export</value>
+  </data>
+  <data name="GroupEditorHide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\groupeditorhide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GroupEditorShow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\groupeditorshow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SampleNameTitle" xml:space="preserve">
+    <value>EndUserDesigner - </value>
+  </data>
+</root>

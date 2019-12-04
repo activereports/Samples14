@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+  <Body>
+    <Height>3in</Height>
+    <ReportItems>
+      <FixedPage Name="FixedPage1">
+        <Pages>
+          <Page>
+            <ReportItems>
+              <Table Name="Table1">
+                <DataSetName>DataSet1</DataSetName>
+                <Header>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
+                  <TableRows>
+                    <TableRow>
+                      <Height>0.25in</Height>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="TextBox1">
+                              <CanGrow>true</CanGrow>
+                              <Style>
+                                <BackgroundColor>DeepSkyBlue</BackgroundColor>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <Value>Name</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="TextBox2">
+                              <CanGrow>true</CanGrow>
+                              <Style>
+                                <BackgroundColor>DeepSkyBlue</BackgroundColor>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <Value>Role</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="TextBox3">
+                              <CanGrow>true</CanGrow>
+                              <Style>
+                                <BackgroundColor>DeepSkyBlue</BackgroundColor>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <Value>City</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                    </TableRow>
+                  </TableRows>
+                </Header>
+                <Details>
+                  <TableRows>
+                    <TableRow>
+                      <Height>0.25in</Height>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="TextBox4">
+                              <CanGrow>true</CanGrow>
+                              <Style>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <Value>=Fields!FirstName.Value &amp; " " &amp; Fields!LastName.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="TextBox5">
+                              <CanGrow>true</CanGrow>
+                              <Style>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <Value>=Fields!Role.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="TextBox6">
+                              <CanGrow>true</CanGrow>
+                              <Style>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <Value>=Fields!City.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                    </TableRow>
+                  </TableRows>
+                </Details>
+                <Height>0.5in</Height>
+                <Left>0.125in</Left>
+                <dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">2.875in</dd:FixedHeight>
+                <dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">6.125in</dd:FixedWidth>
+                <TableColumns>
+                  <TableColumn>
+                    <Width>2.875in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1.625in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1.625in</Width>
+                  </TableColumn>
+                </TableColumns>
+                <Top>0.125in</Top>
+                <Width>6.125in</Width>
+              </Table>
+            </ReportItems>
+          </Page>
+        </Pages>
+      </FixedPage>
+    </ReportItems>
+  </Body>
+  <PageHeight>3in</PageHeight>
+  <PageWidth>6.5in</PageWidth>
+  <Width>6.5in</Width>
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <ConnectionProperties>
+        <DataProvider>CustomCSV</DataProvider>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+</Report>

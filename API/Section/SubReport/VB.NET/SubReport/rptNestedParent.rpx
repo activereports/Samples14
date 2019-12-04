@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215">
+      <Control Type="AR.Field" Name="textBox1" Left="74.88" Top="0" Width="5774.399" Height="288" Text="Nested sub-report" Style="background-color: LavenderBlush; font-size: 12pt; font-weight: bold" />
+    </Section>
+    <Section Type="GroupHeader" Name="ghEmployees" Height="735" DataField="EmployeeID" GroupKeepTogether="2" BackStyle="1" BackColor="14150650" KeepTogether="1">
+      <Control Type="AR.Label" Name="lblEmployeeID" Left="0" Top="0" Width="1440" Height="360" Caption="Employee ID" Style="font-family: Arial; font-size: 11pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblExtension" Left="4860" Top="0" Width="1440" Height="360" Caption="Extension" Style="font-family: Arial; font-size: 11pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblLastName" Left="1620" Top="0" Width="1440" Height="360" Caption="Last Name" Style="font-family: Arial; font-size: 11pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblFirstName" Left="3240" Top="0" Width="1440" Height="360" Caption="First Name" Style="font-family: Arial; font-size: 11pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtEmployeeID" DataField="EmployeeID" Left="0" Top="360" Width="1440" Height="360" Text="EmployeeID" Style="font-family: Arial; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtExtension" DataField="Extension" Left="4860" Top="360" Width="1440" Height="360" Text="Extension" Style="font-family: Arial; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtLastName" DataField="LastName" Left="1620" Top="360" Width="1440" Height="360" Text="LastName" Style="font-family: Arial; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtFirstName" DataField="FirstName" Left="3240" Top="360" Width="1440" Height="360" Text="FirstName" Style="font-family: Arial; ddo-char-set: 1" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="1080" BackColor="16777215">
+      <Control Type="AR.Subreport" Name="subOrders" Left="0" Top="0" Width="8640" Height="1080" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="360" BackStyle="1" BackColor="8388608" />
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215">
+      <Control Type="AR.ReportInfo" Name="reportInfo1" Left="2864.16" Top="72" Width="2985.12" Height="288" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Private _subReport As GrapeCity.ActiveReports.SectionReport
+
+Public Sub ActiveReport_ReportStart()
+	_subReport = New GrapeCity.ActiveReports.SectionReport()
+	_subReport.LoadLayout(System.IO.Path.GetFullPath("..\..\rptNestedChildMain.rpx"))
+
+	Dim dS As New GrapeCity.ActiveReports.Data.OleDBDataSource()
+	dS.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\Nwind.mdb;Persist Security Info=False"
+	dS.SQL = "Select * from employees"
+	rpt.DataSource = dS
+
+	reportInfo1.FormatString = "Page {PageNumber} of {PageCount}"
+End Sub
+
+
+
+Public Sub Detail_Format()
+	subOrders.Report = _subReport
+End Sub]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

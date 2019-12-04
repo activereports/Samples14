@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215">
+      <Control Type="AR.Field" Name="textBox1" Left="174.9593" Top="36" Width="8290.081" Height="288" Text="Sub report using the data set that contains relationship" Style="background-color: LavenderBlush; font-size: 12pt; font-weight: bold" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="2822" BackStyle="1" BackColor="9408444" KeepTogether="1" CanShrink="1">
+      <Control Type="AR.Field" Name="txtOrderDate" DataField="OrderDate" Left="0" Top="449.28" Width="1065.6" Height="288" Text="OrderDate" OutputFormat="yyyy/MM/dd" CanShrink="1" Style="font-family: Arial; font-size: 9.75pt; text-align: left; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtShipName" DataField="ShipName" Left="1154.88" Top="449.28" Width="2016" Height="288" Text="ShipName" CanShrink="1" Style="font-family: Arial; font-size: 9.75pt; text-align: left; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtShippedDate" DataField="ShippedDate" Left="3240" Top="449.28" Width="1065.6" Height="288" Text="ShippedDate" OutputFormat="yyyy/MM/dd" CanShrink="1" Style="font-family: Arial; font-size: 9.75pt; text-align: left; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtShipAddress" DataField="ShipAddress" Left="4380.48" Top="449.28" Width="2088" Height="288" Text="ShipAddress" CanShrink="1" Style="font-family: Arial; font-size: 9.75pt; text-align: left; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtShipCountry" DataField="ShipCountry" Left="6544.8" Top="449.28" Width="1152" Height="288" Text="ShipCountry" CanShrink="1" Style="font-family: Arial; font-size: 9.75pt; text-align: left; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtFreight" DataField="Freight" Left="7776" Top="449.28" Width="864.0005" Height="288" Text="Freight" OutputFormat="¥#,##0" CanShrink="1" Style="font-family: Arial; font-size: 9.75pt; text-align: left; ddo-char-set: 128" />
+      <Control Type="AR.Subreport" Name="ctlSubreport" Left="0" Top="810" Width="8640" Height="1710" />
+      <Control Type="AR.Label" Name="lblOrderDate" Left="0" Top="89.28" Width="1065.6" Height="288" Caption="Order Date" Style="font-family: Arial; font-size: 11pt; text-align: left; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblShipName" Left="1154.88" Top="89.28" Width="2016" Height="288" Caption="Ship Name" Style="font-family: Arial; font-size: 11pt; text-align: left; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblShipDate" Left="3240" Top="89.28" Width="1065.6" Height="288" Caption="Ship Date" Style="font-family: Arial; font-size: 11pt; text-align: left; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblShipAddress" Left="4380.48" Top="89.28" Width="2088" Height="288" Caption="Ship Address" Style="font-family: Arial; font-size: 11pt; text-align: left; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblShipCountry" Left="6544.8" Top="89.28" Width="1152" Height="288" Caption="Ship Country" Style="font-family: Arial; font-size: 11pt; text-align: left; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblFreight" Left="7776" Top="89.28" Width="864.0001" Height="288" Caption="Freight" Style="font-family: Arial; font-size: 11pt; text-align: left; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblWhiteLine" Left="0" Top="2520" Width="8640" Height="316.8" Caption="" Style="background-color: White; ddo-char-set: 0" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.ReportInfo" Name="reportInfo1" Left="2865.6" Top="72" Width="2715.84" Height="288" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Private _subRpt As GrapeCity.ActiveReports.SectionReport
+
+Public Sub ActiveReport_ReportStart()
+	_subRpt = New GrapeCity.ActiveReports.SectionReport()
+	_subRpt.LoadLayout(System.IO.Path.GetFullPath("..\..\rptMasterSub.rpx"))
+	Dim dS As New GrapeCity.ActiveReports.Data.OleDBDataSource()
+	dS.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\Nwind.mdb;Persist Security Info=False"
+	dS.SQL = "Select top 50 * from orders"
+	rpt.DataSource = dS
+
+	reportInfo1.FormatString = "Page {PageNumber} of {PageCount}"
+End Sub
+
+
+Public Sub Detail_Format()
+	ctlSubreport.Report = _subRpt
+End Sub]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

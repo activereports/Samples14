@@ -1,0 +1,659 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Invoice2.rdlx</dd:Name>
+	<Body>
+		<Height>11in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Shape Name="Shape1">
+								<Height>0.61cm</Height>
+								<Left>0.02cm</Left>
+								<dd:RoundingRadius xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+									<TopLeft>0.233858cm</TopLeft>
+									<TopRight>0.233858cm</TopRight>
+								</dd:RoundingRadius>
+								<Style>
+									<BackgroundColor>Thistle</BackgroundColor>
+									<BorderColor>
+										<Default>Indigo</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>5.06375cm</Top>
+								<Width>6.489583in</Width>
+								<dd:ShapeStyle xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">RoundRect</dd:ShapeStyle>
+							</Shape>
+							<Image Name="Image1">
+								<Height>0.95cm</Height>
+								<MIMEType>image/png</MIMEType>
+								<Sizing>FitProportional</Sizing>
+								<Source>Embedded</Source>
+								<Style />
+								<Value>GCLogo1</Value>
+								<Width>5.4cm</Width>
+								<ZIndex>1</ZIndex>
+							</Image>
+							<Textbox Name="lblTitle">
+								<Height>0.95cm</Height>
+								<Left>9.673542cm</Left>
+								<Value>INVOICE</Value>
+								<Style>
+									<BackgroundColor>Thistle</BackgroundColor>
+									<Color>Indigo</Color>
+									<FontSize>20.5pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>30pt</PaddingLeft>
+									<PaddingRight>30pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Justify</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+									<dd:TextJustify xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DistributeAllLines</dd:TextJustify>
+									<BorderColor>
+										<Default>Indigo</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Bottom>Solid</Bottom>
+										<Top>Solid</Top>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>2pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>2.960629E-07cm</Top>
+								<Width>6.83cm</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="txtPostal">
+								<Height>0.48cm</Height>
+								<Left>9.833542cm</Left>
+								<Value>=Fields!PostalCode.Value</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Left</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.677708cm</Top>
+								<Width>3.65cm</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox1">
+								<Height>0.373in</Height>
+								<Left>9.833542cm</Left>
+								<Value>=Fields!Address.Value</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Justify</TextAlign>
+								</Style>
+								<Top>2.730288cm</Top>
+								<Width>6.67cm</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox3">
+								<Height>0.2589in</Height>
+								<Left>9.833541cm</Left>
+								<Value>=Fields!CompanyName.Value</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Justify</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.06375cm</Top>
+								<Width>6.67cm</Width>
+								<ZIndex>6</ZIndex>
+							</Textbox>
+							<Textbox Name="lblCompanyAddress">
+								<Height>0.45cm</Height>
+								<Left>0.02999989cm</Left>
+								<Value>808 Aviation Parkway, Suite 1300</Value>
+								<Style>
+									<FontSize>9pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.43cm</Top>
+								<Width>4.76cm</Width>
+								<ZIndex>8</ZIndex>
+							</Textbox>
+							<Textbox Name="lblCompanyZipCode">
+								<Height>0.45cm</Height>
+								<Left>0.02999989cm</Left>
+								<Value>Raleigh, NC  27560</Value>
+								<Style>
+									<FontSize>9pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.897421cm</Top>
+								<Width>4.76cm</Width>
+								<ZIndex>9</ZIndex>
+							</Textbox>
+							<Textbox Name="lblCompanyTEL">
+								<Height>0.45cm</Height>
+								<Left>0.02999989cm</Left>
+								<Value>Phone: (919) 460-4551</Value>
+								<Style>
+									<FontSize>9pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.377421cm</Top>
+								<Width>4.76cm</Width>
+								<ZIndex>10</ZIndex>
+							</Textbox>
+							<Textbox Name="lblCompanyFAX">
+								<Height>0.45cm</Height>
+								<Left>0.02999989cm</Left>
+								<Value>Fax: (919) 460-7606</Value>
+								<Style>
+									<FontSize>9pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.827421cm</Top>
+								<Width>4.76cm</Width>
+								<ZIndex>11</ZIndex>
+							</Textbox>
+							<Textbox Name="lblCompanyURL">
+								<Action>
+									<Hyperlink>www.grapecity.com</Hyperlink>
+								</Action>
+								<Height>0.6148cm</Height>
+								<Left>0.02645833cm</Left>
+								<Value>www.grapecity.com</Value>
+								<Style>
+									<FontSize>11.25pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingLeft>2pt</PaddingLeft>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>4.233908cm</Top>
+								<Width>16.4835cm</Width>
+								<ZIndex>12</ZIndex>
+							</Textbox>
+							<Textbox Name="lblCustomerID">
+								<Height>0.635cm</Height>
+								<Left>3.871473in</Left>
+								<Value>Customer ID:</Value>
+								<Style>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Left</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.42875cm</Top>
+								<Width>2.4431cm</Width>
+								<ZIndex>13</ZIndex>
+							</Textbox>
+							<Textbox Name="txtCustomerID">
+								<Height>0.635cm</Height>
+								<Left>4.853323in</Left>
+								<Value>=Fields!CustomerID.Value</Value>
+								<Style>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Left</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.42875cm</Top>
+								<Width>1.1146in</Width>
+								<ZIndex>14</ZIndex>
+							</Textbox>
+							<Table Name="Table1">
+								<DataSetName>Customers</DataSetName>
+								<Header>
+									<RepeatOnNewPage>true</RepeatOnNewPage>
+									<TableRows>
+										<TableRow>
+											<Height>0.636522cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Value>ProductID</Value>
+															<Style>
+																<Color>Indigo</Color>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>Indigo</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Left>None</Left>
+																	<Right>None</Right>
+																</BorderStyle>
+																<BorderWidth>
+																	<Default>1.5pt</Default>
+																</BorderWidth>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="lblProductName">
+															<Value>ProductName</Value>
+															<Style>
+																<Color>Indigo</Color>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>30pt</PaddingLeft>
+																<PaddingRight>30pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<dd:TextJustify xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DistributeAllLines</dd:TextJustify>
+																<BorderColor>
+																	<Default>Indigo</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Left>Solid</Left>
+																	<Right>None</Right>
+																</BorderStyle>
+																<BorderWidth>
+																	<Default>1.5pt</Default>
+																</BorderWidth>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="lblQtyPerUnit">
+															<Value>Quantity</Value>
+															<Style>
+																<Color>Indigo</Color>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>Indigo</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Left>Solid</Left>
+																</BorderStyle>
+																<BorderWidth>
+																	<Default>1.5pt</Default>
+																</BorderWidth>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="lblPrice">
+															<Value>Extended Price</Value>
+															<Style>
+																<Color>Indigo</Color>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>10pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>Indigo</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Left>Solid</Left>
+																	<Right>None</Right>
+																</BorderStyle>
+																<BorderWidth>
+																	<Default>1.5pt</Default>
+																</BorderWidth>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.249401in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox7">
+															<Value>=Fields!ProductID.Value</Value>
+															<Style>
+																<BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "White", "Thistle")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Left</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>Indigo</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Bottom>None</Bottom>
+																	<Left>Solid</Left>
+																	<Right>None</Right>
+																	<Top>None</Top>
+																</BorderStyle>
+																<BorderWidth>
+																	<Default>1.5pt</Default>
+																</BorderWidth>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox8">
+															<Value>=Fields!ProductName.Value</Value>
+															<Style>
+																<BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "White", "Thistle")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>10pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>Indigo</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Bottom>None</Bottom>
+																	<Left>Solid</Left>
+																	<Top>None</Top>
+																</BorderStyle>
+																<BorderWidth>
+																	<Default>1.5pt</Default>
+																</BorderWidth>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox9">
+															<Value>=Fields!QuantityPerUnit.Value</Value>
+															<Style>
+																<BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "White", "Thistle")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>Indigo</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Bottom>None</Bottom>
+																	<Left>Solid</Left>
+																	<Top>None</Top>
+																</BorderStyle>
+																<BorderWidth>
+																	<Default>1.5pt</Default>
+																</BorderWidth>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox14">
+															<Value>=Fields!Price.Value*Fields!QuantityPerUnit.Value</Value>
+															<Style>
+																<BackgroundColor>=iif(RowNumber(Nothing) Mod 2, "White", "Thistle")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<Format>$#0</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>10pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>Indigo</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Bottom>None</Bottom>
+																	<Left>Solid</Left>
+																	<Right>Solid</Right>
+																	<Top>None</Top>
+																</BorderStyle>
+																<BorderWidth>
+																	<Default>1.5pt</Default>
+																</BorderWidth>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<Height>0.5in</Height>
+								<Left>0.01in</Left>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">6.75in</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">6.489583in</dd:FixedWidth>
+								<dd:RepeatToFill xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:RepeatToFill>
+								<Style>
+									<BorderColor>
+										<Default>Indigo</Default>
+									</BorderColor>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<TableColumns>
+									<TableColumn>
+										<Width>2.025059cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>7.10948cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>3.810594cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.393075in</Width>
+									</TableColumn>
+								</TableColumns>
+								<Top>1.99in</Top>
+								<Width>6.49in</Width>
+								<ZIndex>23</ZIndex>
+							</Table>
+							<Rectangle Name="Container1">
+								<Height>0.333333in</Height>
+								<Left>0.02645833cm</Left>
+								<dd:RoundingRadius xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+									<BottomLeft>0.1880357cm</BottomLeft>
+									<BottomRight>0.1880357cm</BottomRight>
+								</dd:RoundingRadius>
+								<Style>
+									<BackgroundColor>Thistle</BackgroundColor>
+									<BorderColor>
+										<Default>Indigo</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>22.17668cm</Top>
+								<Width>6.489583in</Width>
+								<ZIndex>24</ZIndex>
+								<ReportItems>
+									<Textbox Name="lblTotal">
+										<Height>0.3319in</Height>
+										<Left>3.59375in</Left>
+										<Value>Total Price</Value>
+										<Style>
+											<BackgroundColor>Indigo</BackgroundColor>
+											<Color>White</Color>
+											<FontWeight>700</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<Width>1.5001in</Width>
+										<ZIndex>1</ZIndex>
+									</Textbox>
+									<Textbox Name="txtTotalPrice">
+										<Height>0.76cm</Height>
+										<Left>5.09375in</Left>
+										<Value>=Sum( Fields!Price.Value*Fields!QuantityPerUnit.Value)</Value>
+										<Style>
+											<FontSize>8.25pt</FontSize>
+											<Format>$#0</Format>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Right</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>Indigo</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Left>Solid</Left>
+												<Right>Solid</Right>
+											</BorderStyle>
+										</Style>
+										<Width>3.5454cm</Width>
+										<ZIndex>3</ZIndex>
+									</Textbox>
+								</ReportItems>
+							</Rectangle>
+						</ReportItems>
+						<Style />
+					</Page>
+				</Pages>
+				<DataSetName>Customers</DataSetName>
+				<Grouping Name="FixedPage1_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!CustomerID.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+			</FixedPage>
+		</ReportItems>
+		<Style />
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<PageHeight>11in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>0.9356906in</TopMargin>
+	<Width>8.5in</Width>
+	<EmbeddedImages>
+		<EmbeddedImage Name="GCLogo1">
+			<ImageData>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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+		<EmbeddedImage Name="GCLogo2">
+			<ImageData>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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<DataSources>
+		<DataSource Name="NWind">
+			<ConnectionProperties>
+				<DataProvider>DATASET</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Customers">
+			<Fields>
+				<Field Name="CustomerID">
+					<DataField>CustomerID</DataField>
+				</Field>
+				<Field Name="CompanyName">
+					<DataField>CompanyName</DataField>
+				</Field>
+				<Field Name="Address">
+					<DataField>Address</DataField>
+				</Field>
+				<Field Name="Phone">
+					<DataField>Phone</DataField>
+				</Field>
+				<Field Name="Fax">
+					<DataField>Fax</DataField>
+				</Field>
+				<Field Name="ProductID">
+					<DataField>ProductID</DataField>
+				</Field>
+				<Field Name="ProductName">
+					<DataField>ProductName</DataField>
+				</Field>
+				<Field Name="QuantityPerUnit">
+					<DataField>QuantityPerUnit</DataField>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price</DataField>
+				</Field>
+				<Field Name="OrderDate">
+					<DataField>OrderDate</DataField>
+				</Field>
+				<Field Name="PostalCode">
+					<DataField>PostalCode</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText />
+				<DataSourceName>NWind</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

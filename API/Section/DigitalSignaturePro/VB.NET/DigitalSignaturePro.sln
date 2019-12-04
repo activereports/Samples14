@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DigitalSignaturePro", "DigitalSignaturePro\DigitalSignaturePro.vbproj", "{3F5CB961-F042-488B-934B-3F8597E4E669}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F5CB961-F042-488B-934B-3F8597E4E669}.Debug|x86.ActiveCfg = Debug|x86
+		{3F5CB961-F042-488B-934B-3F8597E4E669}.Debug|x86.Build.0 = Debug|x86
+		{3F5CB961-F042-488B-934B-3F8597E4E669}.Release|x86.ActiveCfg = Release|x86
+		{3F5CB961-F042-488B-934B-3F8597E4E669}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4154F102-11F3-4DEB-A42A-81CFC48C6987}
+	EndGlobalSection
+EndGlobal

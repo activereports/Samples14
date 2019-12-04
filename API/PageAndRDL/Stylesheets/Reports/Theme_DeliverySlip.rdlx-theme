@@ -1,0 +1,37 @@
+<Theme>
+  <Colors>
+    <Dark1>Black</Dark1>
+    <Dark2>#FF80FF</Dark2>
+    <Light1>White</Light1>
+    <Light2>#F4F9FF</Light2>
+    <Accent1>#6d91d0</Accent1>
+    <Accent2>#e8ae4b</Accent2>
+    <Accent3>#80FFFF</Accent3>
+    <Accent4>#c5e84b</Accent4>
+    <Accent5>#e6ab56</Accent5>
+    <Accent6>#a1e2e2</Accent6>
+    <Hyperlink>#0000ff</Hyperlink>
+    <HyperlinkFollowed>#800080</HyperlinkFollowed>
+  </Colors>
+  <Fonts>
+    <MajorFont>
+      <Family>Tahoma</Family>
+      <Style>Normal</Style>
+      <Size>16pt</Size>
+      <Weight>Bold</Weight>
+    </MajorFont>
+    <MinorFont>
+      <Family>Tahoma</Family>
+      <Style>Normal</Style>
+      <Size>10pt</Size>
+      <Weight>Normal</Weight>
+    </MinorFont>
+  </Fonts>
+  <Images />
+  <Constants>
+    <Constant>
+      <Key>ReportTitle</Key>
+      <Value>DeliverySlip</Value>
+    </Constant>
+  </Constants>
+</Theme>

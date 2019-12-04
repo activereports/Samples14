@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="14909.76" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0" culture="en-US">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-style: normal; text-decoration: none; font-weight: normal; color: Black; font-size: 10pt; vertical-align: top; font-family: &quot;Arial&quot;; ddo-char-set: 186" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="GroupHeader1" Height="1440" DataField="Employees.EmployeeID" RepeatStyle="4" BackColor="16777215" NewPage="1" CanGrow="0">
+      <Control Type="AR.Label" Name="Label135" BorderBottomStyle="1" Left="10260" Top="540" Width="4500" Height="360" Caption="Period" HyperLink="" Style="background-color: #3A6EA5; color: rgb(255,255,255); font-family: Microsoft Sans Serif; font-weight: bold; vertical-align: middle; ddo-char-set: 1" PaddingLeft="5" />
+      <Control Type="AR.Field" Name="txtEmployeeID" DataField="Employees.EmployeeID" Left="0" Top="900" Width="1709.28" Height="360.0001" Text="EmployeeID" Style="font-family: Microsoft Sans Serif; font-size: 9pt; font-weight: bold; vertical-align: middle" PaddingLeft="5" />
+      <Control Type="AR.Field" Name="txtEmployeeName" DataField="EmployeeName" BorderLeftStyle="1" Left="1709.28" Top="900" Width="3510.72" Height="360.0001" Text="EmployeeName" Style="font-family: Microsoft Sans Serif; font-size: 9pt; font-weight: bold; vertical-align: middle" PaddingLeft="5" />
+      <Control Type="AR.Field" Name="txtSection" DataField="Section" BorderLeftStyle="1" Left="5220" Top="900" Width="4949.28" Height="360.0001" Text="Section" Style="font-family: Microsoft Sans Serif; font-size: 9pt; font-weight: bold; vertical-align: middle" PaddingLeft="5" />
+      <Control Type="AR.Label" Name="Label129" BorderBottomStyle="1" Left="0" Top="540" Width="1709.28" Height="360" Caption="EmployeeID" HyperLink="" Style="background-color: #3A6EA5; color: rgb(255,255,255); font-family: Microsoft Sans Serif; font-weight: bold; vertical-align: middle; ddo-char-set: 1" PaddingLeft="5" />
+      <Control Type="AR.Label" Name="Label130" BorderLeftStyle="1" BorderBottomStyle="1" Left="1709.28" Top="540" Width="3510.72" Height="360" Caption="EmployeeName" HyperLink="" Style="background-color: #3A6EA5; color: rgb(255,255,255); font-family: Microsoft Sans Serif; font-weight: bold; vertical-align: middle; ddo-char-set: 1" PaddingLeft="5" />
+      <Control Type="AR.Label" Name="Label131" BorderLeftStyle="1" BorderBottomStyle="1" Left="5220" Top="540" Width="4949.28" Height="360" Caption="Section" HyperLink="" Style="background-color: #3A6EA5; color: rgb(255,255,255); font-family: Microsoft Sans Serif; font-weight: bold; vertical-align: middle; ddo-char-set: 1" PaddingLeft="5" />
+      <Control Type="AR.Label" Name="Label19" Left="0" Top="120" Width="14730" Height="360" Caption="Learning Schedule " HyperLink="" Style="background-color: rgb(192,192,255); color: rgb(0,128,0); font-family: Microsoft Sans Serif; font-size: 11.25pt; font-weight: bold; text-decoration: underline; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtStartDate" Left="10461.6" Top="964.8" Width="1275" Height="240" Text="Field1" OutputFormat="yyyy / MM / dd" Style="font-family: Microsoft Sans Serif; font-size: 9pt" />
+      <Control Type="AR.Field" Name="txtEndDate" Left="12021.12" Top="964.8" Width="1320" Height="240" Text="Field2" OutputFormat="yyyy / MM / dd" Style="font-family: Microsoft Sans Serif; font-size: 9pt" />
+      <Control Type="AR.Label" Name="Label136" Left="11736" Top="964.8" Width="285.12" Height="240.48" Caption="～" HyperLink="" Style="font-size: 9pt" />
+      <Control Type="AR.Shape" Name="Shape12" Left="10260" Top="540.0001" Width="4500" Height="720" BackColor="16777215" LineColor="4194304" Shape="2" RoundingRadius="9.999999" />
+      <Control Type="AR.Shape" Name="shape3" Left="0" Top="540.0001" Width="10169.28" Height="720" BackColor="16777215" LineColor="4194304" Shape="2" RoundingRadius="9.999999" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="1469" BackColor="16777215" KeepTogether="1" CanGrow="0">
+      <Control Type="AR.Shape" Name="Shape2" Left="1695" Top="870" Width="8505" Height="495" BackColor="15007180" BackStyle="1" LineStyle="0" RoundingRadius="9.999999" />
+      <Control Type="AR.Line" Name="Line2" X1="0" Y1="360" X2="10200" Y2="360" LineColor="8388608" />
+      <Control Type="AR.Label" Name="lblDayOfWeek" Left="0" Top="1020" Width="480" Height="299.9999" Caption="Mon" HyperLink="" Style="color: rgb(58,110,165); font-family: 'Tahoma'; font-size: 8.5pt; font-weight: bold; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Line" Name="Line13" X1="480" Y1="360" X2="480" Y2="1440" LineColor="8421376" />
+      <Control Type="AR.Line" Name="Line19" X1="120" Y1="720" X2="360" Y2="480.0001" LineColor="10841658" />
+      <Control Type="AR.Label" Name="lblMonth" Left="30" Top="420" Width="240" Height="240" Caption="12" HyperLink="" Style="color: rgb(58,110,165); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="lblDay" Left="240" Top="600" Width="240" Height="240" Caption="7" HyperLink="" Style="color: rgb(58,110,165); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Line" Name="lin9" X1="1980" Y1="360" X2="1980" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="lin10" X1="2640" Y1="360" X2="2640" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="lin11" X1="3300" Y1="360" X2="3300" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="lin12" X1="3960" Y1="360" X2="3960" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="lin13" X1="4620" Y1="360" X2="4620" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="lin14" X1="5280" Y1="360" X2="5280" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="lin15" X1="5940" Y1="360" X2="5940" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="lin16" X1="6600" Y1="360" X2="6600" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="lin17" X1="7260" Y1="360" X2="7260" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="lin18" X1="7920" Y1="360" X2="7920" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line35" X1="8580" Y1="360" X2="8580" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line36" X1="9240" Y1="360" X2="9240" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line37" X1="1695" Y1="360" X2="1695" Y2="1440" LineColor="8421376" />
+      <Control Type="AR.Line" Name="Line38" X1="9900" Y1="360" X2="9900" Y2="1440" LineColor="8421376" LineStyle="3" />
+      <Control Type="AR.Label" Name="Label20" Left="1890" Top="120" Width="240" Height="240" Caption="9" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label21" Left="2550" Top="120" Width="240" Height="240" Caption="10" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label22" Left="3180" Top="120" Width="240" Height="240" Caption="11" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label23" Left="3840" Top="120" Width="240" Height="240" Caption="12" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label24" Left="4500" Top="120" Width="240" Height="240" Caption="13" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label25" Left="5160" Top="120" Width="240" Height="240" Caption="14" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label26" Left="5820" Top="120" Width="240" Height="240" Caption="15" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label27" Left="6480" Top="120" Width="240" Height="240" Caption="16" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label28" Left="7140" Top="120" Width="240" Height="240" Caption="17" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label29" Left="7800" Top="120" Width="240" Height="240" Caption="18" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label30" Left="8460" Top="120" Width="240" Height="240" Caption="19" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label31" Left="9120" Top="120" Width="240" Height="240" Caption="20" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label32" Left="9780" Top="120" Width="240" Height="240" Caption="21" HyperLink="" Style="color: rgb(0,192,0); font-family: 'Tahoma'; font-size: 8.5pt; text-align: center; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="PrdDummy" Visible="0" BorderLeftStyle="1" BorderLeftColor="8388736" BorderTopStyle="1" BorderTopColor="8388736" BorderRightStyle="1" BorderRightColor="8388736" BorderBottomStyle="1" BorderBottomColor="8388736" Left="1980" Top="450" Width="660" Height="344.9999" HyperLink="" Style="background-color: rgb(180,104,255); font-family: Microsoft Sans Serif; font-size: 9pt; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Label" Name="StdDummy" Visible="0" BorderLeftStyle="1" BorderLeftColor="16711680" BorderTopStyle="1" BorderTopColor="16711680" BorderRightStyle="1" BorderRightColor="16711680" BorderBottomStyle="1" BorderBottomColor="16711680" Left="1980" Top="930" Width="660" Height="344.9999" HyperLink="" Style="background-color: rgb(225,83,169); color: rgb(64,64,64); font-family: Microsoft Sans Serif; font-size: 9pt; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Field" Name="Field1" DataField="Comment" Left="10410" Top="120" Width="4140" Height="299.9999" Text="Comment" Style="color: rgb(0,0,255); font-family: Microsoft Sans Serif; font-size: 9pt" />
+      <Control Type="AR.Field" Name="txtDate" DataField="Date" Visible="0" Left="630" Top="450" Width="540" Height="180" Text="TextBox" Style="font-family: Microsoft Sans Serif; font-size: 8pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtkbn" DataField="kbn" Visible="0" Left="630" Top="630" Width="540" Height="180" Text="TextBox" Style="font-family: Microsoft Sans Serif; font-size: 8pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtStartTime" DataField="StartTime" Visible="0" Left="630" Top="810" Width="540" Height="180" Text="TextBox" Style="font-family: Microsoft Sans Serif; font-size: 8pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtHours" DataField="Hours" Visible="0" Left="630" Top="990" Width="540" Height="180" Text="TextBox" Style="font-family: Microsoft Sans Serif; font-size: 8.25pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtLabels" DataField="Labels" Visible="0" Left="630" Top="1170" Width="540" Height="180" Text="TextBox" Style="font-family: Microsoft Sans Serif; font-size: 8pt; ddo-char-set: 1" />
+      <Control Type="AR.Shape" Name="Shape8" Left="10409.76" Top="0" Width="4500" Height="1440" BackColor="16777215" LineColor="8388608" LineStyle="3" Shape="2" RoundingRadius="9.999999" />
+      <Control Type="AR.Shape" Name="Shape1" Left="0" Top="0" Width="10200" Height="1440" BackColor="16777215" LineColor="8388608" Shape="2" RoundingRadius="9.999999" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="0" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[
+
+
+private DateTime StartDate;		// Start date
+private DateTime EndDate;		// End Date
+private string EmployeeID;		//Employee ID
+private DataTable MyDT = new DataTable();	//Create Table 
+private int iRecPos;
+private int iOutputCnt;
+
+
+public void ActiveReport_ReportStart()
+{
+	// Configuration of the virtual printer
+	rpt.Document.Printer.PrinterName = "";
+	// Set the paper to " A4" size
+		rpt.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.A4;
+		rpt.PageSettings.Orientation = PageOrientation.Landscape;
+
+	// Set the code extraction period and employees.
+	StartDate = new DateTime(1999, 9, 7);
+	EndDate = StartDate.AddDays(5);  // One week
+	EmployeeID = "LH8000101";
+
+	string strConn;
+	System.Text.StringBuilder strSQL = new System.Text.StringBuilder();
+
+	//DB connection string settings
+	strConn = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Schedule.mdb;Persist Security Info=False";
+
+	// Create a statement SQL.
+	//Based on the period and the employee code to get the schedule data of its employees.
+	strSQL.Append("SELECT ");
+	strSQL.Append("Employees.*, ScheduleOfTime.* ");
+	strSQL.Append("FROM ");
+	strSQL.Append("Employees INNER JOIN ScheduleOfTime ON Employees.EmployeeID = ScheduleOfTime.EmployeeID ");
+	strSQL.Append("WHERE ");
+	strSQL.Append("Employees.EmployeeID = '" + EmployeeID + "' And ");
+	strSQL.Append("(ScheduleOfTime.Date) >= #" + StartDate.ToString("MM/dd/yyyy") + "# And ");
+	strSQL.Append("(ScheduleOfTime.Date) <= #" + EndDate.ToString("MM/dd/yyyy") + "# ");
+	strSQL.Append("ORDER BY ");
+	strSQL.Append("Employees.EmployeeID, ScheduleOfTime.Date, ScheduleOfTime.StartTime");
+
+	//Create a data adapter.
+	System.Data.OleDb.OleDbDataAdapter oDataAdapter =
+		new System.Data.OleDb.OleDbDataAdapter(strSQL.ToString(), strConn);
+
+	// get the record
+	oDataAdapter.Fill(MyDT);
+
+	// Set the data source of the report DataTable.
+		rpt.DataSource = MyDT;
+
+	// Create a label
+	for (int i = 9; i <= 20; i++)
+	{
+		CreateLabels(PrdDummy, i);     // The upper label
+		CreateLabels(StdDummy, i);     // Label in the lower
+	}
+}
+
+private bool CheckLabels(string LblName)
+{
+	foreach (GrapeCity.ActiveReports.SectionReportModel.ARControl ctl in this.Detail.Controls){
+		if (ctl.Name == LblName){
+			return false;
+		}
+	}
+	return true;
+}
+
+private void CreateLabels(GrapeCity.ActiveReports.SectionReportModel.Label DummyCtl, int i)
+{
+	//Add a Label control in the Detail section.
+	GrapeCity.ActiveReports.SectionReportModel.Label ctl = new GrapeCity.ActiveReports.SectionReportModel.Label();
+
+	ctl.Name = "lbl" + DummyCtl.Name.Substring(0, 3) + i.ToString("00");
+	ctl.Top = DummyCtl.Top;
+	ctl.Left = DummyCtl.Left + DummyCtl.Width * (i - 9);
+	ctl.Width = DummyCtl.Width;
+	ctl.Height = DummyCtl.Height;
+	ctl.BackColor = DummyCtl.BackColor;
+	ctl.Font = DummyCtl.Font;
+	ctl.Alignment = DummyCtl.Alignment;
+	ctl.VerticalAlignment = DummyCtl.VerticalAlignment;
+	ctl.Border.LeftStyle = DummyCtl.Border.LeftStyle;
+	ctl.Border.TopStyle = DummyCtl.Border.TopStyle;
+	ctl.Border.RightStyle = DummyCtl.Border.RightStyle;
+	ctl.Border.BottomStyle = DummyCtl.Border.BottomStyle;
+	ctl.Border.TopColor = DummyCtl.Border.TopColor;
+	ctl.Border.LeftColor = DummyCtl.Border.LeftColor;
+	ctl.Border.RightColor = DummyCtl.Border.RightColor;
+	ctl.Border.BottomColor = DummyCtl.Border.BottomColor;
+	ctl.Visible = false;
+
+	if (CheckLabels(ctl.Name) == false){
+		Detail.Controls.Remove(this.Detail.Controls[ctl.Name]);
+	}	
+	Detail.Controls.Add(ctl);
+
+}
+
+
+
+
+
+public void Detail_Format()
+{
+	DateTime CurDate;
+	string ctlName = "";
+
+	CurDate = StartDate.AddDays(iOutputCnt);
+
+	// Date, set the day of the week.
+	lblMonth.Text = CurDate.Month.ToString();
+	lblDay.Text = CurDate.Day.ToString();
+	lblDayOfWeek.Text = CurDate.DayOfWeek.ToString("f").Substring(0, 3);
+
+
+	if (CurDate == (DateTime) txtDate.Value)
+	{
+		// Date, set the day of the week.
+		switch (txtkbn.Value.ToString())
+		{
+			case "0":
+				ctlName = "lblPrd" + ((DateTime) txtStartTime.Value).ToString("HH");
+				break;
+			case "1":
+				ctlName = "lblStd" + ((DateTime) txtStartTime.Value).ToString("HH");
+				break;
+		}
+		
+		
+		this.Detail.Controls[ctlName].Tag = Detail.Controls[ctlName].Width * float.Parse(this.txtHours.Text);
+		this.Detail.Controls[ctlName].Visible = true;
+		((GrapeCity.ActiveReports.SectionReportModel.Label) (this.Detail.Controls[ctlName])).Text = txtLabels.Text;
+
+		if (iRecPos != MyDT.Rows.Count - 1)
+		{
+			// If it is not the last record, move the record pointer.
+			rpt.LayoutAction = LayoutAction.NextRecord;
+			iRecPos++;
+		}
+		else
+		{
+			// If the last record, you can output the last section.
+				rpt.LayoutAction = LayoutAction.PrintSection | LayoutAction.MoveLayout | LayoutAction.NextRecord;
+			iOutputCnt++;
+		}
+	}
+	else
+	{
+		// To move the layout of the output.
+			rpt.LayoutAction = LayoutAction.PrintSection | LayoutAction.MoveLayout;
+		iOutputCnt++;
+	}
+}
+
+
+public void Detail_BeforePrint()
+{
+	foreach (ARControl ctl in this.Detail.Controls)
+	{
+		if (ctl.GetType().ToString() == "GrapeCity.ActiveReports.SectionReportModel.Label")
+		{
+			if ((ctl.Name.StartsWith("lblPrd")) ||
+				(ctl.Name.StartsWith("lblStd")))
+			{
+				if (ctl.Tag == null)
+				{
+					ctl.Width = 0;
+				}
+				else
+				{
+					ctl.Width = (float) ctl.Tag;
+				}
+			}
+		}
+	}
+}
+
+
+public void Detail_AfterPrint()
+{
+	// Initialize the label control.
+	foreach (ARControl ctl in this.Detail.Controls)
+	{
+		if (ctl.GetType().ToString() == "GrapeCity.ActiveReports.SectionReportModel.Label")
+		{
+			if ((ctl.Name.StartsWith("lblPrd")) ||
+				(ctl.Name.StartsWith("lblStd")))
+			{
+				ctl.Width = 660;
+				ctl.Visible = false;
+				((GrapeCity.ActiveReports.SectionReportModel.Label) ctl).Text = "";
+			}
+		}
+	}
+}
+
+
+public void GroupHeader1_Format()
+{
+	txtStartDate.Value = StartDate;    // Start date
+	txtEndDate.Value = EndDate;        // End date
+}
+
+
+
+]]></Script>
+  <PageSettings LeftMargin="800" RightMargin="800" TopMargin="800" BottomMargin="500" />
+  <Parameters />
+</ActiveReportsLayout>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8730" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+	<StyleSheet>
+		<Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+		<Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" Parent="Normal" />
+		<Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" Parent="Normal" />
+		<Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" Parent="Normal" />
+	</StyleSheet>
+	<Sections>
+		<Section Type="GroupHeader" Name="ghOrderItems" Height="299" BackColor="16777215" KeepTogether="1">
+			<Control Type="AR.Label" Name="lblISBN" Left="0" Top="0" Width="2790" Height="270" Caption="ISBN" Style="font-weight: bold; ddo-char-set: 0" />
+			<Control Type="AR.Label" Name="lblTitle" Left="2880" Top="0" Width="4320" Height="270" Caption="Title" Style="font-weight: bold; ddo-char-set: 0" />
+			<Control Type="AR.Label" Name="lblPrice" Left="7380" Top="0" Width="1350" Height="270" Caption="Price" Style="font-weight: bold; ddo-char-set: 0" />
+			<Control Type="AR.Line" Name="lneSep" X1="0" Y1="270" X2="8730" Y2="270" />
+		</Section>
+		<Section Type="Detail" Name="Detail" Height="270" BackStyle="1" BackColor="16777152" KeepTogether="1">
+			<Control Type="AR.Field" Name="txtISBN" DataField="@isbn" Left="0" Top="0" Width="2790" Height="270" Text="isbn" Style="color: #000000; ddo-char-set: 0" />
+			<Control Type="AR.Field" Name="txtTitle" DataField="TITLE" Left="2880" Top="0" Width="4320" Height="270" Text="TITLE" Style="color: #000000; ddo-char-set: 0" />
+			<Control Type="AR.Field" Name="txtPRICE" DataField="PRICE" Left="7380" Top="0" Width="1350" Height="270" Text="Price" Style="color: #000000; ddo-char-set: 0" />
+		</Section>
+		<Section Type="GroupFooter" Name="gfOrderItems" Height="270" BackColor="16777215" KeepTogether="1">
+			<Control Type="AR.Field" Name="txtOrderTotal" DataField="PRICE" Left="7380" Top="0" Width="1350" Height="270" Text="Total" Style="color: #000000; font-style: italic; font-weight: bold; ddo-char-set: 0" SummaryType="3" SummaryGroup="ghOrderItems" />
+		</Section>
+	</Sections>
+	<PageSettings />
+	<Parameters />
+</ActiveReportsLayout>

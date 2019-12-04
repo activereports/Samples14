@@ -1,0 +1,946 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Medical Reports - PatientDiseaseSummaryReport.rdlx</dd:Name>
+	<Body>
+		<Height>5.614583in</Height>
+		<ReportItems>
+			<Textbox Name="TextBox1">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>ACME Hospital</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Width>2.375in</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox2">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>123 Technology Street</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.25in</Top>
+				<Width>2.375in</Width>
+				<ZIndex>2</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox3">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>Pittsburgh, Pa 15795</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.5in</Top>
+				<Width>2.375in</Width>
+				<ZIndex>3</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox4">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>Phone:</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.75in</Top>
+				<Width>0.5833in</Width>
+				<ZIndex>4</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox5">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>Mail:</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+					</BorderStyle>
+					<BorderWidth>
+						<Default>2pt</Default>
+					</BorderWidth>
+				</Style>
+				<Top>1in</Top>
+				<Width>0.5833in</Width>
+				<ZIndex>5</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox6">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>0.5833333in</Left>
+				<Value>+1 (412)-681-4343</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.75in</Top>
+				<Width>1.7917in</Width>
+				<ZIndex>6</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox7">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>0.5833333in</Left>
+				<Value>info@ACME.com</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+					</BorderStyle>
+					<BorderWidth>
+						<Default>2pt</Default>
+					</BorderWidth>
+				</Style>
+				<Top>1in</Top>
+				<Width>1.7917in</Width>
+				<ZIndex>7</ZIndex>
+			</Textbox>
+			<Image Name="Image1">
+				<Height>0.6042in</Height>
+				<Left>4.260417in</Left>
+				<Sizing>Fit</Sizing>
+				<Source>Embedded</Source>
+				<Value>AcmeLogo-vertical-500px</Value>
+				<Width>2.7292in</Width>
+				<ZIndex>8</ZIndex>
+			</Image>
+			<Textbox Name="TextBox8">
+				<CanGrow>true</CanGrow>
+				<Height>0.6979in</Height>
+				<Value>Patient Disease Summary Report</Value>
+				<Style>
+					<FontFamily>Arial</FontFamily>
+					<FontSize>28pt</FontSize>
+					<FontStyle>Normal</FontStyle>
+					<FontWeight>700</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderStyle>
+						<Default>None</Default>
+					</BorderStyle>
+				</Style>
+				<Top>1.614583in</Top>
+				<Width>6.9896in</Width>
+				<ZIndex>9</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox9">
+				<CanGrow>true</CanGrow>
+				<Height>0.3229in</Height>
+				<Left>0.583333in</Left>
+				<Value>Important Information about the patient current diseases, allergies and procedures:
+
+</Value>
+				<Style>
+					<Color>Red</Color>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<BorderStyle>
+						<Left>Solid</Left>
+						<Right>Solid</Right>
+						<Top>Solid</Top>
+					</BorderStyle>
+				</Style>
+				<Top>3.260383in</Top>
+				<Width>5.7188in</Width>
+				<ZIndex>10</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox10">
+				<CanGrow>true</CanGrow>
+				<Height>0.5938in</Height>
+				<Left>0.583333in</Left>
+				<Value>Severe Allergic Reaction to Peanuts. Has not had a reaction since 2003.  Must use an Epi-Pen in case they come into contact with Peanuts. 
+Severe Allergic Reaction to Penicillin.  Have been allergic since 2007.</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Left>Solid</Left>
+						<Right>Solid</Right>
+						<Top>None</Top>
+					</BorderStyle>
+				</Style>
+				<Top>3.583283in</Top>
+				<Width>5.7188in</Width>
+				<ZIndex>11</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox11">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>0.9583333in</Left>
+				<Value>Patient:</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Top>2.375in</Top>
+				<Width>0.5416in</Width>
+				<ZIndex>12</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox13">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>1.5in</Left>
+				<Value>=First(Fields.Item("['Patient Name']").Value)</Value>
+				<Style>
+					<FontFamily>Arial</FontFamily>
+					<FontSize>10pt</FontSize>
+					<FontStyle>Normal</FontStyle>
+					<FontWeight>700</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Left</TextAlign>
+				</Style>
+				<Top>2.375in</Top>
+				<Width>1in</Width>
+				<ZIndex>14</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox15">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>2.635417in</Left>
+				<Value>Patient ID:</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Top>2.375in</Top>
+				<Width>0.8334in</Width>
+				<ZIndex>16</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox18">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>4.635417in</Left>
+				<Value>Sex:</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Top>2.729167in</Top>
+				<Width>0.5417in</Width>
+				<ZIndex>19</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox20">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>5.177083in</Left>
+				<Value>  Female</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Left</TextAlign>
+				</Style>
+				<Top>2.729167in</Top>
+				<Width>0.9375in</Width>
+				<ZIndex>21</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox21">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>3.46875in</Left>
+				<Value>=First(Fields.Item("['Patient ID']").Value)</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Left</TextAlign>
+				</Style>
+				<Top>2.375in</Top>
+				<Width>1.0625in</Width>
+				<ZIndex>22</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox16">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>2.635417in</Left>
+				<Value>Age:</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Top>2.729167in</Top>
+				<Width>0.8333in</Width>
+				<ZIndex>17</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox17">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>3.46875in</Left>
+				<Value>30y 1m 2d</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Left</TextAlign>
+				</Style>
+				<Top>2.729167in</Top>
+				<Width>1.0417in</Width>
+				<ZIndex>18</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox12">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>0.9583333in</Left>
+				<Value>Date:</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Top>2.729167in</Top>
+				<Width>0.5417in</Width>
+				<ZIndex>13</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox14">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>1.5in</Left>
+				<Value>=First(Fields!Date.Value)</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Left</TextAlign>
+				</Style>
+				<Top>2.729167in</Top>
+				<Width>1.0104in</Width>
+				<ZIndex>15</ZIndex>
+			</Textbox>
+			<Table Name="Table1">
+				<DataSetName>DataSet1</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox19">
+											<CanGrow>true</CanGrow>
+											<Value>Diseases/Allergies</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox22">
+											<CanGrow>true</CanGrow>
+											<Value>Severity</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox23">
+											<CanGrow>true</CanGrow>
+											<Value>Status</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox30">
+											<CanGrow>true</CanGrow>
+											<Value>Active</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox33">
+											<CanGrow>true</CanGrow>
+											<Value>Infectious</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox36">
+											<CanGrow>true</CanGrow>
+											<Value>Diagnosed</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox39">
+											<CanGrow>true</CanGrow>
+											<Value>Remarks</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox24">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields!Disease1.Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox25">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease1_Severity']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox26">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease1_Status1']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox31">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease1_Active']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox34">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease1_Infectious']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox37">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease1_Diagnosed']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox40">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease1_Remarks']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox42">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields!Disease2.Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox43">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease2_Severity']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox44">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease2_Status1']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox45">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease2_Active']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox46">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease2_Infectious']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox47">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease2_Diagnosed']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox48">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease2_Remarks']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox49">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields!Disease3.Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox50">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease3_Severity']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox51">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease3_Status1']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox52">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease3_Active']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox53">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease3_Infectious']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox54">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease3_Diagnosed']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox55">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['Disease3_Remarks']").Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Height>1in</Height>
+				<Left>0.02083333in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>2.115529in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.819634in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.819634in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.480211in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.691412in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.031777in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.010554in</Width>
+					</TableColumn>
+				</TableColumns>
+				<Top>4.364583in</Top>
+				<Width>6.96875in</Width>
+				<ZIndex>23</ZIndex>
+			</Table>
+		</ReportItems>
+	</Body>
+	<BottomMargin>0.5in</BottomMargin>
+	<LeftMargin>0.5in</LeftMargin>
+	<PageHeight>7in</PageHeight>
+	<PageWidth>8in</PageWidth>
+	<RightMargin>0.5in</RightMargin>
+	<TopMargin>0.5in</TopMargin>
+	<Width>6.989617in</Width>
+	<EmbeddedImages>
+		<EmbeddedImage Name="AcmeLogo-vertical-500px">
+			<ImageData>iVBORw0KGgoAAAANSUhEUgAAAfQAAAB/CAYAAAAZ1jAlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAFZdJREFUeNrsnVtyG7kVhntS8z7cQDL0CkyvQPQKhk4ekypRK5C8AkorkLgCUVXzmpK8AlErML0Cc7KBcFYwaciHLg7DCw76AA00v6+KpUnMS3fj8p8fOAB++Ptf//lHBVnw7//8+gNPAQAAQvgLjwAAAABBBwAAAAQdAAAAEHQAAABA0AEAABB0AAAAQNABAADAjh9P+N6f6teXhL83oboBAACCbsuqfl38+z+/rlL82D/+9q8xVQ0AAGJyqkPu01RijjsHAAAEPZ47v0v1Y7U7H9Z/+lQ1AABA0HHnAAAACHrL7nxINQMAAAQddw4AAICg484BAABB7xZPuHMAAEDQy+cGdw4AAAh62cxqd77EnQMAAIKOO8edAwAAgo47BwAAQNBx5wAAACcs6Knd+SVVCgAAEPSy3Xm//jOiSgEAAIJetjtn7hwAABD0DrjzMdUJAAAQdNw5AAAAgo47BwAABL1bzHHnAACAoOPOcecAAICgZ+DO57hzAABA0HHnuHMAAEDQcecAAAAIOu4cAADghAUddw4AAAg67lzlznsVe7YDAACCXrw7v6pfPaoOAAAg6GW7c45IBQAABB13DgAAgKBvM8WdAwAAlC3oy9qdP+HOAQAAyhZ05s4BAAAKF3Tnzme4cwAAgG/8iDvHnUM7yI6D/QNB65KnBABdFnTceVmitd6IxwnXT/VrIM/T/XWrFN6fiHAP69dbue+BT52qP+f+rOrXQl5f3N/6mS0SXO9Y/ueZ/F1f8039+9cFloG7/s97/vm9xWoZqeuDXIOxjetzdWhF74Sg485BixPz+z3/Nqyf8TDx0sOUAnK+EcyE0pNgYLjx3a4zdgmhnyIlhrrr3be9sbun6wKL5PLIM7bieSMY22lI5BWLtWgfwgXRnWtzUJ6gp3bnY9x5Y849/r0TnYsEgFdyT/2IP9WTujneEPdpbOe+Fvv6N8eJ26HliMMuBvIMG+Fc7wEh3wyW+i0/kmUFnaS0pLibxL+HO2/ekQ6PBU3yvqLvs365UYj/irNNeT9rcf9cX8OzG/Ew+M5Bx9rF+Mi//3RK7ZLcDAT95Ny5cyEZRNKlMzF+X3aOvH5d1//5tcrjOF0n5s8Gwn5sVGpgFDjkEpgPaKqAoHfbnXNEakOxq/xPpRvJ+0u6v5EIeY71ZC3st4Gf93Gsl4WU09gjQLGse/PMH8m8AgQddw5KRoqOcj33XIorf6z/87HKP78i1EX7ONZRIVMlE6P7BUDQcecni/YZXubu0jeWPo0KKYP5KbcTmRboe76X5FdA0BOwzuLFnReCpiPdcumjjO/JXdtzYXXjJbKzzz2hURNw4NIBQU/ANPEmCLjz5lx26dlLkFfCEPufSHR40TjTMutXuimHU3HoLxUg6C268zvceVHuvN/AafelDHIT8/uIPzHf87L43pD71TrVXKdKtMEhDh2KJ/eNZXDnp+PO17hNWWYdFfNl9W36yLmkxbH1wBtbdTqneaZ0nKFOrBfwfpfQeJ1RENYLGDlocy36PLJzPtuqg4Cg484hSke6TRbbwYpTvTWqx0E7uUkw+92xbywFPPcQ99DnF9IGLqu8toMNWTFh5dAXlX51wUNJO+9BvuQ85I47L49xZTMX2eoaZxHOZ4N7casz3tT1+MJiW1bXHlzHLwfavDk0ktEgIAoR9F5mUyWXie57F78HfAbXDJ0W9NTufFThztvqSHfR9hrnpglwcxHy61hBqRuud4GCCPvcyJ07fi45IPbcSCamoAMg6C27c/Zst+lILTvFSUv34YZrh01cuXPQqfbLFmF3jv2DBMKOTw2+MrQMc0lonDQoe0QdEPTC3fmwYQcO3zg3/r5x6uxp6dAnDertRVtnhcsStbVbb+LQm4haqy49cP8DXDp0hhyT4pg7L8+dxwqKUmdPuyS4kCDC1df3iY4vPSTqr9fR8GsaCWLLCY2TFu8dAIeOO+8EsaYskq1xlroQun7+om0xN3oGFoLW1lSJRVtG0AFBN2SGOy9SBGJt2WqxDC52XfiYaEe2FFgI2rClo1Utpnze0qIBQbdjijsvDq0Qap3sZcZ14akW87sOlaWVQz1PedESVFoEfhzQAgi6oTtf4s6LcufaA1Vc+V5oRSZB9nRI0LAKuJdTEfTUh7ZYtWW2fwUE3YhkR6Tizs24UrqaG5lrnufi0htMGaRO3kyB5ZDzJFFbtjylD4cORZNLlntqdz6s4p8VvSv671qHoRHazWNwH5QB1SBi9nSI+1+2tTwtMpb107n0jwmCnivL63Zb/nYhwREQ9JNw5442OuO6o3ju0qhAwI5c3xMe3fal9eedg+srHV8MQQ+Z7512tD+wHnJOsezQevQGlw7FksOQe2p3DjZoh1S3RfBB+fmh9bysHMCi/U4XlMw6WqbWYhZ12WGDbV4P1jOaNiDohbhzMOlItXvfP+0I2kJE0XpeNmTu9amDc+dVpKVm66NVcwkqffiJFg4IOu78lNAOc/6fG5dy14q6dfb0WcBnPnW0TGM56ShL2CIeqESmOxRL23PouPMynZzGzS0PbLzihH6sFfXKbl5W7Uo7tIlMKiF7XXYY4bzvWCsfmEOP34f0JRhbt7+nLiYiSl+5TobeNg9ulO9L9W0p78Lq/tsUdNx5mWgd1/SAOM7rSr9Qiombl71rOuwt8+da5h0uV81Q80I6ZF/xc0PjZoKuDCrnlW6FSRsO/Tzi7npL62BKEnz3PTv3nG+OJB6Pqz9Pl7g2He0shPq7b/eU6zqwmMlRxE1/Z72E8pfKbzpvtPHZldTVT03Kq01Bx52XGVlrHLVPApkT/Hulg7LIng7puLu8nGmgLNcnRV1wLn1kOLqhCSrX0z1DTT1PbDbGEb97VtkncR4LkLTtxH3XY/3c30XKT+kdKf/fDIR8IuXYa3CNTuBHEoC4flFtXNqaQ3/CnRfJZUA5H6yQEo1qG7HFvGw/4DO/dbhsNc/jJSAgNxkiVwaVy8D61e9Qucaos8cEexVY/54jrYqI1m7r63XG4mtlux/COkD4Wn+/Kqm0LUHv6jreLrvzkINSfDt9rYOw2A42JCGuyw5dJWIBSY1Wh7ZMAurfl4ijFWDr/G8L6Q9dH/RZ6mOsvIue1ry0IejzFs9LhnC0EehcMQoTEuCxF79h56Rtw/JXu5fAZcPr1ASVmzsTLpU/RWJce4zF9SbVJGU9dIHH50SBn+ra2hB05s7LRDvM7d3Zi/Br51f7DR2fVsSqDgei/ZAPyfPQPJNRw2WHmuHHzb32tYJ+RnNvlUmCA5lCg0on4s8Jgz7VMtnUSXG48zId3FjZ6Ydk1jqXrt3opcl2sH1K9jsqp7HVhrX78rsyuwiogz2lw9+sfzj08rh3K2CMMt9NpsoCxHwh7WOxS/c2lrWd72uDWr1M7dBx54VGzLHc+VbF1Xa8w8DlZ2AkYBK4acotdHOgkeI6/7QkNiABlzqVB89G7btx5rwElL5i7trEm7reuaz9u32i7P5/+fd37v31627rWtVmJaWg487LdOfDADd7lzDgu0z4LLrq3DRDzLvasDYHYhw5qLxp6tI6XNY54Btg9cSp51AWjx5i7sTYrae/0AaR7v3166MI+3r68SVnQcedn4Y7nzVYS/oUEE1bbweLc9MzU5ab6tAW5ZTPvmTMFWVtxkvDzy+V5fDcsqlx9W945G0LceWNTKvrO+vXh/o/P1T6vKJkc+i48zLd+aDSb486bVKZ69/UbFiy6dI/UmLBaMr4ZU+5OVH3TVrTbg6kSci8OdDhau6zn/D5u2enXSvtO6qy7ED9HNT1695iN7eAPtDV1WNL6RbizM02xQndhCmVoOPOy0Q7nG2RxHITIOjOpd8kOAWt37UCDhjOXB0I5DRZ6Oc+gq7c5nVxwDj8nnFZP2B4vNr4FzfnnPh3jy3Xde3hQy4nMKYYcsedl9nR9wOEtfGGQTJcqq0vIcd0htTJfgeLWju0vDhQbjPNs/RcmnRpVP+05f2WXiC7wPi2heVsx0aHbnLa9TSFoOPOC42Itc7N8BCIkMAgRXJcF9cnWzn0V6ep/K6JR1Dpu5TR+hASkuLyE/S1qCfJb/A4onfZwojBQWIPuS9w50W6c+2a31cHZHhi1Epemk61pzymUzunGuJmO+fQD02pyOl5c8VzPXa0qiYhc3rkut21aW51SE/QCosj9fJ1+Zgc5BLbGf9SmlmNLejs2V6uO9c6lFGl3xjGGs0xnSEHNrigYdCxs5t/NnLnmy5dI4bnu8osYJvXmef7NNn1vVzmRk8I97xdguuhNd/r09msEtGWB/q0Qzzl9vBiDrmbn8MLybgs9Lr7MkymcQJauubc+gHu6ZATnlW6zOp9h7ZociJ8l0pqy5ylay0gAfN7j7J5NPq95Y5g7tgRsU85BnsxBZ258wIJ2Oa1yGCkwVTQeceKXHsOug/akbnJDndulQwXcv0hwQ7Yi/qxZWouGLxvqV18yfG5xRJ03DnuvC00x3SGDJkNOrbdrGZqxbcTmynFc7i1OdC4Ctzm1bgTRtDbFfWZhzEcR8p8P1b28xyfWSxBx52X6c6HVTeGGX1ddOiOV5cdKW9tWXuJtAxFagP6SeDz1YwGLJXXxNK19kX92qMu3Sum2nwpckVLjKS4pO5czs7lbGwbuvIc1xvNHOvAnUO/jfj9uaN1oJo5aO1GM6/PtPqWo+B7XXNlgqK2vFi6loeoX0jwOTgi6suECatZtv0YDj21Oz+nypsERv2qWwlfE4+OwjXK+QkHP1Ec+saz1Qb2lxHdeUgnPKRnyIb3RwLK9XK2kw7CrAU9tTsfV8xz4c53M/Js3A+B3z82XHffFpola1WA+9E+27EiyFhq97sOGVHh1LVsXLoLJi+OBJUpRT1L3bEW9NTunKF2m8BIs+a3FLy2gw1YZrXJfc4dvhumPJIwpOmU1M9IVhIslGUWu69h6Vq5ou67nO32VJ+R5Rw67rxcrgI+47Y8/JTwGt1QrDbxxR3TeeexXvQhMDh09c8tm/mQoZiP5NpujMQqNOiZynVY0mSb4ZBjVOd0EfmIel23L47UKTd6tpLzxatI9STLemEp6Ljzct35ZUBlv0m5sYJs26kV9J585ljn74KT88AAcdTW0Y4HntXVhktZHCh3jSMOEnQnvPVvTYyD7yY7UGq3/P2ZXiI7UZ9Jzs8hDbiS09lCA78vR/qbLFdAWA25r3DnxTKq9Nm8yXdJChi+9Q785F6aBKTjiBtcqIKz+vVY+Q05aoeSf2twaQ/Gt9rkQAztMaoMuecp6teV33K2YeBPHAtgRzk+FytBT71nO+683WfZ1h79Ib/rdUynBKTzpqLe1py6dFyfFR2NNiBeNrg8J8BWAeCsYTCpLWMEPV9Rv/AI8h8Dy/BYPenlmBRrIeirhhEz7rw9RxfyLBdtHU7SIIHNN2j52PAS3fN8TrmTnBt6FFf+rCzLZIIuAmx1kEXTqT1tMNAj0z1rfJaz3QbU2aVHnc9uybSFoE8TD7/izu0IqZBtn6AXMnzb94mmJVBpKupOzD/Xv3cbUwhEyK/r//xahQ3/aXfCWja8ZIscm6emm/kEBqO49Hxdus9ytlh9TXZLV5sKOu68XHfuKuIwoLzbPjIwtL5NPDuIO6N7dIlpX0XY+5blJvP1Xz3vaWHh0A2EdGnwXK2CyZBMd19+Cgk4T6z7MU0o81zOFsLM4z1Rl8hJXox3/Wia5Y47L5eQ/chbPzLQ/X5dwV1DGys/+npoi+cpaxfSyTZ1Zuu18C7jdiER/0Jz0ps0Zncdv1S6bVE3HUxTEbEq82kVnky0aHBC3q4gRxPMajLdQ+rMuWXQt+Pa9333x5amz3oR+gWf5WzqINSjrxnEWuUiU3eP0h95BdRNBB13Xq477wd2rNNMbmFahW2E4wLCuUdDdkGDi/g/G9a573tRyxK8hbShlz0Opifv70Uo/6HyIyadvhNkCWwGLde9mA49hGHVzjazncoN8FzOpuXGo69xQ++VpaiL3t1KGXm3vyZD7qndOXu2tzvS0Voy3K5ovArLSB/6OiGp2x+qOHNza5EYSllsv0byb7E63DYD4xBhtt606ktAWXWOBiMeZxnf03WlP0PgoEuv/PI/nKg/Ns2b2UhyvV+3f43Ohgp6anfeVgTbRXfeK9ydN72eiaIxu8DhnZVDzQitoL9Y/bAIszZIemj5efUiDomDvahfWLZZCRJ8vs/1q19DzmcXIXeO/ODSU5lTd3k5/61ff8jr83rULVTQmTsvl6sA55dDMtx2I3PXswz46FjTOUuE/r4qU9RXmTqsqfIerM1DiDNF0MvCus36jta5vvVeBNcJ795DoiTB9Uoc+VfPvvl5x/vcCJJbLjv8MbCTwJ2XS5HJcAeEISTL1AWI3vNdcu/vJIK+Kqisb4zEybrs7xRBei51b1h1a0/3Lt3LzjYrSXLPlcHUlSTIvVd83/eEWNGxasOABAWH4vwPTf/chjh03HmhSIUIqdzTTG9pFig245AhVDnsIea8uhWvUwWyBG+7DvQCOhTT0QnpP2YNg5ImLAM+85YexDQ4SiHqpsvZNr4vtP33GwbTvxx57yBE0GepSh13nkVwlE0y3B5heEr4LNZD/W+qhKNUysbvliK9O1BmuSR4+QSJjTeS2ee2AjvjbMQKsVeJ8IXx96XMq3nacv0H0Qr6LEYDw50nCY5GVdhQzzTzWwt1cOPQRCcXSIhbd8I+z0TI3XN4s8uVG3SYMUTVZ6VCTnWP3eIKRRIxPxp+n1t18a6Ke8LoOji/2OPWTQQ92RGpuHNzQubOk56i18BthYrqxKBhvxdhb+M5LaWjckJ+7TkV9jbwGad26ZYbyez8/sA+CY4HN/0Dz7DXUj9xZ91GJfvduu0fCs4/HTPcmqQ43Hm57nzdwLQd5KdCbvGmCtvG1i0V6TXNCZF2cVF/lxPXkQRPsRzdeprhIVDwVpmMKrxOX9TPbLlHAGK7c22Zu2fWO9LOeh7fkZLegXrYpC9vMtzcb6v+ObcrfeHQ8DvXbX+9Ac15FTYS+iT97d4kUNk456zavdHN6zkUP/z9r//8w/MH36QSdImEn09NeOvn+wPhR3CduT7SeS5SJnNurPd/Kx1IqMCvpLG+SGNfdKzcXBbw7VbHtJKRj5i/O97oeFfbIhUSLEmZDyKPLJgF+IkNWi73/rqsTAKa36VfeIrwfIdSv84OBFS/ST+l6puk7p5vGa/XY4V9BX0WY6/aAxf8XJ3gcDuC3vnOZFD5bem63hZ2kelyQesOdnAK9woQG19BT+nOX4+fPMXCQNABACAUnzl0J+RjWRifgjOKBQAAwF7Q+xUJagAAAFnzFx4BAAAAgg4AAAAIOgAAACDoAAAAgKADAAAg6AAAAICgAwAAgB3/E2AAraQ5J3mHSmIAAAAASUVORK5CYII=</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>jsondata={"PatientSummary":[{        "Patient Name":"Jane Doe",        "Patient ID": "P2343",        "Date":"01/31/2016",        "Age":"30 yrs Old",        "Sex":"Female",        "Disease1":"Allergy to Peanuts",        "Disease1_Severity":"Severe",        "Disease1_Status1":"Chronic",        "Disease1_Active":"Yes",        "Disease1_Infectious":"",        "Disease1_Diagnosed":"01/10/2003",        "Disease1_Remarks":"",        "Disease2":"Allergy to Penicillin",        "Disease2_Severity":"Moderate",        "Disease2_Status1":"Chronic",        "Disease2_Active":"Yes",        "Disease2_Infectious":"",        "Disease2_Diagnosed":"01/14/2010",        "Disease2_Remarks":"Anaphylaxis",        "Disease3":"Acute hepatitis A",        "Disease3_Severity":"Moderate",        "Disease3_Status1":"Healed",        "Disease3_Active":"",        "Disease3_Infectious":"Yes",        "Disease3_Diagnosed":"03/03/2005",        "Disease3_Remarks":""}]};schemadata={  "$id": "http://example.com/example.json",  "type": "object",  "definitions": {},  "$schema": "http://json-schema.org/draft-07/schema#",  "properties": {    "PatientSummary": {      "$id": "/properties/PatientSummary",      "type": "array",      "items": {        "$id": "/properties/PatientSummary/items",        "type": "object",        "properties": {          "Patient Name": {            "$id": "/properties/PatientSummary/items/properties/Patient Name",            "type": "string",            "title": "The Patient name Schema ",            "default": "",            "examples": [              "Jane Doe"            ]          },          "Patient ID": {            "$id": "/properties/PatientSummary/items/properties/Patient ID",            "type": "string",            "title": "The Patient id Schema ",            "default": "",            "examples": [              "P2343"            ]          },          "Date": {            "$id": "/properties/PatientSummary/items/properties/Date",            "type": "string",            "title": "The Date Schema ",            "default": "",            "examples": [              "01/31/2016"            ]          },          "Age": {            "$id": "/properties/PatientSummary/items/properties/Age",            "type": "string",            "title": "The Age Schema ",            "default": "",            "examples": [              "30 yrs Old"            ]          },          "Sex": {            "$id": "/properties/PatientSummary/items/properties/Sex",            "type": "string",            "title": "The Sex Schema ",            "default": "",            "examples": [              "Female"            ]          },          "Disease1": {            "$id": "/properties/PatientSummary/items/properties/Disease1",            "type": "string",            "title": "The Disease1 Schema ",            "default": "",            "examples": [              "Allergy to Peanut"            ]          },          "Disease1_Severity": {            "$id": "/properties/PatientSummary/items/properties/Disease1_Severity",            "type": "string",            "title": "The Disease1_severity Schema ",            "default": "",            "examples": [              "Severe"            ]          },          "Disease1_Status1": {            "$id": "/properties/PatientSummary/items/properties/Disease1_Status1",            "type": "string",            "title": "The Disease1_status1 Schema ",            "default": "",            "examples": [              "Chronic"            ]          },          "Disease1_Active": {            "$id": "/properties/PatientSummary/items/properties/Disease1_Active",            "type": "string",            "title": "The Disease1_active Schema ",            "default": "",            "examples": [              "*"            ]          },          "Disease1_Infectious": {            "$id": "/properties/PatientSummary/items/properties/Disease1_Infectious",            "type": "string",            "title": "The Disease1_infectious Schema ",            "default": "",            "examples": [              ""            ]          },          "Disease1_Diagnosed": {            "$id": "/properties/PatientSummary/items/properties/Disease1_Diagnosed",            "type": "string",            "title": "The Disease1_diagnosed Schema ",            "default": "",            "examples": [              "01/10/2003"            ]          },          "Disease1_Remarks": {            "$id": "/properties/PatientSummary/items/properties/Disease1_Remarks",            "type": "string",            "title": "The Disease1_remarks Schema ",            "default": "",            "examples": [              "Anaphylaxis"            ]          },          "Disease2": {            "$id": "/properties/PatientSummary/items/properties/Disease2",            "type": "string",            "title": "The Disease2 Schema ",            "default": "",            "examples": [              "Allergy to Penicillin"            ]          },          "Disease2_Severity": {            "$id": "/properties/PatientSummary/items/properties/Disease2_Severity",            "type": "string",            "title": "The Disease2_severity Schema ",            "default": "",            "examples": [              "Moderate"            ]          },          "Disease2_Status1": {            "$id": "/properties/PatientSummary/items/properties/Disease2_Status1",            "type": "string",            "title": "The Disease2_status1 Schema ",            "default": "",            "examples": [              "Chronic"            ]          },          "Disease2_Active": {            "$id": "/properties/PatientSummary/items/properties/Disease2_Active",            "type": "string",            "title": "The Disease2_active Schema ",            "default": "",            "examples": [              "*"            ]          },          "Disease2_Infectious": {            "$id": "/properties/PatientSummary/items/properties/Disease2_Infectious",            "type": "string",            "title": "The Disease2_infectious Schema ",            "default": "",            "examples": [              ""            ]          },          "Disease2_Diagnosed": {            "$id": "/properties/PatientSummary/items/properties/Disease2_Diagnosed",            "type": "string",            "title": "The Disease2_diagnosed Schema ",            "default": "",            "examples": [              "01/14/2010"            ]          },          "Disease2_Remarks": {            "$id": "/properties/PatientSummary/items/properties/Disease2_Remarks",            "type": "string",            "title": "The Disease2_remarks Schema ",            "default": "",            "examples": [              ""            ]          },          "Disease3": {            "$id": "/properties/PatientSummary/items/properties/Disease3",            "type": "string",            "title": "The Disease3 Schema ",            "default": "",            "examples": [              "Acute hepatitis C"            ]          },          "Disease3_Severity": {            "$id": "/properties/PatientSummary/items/properties/Disease3_Severity",            "type": "string",            "title": "The Disease3_severity Schema ",            "default": "",            "examples": [              "Moderate"            ]          },          "Disease3_Status1": {            "$id": "/properties/PatientSummary/items/properties/Disease3_Status1",            "type": "string",            "title": "The Disease3_status1 Schema ",            "default": "",            "examples": [              "Healed"            ]          },          "Disease3_Active": {            "$id": "/properties/PatientSummary/items/properties/Disease3_Active",            "type": "string",            "title": "The Disease3_active Schema ",            "default": "",            "examples": [              ""            ]          },          "Disease3_Infectious": {            "$id": "/properties/PatientSummary/items/properties/Disease3_Infectious",            "type": "string",            "title": "The Disease3_infectious Schema ",            "default": "",            "examples": [              "*"            ]          },          "Disease3_Diagnosed": {            "$id": "/properties/PatientSummary/items/properties/Disease3_Diagnosed",            "type": "string",            "title": "The Disease3_diagnosed Schema ",            "default": "",            "examples": [              "03/03/2005"            ]          },          "Disease3_Remarks": {            "$id": "/properties/PatientSummary/items/properties/Disease3_Remarks",            "type": "string",            "title": "The Disease3_remarks Schema ",            "default": "",            "examples": [              ""            ]          }        }      }    }  }}</ConnectString>
+				<DataProvider>JSON</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="['Patient Name']">
+					<DataField>['Patient Name']</DataField>
+				</Field>
+				<Field Name="['Patient ID']">
+					<DataField>['Patient ID']</DataField>
+				</Field>
+				<Field Name="Date">
+					<DataField>Date</DataField>
+				</Field>
+				<Field Name="Age">
+					<DataField>Age</DataField>
+				</Field>
+				<Field Name="Sex">
+					<DataField>Sex</DataField>
+				</Field>
+				<Field Name="Disease1">
+					<DataField>Disease1</DataField>
+				</Field>
+				<Field Name="['Disease1_Severity']">
+					<DataField>['Disease1_Severity']</DataField>
+				</Field>
+				<Field Name="['Disease1_Status1']">
+					<DataField>['Disease1_Status1']</DataField>
+				</Field>
+				<Field Name="['Disease1_Active']">
+					<DataField>['Disease1_Active']</DataField>
+				</Field>
+				<Field Name="['Disease1_Infectious']">
+					<DataField>['Disease1_Infectious']</DataField>
+				</Field>
+				<Field Name="['Disease1_Diagnosed']">
+					<DataField>['Disease1_Diagnosed']</DataField>
+				</Field>
+				<Field Name="['Disease1_Remarks']">
+					<DataField>['Disease1_Remarks']</DataField>
+				</Field>
+				<Field Name="Disease2">
+					<DataField>Disease2</DataField>
+				</Field>
+				<Field Name="['Disease2_Severity']">
+					<DataField>['Disease2_Severity']</DataField>
+				</Field>
+				<Field Name="['Disease2_Status1']">
+					<DataField>['Disease2_Status1']</DataField>
+				</Field>
+				<Field Name="['Disease2_Active']">
+					<DataField>['Disease2_Active']</DataField>
+				</Field>
+				<Field Name="['Disease2_Infectious']">
+					<DataField>['Disease2_Infectious']</DataField>
+				</Field>
+				<Field Name="['Disease2_Diagnosed']">
+					<DataField>['Disease2_Diagnosed']</DataField>
+				</Field>
+				<Field Name="['Disease2_Remarks']">
+					<DataField>['Disease2_Remarks']</DataField>
+				</Field>
+				<Field Name="Disease3">
+					<DataField>Disease3</DataField>
+				</Field>
+				<Field Name="['Disease3_Severity']">
+					<DataField>['Disease3_Severity']</DataField>
+				</Field>
+				<Field Name="['Disease3_Status1']">
+					<DataField>['Disease3_Status1']</DataField>
+				</Field>
+				<Field Name="['Disease3_Active']">
+					<DataField>['Disease3_Active']</DataField>
+				</Field>
+				<Field Name="['Disease3_Infectious']">
+					<DataField>['Disease3_Infectious']</DataField>
+				</Field>
+				<Field Name="['Disease3_Diagnosed']">
+					<DataField>['Disease3_Diagnosed']</DataField>
+				</Field>
+				<Field Name="['Disease3_Remarks']">
+					<DataField>['Disease3_Remarks']</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>$.PatientSummary[*]</CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>PaperOrientation</Name>
+			<Value>Portrait</Value>
+		</CustomProperty>
+	</CustomProperties>
+</Report>

@@ -1,0 +1,785 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">ReelsTablix.rdlx</dd:Name>
+	<Body>
+		<Height>14in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Textbox Name="TextBox13">
+								<Height>1.3758cm</Height>
+								<Value>Sales Report</Value>
+								<Style>
+									<Color>DarkSlateBlue</Color>
+									<FontFamily>Arial Black</FontFamily>
+									<FontSize>28pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Width>9.5515cm</Width>
+								<ZIndex>1</ZIndex>
+							</Textbox>
+							<Image Name="Image1">
+								<Height>1.3229cm</Height>
+								<Left>9.868958cm</Left>
+								<MIMEType>image/png</MIMEType>
+								<Sizing>FitProportional</Sizing>
+								<Source>Embedded</Source>
+								<Value>○GrapeCity-紫</Value>
+								<Width>9.0204cm</Width>
+								<ZIndex>2</ZIndex>
+							</Image>
+							<Tablix Name="Tablix1">
+								<TablixCorner>
+									<TablixCornerRows>
+										<TablixCornerRow>
+											<TablixCornerCell>
+												<CellContents>
+													<Textbox Name="TextBox1">
+														<Value>Sales by Country, City, Media Type, Quarter, and Year</Value>
+														<Style>
+															<BackgroundColor>DarkSlateBlue</BackgroundColor>
+															<Color>White</Color>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>14pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>700</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+													</Textbox>
+													<ColSpan>3</ColSpan>
+													<RowSpan>2</RowSpan>
+												</CellContents>
+											</TablixCornerCell>
+											<TablixCornerCell />
+											<TablixCornerCell />
+										</TablixCornerRow>
+										<TablixCornerRow>
+											<TablixCornerCell />
+											<TablixCornerCell />
+											<TablixCornerCell />
+										</TablixCornerRow>
+									</TablixCornerRows>
+								</TablixCorner>
+								<TablixBody>
+									<TablixColumns>
+										<TablixColumn>
+											<Width>2.332452cm</Width>
+										</TablixColumn>
+										<TablixColumn>
+											<Width>2.332452cm</Width>
+										</TablixColumn>
+										<TablixColumn>
+											<Width>2.337733cm</Width>
+										</TablixColumn>
+									</TablixColumns>
+									<TablixRows>
+										<TablixRow>
+											<Height>0.681337cm</Height>
+											<TablixCells>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox4">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<BackgroundColor>=""</BackgroundColor>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontStyle>Normal</FontStyle>
+																<FontWeight>400</FontWeight>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox8">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<BackgroundColor>=""</BackgroundColor>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontStyle>Normal</FontStyle>
+																<FontWeight>400</FontWeight>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox26">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+											</TablixCells>
+										</TablixRow>
+										<TablixRow>
+											<Height>0.681337cm</Height>
+											<TablixCells>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox14">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox11">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox23">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+											</TablixCells>
+										</TablixRow>
+										<TablixRow>
+											<Height>0.6746466cm</Height>
+											<TablixCells>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox15">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox20">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox22">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+											</TablixCells>
+										</TablixRow>
+										<TablixRow>
+											<Height>0.75cm</Height>
+											<TablixCells>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox24">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox28">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox29">
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+											</TablixCells>
+										</TablixRow>
+									</TablixRows>
+								</TablixBody>
+								<TablixColumnHierarchy>
+									<TablixMembers>
+										<TablixMember>
+											<Group Name="Tablix1_Years1">
+												<GroupExpressions>
+													<GroupExpression>=Fields!Years.Value</GroupExpression>
+												</GroupExpressions>
+											</Group>
+											<SortExpressions>
+												<SortExpression>
+													<Direction>Ascending</Direction>
+													<Value>=Fields!Years.Value</Value>
+												</SortExpression>
+											</SortExpressions>
+											<TablixHeader>
+												<Size>0.268244in</Size>
+												<CellContents>
+													<Textbox Name="TextBox2">
+														<Value>=Fields!Years.Value</Value>
+														<Style>
+															<BackgroundColor>WhiteSmoke</BackgroundColor>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>10pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>400</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<TextAlign>Center</TextAlign>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+													</Textbox>
+												</CellContents>
+											</TablixHeader>
+											<TablixMembers>
+												<TablixMember>
+													<Group Name="Tablix1_Quarters1">
+														<GroupExpressions>
+															<GroupExpression>=Fields!Quarters.Value</GroupExpression>
+														</GroupExpressions>
+													</Group>
+													<SortExpressions>
+														<SortExpression>
+															<Direction>Ascending</Direction>
+															<Value>=Fields!Quarters.Value</Value>
+														</SortExpression>
+													</SortExpressions>
+													<TablixHeader>
+														<Size>0.268244in</Size>
+														<CellContents>
+															<Textbox Name="TextBox5">
+																<Value>=Fields!Quarters.Value</Value>
+																<Style>
+																	<BackgroundColor>WhiteSmoke</BackgroundColor>
+																	<FontFamily>Times New Roman</FontFamily>
+																	<FontSize>10pt</FontSize>
+																	<FontStyle>Normal</FontStyle>
+																	<FontWeight>400</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<TextAlign>Center</TextAlign>
+																	<Border>
+																		<Style>Solid</Style>
+																	</Border>
+																</Style>
+															</Textbox>
+														</CellContents>
+													</TablixHeader>
+												</TablixMember>
+												<TablixMember>
+													<TablixHeader>
+														<Size>0.268244in</Size>
+														<CellContents>
+															<Textbox Name="TextBox6">
+																<Value>Total for Year</Value>
+																<Style>
+																	<BackgroundColor>DarkSlateGray</BackgroundColor>
+																	<Color>White</Color>
+																	<FontFamily>Times New Roman</FontFamily>
+																	<FontSize>10pt</FontSize>
+																	<FontStyle>Normal</FontStyle>
+																	<FontWeight>700</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<TextAlign>Center</TextAlign>
+																	<VerticalAlign>Middle</VerticalAlign>
+																	<Border>
+																		<Style>Solid</Style>
+																	</Border>
+																</Style>
+															</Textbox>
+														</CellContents>
+													</TablixHeader>
+												</TablixMember>
+											</TablixMembers>
+										</TablixMember>
+										<TablixMember>
+											<TablixHeader>
+												<Size>0.5361111in</Size>
+												<CellContents>
+													<Textbox Name="TextBox12">
+														<Value>Grand Total</Value>
+														<Style>
+															<BackgroundColor>DarkSlateBlue</BackgroundColor>
+															<Color>White</Color>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>10pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>700</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<TextAlign>Center</TextAlign>
+															<VerticalAlign>Middle</VerticalAlign>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+													</Textbox>
+												</CellContents>
+											</TablixHeader>
+										</TablixMember>
+									</TablixMembers>
+								</TablixColumnHierarchy>
+								<TablixRowHierarchy>
+									<TablixMembers>
+										<TablixMember>
+											<Group Name="Tablix1_Country1">
+												<GroupExpressions>
+													<GroupExpression>=Fields!Country.Value</GroupExpression>
+												</GroupExpressions>
+											</Group>
+											<TablixHeader>
+												<Size>0.918289in</Size>
+												<CellContents>
+													<Textbox Name="TextBox3">
+														<Value>=Fields!Country.Value</Value>
+														<Style>
+															<BackgroundColor>WhiteSmoke</BackgroundColor>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>10pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>400</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<TextAlign>Center</TextAlign>
+															<VerticalAlign>Middle</VerticalAlign>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+													</Textbox>
+												</CellContents>
+											</TablixHeader>
+											<TablixMembers>
+												<TablixMember>
+													<Group Name="Tablix1_City1">
+														<GroupExpressions>
+															<GroupExpression>=Fields!City.Value</GroupExpression>
+														</GroupExpressions>
+													</Group>
+													<TablixHeader>
+														<Size>0.918289in</Size>
+														<CellContents>
+															<Textbox Name="TextBox7">
+																<Value>=Fields!City.Value</Value>
+																<Style>
+																	<BackgroundColor>WhiteSmoke</BackgroundColor>
+																	<FontFamily>Times New Roman</FontFamily>
+																	<FontSize>10pt</FontSize>
+																	<FontStyle>Normal</FontStyle>
+																	<FontWeight>400</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<TextAlign>Center</TextAlign>
+																	<Border>
+																		<Style>Solid</Style>
+																	</Border>
+																</Style>
+															</Textbox>
+														</CellContents>
+													</TablixHeader>
+													<TablixMembers>
+														<TablixMember>
+															<Group Name="Tablix1_MediaType1">
+																<GroupExpressions>
+																	<GroupExpression>=Fields!MediaType.Value</GroupExpression>
+																</GroupExpressions>
+															</Group>
+															<TablixHeader>
+																<Size>0.918289in</Size>
+																<CellContents>
+																	<Textbox Name="TextBox10">
+																		<Value>=Fields!MediaType.Value</Value>
+																		<Style>
+																			<BackgroundColor>WhiteSmoke</BackgroundColor>
+																			<FontFamily>Times New Roman</FontFamily>
+																			<FontSize>10pt</FontSize>
+																			<FontStyle>Normal</FontStyle>
+																			<FontWeight>400</FontWeight>
+																			<PaddingBottom>2pt</PaddingBottom>
+																			<PaddingLeft>2pt</PaddingLeft>
+																			<PaddingRight>2pt</PaddingRight>
+																			<PaddingTop>2pt</PaddingTop>
+																			<TextAlign>Center</TextAlign>
+																			<Border>
+																				<Style>Solid</Style>
+																			</Border>
+																		</Style>
+																	</Textbox>
+																</CellContents>
+															</TablixHeader>
+														</TablixMember>
+														<TablixMember>
+															<TablixHeader>
+																<Size>0.918289in</Size>
+																<CellContents>
+																	<Textbox Name="TextBox9">
+																		<Value>City Total</Value>
+																		<Style>
+																			<BackgroundColor>DarkSeaGreen</BackgroundColor>
+																			<FontFamily>Times New Roman</FontFamily>
+																			<FontSize>10pt</FontSize>
+																			<FontStyle>Normal</FontStyle>
+																			<FontWeight>700</FontWeight>
+																			<PaddingBottom>2pt</PaddingBottom>
+																			<PaddingLeft>2pt</PaddingLeft>
+																			<PaddingRight>2pt</PaddingRight>
+																			<PaddingTop>2pt</PaddingTop>
+																			<TextAlign>Center</TextAlign>
+																			<VerticalAlign>Middle</VerticalAlign>
+																			<Border>
+																				<Style>Solid</Style>
+																			</Border>
+																		</Style>
+																	</Textbox>
+																</CellContents>
+															</TablixHeader>
+														</TablixMember>
+													</TablixMembers>
+												</TablixMember>
+												<TablixMember>
+													<TablixHeader>
+														<Size>1.836578in</Size>
+														<CellContents>
+															<Textbox Name="TextBox16">
+																<Value>Country Total</Value>
+																<Style>
+																	<BackgroundColor>DarkSlateGray</BackgroundColor>
+																	<Color>White</Color>
+																	<FontFamily>Times New Roman</FontFamily>
+																	<FontSize>10pt</FontSize>
+																	<FontStyle>Normal</FontStyle>
+																	<FontWeight>700</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<VerticalAlign>Middle</VerticalAlign>
+																	<Border>
+																		<Style>Solid</Style>
+																	</Border>
+																</Style>
+															</Textbox>
+														</CellContents>
+													</TablixHeader>
+												</TablixMember>
+											</TablixMembers>
+										</TablixMember>
+										<TablixMember>
+											<TablixHeader>
+												<Size>2.754167in</Size>
+												<CellContents>
+													<Textbox Name="TextBox21">
+														<Value>Total</Value>
+														<Style>
+															<BackgroundColor>DarkSlateBlue</BackgroundColor>
+															<Color>White</Color>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>10pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>700</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<VerticalAlign>Middle</VerticalAlign>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+													</Textbox>
+												</CellContents>
+											</TablixHeader>
+										</TablixMember>
+									</TablixMembers>
+								</TablixRowHierarchy>
+								<RepeatColumnHeaders>true</RepeatColumnHeaders>
+								<RepeatRowHeaders>true</RepeatRowHeaders>
+								<DataSetName>DataSet1</DataSetName>
+								<Top>1.6cm</Top>
+								<Height>4.15cm</Height>
+								<Width>14cm</Width>
+								<ZIndex>3</ZIndex>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">28.8cm</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">18.8cm</dd:FixedWidth>
+								<Style>
+									<Color>Black</Color>
+									<FontFamily>Times New Roman</FontFamily>
+									<FontSize>10pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<Border>
+										<Style>Solid</Style>
+									</Border>
+								</Style>
+							</Tablix>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>DataSet1</DataSetName>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>0.5316223in</LeftMargin>
+	<PageHeight>14in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<RightMargin>0.5316223in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>8.5in</Width>
+	<EmbeddedImages>
+		<EmbeddedImage Name="○GrapeCity-紫">
+			<ImageData>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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Reels.mdb</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="TotalOrder">
+					<DataField>TotalOrder</DataField>
+				</Field>
+				<Field Name="Years">
+					<DataField>Years</DataField>
+				</Field>
+				<Field Name="Quarters">
+					<DataField>Quarters</DataField>
+				</Field>
+				<Field Name="Months">
+					<DataField>Months</DataField>
+				</Field>
+				<Field Name="CustomerID">
+					<DataField>CustomerID</DataField>
+				</Field>
+				<Field Name="AccountNumber">
+					<DataField>AccountNumber</DataField>
+				</Field>
+				<Field Name="FirstName">
+					<DataField>FirstName</DataField>
+				</Field>
+				<Field Name="MiddleInitial">
+					<DataField>MiddleInitial</DataField>
+				</Field>
+				<Field Name="LastName">
+					<DataField>LastName</DataField>
+				</Field>
+				<Field Name="Address1">
+					<DataField>Address1</DataField>
+				</Field>
+				<Field Name="Address2">
+					<DataField>Address2</DataField>
+				</Field>
+				<Field Name="City">
+					<DataField>City</DataField>
+				</Field>
+				<Field Name="Region">
+					<DataField>Region</DataField>
+				</Field>
+				<Field Name="PostalCode">
+					<DataField>PostalCode</DataField>
+				</Field>
+				<Field Name="Country">
+					<DataField>Country</DataField>
+				</Field>
+				<Field Name="SalesID">
+					<DataField>SalesID</DataField>
+				</Field>
+				<Field Name="SaleDate">
+					<DataField>SaleDate</DataField>
+				</Field>
+				<Field Name="TaxPercent">
+					<DataField>TaxPercent</DataField>
+				</Field>
+				<Field Name="MediaType">
+					<DataField>MediaType</DataField>
+				</Field>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="Quantity">
+					<DataField>Quantity</DataField>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price</DataField>
+				</Field>
+				<Field Name="Discount">
+					<DataField>Discount</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT *
+    , Quantity * Price AS TotalOrder
+    , YEAR(SaleDate) AS Years
+    , 'Q' + STR(DATEPART('q', SaleDate)) AS Quarters
+    , MONTH(SaleDate) AS Months 
+FROM CustomerOrders 
+ORDER BY 
+    'Years ' DESC
+   ,'CustomerOrders '
+   ,'Months'
+   ,MediaType
+   ,Country
+   ,City
+   ,Title
+</CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

@@ -1,0 +1,5009 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Customers>
+  <Customer ID="ALFKI">
+    <CompanyName>Alfreds Futterkiste</CompanyName>
+    <ContactName>Maria Anders</ContactName>
+    <City>Berlin</City>
+    <Country>Germany</Country>
+    <Phone>030-0074321</Phone>
+    <Orders>
+      <OrderID>10643</OrderID>
+      <CustomerID>ALFKI</CustomerID>
+      <OrderDate>1995-09-25T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10643</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>45.6</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10643</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10643</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>2</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10692</OrderID>
+      <CustomerID>ALFKI</CustomerID>
+      <OrderDate>1995-11-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10692</OrderID>
+        <ProductName>Vegie-spread</ProductName>
+        <UnitPrice>43.9</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10702</OrderID>
+      <CustomerID>ALFKI</CustomerID>
+      <OrderDate>1995-11-13T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10702</OrderID>
+        <ProductName>Aniseed Syrup</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10702</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10835</OrderID>
+      <CustomerID>ALFKI</CustomerID>
+      <OrderDate>1996-02-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10835</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>55</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10835</OrderID>
+        <ProductName>Original Frankfurter grüne Soße</ProductName>
+        <UnitPrice>13</UnitPrice>
+        <Quantity>2</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10952</OrderID>
+      <CustomerID>ALFKI</CustomerID>
+      <OrderDate>1996-04-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10952</OrderID>
+        <ProductName>Grandma's Boysenberry Spread</ProductName>
+        <UnitPrice>25</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10952</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>45.6</UnitPrice>
+        <Quantity>2</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11011</OrderID>
+      <CustomerID>ALFKI</CustomerID>
+      <OrderDate>1996-05-09T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11011</OrderID>
+        <ProductName>Escargots de Bourgogne</ProductName>
+        <UnitPrice>13.25</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11011</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="ANATR">
+    <CompanyName>Ana Trujillo Emparedados y helados</CompanyName>
+    <ContactName>Ana Trujillo</ContactName>
+    <City>México D.F.</City>
+    <Country>Mexico</Country>
+    <Phone>(5) 555-4729</Phone>
+    <Orders>
+      <OrderID>10308</OrderID>
+      <CustomerID>ANATR</CustomerID>
+      <OrderDate>1994-10-19T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10308</OrderID>
+        <ProductName>Gudbrandsdalsost</ProductName>
+        <UnitPrice>28.8</UnitPrice>
+        <Quantity>1</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10308</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10625</OrderID>
+      <CustomerID>ANATR</CustomerID>
+      <OrderDate>1995-09-08T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10625</OrderID>
+        <ProductName>Tofu</ProductName>
+        <UnitPrice>23.25</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10625</OrderID>
+        <ProductName>Singaporean Hokkien Fried Mee</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10625</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10759</OrderID>
+      <CustomerID>ANATR</CustomerID>
+      <OrderDate>1995-12-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10759</OrderID>
+        <ProductName>Mascarpone Fabioli</ProductName>
+        <UnitPrice>32</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10926</OrderID>
+      <CustomerID>ANATR</CustomerID>
+      <OrderDate>1996-04-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10926</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>2</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10926</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>6</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10926</OrderID>
+        <ProductName>Teatime Chocolate Biscuits</ProductName>
+        <UnitPrice>9.2</UnitPrice>
+        <Quantity>7</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10926</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>34.8</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="ANTON">
+    <CompanyName>Antonio Moreno Taquería</CompanyName>
+    <ContactName>Antonio Moreno</ContactName>
+    <City>México D.F.</City>
+    <Country>Mexico</Country>
+    <Phone>(5) 555-3932</Phone>
+    <Orders>
+      <OrderID>10365</OrderID>
+      <CustomerID>ANTON</CustomerID>
+      <OrderDate>1994-12-28T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10365</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>16.8</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10507</OrderID>
+      <CustomerID>ANTON</CustomerID>
+      <OrderDate>1995-05-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10507</OrderID>
+        <ProductName>Ipoh Coffee</ProductName>
+        <UnitPrice>46</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10507</OrderID>
+        <ProductName>Chocolade</ProductName>
+        <UnitPrice>12.75</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10535</OrderID>
+      <CustomerID>ANTON</CustomerID>
+      <OrderDate>1995-06-13T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10535</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10535</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>18.4</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10535</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>19.5</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10535</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>55</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10573</OrderID>
+      <CustomerID>ANTON</CustomerID>
+      <OrderDate>1995-07-20T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10573</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>39</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10573</OrderID>
+        <ProductName>Sasquatch Ale</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10573</OrderID>
+        <ProductName>Perth Pasties</ProductName>
+        <UnitPrice>32.8</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10677</OrderID>
+      <CustomerID>ANTON</CustomerID>
+      <OrderDate>1995-10-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10677</OrderID>
+        <ProductName>Gumbär Gummibärchen</ProductName>
+        <UnitPrice>31.23</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10677</OrderID>
+        <ProductName>Geitost</ProductName>
+        <UnitPrice>2.5</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10682</OrderID>
+      <CustomerID>ANTON</CustomerID>
+      <OrderDate>1995-10-26T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10682</OrderID>
+        <ProductName>Geitost</ProductName>
+        <UnitPrice>2.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10682</OrderID>
+        <ProductName>Louisiana Hot Spiced Okra</ProductName>
+        <UnitPrice>17</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10682</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10856</OrderID>
+      <CustomerID>ANTON</CustomerID>
+      <OrderDate>1996-02-28T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10856</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>19</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10856</OrderID>
+        <ProductName>Singaporean Hokkien Fried Mee</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="AROUT">
+    <CompanyName>Around the Horn</CompanyName>
+    <ContactName>Thomas Hardy</ContactName>
+    <City>London</City>
+    <Country>UK</Country>
+    <Phone>(171) 555-7788</Phone>
+    <Orders>
+      <OrderID>10355</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1994-12-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10355</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>3.6</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10355</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>15.6</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10383</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1995-01-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10383</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>4.8</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10383</OrderID>
+        <ProductName>Valkoinen suklaa</ProductName>
+        <UnitPrice>13</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10383</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>30.4</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10453</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1995-03-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10453</OrderID>
+        <ProductName>Chocolade</ProductName>
+        <UnitPrice>10.2</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10453</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10558</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1995-07-05T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10558</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10558</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10558</OrderID>
+        <ProductName>Filo Mix</ProductName>
+        <UnitPrice>7</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10558</OrderID>
+        <ProductName>Perth Pasties</ProductName>
+        <UnitPrice>32.8</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10558</OrderID>
+        <ProductName>Röd Kaviar</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10707</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1995-11-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10707</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>24</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10707</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>19.5</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10707</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>28</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10741</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1995-12-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10741</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>19</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10743</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1995-12-18T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10743</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>28</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10768</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1996-01-08T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10768</OrderID>
+        <ProductName>Gustaf's Knäckebröd</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10768</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10768</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10768</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10793</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1996-01-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10793</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10793</OrderID>
+        <ProductName>Filo Mix</ProductName>
+        <UnitPrice>7</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10864</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1996-03-04T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10864</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10864</OrderID>
+        <ProductName>Laughing Lumberjack Lager</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10920</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1996-04-02T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10920</OrderID>
+        <ProductName>Valkoinen suklaa</ProductName>
+        <UnitPrice>16.25</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10953</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1996-04-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10953</OrderID>
+        <ProductName>Sir Rodney's Marmalade</ProductName>
+        <UnitPrice>81</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10953</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11016</OrderID>
+      <CustomerID>AROUT</CustomerID>
+      <OrderDate>1996-05-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11016</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11016</OrderID>
+        <ProductName>Inlagd Sill</ProductName>
+        <UnitPrice>19</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="BERGS">
+    <CompanyName>Berglunds snabbköp</CompanyName>
+    <ContactName>Christina Berglund</ContactName>
+    <City>Luleå</City>
+    <Country>Sweden</Country>
+    <Phone>0921-12 34 65</Phone>
+    <Orders>
+      <OrderID>10278</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1994-09-12T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10278</OrderID>
+        <ProductName>Gula Malacca</ProductName>
+        <UnitPrice>15.5</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10278</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>44</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10278</OrderID>
+        <ProductName>Vegie-spread</ProductName>
+        <UnitPrice>35.1</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10278</OrderID>
+        <ProductName>Röd Kaviar</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10280</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1994-09-14T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10280</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>3.6</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10280</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>19.2</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10280</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>6.2</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10384</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-01-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10384</OrderID>
+        <ProductName>Sir Rodney's Marmalade</ProductName>
+        <UnitPrice>64.8</UnitPrice>
+        <Quantity>28</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10384</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>27.2</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10444</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-03-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10444</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>31.2</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10444</OrderID>
+        <ProductName>Gumbär Gummibärchen</ProductName>
+        <UnitPrice>24.9</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10444</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10444</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>7.7</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10445</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-03-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10445</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10445</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>5.9</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10524</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-06-01T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10524</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>31</UnitPrice>
+        <Quantity>2</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10524</OrderID>
+        <ProductName>Nord-Ost Matjeshering</ProductName>
+        <UnitPrice>25.89</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10524</OrderID>
+        <ProductName>Ipoh Coffee</ProductName>
+        <UnitPrice>46</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10524</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>7.45</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10572</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-07-19T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10572</OrderID>
+        <ProductName>Pavlova</ProductName>
+        <UnitPrice>17.45</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10572</OrderID>
+        <ProductName>Mascarpone Fabioli</ProductName>
+        <UnitPrice>32</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10572</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>18.4</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10572</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10626</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-09-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10626</OrderID>
+        <ProductName>Perth Pasties</ProductName>
+        <UnitPrice>32.8</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10626</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10626</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10654</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-10-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10654</OrderID>
+        <ProductName>Chef Anton's Cajun Seasoning</ProductName>
+        <UnitPrice>22</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10654</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10654</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>7.45</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10672</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-10-18T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10672</OrderID>
+        <ProductName>Côte de Blaye</ProductName>
+        <UnitPrice>263.5</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10672</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10689</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-11-01T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10689</OrderID>
+        <ProductName>Chai</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10733</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1995-12-08T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10733</OrderID>
+        <ProductName>Tofu</ProductName>
+        <UnitPrice>23.25</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10733</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>45.6</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10733</OrderID>
+        <ProductName>Filo Mix</ProductName>
+        <UnitPrice>7</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10778</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1996-01-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10778</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10837</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1996-02-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10837</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>6</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10837</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>18.4</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10837</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10837</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10857</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1996-02-28T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10857</OrderID>
+        <ProductName>Aniseed Syrup</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10857</OrderID>
+        <ProductName>Gumbär Gummibärchen</ProductName>
+        <UnitPrice>31.23</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10857</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>123.79</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10866</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1996-03-05T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10866</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>19</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10866</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>4.5</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10866</OrderID>
+        <ProductName>Nord-Ost Matjeshering</ProductName>
+        <UnitPrice>25.89</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10875</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1996-03-08T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10875</OrderID>
+        <ProductName>Teatime Chocolate Biscuits</ProductName>
+        <UnitPrice>9.2</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10875</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10875</OrderID>
+        <ProductName>Maxilaku</ProductName>
+        <UnitPrice>20</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10924</OrderID>
+      <CustomerID>BERGS</CustomerID>
+      <OrderDate>1996-04-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10924</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>31</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10924</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>45.6</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10924</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="BLAUS">
+    <CompanyName>Blauer See Delikatessen</CompanyName>
+    <ContactName>Hanna Moos</ContactName>
+    <City>Mannheim</City>
+    <Country>Germany</Country>
+    <Phone>0621-08460</Phone>
+    <Orders>
+      <OrderID>10501</OrderID>
+      <CustomerID>BLAUS</CustomerID>
+      <OrderDate>1995-05-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10501</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>7.45</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10509</OrderID>
+      <CustomerID>BLAUS</CustomerID>
+      <OrderDate>1995-05-18T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10509</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>45.6</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10582</OrderID>
+      <CustomerID>BLAUS</CustomerID>
+      <OrderDate>1995-07-28T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10582</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>19.5</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10582</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10614</OrderID>
+      <CustomerID>BLAUS</CustomerID>
+      <OrderDate>1995-08-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10614</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10614</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10614</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10853</OrderID>
+      <CustomerID>BLAUS</CustomerID>
+      <OrderDate>1996-02-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10853</OrderID>
+        <ProductName>Carnarvon Tigers</ProductName>
+        <UnitPrice>62.5</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10956</OrderID>
+      <CustomerID>BLAUS</CustomerID>
+      <OrderDate>1996-04-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10956</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10956</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10956</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11058</OrderID>
+      <CustomerID>BLAUS</CustomerID>
+      <OrderDate>1996-05-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11058</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11058</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11058</OrderID>
+        <ProductName>Sirop d'йrable</ProductName>
+        <UnitPrice>28.5</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="BLONP">
+    <CompanyName>Blondesddsl père et fils</CompanyName>
+    <ContactName>Frédérique Citeaux</ContactName>
+    <City>Strasbourg</City>
+    <Country>France</Country>
+    <Phone>88.60.15.31</Phone>
+    <Orders>
+      <OrderID>10265</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1994-08-25T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10265</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>31.2</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10265</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10297</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1994-10-05T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10297</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10297</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>27.8</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10360</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1994-12-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10360</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>36.4</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10360</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>99</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10360</OrderID>
+        <ProductName>Côte de Blaye</ProductName>
+        <UnitPrice>210.8</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10360</OrderID>
+        <ProductName>Maxilaku</ProductName>
+        <UnitPrice>16</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10360</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>5.9</UnitPrice>
+        <Quantity>28</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10436</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1995-03-08T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10436</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>9.6</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10436</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>30.4</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10436</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>26.6</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10436</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>6.2</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10449</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1995-03-21T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10449</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>24.8</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10449</OrderID>
+        <ProductName>Filo Mix</ProductName>
+        <UnitPrice>5.6</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10449</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>39.4</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10559</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1995-07-06T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10559</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10559</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>24</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10566</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1995-07-13T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10566</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10566</OrderID>
+        <ProductName>Carnarvon Tigers</ProductName>
+        <UnitPrice>62.5</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10566</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10584</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1995-07-31T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10584</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10628</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1995-09-12T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10628</OrderID>
+        <ProductName>Chai</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10679</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1995-10-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10679</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>55</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10826</OrderID>
+      <CustomerID>BLONP</CustomerID>
+      <OrderDate>1996-02-12T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10826</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10826</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>19.5</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="BOLID">
+    <CompanyName>Bólido Comidas preparadas</CompanyName>
+    <ContactName>Martín Sommer</ContactName>
+    <City>Madrid</City>
+    <Country>Spain</Country>
+    <Phone>(91) 555 22 82</Phone>
+    <Orders>
+      <OrderID>10326</OrderID>
+      <CustomerID>BOLID</CustomerID>
+      <OrderDate>1994-11-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10326</OrderID>
+        <ProductName>Chef Anton's Cajun Seasoning</ProductName>
+        <UnitPrice>17.6</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10326</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>15.6</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10326</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>6.2</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10801</OrderID>
+      <CustomerID>BOLID</CustomerID>
+      <OrderDate>1996-01-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10801</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>39</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10801</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>123.79</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10970</OrderID>
+      <CustomerID>BOLID</CustomerID>
+      <OrderDate>1996-04-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10970</OrderID>
+        <ProductName>Filo Mix</ProductName>
+        <UnitPrice>7</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="BONAP">
+    <CompanyName>Bon app'</CompanyName>
+    <ContactName>Laurence Lebihan</ContactName>
+    <City>Marseille</City>
+    <Country>France</Country>
+    <Phone>91.24.45.40</Phone>
+    <Orders>
+      <OrderID>10331</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1994-11-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10331</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>5.9</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10340</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1994-11-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10340</OrderID>
+        <ProductName>Carnarvon Tigers</ProductName>
+        <UnitPrice>50</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10340</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>7.7</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10340</OrderID>
+        <ProductName>Ipoh Coffee</ProductName>
+        <UnitPrice>36.8</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10362</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1994-12-26T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10362</OrderID>
+        <ProductName>NuNuCa Nuß-Nougat-Creme</ProductName>
+        <UnitPrice>11.2</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10362</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>42.4</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10362</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>5.9</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10470</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1995-04-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10470</OrderID>
+        <ProductName>Carnarvon Tigers</ProductName>
+        <UnitPrice>50</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10470</OrderID>
+        <ProductName>Tunnbröd</ProductName>
+        <UnitPrice>7.2</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10470</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>26.6</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10511</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1995-05-19T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10511</OrderID>
+        <ProductName>Chef Anton's Cajun Seasoning</ProductName>
+        <UnitPrice>22</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10511</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>30</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10511</OrderID>
+        <ProductName>Northwoods Cranberry Sauce</ProductName>
+        <UnitPrice>40</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10525</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1995-06-02T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10525</OrderID>
+        <ProductName>Inlagd Sill</ProductName>
+        <UnitPrice>19</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10525</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>18.4</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10663</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1995-10-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10663</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>18.4</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10663</OrderID>
+        <ProductName>Singaporean Hokkien Fried Mee</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10663</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10715</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1995-11-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10715</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>31</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10715</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10730</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1995-12-06T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10730</OrderID>
+        <ProductName>Pavlova</ProductName>
+        <UnitPrice>17.45</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10730</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10730</OrderID>
+        <ProductName>Louisiana Fiery Hot Pepper Sauce</ProductName>
+        <UnitPrice>21.05</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10732</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1995-12-07T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10732</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10755</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1995-12-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10755</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10755</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10755</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>19.5</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10755</OrderID>
+        <ProductName>Gudbrandsdalsost</ProductName>
+        <UnitPrice>36</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10827</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1996-02-12T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10827</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>31</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10827</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10871</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1996-03-07T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10871</OrderID>
+        <ProductName>Grandma's Boysenberry Spread</ProductName>
+        <UnitPrice>25</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10871</OrderID>
+        <ProductName>Pavlova</ProductName>
+        <UnitPrice>17.45</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10871</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>39</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10876</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1996-03-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10876</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10876</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>33.25</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10932</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1996-04-05T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10932</OrderID>
+        <ProductName>Pavlova</ProductName>
+        <UnitPrice>17.45</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10932</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10932</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>34.8</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10932</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10940</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1996-04-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10940</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>30</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10940</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>6</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11076</OrderID>
+      <CustomerID>BONAP</CustomerID>
+      <OrderDate>1996-06-05T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11076</OrderID>
+        <ProductName>Grandma's Boysenberry Spread</ProductName>
+        <UnitPrice>25</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11076</OrderID>
+        <ProductName>Tofu</ProductName>
+        <UnitPrice>23.25</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11076</OrderID>
+        <ProductName>Teatime Chocolate Biscuits</ProductName>
+        <UnitPrice>9.2</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="BOTTM">
+    <CompanyName>Bottom-Dollar Markets</CompanyName>
+    <ContactName>Elizabeth Lincoln</ContactName>
+    <City>Tsawassen</City>
+    <Country>Canada</Country>
+    <Phone>(604) 555-4729</Phone>
+    <Orders>
+      <OrderID>10389</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1995-01-20T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10389</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>24.8</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10389</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>19.2</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10389</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>39.4</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10389</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10410</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1995-02-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10410</OrderID>
+        <ProductName>Geitost</ProductName>
+        <UnitPrice>2</UnitPrice>
+        <Quantity>49</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10410</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>44</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10411</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1995-02-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10411</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>7.7</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10411</OrderID>
+        <ProductName>Gula Malacca</ProductName>
+        <UnitPrice>15.5</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10411</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>44</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10431</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1995-03-02T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10431</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>31.2</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10431</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>14.7</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10431</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>7.6</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10492</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1995-05-02T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10492</OrderID>
+        <ProductName>NuNuCa Nuß-Nougat-Creme</ProductName>
+        <UnitPrice>11.2</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10492</OrderID>
+        <ProductName>Singaporean Hokkien Fried Mee</ProductName>
+        <UnitPrice>11.2</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10742</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1995-12-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10742</OrderID>
+        <ProductName>Aniseed Syrup</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10742</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10742</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>34.8</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10918</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1996-04-01T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10918</OrderID>
+        <ProductName>Chai</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10918</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10944</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1996-04-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10944</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10944</OrderID>
+        <ProductName>Gula Malacca</ProductName>
+        <UnitPrice>19.45</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10944</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10949</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1996-04-12T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10949</OrderID>
+        <ProductName>Grandma's Boysenberry Spread</ProductName>
+        <UnitPrice>25</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10949</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>31</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10949</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>39</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10949</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10975</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1996-04-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10975</OrderID>
+        <ProductName>Northwoods Cranberry Sauce</ProductName>
+        <UnitPrice>40</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10975</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10982</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1996-04-26T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10982</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>30</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10982</OrderID>
+        <ProductName>Ipoh Coffee</ProductName>
+        <UnitPrice>46</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11027</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1996-05-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11027</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>4.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11027</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11045</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1996-05-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11045</OrderID>
+        <ProductName>Geitost</ProductName>
+        <UnitPrice>2.5</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11045</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11048</OrderID>
+      <CustomerID>BOTTM</CustomerID>
+      <OrderDate>1996-05-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11048</OrderID>
+        <ProductName>Scottish Longbreads</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>42</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="BSBEV">
+    <CompanyName>B's Beverages</CompanyName>
+    <ContactName>Victoria Ashworth</ContactName>
+    <City>London</City>
+    <Country>UK</Country>
+    <Phone>(171) 555-1212</Phone>
+    <Orders>
+      <OrderID>10289</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1994-09-26T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10289</OrderID>
+        <ProductName>Aniseed Syrup</ProductName>
+        <UnitPrice>8</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10289</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>26.6</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10471</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1995-04-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10471</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>24</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10471</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>30.4</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10484</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1995-04-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10484</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>8</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10484</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>14.7</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10484</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>42.4</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10538</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1995-06-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10538</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>7</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10538</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>34.8</UnitPrice>
+        <Quantity>1</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10539</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1995-06-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10539</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>6</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10539</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10539</OrderID>
+        <ProductName>Geitost</ProductName>
+        <UnitPrice>2.5</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10539</OrderID>
+        <ProductName>Maxilaku</ProductName>
+        <UnitPrice>20</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10578</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1995-07-25T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10578</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10578</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>19.5</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10599</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1995-08-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10599</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10943</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1996-04-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10943</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>6</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10943</OrderID>
+        <ProductName>Gustaf's Knäckebröd</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10943</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10947</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1996-04-12T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10947</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>55</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11023</OrderID>
+      <CustomerID>BSBEV</CustomerID>
+      <OrderDate>1996-05-14T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11023</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>30</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11023</OrderID>
+        <ProductName>Ipoh Coffee</ProductName>
+        <UnitPrice>46</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="CACTU">
+    <CompanyName>Cactus Comidas para llevar</CompanyName>
+    <ContactName>Patricio Simpson</ContactName>
+    <City>Buenos Aires</City>
+    <Country>Argentina</Country>
+    <Phone>(1) 135-5555</Phone>
+    <Orders>
+      <OrderID>10521</OrderID>
+      <CustomerID>CACTU</CustomerID>
+      <OrderDate>1995-05-30T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10521</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10521</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10521</OrderID>
+        <ProductName>Scottish Longbreads</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10782</OrderID>
+      <CustomerID>CACTU</CustomerID>
+      <OrderDate>1996-01-17T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10782</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>1</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10819</OrderID>
+      <CustomerID>CACTU</CustomerID>
+      <OrderDate>1996-02-07T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10819</OrderID>
+        <ProductName>Ipoh Coffee</ProductName>
+        <UnitPrice>46</UnitPrice>
+        <Quantity>7</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10819</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10881</OrderID>
+      <CustomerID>CACTU</CustomerID>
+      <OrderDate>1996-03-13T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10881</OrderID>
+        <ProductName>Röd Kaviar</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10937</OrderID>
+      <CustomerID>CACTU</CustomerID>
+      <OrderDate>1996-04-09T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10937</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>45.6</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10937</OrderID>
+        <ProductName>Sasquatch Ale</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11054</OrderID>
+      <CustomerID>CACTU</CustomerID>
+      <OrderDate>1996-05-28T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11054</OrderID>
+        <ProductName>Geitost</ProductName>
+        <UnitPrice>2.5</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11054</OrderID>
+        <ProductName>Laughing Lumberjack Lager</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="CENTC">
+    <CompanyName>Centro comercial Moctezuma</CompanyName>
+    <ContactName>Francisco Chang</ContactName>
+    <City>México D.F.</City>
+    <Country>Mexico</Country>
+    <Phone>(5) 555-3392</Phone>
+    <Orders>
+      <OrderID>10259</OrderID>
+      <CustomerID>CENTC</CustomerID>
+      <OrderDate>1994-08-18T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10259</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>8</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10259</OrderID>
+        <ProductName>Gravad lax</ProductName>
+        <UnitPrice>20.8</UnitPrice>
+        <Quantity>1</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="CHOPS">
+    <CompanyName>Chop-suey Chinese</CompanyName>
+    <ContactName>Yang Wang</ContactName>
+    <City>Bern</City>
+    <Country>Switzerland</Country>
+    <Phone>0452-076545</Phone>
+    <Orders>
+      <OrderID>10254</OrderID>
+      <CustomerID>CHOPS</CustomerID>
+      <OrderDate>1994-08-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10254</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>3.6</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10254</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>19.2</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10254</OrderID>
+        <ProductName>Longlife Tofu</ProductName>
+        <UnitPrice>8</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10370</OrderID>
+      <CustomerID>CHOPS</CustomerID>
+      <OrderDate>1995-01-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10370</OrderID>
+        <ProductName>Chai</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10370</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>26.6</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10370</OrderID>
+        <ProductName>Longlife Tofu</ProductName>
+        <UnitPrice>8</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10519</OrderID>
+      <CustomerID>CHOPS</CustomerID>
+      <OrderDate>1995-05-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10519</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>31</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10519</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10519</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10731</OrderID>
+      <CustomerID>CHOPS</CustomerID>
+      <OrderDate>1995-12-07T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10731</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10731</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10746</OrderID>
+      <CustomerID>CHOPS</CustomerID>
+      <OrderDate>1995-12-20T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10746</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>6</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10746</OrderID>
+        <ProductName>Singaporean Hokkien Fried Mee</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>28</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10746</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10746</OrderID>
+        <ProductName>Gudbrandsdalsost</ProductName>
+        <UnitPrice>36</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10966</OrderID>
+      <CustomerID>CHOPS</CustomerID>
+      <OrderDate>1996-04-19T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10966</OrderID>
+        <ProductName>Gravad lax</ProductName>
+        <UnitPrice>26</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10966</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10966</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11029</OrderID>
+      <CustomerID>CHOPS</CustomerID>
+      <OrderDate>1996-05-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11029</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11029</OrderID>
+        <ProductName>Vegie-spread</ProductName>
+        <UnitPrice>43.9</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11041</OrderID>
+      <CustomerID>CHOPS</CustomerID>
+      <OrderDate>1996-05-22T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11041</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>19</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11041</OrderID>
+        <ProductName>Vegie-spread</ProductName>
+        <UnitPrice>43.9</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="COMMI">
+    <CompanyName>Comércio Mineiro</CompanyName>
+    <ContactName>Pedro Afonso</ContactName>
+    <City>Sao Paulo</City>
+    <Country>Brazil</Country>
+    <Phone>(11) 555-7647</Phone>
+    <Orders>
+      <OrderID>10290</OrderID>
+      <CustomerID>COMMI</CustomerID>
+      <OrderDate>1994-09-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10290</OrderID>
+        <ProductName>Chef Anton's Gumbo Mix</ProductName>
+        <UnitPrice>17</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10290</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>99</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10290</OrderID>
+        <ProductName>Maxilaku</ProductName>
+        <UnitPrice>16</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10290</OrderID>
+        <ProductName>Original Frankfurter grüne Soße</ProductName>
+        <UnitPrice>10.4</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10466</OrderID>
+      <CustomerID>COMMI</CustomerID>
+      <OrderDate>1995-04-06T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10466</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>16.8</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10466</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>9.6</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10494</OrderID>
+      <CustomerID>COMMI</CustomerID>
+      <OrderDate>1995-05-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10494</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>30.4</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10969</OrderID>
+      <CustomerID>COMMI</CustomerID>
+      <OrderDate>1996-04-22T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10969</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11042</OrderID>
+      <CustomerID>COMMI</CustomerID>
+      <OrderDate>1996-05-22T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11042</OrderID>
+        <ProductName>Gula Malacca</ProductName>
+        <UnitPrice>19.45</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11042</OrderID>
+        <ProductName>Sirop d'йrable</ProductName>
+        <UnitPrice>28.5</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="CONSH">
+    <CompanyName>Consolidated Holdings</CompanyName>
+    <ContactName>Elizabeth Brown</ContactName>
+    <City>London</City>
+    <Country>UK</Country>
+    <Phone>(171) 555-2282</Phone>
+    <Orders>
+      <OrderID>10435</OrderID>
+      <CustomerID>CONSH</CustomerID>
+      <OrderDate>1995-03-07T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10435</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>15.2</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10435</OrderID>
+        <ProductName>Gustaf's Knäckebröd</ProductName>
+        <UnitPrice>16.8</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10435</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>27.8</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10462</OrderID>
+      <CustomerID>CONSH</CustomerID>
+      <OrderDate>1995-04-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10462</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>4.8</UnitPrice>
+        <Quantity>1</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10462</OrderID>
+        <ProductName>Tunnbröd</ProductName>
+        <UnitPrice>7.2</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10848</OrderID>
+      <CustomerID>CONSH</CustomerID>
+      <OrderDate>1996-02-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10848</OrderID>
+        <ProductName>Chef Anton's Gumbo Mix</ProductName>
+        <UnitPrice>21.35</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10848</OrderID>
+        <ProductName>Mishi Kobe Niku</ProductName>
+        <UnitPrice>97</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="DRACD">
+    <CompanyName>Drachenblut Delikatessen</CompanyName>
+    <ContactName>Sven Ottlieb</ContactName>
+    <City>Aachen</City>
+    <Country>Germany</Country>
+    <Phone>0241-039123</Phone>
+    <Orders>
+      <OrderID>10363</OrderID>
+      <CustomerID>DRACD</CustomerID>
+      <OrderDate>1994-12-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10363</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10363</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>6.2</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10363</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10391</OrderID>
+      <CustomerID>DRACD</CustomerID>
+      <OrderDate>1995-01-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10391</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>4.8</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10797</OrderID>
+      <CustomerID>DRACD</CustomerID>
+      <OrderDate>1996-01-25T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10797</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10825</OrderID>
+      <CustomerID>DRACD</CustomerID>
+      <OrderDate>1996-02-09T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10825</OrderID>
+        <ProductName>Gumbär Gummibärchen</ProductName>
+        <UnitPrice>31.23</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10825</OrderID>
+        <ProductName>Perth Pasties</ProductName>
+        <UnitPrice>32.8</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11036</OrderID>
+      <CustomerID>DRACD</CustomerID>
+      <OrderDate>1996-05-20T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11036</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>6</UnitPrice>
+        <Quantity>7</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11036</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>55</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11067</OrderID>
+      <CustomerID>DRACD</CustomerID>
+      <OrderDate>1996-06-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11067</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="DUMON">
+    <CompanyName>Du monde entier</CompanyName>
+    <ContactName>Janine Labrune</ContactName>
+    <City>Nantes</City>
+    <Country>France</Country>
+    <Phone>40.67.88.88</Phone>
+    <Orders>
+      <OrderID>10311</OrderID>
+      <CustomerID>DUMON</CustomerID>
+      <OrderDate>1994-10-21T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10311</OrderID>
+        <ProductName>Singaporean Hokkien Fried Mee</ProductName>
+        <UnitPrice>11.2</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10311</OrderID>
+        <ProductName>Gudbrandsdalsost</ProductName>
+        <UnitPrice>28.8</UnitPrice>
+        <Quantity>7</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10609</OrderID>
+      <CustomerID>DUMON</CustomerID>
+      <OrderDate>1995-08-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10609</OrderID>
+        <ProductName>Chai</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10609</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>31</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10609</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10683</OrderID>
+      <CustomerID>DUMON</CustomerID>
+      <OrderDate>1995-10-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10683</OrderID>
+        <ProductName>Filo Mix</ProductName>
+        <UnitPrice>7</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10890</OrderID>
+      <CustomerID>DUMON</CustomerID>
+      <OrderDate>1996-03-18T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10890</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>39</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10890</OrderID>
+        <ProductName>Sasquatch Ale</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10890</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="EASTC">
+    <CompanyName>Eastern Connection</CompanyName>
+    <ContactName>Ann Devon</ContactName>
+    <City>London</City>
+    <Country>UK</Country>
+    <Phone>(171) 555-0297</Phone>
+    <Orders>
+      <OrderID>10364</OrderID>
+      <CustomerID>EASTC</CustomerID>
+      <OrderDate>1994-12-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10364</OrderID>
+        <ProductName>Gudbrandsdalsost</ProductName>
+        <UnitPrice>28.8</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10364</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>17.2</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10400</OrderID>
+      <CustomerID>EASTC</CustomerID>
+      <OrderDate>1995-02-01T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10400</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>99</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10400</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10400</OrderID>
+        <ProductName>Maxilaku</ProductName>
+        <UnitPrice>16</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10532</OrderID>
+      <CustomerID>EASTC</CustomerID>
+      <OrderDate>1995-06-09T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10532</OrderID>
+        <ProductName>Nord-Ost Matjeshering</ProductName>
+        <UnitPrice>25.89</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10532</OrderID>
+        <ProductName>Louisiana Hot Spiced Okra</ProductName>
+        <UnitPrice>17</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10726</OrderID>
+      <CustomerID>EASTC</CustomerID>
+      <OrderDate>1995-12-04T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10726</OrderID>
+        <ProductName>Chef Anton's Cajun Seasoning</ProductName>
+        <UnitPrice>22</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10726</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10987</OrderID>
+      <CustomerID>EASTC</CustomerID>
+      <OrderDate>1996-04-30T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10987</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>30</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10987</OrderID>
+        <ProductName>Ipoh Coffee</ProductName>
+        <UnitPrice>46</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10987</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>34.8</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11024</OrderID>
+      <CustomerID>EASTC</CustomerID>
+      <OrderDate>1996-05-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11024</OrderID>
+        <ProductName>Gumbär Gummibärchen</ProductName>
+        <UnitPrice>31.23</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11024</OrderID>
+        <ProductName>Geitost</ProductName>
+        <UnitPrice>2.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11024</OrderID>
+        <ProductName>Louisiana Fiery Hot Pepper Sauce</ProductName>
+        <UnitPrice>21.05</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11024</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11047</OrderID>
+      <CustomerID>EASTC</CustomerID>
+      <OrderDate>1996-05-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11047</OrderID>
+        <ProductName>Chai</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11047</OrderID>
+        <ProductName>Chef Anton's Gumbo Mix</ProductName>
+        <UnitPrice>21.35</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11056</OrderID>
+      <CustomerID>EASTC</CustomerID>
+      <OrderDate>1996-05-28T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11056</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>30</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11056</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>24</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11056</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="ERNSH">
+    <CompanyName>Ernst Handel</CompanyName>
+    <ContactName>Roland Mendel</ContactName>
+    <City>Graz</City>
+    <Country>Austria</Country>
+    <Phone>7675-3425</Phone>
+    <Orders>
+      <OrderID>10258</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1994-08-17T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10258</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>15.2</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10258</OrderID>
+        <ProductName>Chef Anton's Gumbo Mix</ProductName>
+        <UnitPrice>17</UnitPrice>
+        <Quantity>65</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10258</OrderID>
+        <ProductName>Mascarpone Fabioli</ProductName>
+        <UnitPrice>25.6</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10263</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1994-08-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10263</OrderID>
+        <ProductName>Pavlova</ProductName>
+        <UnitPrice>13.9</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10263</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>3.6</UnitPrice>
+        <Quantity>28</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10263</OrderID>
+        <ProductName>Nord-Ost Matjeshering</ProductName>
+        <UnitPrice>20.7</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10263</OrderID>
+        <ProductName>Longlife Tofu</ProductName>
+        <UnitPrice>8</UnitPrice>
+        <Quantity>36</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10351</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1994-12-12T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10351</OrderID>
+        <ProductName>Côte de Blaye</ProductName>
+        <UnitPrice>210.8</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10351</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>7.7</UnitPrice>
+        <Quantity>13</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10351</OrderID>
+        <ProductName>Gula Malacca</ProductName>
+        <UnitPrice>15.5</UnitPrice>
+        <Quantity>77</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10351</OrderID>
+        <ProductName>Louisiana Fiery Hot Pepper Sauce</ProductName>
+        <UnitPrice>16.8</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10368</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1994-12-30T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10368</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>8</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10368</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>36.4</UnitPrice>
+        <Quantity>13</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10368</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>15.6</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10368</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>26.6</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10382</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-01-13T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10382</OrderID>
+        <ProductName>Chef Anton's Gumbo Mix</ProductName>
+        <UnitPrice>17</UnitPrice>
+        <Quantity>32</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10382</OrderID>
+        <ProductName>Carnarvon Tigers</ProductName>
+        <UnitPrice>50</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10382</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>99</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10382</OrderID>
+        <ProductName>Geitost</ProductName>
+        <UnitPrice>2</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10382</OrderID>
+        <ProductName>Longlife Tofu</ProductName>
+        <UnitPrice>8</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10390</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-01-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10390</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10390</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10390</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>9.6</UnitPrice>
+        <Quantity>45</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10390</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>27.8</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10402</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-02-02T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10402</OrderID>
+        <ProductName>Tunnbröd</ProductName>
+        <UnitPrice>7.2</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10402</OrderID>
+        <ProductName>Vegie-spread</ProductName>
+        <UnitPrice>35.1</UnitPrice>
+        <Quantity>65</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10403</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-02-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10403</OrderID>
+        <ProductName>Pavlova</ProductName>
+        <UnitPrice>13.9</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10403</OrderID>
+        <ProductName>Chocolade</ProductName>
+        <UnitPrice>10.2</UnitPrice>
+        <Quantity>70</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10430</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-03-02T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10430</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>31.2</UnitPrice>
+        <Quantity>45</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10430</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>8</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10430</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>30.4</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10430</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>44</UnitPrice>
+        <Quantity>70</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10442</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-03-14T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10442</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>16.8</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10442</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>5.9</UnitPrice>
+        <Quantity>80</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10442</OrderID>
+        <ProductName>Louisiana Hot Spiced Okra</ProductName>
+        <UnitPrice>13.6</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10514</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-05-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10514</OrderID>
+        <ProductName>Sir Rodney's Marmalade</ProductName>
+        <UnitPrice>81</UnitPrice>
+        <Quantity>39</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10514</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>45.6</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10514</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>70</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10514</OrderID>
+        <ProductName>Louisiana Fiery Hot Pepper Sauce</ProductName>
+        <UnitPrice>21.05</UnitPrice>
+        <Quantity>39</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10514</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10571</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-07-18T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10571</OrderID>
+        <ProductName>Tofu</ProductName>
+        <UnitPrice>23.25</UnitPrice>
+        <Quantity>11</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10571</OrderID>
+        <ProductName>Singaporean Hokkien Fried Mee</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>28</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10595</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-08-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10595</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10595</OrderID>
+        <ProductName>Sirop d'йrable</ProductName>
+        <UnitPrice>28.5</UnitPrice>
+        <Quantity>120</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10595</OrderID>
+        <ProductName>Gudbrandsdalsost</ProductName>
+        <UnitPrice>36</UnitPrice>
+        <Quantity>65</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10633</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-09-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10633</OrderID>
+        <ProductName>Queso Manchego La Pastora</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>36</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10633</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>6</UnitPrice>
+        <Quantity>13</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10633</OrderID>
+        <ProductName>Gumbär Gummibärchen</ProductName>
+        <UnitPrice>31.23</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10633</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>80</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10667</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-10-13T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10667</OrderID>
+        <ProductName>Gudbrandsdalsost</ProductName>
+        <UnitPrice>36</UnitPrice>
+        <Quantity>45</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10667</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10698</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1995-11-09T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10698</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10698</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>39</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10698</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>123.79</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10698</OrderID>
+        <ProductName>Louisiana Fiery Hot Pepper Sauce</ProductName>
+        <UnitPrice>21.05</UnitPrice>
+        <Quantity>65</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10698</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10764</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-01-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10764</OrderID>
+        <ProductName>Aniseed Syrup</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10764</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>130</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10771</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-01-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10771</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10773</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-01-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10773</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>39</UnitPrice>
+        <Quantity>33</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10773</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>70</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10773</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>7</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10776</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-01-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10776</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10776</OrderID>
+        <ProductName>Singaporean Hokkien Fried Mee</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10776</OrderID>
+        <ProductName>Røgede sild</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>27</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10776</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>120</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10795</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-01-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10795</OrderID>
+        <ProductName>Pavlova</ProductName>
+        <UnitPrice>17.45</UnitPrice>
+        <Quantity>65</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10795</OrderID>
+        <ProductName>Alice Mutton</ProductName>
+        <UnitPrice>39</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10836</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-02-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10836</OrderID>
+        <ProductName>Gustaf's Knäckebröd</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>52</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10836</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10836</OrderID>
+        <ProductName>Ravioli Angelo</ProductName>
+        <UnitPrice>19.5</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10836</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10836</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>33.25</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10854</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-02-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10854</OrderID>
+        <ProductName>Ikura</ProductName>
+        <UnitPrice>31</UnitPrice>
+        <Quantity>100</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10854</OrderID>
+        <ProductName>Konbu</ProductName>
+        <UnitPrice>6</UnitPrice>
+        <Quantity>65</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10895</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-03-20T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10895</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>4.5</UnitPrice>
+        <Quantity>110</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10895</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>45</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10895</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>18.4</UnitPrice>
+        <Quantity>91</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10895</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>100</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10968</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-04-22T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10968</OrderID>
+        <ProductName>Queso Manchego La Pastora</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10968</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>4.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10968</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>33.25</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10979</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-04-25T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10979</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>30</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10979</OrderID>
+        <ProductName>Queso Manchego La Pastora</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10979</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>4.5</UnitPrice>
+        <Quantity>80</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10979</OrderID>
+        <ProductName>Schoggi Schokolade</ProductName>
+        <UnitPrice>43.9</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10979</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10979</OrderID>
+        <ProductName>Vegie-spread</ProductName>
+        <UnitPrice>43.9</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10990</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-05-01T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10990</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>65</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10990</OrderID>
+        <ProductName>Sasquatch Ale</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10990</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>24</UnitPrice>
+        <Quantity>65</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10990</OrderID>
+        <ProductName>Sirop d'йrable</ProductName>
+        <UnitPrice>28.5</UnitPrice>
+        <Quantity>66</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11008</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-05-08T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11008</OrderID>
+        <ProductName>Rössle Sauerkraut</ProductName>
+        <UnitPrice>45.6</UnitPrice>
+        <Quantity>70</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11008</OrderID>
+        <ProductName>Sasquatch Ale</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>90</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11008</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11017</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-05-13T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11017</OrderID>
+        <ProductName>Aniseed Syrup</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11017</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>55</UnitPrice>
+        <Quantity>110</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11017</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11072</OrderID>
+      <CustomerID>ERNSH</CustomerID>
+      <OrderDate>1996-06-04T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11072</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>19</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11072</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11072</OrderID>
+        <ProductName>Valkoinen suklaa</ProductName>
+        <UnitPrice>16.25</UnitPrice>
+        <Quantity>22</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11072</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>33.25</UnitPrice>
+        <Quantity>130</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="FAMIA">
+    <CustomerID>FAMIA</CustomerID>
+    <CompanyName>Familia Arquibaldo</CompanyName>
+    <ContactName>Aria Cruz</ContactName>
+    <City>Sao Paulo</City>
+    <Country>Brazil</Country>
+    <Phone>(11) 555-9857</Phone>
+    <Orders>
+      <OrderID>10347</OrderID>
+      <CustomerID>FAMIA</CustomerID>
+      <OrderDate>1994-12-07T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10347</OrderID>
+        <ProductName>NuNuCa Nuß-Nougat-Creme</ProductName>
+        <UnitPrice>11.2</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10347</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10347</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>14.7</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10347</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>6.2</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10386</OrderID>
+      <CustomerID>FAMIA</CustomerID>
+      <OrderDate>1995-01-18T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10386</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>3.6</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10386</OrderID>
+        <ProductName>Sasquatch Ale</ProductName>
+        <UnitPrice>11.2</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10414</OrderID>
+      <CustomerID>FAMIA</CustomerID>
+      <OrderDate>1995-02-14T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10414</OrderID>
+        <ProductName>Teatime Chocolate Biscuits</ProductName>
+        <UnitPrice>7.3</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10414</OrderID>
+        <ProductName>Geitost</ProductName>
+        <UnitPrice>2</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10512</OrderID>
+      <CustomerID>FAMIA</CustomerID>
+      <OrderDate>1995-05-22T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10512</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>4.5</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10512</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10512</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10512</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10581</OrderID>
+      <CustomerID>FAMIA</CustomerID>
+      <OrderDate>1995-07-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10581</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10650</OrderID>
+      <CustomerID>FAMIA</CustomerID>
+      <OrderDate>1995-09-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10650</OrderID>
+        <ProductName>Nord-Ost Matjeshering</ProductName>
+        <UnitPrice>25.89</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10650</OrderID>
+        <ProductName>Perth Pasties</ProductName>
+        <UnitPrice>32.8</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10650</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>7.45</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10725</OrderID>
+      <CustomerID>FAMIA</CustomerID>
+      <OrderDate>1995-12-01T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10725</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10725</OrderID>
+        <ProductName>Filo Mix</ProductName>
+        <UnitPrice>7</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10725</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>24</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="FISSA">
+    <CompanyName>FISSA Fabrica Inter. Salchichas S.A.</CompanyName>
+    <ContactName>Diego Roel</ContactName>
+    <City>Madrid</City>
+    <Country>Spain</Country>
+    <Phone>(91) 555 94 44</Phone>
+  </Customer>
+  <Customer ID="FOLIG">
+    <CompanyName>Folies gourmandes</CompanyName>
+    <ContactName>Martine Rancй</ContactName>
+    <City>Lille</City>
+    <Country>France</Country>
+    <Phone>20.16.10.16</Phone>
+    <Orders>
+      <OrderID>10408</OrderID>
+      <CustomerID>FOLIG</CustomerID>
+      <OrderDate>1995-02-08T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10408</OrderID>
+        <ProductName>Gravad lax</ProductName>
+        <UnitPrice>20.8</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10408</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>5.9</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10408</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>39.4</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10480</OrderID>
+      <CustomerID>FOLIG</CustomerID>
+      <OrderDate>1995-04-20T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10480</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>7.6</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10480</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>44</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10634</OrderID>
+      <CustomerID>FOLIG</CustomerID>
+      <OrderDate>1995-09-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10634</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>30</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10634</OrderID>
+        <ProductName>Carnarvon Tigers</ProductName>
+        <UnitPrice>62.5</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10634</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10634</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>2</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10763</OrderID>
+      <CustomerID>FOLIG</CustomerID>
+      <OrderDate>1996-01-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10763</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10763</OrderID>
+        <ProductName>Gustaf's Knäckebröd</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10763</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>4.5</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10789</OrderID>
+      <CustomerID>FOLIG</CustomerID>
+      <OrderDate>1996-01-22T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10789</OrderID>
+        <ProductName>Carnarvon Tigers</ProductName>
+        <UnitPrice>62.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10789</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10789</OrderID>
+        <ProductName>Vegie-spread</ProductName>
+        <UnitPrice>43.9</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10789</OrderID>
+        <ProductName>Scottish Longbreads</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="FOLKO">
+    <CompanyName>Folk och fä HB</CompanyName>
+    <ContactName>Maria Larsson</ContactName>
+    <City>Bräcke</City>
+    <Country>Sweden</Country>
+    <Phone>0695-34 67 21</Phone>
+    <Orders>
+      <OrderID>10264</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1994-08-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10264</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>15.2</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10264</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>7.7</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10327</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1994-11-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10327</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>15.2</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10327</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>16.8</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10327</OrderID>
+        <ProductName>Nord-Ost Matjeshering</ProductName>
+        <UnitPrice>20.7</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10327</OrderID>
+        <ProductName>Escargots de Bourgogne</ProductName>
+        <UnitPrice>10.6</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10378</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1995-01-10T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10378</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>17.2</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10434</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1995-03-06T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10434</OrderID>
+        <ProductName>Queso Cabrales</ProductName>
+        <UnitPrice>16.8</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10434</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>18</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10460</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1995-03-31T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10460</OrderID>
+        <ProductName>Scottish Longbreads</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10460</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>6.2</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10533</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1995-06-12T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10533</OrderID>
+        <ProductName>Chef Anton's Cajun Seasoning</ProductName>
+        <UnitPrice>22</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10533</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>34.8</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10533</OrderID>
+        <ProductName>Röd Kaviar</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10561</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1995-07-07T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10561</OrderID>
+        <ProductName>Gula Malacca</ProductName>
+        <UnitPrice>19.45</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10561</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10703</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1995-11-14T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10703</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>19</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10703</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>55</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10703</OrderID>
+        <ProductName>Röd Kaviar</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10762</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-01-02T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10762</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>16</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10762</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10762</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>28</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10762</OrderID>
+        <ProductName>Gnocchi di nonna Alice</ProductName>
+        <UnitPrice>38</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10774</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-01-11T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10774</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>12.5</UnitPrice>
+        <Quantity>2</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10774</OrderID>
+        <ProductName>Louisiana Hot Spiced Okra</ProductName>
+        <UnitPrice>17</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10824</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-02-09T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10824</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10824</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>9</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10880</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-03-12T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10880</OrderID>
+        <ProductName>Tunnbröd</ProductName>
+        <UnitPrice>9</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10880</OrderID>
+        <ProductName>Sirop d'йrable</ProductName>
+        <UnitPrice>28.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10880</OrderID>
+        <ProductName>Outback Lager</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10902</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-03-25T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10902</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>24</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10902</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10955</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-04-16T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10955</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10977</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-04-25T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10977</OrderID>
+        <ProductName>Chartreuse verte</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10977</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10977</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10977</OrderID>
+        <ProductName>Vegie-spread</ProductName>
+        <UnitPrice>43.9</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10980</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-04-26T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10980</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10993</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-05-01T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10993</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>123.79</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10993</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11001</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-05-06T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11001</OrderID>
+        <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+        <UnitPrice>30</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11001</OrderID>
+        <ProductName>Gustaf's Knäckebröd</ProductName>
+        <UnitPrice>21</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11001</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11001</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>24</UnitPrice>
+        <Quantity>6</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11050</OrderID>
+      <CustomerID>FOLKO</CustomerID>
+      <OrderDate>1996-05-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11050</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="FRANK">
+    <CompanyName>Frankenversand</CompanyName>
+    <ContactName>Peter Franken</ContactName>
+    <City>München</City>
+    <Country>Germany</Country>
+    <Phone>089-0877310</Phone>
+    <Orders>
+      <OrderID>10267</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1994-08-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10267</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>14.7</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10267</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>44</UnitPrice>
+        <Quantity>70</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10267</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>14.4</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10337</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1994-11-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10337</OrderID>
+        <ProductName>Tunnbröd</ProductName>
+        <UnitPrice>7.2</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10337</OrderID>
+        <ProductName>Gumbär Gummibärchen</ProductName>
+        <UnitPrice>24.9</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10337</OrderID>
+        <ProductName>Inlagd Sill</ProductName>
+        <UnitPrice>15.2</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10337</OrderID>
+        <ProductName>Gravad lax</ProductName>
+        <UnitPrice>20.8</UnitPrice>
+        <Quantity>28</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10337</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>27.8</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10342</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1994-11-30T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10342</OrderID>
+        <ProductName>Chang</ProductName>
+        <UnitPrice>15.2</UnitPrice>
+        <Quantity>24</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10342</OrderID>
+        <ProductName>Gorgonzola Telino</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>56</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10342</OrderID>
+        <ProductName>Inlagd Sill</ProductName>
+        <UnitPrice>15.2</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10342</OrderID>
+        <ProductName>Pâté chinois</ProductName>
+        <UnitPrice>19.2</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10396</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1995-01-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10396</OrderID>
+        <ProductName>Tunnbröd</ProductName>
+        <UnitPrice>7.2</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10396</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>17.2</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10396</OrderID>
+        <ProductName>Mozzarella di Giovanni</ProductName>
+        <UnitPrice>27.8</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10488</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1995-04-27T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10488</OrderID>
+        <ProductName>Raclette Courdavault</ProductName>
+        <UnitPrice>44</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10488</OrderID>
+        <ProductName>Röd Kaviar</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10560</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1995-07-07T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10560</OrderID>
+        <ProductName>Nord-Ost Matjeshering</ProductName>
+        <UnitPrice>25.89</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10560</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10623</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1995-09-07T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10623</OrderID>
+        <ProductName>Tofu</ProductName>
+        <UnitPrice>23.25</UnitPrice>
+        <Quantity>21</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10623</OrderID>
+        <ProductName>Teatime Chocolate Biscuits</ProductName>
+        <UnitPrice>9.2</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10623</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10623</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>4.5</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10623</OrderID>
+        <ProductName>Steeleye Stout</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10653</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1995-10-03T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10653</OrderID>
+        <ProductName>Pavlova</ProductName>
+        <UnitPrice>17.45</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10653</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10670</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1995-10-17T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10670</OrderID>
+        <ProductName>Tunnbröd</ProductName>
+        <UnitPrice>9</UnitPrice>
+        <Quantity>32</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10670</OrderID>
+        <ProductName>Spegesild</ProductName>
+        <UnitPrice>12</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10670</OrderID>
+        <ProductName>Laughing Lumberjack Lager</ProductName>
+        <UnitPrice>14</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10670</OrderID>
+        <ProductName>Röd Kaviar</ProductName>
+        <UnitPrice>15</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10670</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10675</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1995-10-20T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10675</OrderID>
+        <ProductName>Tofu</ProductName>
+        <UnitPrice>23.25</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10675</OrderID>
+        <ProductName>Perth Pasties</ProductName>
+        <UnitPrice>32.8</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10675</OrderID>
+        <ProductName>Escargots de Bourgogne</ProductName>
+        <UnitPrice>13.25</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10717</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1995-11-24T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10717</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>32</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10717</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>7.45</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10717</OrderID>
+        <ProductName>Gudbrandsdalsost</ProductName>
+        <UnitPrice>36</UnitPrice>
+        <Quantity>25</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10791</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1996-01-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10791</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>123.79</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10791</OrderID>
+        <ProductName>Jack's New England Clam Chowder</ProductName>
+        <UnitPrice>9.65</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10859</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1996-02-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10859</OrderID>
+        <ProductName>Guaraná Fantástica</ProductName>
+        <UnitPrice>4.5</UnitPrice>
+        <Quantity>40</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10859</OrderID>
+        <ProductName>Tourtière</ProductName>
+        <UnitPrice>7.45</UnitPrice>
+        <Quantity>35</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10859</OrderID>
+        <ProductName>Wimmers gute Semmelknödel</ProductName>
+        <UnitPrice>33.25</UnitPrice>
+        <Quantity>30</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10929</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1996-04-04T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10929</OrderID>
+        <ProductName>Sir Rodney's Scones</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10929</OrderID>
+        <ProductName>Rhönbräu Klosterbier</ProductName>
+        <UnitPrice>7.75</UnitPrice>
+        <Quantity>49</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10929</OrderID>
+        <ProductName>Original Frankfurter grüne Soße</ProductName>
+        <UnitPrice>13</UnitPrice>
+        <Quantity>15</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11012</OrderID>
+      <CustomerID>FRANK</CustomerID>
+      <OrderDate>1996-05-09T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11012</OrderID>
+        <ProductName>Teatime Chocolate Biscuits</ProductName>
+        <UnitPrice>9.2</UnitPrice>
+        <Quantity>50</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11012</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>36</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11012</OrderID>
+        <ProductName>Fløtemysost</ProductName>
+        <UnitPrice>21.5</UnitPrice>
+        <Quantity>60</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer ID="FRANR">
+    <CompanyName>France restauration</CompanyName>
+    <ContactName>Carine Schmitt</ContactName>
+    <City>Nantes</City>
+    <Country>France</Country>
+    <Phone>40.32.21.21</Phone>
+    <Orders>
+      <OrderID>10671</OrderID>
+      <CustomerID>FRANR</CustomerID>
+      <OrderDate>1995-10-18T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10671</OrderID>
+        <ProductName>Pavlova</ProductName>
+        <UnitPrice>17.45</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10671</OrderID>
+        <ProductName>Tarte au sucre</ProductName>
+        <UnitPrice>49.3</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10671</OrderID>
+        <ProductName>Louisiana Fiery Hot Pepper Sauce</ProductName>
+        <UnitPrice>21.05</UnitPrice>
+        <Quantity>12</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10860</OrderID>
+      <CustomerID>FRANR</CustomerID>
+      <OrderDate>1996-02-29T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10860</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>3</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10860</OrderID>
+        <ProductName>Lakkalikööri</ProductName>
+        <UnitPrice>18</UnitPrice>
+        <Quantity>20</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10971</OrderID>
+      <CustomerID>FRANR</CustomerID>
+      <OrderDate>1996-04-23T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10971</OrderID>
+        <ProductName>Thüringer Rostbratwurst</ProductName>
+        <UnitPrice>123.79</UnitPrice>
+        <Quantity>14</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+  <Customer IF="FRANS">
+    <CompanyName>Franchi S.p.A.</CompanyName>
+    <ContactName>Paolo Accorti</ContactName>
+    <City>Torino</City>
+    <Country>Italy</Country>
+    <Phone>011-4988260</Phone>
+    <Orders>
+      <OrderID>10422</OrderID>
+      <CustomerID>FRANS</CustomerID>
+      <OrderDate>1995-02-22T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10422</OrderID>
+        <ProductName>Gumbär Gummibärchen</ProductName>
+        <UnitPrice>24.9</UnitPrice>
+        <Quantity>2</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10710</OrderID>
+      <CustomerID>FRANS</CustomerID>
+      <OrderDate>1995-11-20T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10710</OrderID>
+        <ProductName>Teatime Chocolate Biscuits</ProductName>
+        <UnitPrice>9.2</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10710</OrderID>
+        <ProductName>Zaanse koeken</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10753</OrderID>
+      <CustomerID>FRANS</CustomerID>
+      <OrderDate>1995-12-26T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10753</OrderID>
+        <ProductName>Røgede sild</ProductName>
+        <UnitPrice>9.5</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>10753</OrderID>
+        <ProductName>Longlife Tofu</ProductName>
+        <UnitPrice>10</UnitPrice>
+        <Quantity>5</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>10807</OrderID>
+      <CustomerID>FRANS</CustomerID>
+      <OrderDate>1996-01-31T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>10807</OrderID>
+        <ProductName>Boston Crab Meat</ProductName>
+        <UnitPrice>18.4</UnitPrice>
+        <Quantity>1</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11026</OrderID>
+      <CustomerID>FRANS</CustomerID>
+      <OrderDate>1996-05-15T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11026</OrderID>
+        <ProductName>Carnarvon Tigers</ProductName>
+        <UnitPrice>62.5</UnitPrice>
+        <Quantity>8</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11026</OrderID>
+        <ProductName>Manjimup Dried Apples</ProductName>
+        <UnitPrice>53</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+    <Orders>
+      <OrderID>11060</OrderID>
+      <CustomerID>FRANS</CustomerID>
+      <OrderDate>1996-05-30T00:00:00</OrderDate>
+      <OrderDetails>
+        <OrderID>11060</OrderID>
+        <ProductName>Camembert Pierrot</ProductName>
+        <UnitPrice>34</UnitPrice>
+        <Quantity>4</Quantity>
+      </OrderDetails>
+      <OrderDetails>
+        <OrderID>11060</OrderID>
+        <ProductName>Original Frankfurter grüne Soße</ProductName>
+        <UnitPrice>13</UnitPrice>
+        <Quantity>10</Quantity>
+      </OrderDetails>
+    </Orders>
+  </Customer>
+</Customers>

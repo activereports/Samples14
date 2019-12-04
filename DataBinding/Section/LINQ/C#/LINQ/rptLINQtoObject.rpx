@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackStyle="1" BackColor="12648447">
+      <Control Type="AR.Field" Name="TextBox5" Left="630" Top="0" Width="1440" Height="288" Text="ID" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox6" Left="2250" Top="0" Width="1440" Height="288" Text="Name" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox7" Left="3960" Top="0" Width="1440" Height="288" Text="Age" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox8" Left="5760" Top="0" Width="1440" Height="288" Text="City" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="585" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox1" DataField="ID" Left="630" Top="90" Width="1440" Height="288" Text="ID" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox2" DataField="Name" Left="2250" Top="90" Width="1440" Height="288" Text="Name" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox3" DataField="Age" Left="3960" Top="90" Width="1440" Height="288" Text="Age" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+      <Control Type="AR.Field" Name="TextBox4" DataField="city" Left="5760" Top="90" Width="1440" Height="288" Text="city" Style="font-family: Arial Unicode MS; font-size: 12pt" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[	using System.Linq;
+  struct Person
+{
+	public int id;
+	public string name;
+	public int age;
+	public string city;
+}
+
+public void ActiveReport_ReportStart()
+{
+	//To run the report.
+	System.Collections.Generic.List < Person > People = new System.Collections.Generic.List<Person>
+	{
+			new Person{id = 1, name = "Jon Doe", age = 25, city = "New York"},
+			new Person{id = 2, name = "Jane Doe", age = 21, city = "New York"},					
+			new Person{id = 3, name = "Robby", age = 29, city = "Boston"},
+			new Person{id = 4, name = "Mike", age = 30, city = "Denver"},
+			new Person{id = 5, name = "Lily", age = 35, city = "Denver"},
+			new Person{id = 6, name = "Martha", age = 55, city = "Washington"},
+			new Person{id = 7, name = "Harry", age = 22, city = "Washington"},
+			new Person{id = 8, name = "Marshall", age = 29, city = "Chicago"},
+			new Person{id = 9, name = "Temprence", age = 32, city = "Chicago"},
+			new Person{id = 10, name = "Joseph", age = 42, city = "Austin"},
+	};
+
+	// To create a query. To sort in descending order of Age.
+	var data = from p in People
+			orderby p.age descending
+			select new
+				{
+					ID = p.id,
+					Name = p.name,
+					Age = p.age,
+					City = p.city
+					};
+
+	// To combine the data source in the report.
+	rpt.DataSource = data.ToList();
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

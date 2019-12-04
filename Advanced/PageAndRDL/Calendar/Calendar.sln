@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDesignerPro", "TestDesignerPro\TestDesignerPro.csproj", "{29C27B04-B289-4977-9054-BD879C970F92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestViewer", "TestViewer\TestViewer.csproj", "{0E09FCDB-5E8E-479E-BED5-9AE3ADA44F8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarDesigner", "CalendarDesigner\CalendarDesigner.csproj", "{B2EA3EB8-6439-493F-88A2-563A1464CDBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarComponent", "CalendarComponent\CalendarComponent.csproj", "{40126FB0-44EC-4580-AE8F-E10251CC9328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{A6F15189-CD56-4A69-B582-A182F4275FAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29C27B04-B289-4977-9054-BD879C970F92}.Debug|x86.ActiveCfg = Debug|x86
+		{29C27B04-B289-4977-9054-BD879C970F92}.Debug|x86.Build.0 = Debug|x86
+		{29C27B04-B289-4977-9054-BD879C970F92}.Release|x86.ActiveCfg = Release|x86
+		{29C27B04-B289-4977-9054-BD879C970F92}.Release|x86.Build.0 = Release|x86
+		{0E09FCDB-5E8E-479E-BED5-9AE3ADA44F8F}.Debug|x86.ActiveCfg = Debug|x86
+		{0E09FCDB-5E8E-479E-BED5-9AE3ADA44F8F}.Debug|x86.Build.0 = Debug|x86
+		{0E09FCDB-5E8E-479E-BED5-9AE3ADA44F8F}.Release|x86.ActiveCfg = Release|x86
+		{0E09FCDB-5E8E-479E-BED5-9AE3ADA44F8F}.Release|x86.Build.0 = Release|x86
+		{B2EA3EB8-6439-493F-88A2-563A1464CDBB}.Debug|x86.ActiveCfg = Debug|x86
+		{B2EA3EB8-6439-493F-88A2-563A1464CDBB}.Debug|x86.Build.0 = Debug|x86
+		{B2EA3EB8-6439-493F-88A2-563A1464CDBB}.Release|x86.ActiveCfg = Release|x86
+		{B2EA3EB8-6439-493F-88A2-563A1464CDBB}.Release|x86.Build.0 = Release|x86
+		{40126FB0-44EC-4580-AE8F-E10251CC9328}.Debug|x86.ActiveCfg = Debug|x86
+		{40126FB0-44EC-4580-AE8F-E10251CC9328}.Debug|x86.Build.0 = Debug|x86
+		{40126FB0-44EC-4580-AE8F-E10251CC9328}.Release|x86.ActiveCfg = Release|x86
+		{40126FB0-44EC-4580-AE8F-E10251CC9328}.Release|x86.Build.0 = Release|x86
+		{A6F15189-CD56-4A69-B582-A182F4275FAE}.Debug|x86.ActiveCfg = Debug|x86
+		{A6F15189-CD56-4A69-B582-A182F4275FAE}.Debug|x86.Build.0 = Debug|x86
+		{A6F15189-CD56-4A69-B582-A182F4275FAE}.Release|x86.ActiveCfg = Release|x86
+		{A6F15189-CD56-4A69-B582-A182F4275FAE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1365A91-393A-43EC-BAC1-23E01C74B0E3}
+	EndGlobalSection
+EndGlobal

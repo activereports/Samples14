@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="11332.8" DocumentName="IList Sample ActiveReport" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="ReportHeader" Name="ReportHeader" Height="630" BackColor="16777215">
+      <Control Type="AR.Label" Name="Label10" Left="0" Top="0" Width="11664" Height="630.72" Caption="Product Listing for Northwind Traders" Style="background-color: PeachPuff; font-family: Verdana; font-size: 20.25pt; font-weight: bold; text-align: center" />
+    </Section>
+    <Section Type="GroupHeader" Name="GroupHeader1" Height="1530" RepeatStyle="1" BackColor="16777215">
+      <Control Type="AR.Label" Name="Label1" Left="4320" Top="0" Width="810" Height="1530" Caption="Price per Unit" Style="color: IndianRed; font-weight: bold; text-align: right; text-decoration: none; vertical-align: bottom" />
+      <Control Type="AR.Label" Name="Label2" Left="5310" Top="0" Width="270" Height="1530" Caption="Stocked Units" Style="color: IndianRed; font-weight: bold; text-align: left; text-decoration: none; vertical-align: bottom" Angle="900" />
+      <Control Type="AR.Label" Name="Label3" Left="5760" Top="0" Width="270" Height="1530" Caption="Ordered Units" Style="color: IndianRed; font-weight: bold; text-align: left; text-decoration: none; vertical-align: bottom" Angle="900" />
+      <Control Type="AR.Label" Name="Label4" Left="630" Top="1200" Width="3690" Height="330.0001" Caption="Product Name" Style="color: IndianRed; font-weight: bold; text-decoration: none; vertical-align: bottom" />
+      <Control Type="AR.Label" Name="Label5" Left="0" Top="0" Width="270" Height="1530" Caption="Discontinued" Style="color: IndianRed; font-weight: bold; vertical-align: bottom" Angle="900" />
+      <Control Type="AR.Label" Name="Label6" Left="6210" Top="0" Width="270" Height="1530" Caption="Reorder Level" Style="color: IndianRed; font-weight: bold; text-align: left; text-decoration: none; vertical-align: bottom" Angle="900" />
+      <Control Type="AR.Label" Name="Label7" Left="270" Top="0" Width="360" Height="1530" Caption="Product ID" Style="color: IndianRed; font-weight: bold; text-align: center; text-decoration: none; vertical-align: bottom" Angle="900" />
+      <Control Type="AR.Label" Name="Label8" Left="6480" Top="1170" Width="2340" Height="360" Caption="Quantity Per Unit" Style="color: IndianRed; font-weight: bold; text-align: right; text-decoration: none; vertical-align: bottom" />
+      <Control Type="AR.Label" Name="Label9" Left="8820" Top="1170" Width="2448" Height="360" Caption="Comments" Style="color: IndianRed; font-weight: bold; text-align: center; text-decoration: none; vertical-align: bottom" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="270" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.Field" Name="txtProductName" DataField="ProductName" Left="630" Top="0" Width="3690" Height="270" Text="ProductName" />
+      <Control Type="AR.Field" Name="txtUnitPrice" DataField="UnitPrice" Left="4320" Top="0" Width="810" Height="270" Text="$.$$" OutputFormat="$##0.00" Style="text-align: right" />
+      <Control Type="AR.Field" Name="txtUnitsInStock" DataField="UnitsInStock" Left="5130" Top="0" Width="450" Height="270" Text="stk" Style="text-align: right" />
+      <Control Type="AR.Field" Name="txtUnitsOnOrder" DataField="UnitsOnOrder" Left="5580" Top="0" Width="450" Height="270" Text="odr" Style="text-align: right" />
+      <Control Type="AR.CheckBox" Name="cbDiscontinued" DataField="Discontinued" Left="0" Top="0" Width="270" Height="270" Caption="CheckBox1" />
+      <Control Type="AR.Field" Name="txtReorderLevel" DataField="ReorderLevel" Left="6030" Top="0" Width="450" Height="270" Text="rl" Style="text-align: right" />
+      <Control Type="AR.Field" Name="txtProductId" DataField="ProductId" Left="270" Top="0" Width="360" Height="270" Text="#" />
+      <Control Type="AR.Field" Name="txtQuantityPerUnit" DataField="QuantityPerUnit" Left="6480" Top="0" Width="2340" Height="270" Text="Quantity per Unit" Style="font-size: 10pt; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtComments" Left="8820" Top="0" Width="2448" Height="270" Style="font-size: 10pt; text-align: center; vertical-align: middle" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="0" BackColor="16777215" />
+    <Section Type="ReportFooter" Name="ReportFooter" Height="0" BackColor="16777215" />
+  </Sections>
+  <Script><![CDATA[private long _greenBarCounter;
+
+public void Detail_Format()
+{
+	//Green bar effect colors the background of every other row.
+	_greenBarCounter++;
+	if ((_greenBarCounter % 2) == 0)
+	{
+		// Even number rows
+		rpt.Sections["Detail"].BackColor = Color.Transparent;
+	}
+	else
+	{
+		// Odd number rows
+		rpt.Sections["Detail"].BackColor = Color.LightGray;
+	}
+
+	// Reorder Row Coloring - Highlights the products that are to be
+	// re-ordered for a better understanding.
+	// Values for calculating the highlight.
+	int reorderLevel = System.Int32.Parse(this.txtReorderLevel.Text);
+	int unitsInStock = System.Int32.Parse(this.txtUnitsInStock.Text);
+
+	if (unitsInStock < reorderLevel)
+	{
+		// Highlight since the re-stocking level has been met.
+		rpt.Sections["Detail"].BackColor = Color.LightCoral;
+
+		this.txtComments.Text = "Check " + this.txtProductName.Text;
+	}
+	else
+	{
+		//Reset the comments text
+		this.txtComments.Text = "";
+	}
+}
+
+public void ActiveReport_ReportStart()
+{
+	// Assign the productCollection DataLayer object to the report's datasource
+	rpt.Name = "IList Sample ActiveReport";
+}
+
+
+]]></Script>
+  <PageSettings LeftMargin="288" RightMargin="288" TopMargin="720" BottomMargin="648" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" />
+  <Parameters />
+</ActiveReportsLayout>

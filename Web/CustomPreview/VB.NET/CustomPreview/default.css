@@ -1,0 +1,341 @@
+﻿/*******************************
+BODY
+********************************/
+body
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	Xwidth: 100%; /* This causes problems with web controls*/
+	background: #ffffff; 
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+
+/*******************************
+DIV
+********************************/
+div#pagetop
+{
+	position: relative;
+	left: 0px;
+	padding: 0px 0px 0px 0px;
+	border-bottom: 1px solid #999999;
+}
+div#pagetop h1 a:link, div#pagetop h1 a:active, div#pagetop h1 a:visited
+{
+	font-size:larger;
+	color:White;	
+	margin-top: 0em;
+	text-decoration:none;
+	color: White;
+}
+div#pagetop h1 a:hover
+{
+	font-size:larger;
+	
+	margin-top: 0em;
+	text-decoration:underline;
+	color: White;
+}
+div#pagetop h2
+{
+	font-size:small
+}
+div#projectnamebanner
+{
+	background-color: #99ccff;
+}
+div#pagebody
+{
+	padding: 5px 10px 0px 22px; 
+}
+div#pagetitlebanner
+{
+	width: 100%; 
+	padding: 0px 10px 0px 22px; 
+	background-color: #6699CC;/*#99ccff;        */
+	color:white;
+}
+div.popupbubble
+{
+	left: 4px;
+	position: absolute;
+	padding: 0px 8px 5px 26px;
+	z-index: 1;
+	width: 50%;
+	visibility: hidden;
+	border: 1px solid #999999;
+	background: #ffffcc;
+}
+
+
+
+
+/*******************************
+TABLE
+********************************/
+
+table.projectnametable
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	width: 100%;
+	height: 21px; 
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 0px;
+	background-color: #99ccff; 
+	font-size: 100%;
+}
+table.projectnametable td 
+{
+	align: left;
+	margin: 0px 0px 0px 0px;
+	padding: 2px 0px 0px 4px;
+	vertical-align: middle;
+	border-width: 0px
+	border-style: solid;
+	border-color: #999999;
+	background: transparent; 
+	font-style: italic;
+	font-weight: normal;
+}
+table.projectnametable td.button
+{
+	width: 14px;
+	cursor: hand;
+}
+.filtereditemlisttable, table.xmldoctable
+{
+	width: 95%; 
+	margin-top: .6em;
+	margin-bottom: .3em;
+	border-width: 1px 1px 0px 0px;
+	border-style: solid;
+	border-color: #999999;
+	background-color: #999999; 
+	font-size: 100%;
+}
+table.filtereditemlisttable th, table.filtereditemlisttable td, table.xmldoctable th, table.xmldoctable td
+{ 
+	border-style: solid; 
+	border-width: 0px 0px 1px 1px;
+	border-style: solid;
+	border-color: #999999;
+	padding: 4px 6px;
+	text-align: left;
+	vertical-align: top;
+}
+table.filtereditemlisttable th, table.xmldoctable th
+{ 
+	background: #cccccc; 
+	vertical-align: bottom;
+}
+table.filtereditemlisttable td, table.xmldoctable td
+{
+	background: #ffffff;
+	vertical-align: top;
+}
+table.syntaxtable
+{
+	width: 70%; 
+	margin-top: .6em;
+	margin-bottom: .3em;
+	border-width: 1px 1px 0px 0px;
+	border-style: solid;
+	border-color: #999999;
+	background-color: #999999; 
+	font-size: 100%;
+}
+table.syntaxtable th, table.syntaxtable td
+{ 
+	border-style: solid; 
+	border-width: 0px 0px 1px 1px;
+	border-style: solid;
+	border-color: #999999;
+	padding: 4px 6px;
+	text-align: left;
+}
+table.syntaxtable th	
+{ 
+	background: #cccccc; 
+	vertical-align: bottom;
+}
+table.syntaxtable td	
+{
+	background: #ffffff;
+	vertical-align: top;
+}
+
+
+
+
+/*******************************
+CODE
+********************************/
+CODE, p.example, p.sourcecode, table.sourcecode, tr.sourcecode, td.sourcecode
+{
+    FONT-FAMILY: Courier New;
+    FONT-SIZE: 100%;
+}
+
+
+
+/*******************************
+PRE
+********************************/
+
+pre.syntax
+{
+	background: #cccccc;
+	padding: 4px 8px;
+	cursor: text;
+	margin-top: 1em;
+	margin-bottom: 1em; 
+	color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999999;
+}
+PRE.example
+{
+    FONT-FAMILY: Courier New;
+    FONT-SIZE: 100%;
+    COLOR: #000060;
+}
+
+
+/*******************************
+A
+********************************/
+A
+{
+    COLOR : #0000FF
+}
+A:link
+{
+    COLOR : #0000FF
+}
+A:active
+{
+    COLOR : #000080
+}
+A:visited
+{
+    COLOR : #800080
+}
+A:hover
+{
+    COLOR : #FF0000
+}
+
+
+/*******************************
+HEADINGS
+********************************/
+h1, h2, h3, h4
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin-bottom: .4em; 
+	margin-top: 1em;
+	font-weight: bold;
+}
+h1
+{
+	font-size: 120%;
+	margin-top: 0em;
+}
+h2
+{
+	font-size: 130%;
+}
+h3
+{
+	font-size: 115%;
+}
+h4
+{
+	font-size: 100%;
+}
+
+
+/*******************************
+DEFINITIONS AND TERMS
+********************************/
+dl
+{
+	margin-top: 0em; 
+	padding-left: 1px; /* Prevents italic-letter descenders from being cut off */
+}
+dd
+{
+	margin-bottom: 0em;  
+	margin-left: 1.5em; 
+}
+dt
+{
+	margin-top: .5em; 
+	font-weight:bold;
+	
+}
+dd.popupbubble
+{
+	margin-bottom: 0em;  
+	margin-left: -10px; 
+}
+dt.popupbubble
+{
+	margin-top: .5em; 
+	margin-left: -18px; 
+}
+
+
+
+/*******************************
+LISTS
+********************************/
+ol, ul
+{
+	margin: .5em 0em 0em 2em; 
+}
+li
+{
+	margin-bottom: .5em;
+}
+ul p, ol p, dl p
+{
+	margin-left: 0em;
+}
+
+
+/*******************************
+P
+********************************/
+p
+{
+	margin: .5em 0em .5em 0em;
+}
+
+
+
+/*******************************
+MISC
+********************************/
+blockquote.dxOverload
+{
+	margin: .5em 1.5em .5em 1.5em;
+}
+
+.dxH1, .dxH2, .dxH3, .dxH4
+{
+	margin-left: -18px;	
+}
+DIV.content
+{
+	margin: .5em 0em .5em .5em;
+}

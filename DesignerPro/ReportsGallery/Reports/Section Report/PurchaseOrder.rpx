@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="15595.2" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0" culture="en-US">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-style: normal; text-decoration: none; font-weight: normal; color: Black; font-size: 10pt; vertical-align: top; font-family: &quot;Arial&quot;; ddo-char-set: 186" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="groupHeader1" Height="1874.88" DataField="SHIRE_DENPYO.DEN_NO" BackStyle="1" BackColor="14150650">
+      <Control Type="AR.Label" Name="label1" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="0" Top="1298.88" Width="2610.72" Height="576" Caption="Product" Style="font-family: Microsoft Sans Serif; font-weight: bold; text-align: justify; text-justify: auto; vertical-align: middle" PaddingLeft="10" PaddingTop="5" PaddingRight="10" PaddingBottom="5" />
+      <Control Type="AR.Label" Name="label2" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="2610.72" Top="1298.88" Width="1920.96" Height="575.9998" Caption="Product Type" Style="font-family: Microsoft Sans Serif; font-weight: bold; text-align: justify; text-justify: auto; vertical-align: middle" PaddingLeft="10" PaddingTop="5" PaddingRight="10" PaddingBottom="5" />
+      <Control Type="AR.Label" Name="label3" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="4531.68" Top="1298.88" Width="930.2399" Height="575.9999" Caption="Color" Style="font-family: Microsoft Sans Serif; font-weight: bold; text-align: center; text-justify: auto; vertical-align: middle" />
+      <Control Type="AR.Label" Name="label5" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="5461.92" Top="1298.88" Width="974.8804" Height="575.9999" Caption="Size" Style="font-family: Microsoft Sans Serif; font-weight: bold; text-align: center; text-justify: auto; vertical-align: middle" />
+      <Control Type="AR.Label" Name="label7" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="7271.994" Top="1298.88" Width="1336.326" Height="575.9998" Caption="Quantity" Style="font-family: Microsoft Sans Serif; font-weight: bold; text-align: justify; text-justify: auto; vertical-align: middle" PaddingLeft="5" PaddingRight="5" />
+      <Control Type="AR.Label" Name="label10" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="9973.436" Top="1298.88" Width="1380.96" Height="575.9998" Caption="Cost" Style="font-weight: bold; text-align: justify; text-justify: auto; vertical-align: middle" PaddingLeft="10" PaddingTop="5" PaddingRight="10" PaddingBottom="5" />
+      <Control Type="AR.Label" Name="label11" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="11354.4" Top="1298.88" Width="1380.96" Height="575.9998" Caption="Total Cost" Style="font-weight: bold; text-align: justify; text-justify: auto; vertical-align: middle" PaddingLeft="10" PaddingTop="5" PaddingRight="10" PaddingBottom="5" />
+      <Control Type="AR.Label" Name="label12" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="12735.36" Top="1298.88" Width="1380.96" Height="576.0001" Caption="Price" Style="font-weight: bold; text-align: justify; text-justify: auto; vertical-align: middle" PaddingLeft="10" PaddingTop="5" PaddingRight="10" PaddingBottom="5" />
+      <Control Type="AR.Label" Name="label13" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="14116.32" Top="1298.88" Width="1470.24" Height="575.9998" Caption="Total Price" Style="font-weight: bold; text-align: left; text-justify: auto; vertical-align: middle" />
+      <Control Type="AR.Label" Name="label14" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="0" Top="118.08" Width="1800" Height="486.72" Caption="Company" Style="font-family: Arial Unicode MS; font-weight: bold; text-align: center; ddo-char-set: 1; ddo-font-vertical: true" PaddingTop="1" />
+      <Control Type="AR.Label" Name="label15" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="2102.4" Top="118.08" Width="2219.04" Height="486.72" Caption="Store Name" Style="font-family: Arial Unicode MS; font-weight: bold; text-align: center; ddo-char-set: 1" PaddingTop="1" />
+      <Control Type="AR.Label" Name="label17" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="6721.919" Top="118.08" Width="1391.04" Height="498.24" Caption="Product Class" Style="font-family: Arial Unicode MS; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="label20" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="11688.48" Top="95.04" Width="2067.839" Height="493.92" Caption="Supplier" Style="font-weight: bold" PaddingLeft="2" PaddingTop="2" />
+      <Control Type="AR.Field" Name="textBox14" DataField="COMPANY_NM" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="0" Top="604.8" Width="1800" Height="486.72" Text="txtCOMPANY_NM" Style="font-family: Arial Unicode MS; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="textBox15" DataField="SHOP_NM" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="2102.4" Top="604.8" Width="2219.04" Height="486.72" Text="txtSHOP_NM" Style="font-family: Arial Unicode MS; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="textBox16" DataField="COMPANY_CD" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="4440.96" Top="604.8" Width="1726.56" Height="486.7201" Text="txtCOMPANY_CD" Style="font-family: Arial Unicode MS; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="label25" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="6436.794" Top="1298.88" Width="835.1995" Height="575.9998" Caption="Unit" Style="font-family: Microsoft Sans Serif; font-weight: bold; text-align: center; text-justify: auto; vertical-align: middle" />
+      <Control Type="AR.Label" Name="label28" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="4440.96" Top="95.04" Width="1726.56" Height="498.24" Caption="Company Code" Style="font-family: Arial Unicode MS; font-weight: bold; text-align: justify; text-justify: auto; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="textBox18" DataField="DEN_KBN" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="6721.919" Top="604.8" Width="1391.04" Height="486.72" Text="txtDEN_KBN" Style="font-family: Arial Unicode MS; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="textBox21" DataField="TORI_NM" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="11688.48" Top="604.8" Width="2067.84" Height="475.2001" Text="txtTORI_NM" />
+      <Control Type="AR.Label" Name="label16" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="14116.32" Top="106.56" Width="1470.24" Height="498.24" Caption="Date" Style="font-weight: bold; text-align: justify; text-justify: distribute-all-lines; vertical-align: middle" PaddingLeft="5" PaddingRight="5" />
+      <Control Type="AR.Field" Name="textBox22" DataField="Date" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="14116.32" Top="604.8" Width="1470.24" Height="475.2" Text="txtDate" OutputFormat="yyyy/MM/dd" />
+    </Section>
+    <Section Type="Detail" Name="detail" Height="576" RepeatToFill="1" BackStyle="1" BackColor="14804223">
+      <Control Type="AR.Field" Name="textBox1" DataField="PRODUCT_NM" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="0" Top="0" Width="2610.72" Height="576" Text="txtPRODUCT_NM" Style="font-family: Microsoft Sans Serif; vertical-align: middle" />
+      <Control Type="AR.Field" Name="textBox2" DataField="PRODUCT_CD" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="2610.72" Top="0" Width="1920.96" Height="576" Text="txtPRODUCT_CD" Style="font-family: Arial Unicode MS; vertical-align: middle" />
+      <Control Type="AR.Field" Name="textBox7" DataField="QTY" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="7272" Top="0" Width="1336.32" Height="576" Text="txtQTY" Style="font-family: Arial Unicode MS; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="textBox10" DataField="COST" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="9973.44" Top="0" Width="1380.96" Height="576" Text="txtCOST" OutputFormat="#,##0" Style="font-family: Arial Unicode MS; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="textBox12" DataField="SELLING_PRICE" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="12735.36" Top="0" Width="1380.96" Height="576" Text="txtSELLING_PRICE" OutputFormat="#,##0" Style="font-family: Arial Unicode MS; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="textBox3" DataField="COLOR" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="4531.68" Top="0" Width="930.2405" Height="576" Text="txtCOLOR" Style="font-family: Arial Unicode MS; vertical-align: middle" />
+      <Control Type="AR.Field" Name="textBox4" DataField="SIZE" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="5461.92" Top="0" Width="974.8799" Height="576" Text="txtSIZE" Style="font-family: Arial Unicode MS; vertical-align: middle" />
+      <Control Type="AR.Field" Name="textBox5" DataField="UNIT" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="6436.8" Top="0" Width="835.1995" Height="576" Text="txtUNIT" Style="font-family: Arial Unicode MS; text-align: left; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtTotal_COST1" DataField="Total_COST" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="11354.4" Top="0" Width="1380.961" Height="576" Text="txtTotal_COST" OutputFormat="#,##0" Style="font-family: Arial Unicode MS; text-align: right; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtTotal_SELLING_PRICE1" DataField="Total_SELLING_PRICE" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="14116.32" Top="0" Width="1470.24" Height="576" Text="txtTotal_SELLING_PRICE" OutputFormat="#,##0" Style="font-family: Arial Unicode MS; text-align: right; vertical-align: middle" />
+    </Section>
+    <Section Type="GroupFooter" Name="groupFooter1" Height="590.4" BackStyle="1" BackColor="12903679">
+      <Control Type="AR.Label" Name="label21" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="5461.92" Top="0" Width="1810.08" Height="576" Caption="Total Quanitity" Style="font-family: Arial Unicode MS; font-weight: bold; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Label" Name="label22" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="9973.44" Top="0" Width="1380.959" Height="576" Caption="TotaL Cost" Style="font-family: Arial Unicode MS; font-weight: bold; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Label" Name="label23" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="12735.36" Top="0" Width="1380.959" Height="576" Caption="Total Price" Style="font-family: Arial Unicode MS; font-weight: bold; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Field" Name="textBox23" DataField="QTY" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="7272" Top="0" Width="840.9601" Height="576" Text="txtQTY" Style="font-family: Arial Unicode MS; text-align: right; vertical-align: middle" SummaryType="3" SummaryRunning="1" SummaryGroup="groupHeader1" />
+      <Control Type="AR.Field" Name="textBox24" DataField="Total_COST" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="11354.4" Top="0" Width="1380.961" Height="576" Text="txtTotal_COST" OutputFormat="#,##0" Style="font-family: Arial Unicode MS; text-align: right; vertical-align: middle" SummaryType="3" SummaryRunning="1" SummaryGroup="groupHeader1" />
+      <Control Type="AR.Field" Name="textBox25" DataField="Total_SELLING_PRICE" BorderLeftStyle="1" BorderTopStyle="1" BorderRightStyle="1" BorderBottomStyle="1" Left="14116.32" Top="0" Width="1470.24" Height="576" Text="txtTotal_SELLING_PRICE" OutputFormat="#,##0" Style="font-family: Arial Unicode MS; text-align: right; vertical-align: middle" SummaryType="3" SummaryRunning="1" SummaryGroup="groupHeader1" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Shiire.mdb;Persist Security Info=False" SQL="Select * from SHIIRE_REPORT" />
+  </DataSources>
+  <CalculatedFields>
+    <Field Name="Total_COST" Formula="COST * QTY" FieldType="Double" DefaultValue="0" />
+    <Field Name="Total_SELLING_PRICE" Formula="SELLING_PRICE * QTY" FieldType="Double" DefaultValue="0" />
+  </CalculatedFields>
+  <Script><![CDATA[
+
+int i = 0;
+public void detail_Format()
+{
+	if(i % 2 == 0)
+	{
+		this.detail.BackColor = System.Drawing.Color.Azure;	
+	}
+	
+	else
+	{
+		this.detail.BackColor = System.Drawing.Color.Beige;
+	}
+	
+	i++;
+}
+
+
+]]></Script>
+  <PageSettings LeftMargin="432" RightMargin="432" TopMargin="432" BottomMargin="432" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" Orientation="2" />
+  <Parameters />
+</ActiveReportsLayout>

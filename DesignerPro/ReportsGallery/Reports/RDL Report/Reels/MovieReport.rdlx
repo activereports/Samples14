@@ -1,0 +1,582 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MovieReport.rdlx</dd:Name>
+	<PageHeader>
+		<Height>1in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Image Name="ReelsLogo">
+				<Height>1in</Height>
+				<MIMEType>=Theme.Images!Logo.MIMEType</MIMEType>
+				<Sizing>FitProportional</Sizing>
+				<Source>Database</Source>
+				<Style />
+				<Value>=Theme.Images!Logo.ImageData</Value>
+				<Width>1.5in</Width>
+			</Image>
+			<Textbox Name="TextBox1">
+				<CanGrow>true</CanGrow>
+				<Height>0.5in</Height>
+				<Left>3.75in</Left>
+				<Value>Movie Information</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+					<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Width>2.260417in</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+		</ReportItems>
+		<Style />
+	</PageHeader>
+	<Body>
+		<Height>2.5in</Height>
+		<ReportItems>
+			<List Name="MovieList">
+				<DataSetName>MovieDataSet</DataSetName>
+				<Grouping Name="MovieIDGroup">
+					<GroupExpressions>
+						<GroupExpression>=Fields!MovieID.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+				<Height>2.375in</Height>
+				<ReportItems>
+					<Textbox Name="MovieTitle">
+						<CanGrow>true</CanGrow>
+						<Height>0.375in</Height>
+						<Left>0.1770833in</Left>
+						<Value>=Fields!Title.Value</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>16pt</FontSize>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.125in</Top>
+						<Width>4.75in</Width>
+						<ZIndex>9</ZIndex>
+					</Textbox>
+					<Textbox Name="ReleaseYear">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.1875in</Left>
+						<Value>="Released in: " &amp; Fields!YearReleased.Value</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.625in</Top>
+						<Width>1.75in</Width>
+						<ZIndex>8</ZIndex>
+					</Textbox>
+					<Textbox Name="RatingLabel">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.1875in</Left>
+						<Value>User Rating:</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.875in</Top>
+						<Width>1in</Width>
+						<ZIndex>7</ZIndex>
+					</Textbox>
+					<Textbox Name="UserRating">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>1.1875in</Left>
+						<Value>=Fields!UserRating.Value</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<Format>N1</Format>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.875in</Top>
+						<Width>0.25in</Width>
+						<ZIndex>6</ZIndex>
+					</Textbox>
+					<Textbox Name="OutOfTenLabel">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>1.4375in</Left>
+						<Value>out of 10</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.875in</Top>
+						<Width>0.625in</Width>
+						<ZIndex>5</ZIndex>
+					</Textbox>
+					<Textbox Name="MpaaRating">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>3.635417in</Left>
+						<Value>="The MPAA Rated this Film: " &amp; Fields!MPAA.Value</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Right</TextAlign>
+						</Style>
+						<Top>0.625in</Top>
+						<Width>2.375in</Width>
+						<ZIndex>4</ZIndex>
+					</Textbox>
+					<Textbox Name="MovieLength">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>4.635417in</Left>
+						<Value>="Length: " &amp; Fields!Length.Value &amp; " min"</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Right</TextAlign>
+						</Style>
+						<Top>0.875in</Top>
+						<Width>1.375in</Width>
+						<ZIndex>3</ZIndex>
+					</Textbox>
+					<List Name="CrewList">
+						<DataSetName>MovieDataSet</DataSetName>
+						<Grouping Name="CrewTitleIDGroup">
+							<GroupExpressions>
+								<GroupExpression>=Fields!CrewTitleID.Value</GroupExpression>
+							</GroupExpressions>
+						</Grouping>
+						<Height>0.375in</Height>
+						<Left>0.21875in</Left>
+						<ReportItems>
+							<Textbox Name="CrewTitle">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Value>=Fields!CrewTitle.Value &amp; "s"</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Width>0.875in</Width>
+								<ZIndex>1</ZIndex>
+							</Textbox>
+							<List Name="CastNameList">
+								<DataSetName>MovieDataSet</DataSetName>
+								<Grouping Name="MoviePersonIDGroup">
+									<GroupExpressions>
+										<GroupExpression>=Fields!MoviePersonID.Value</GroupExpression>
+									</GroupExpressions>
+								</Grouping>
+								<Height>0.25in</Height>
+								<Left>1in</Left>
+								<ReportItems>
+									<Textbox Name="CrewName">
+										<Action>
+											<Drillthrough>
+												<Parameters>
+													<Parameter Name="FirstLetter">
+														<Value>=Fields!LastName.Value.Substring(0, 1)</Value>
+													</Parameter>
+													<Parameter Name="MoviePersonID">
+														<Value>=Fields!MoviePersonID.Value</Value>
+													</Parameter>
+												</Parameters>
+												<ReportName>Filmography</ReportName>
+											</Drillthrough>
+										</Action>
+										<CanGrow>true</CanGrow>
+										<Height>0.25in</Height>
+										<Left>0.125in</Left>
+										<Value>=Fields!CastName.Value</Value>
+										<Style>
+											<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+											<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+											<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextDecoration>Underline</TextDecoration>
+										</Style>
+										<Width>1.75in</Width>
+										<ZIndex>1</ZIndex>
+									</Textbox>
+									<Textbox Name="CrewBullet">
+										<CanGrow>true</CanGrow>
+										<Height>0.25in</Height>
+										<Value>•</Value>
+										<Style>
+											<FontSize>12pt</FontSize>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+										</Style>
+										<Width>0.125in</Width>
+									</Textbox>
+								</ReportItems>
+								<Style />
+								<Width>1.875in</Width>
+							</List>
+						</ReportItems>
+						<Style>
+							<BackgroundColor>=Theme.Colors(1,2)</BackgroundColor>
+							<BorderColor>
+								<Default>=Theme.Colors(0,2)</Default>
+							</BorderColor>
+							<BorderStyle>
+								<Default>Solid</Default>
+							</BorderStyle>
+						</Style>
+						<Top>1.875in</Top>
+						<Width>3.125in</Width>
+						<ZIndex>2</ZIndex>
+					</List>
+					<List Name="GenreList">
+						<DataSetName>MovieDataSet</DataSetName>
+						<Grouping Name="GenreIDGroup">
+							<GroupExpressions>
+								<GroupExpression>=Fields!GenreID.Value</GroupExpression>
+							</GroupExpressions>
+						</Grouping>
+						<Height>0.25in</Height>
+						<Left>0.6875in</Left>
+						<ReportItems>
+							<Textbox Name="GenreName">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Left>0.125in</Left>
+								<Value>=Fields!GenreName.Value</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Width>1.25in</Width>
+								<ZIndex>1</ZIndex>
+							</Textbox>
+							<Textbox Name="GenreBullet">
+								<CanGrow>true</CanGrow>
+								<Height>0.25in</Height>
+								<Value>•</Value>
+								<Style>
+									<FontSize>12pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Width>0.125in</Width>
+							</Textbox>
+						</ReportItems>
+						<Style />
+						<Top>1.25in</Top>
+						<Width>1.5in</Width>
+						<ZIndex>1</ZIndex>
+					</List>
+					<Textbox Name="GenreLabel">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.1875in</Left>
+						<Value>Genre:</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>1.25in</Top>
+						<Width>0.5in</Width>
+					</Textbox>
+				</ReportItems>
+				<Style />
+				<Width>6.010417in</Width>
+			</List>
+		</ReportItems>
+		<Style />
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>6.010417in</Width>
+	<ConsumeContainerWhitespace>True</ConsumeContainerWhitespace>
+	<ReportParameters>
+		<ReportParameter Name="FirstLetter">
+			<DataType>String</DataType>
+			<Prompt>Movie starts with</Prompt>
+			<ValidValues>
+				<ParameterValues>
+					<ParameterValue>
+						<Label>A</Label>
+						<Value>A</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>B</Label>
+						<Value>B</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>C</Label>
+						<Value>C</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>D</Label>
+						<Value>D</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>E</Label>
+						<Value>E</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>F</Label>
+						<Value>F</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>G</Label>
+						<Value>G</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>H</Label>
+						<Value>H</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>I</Label>
+						<Value>I</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>J</Label>
+						<Value>J</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>K</Label>
+						<Value>K</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>L</Label>
+						<Value>L</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>M</Label>
+						<Value>M</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>N</Label>
+						<Value>N</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>O</Label>
+						<Value>O</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>P</Label>
+						<Value>P</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>Q</Label>
+						<Value>Q</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>R</Label>
+						<Value>R</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>S</Label>
+						<Value>S</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>T</Label>
+						<Value>T</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>U</Label>
+						<Value>U</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>V</Label>
+						<Value>V</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>W</Label>
+						<Value>W</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>X</Label>
+						<Value>X</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>Y</Label>
+						<Value>Y</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>Z</Label>
+						<Value>Z</Value>
+					</ParameterValue>
+				</ParameterValues>
+			</ValidValues>
+		</ReportParameter>
+		<ReportParameter Name="MovieID">
+			<DataType>Integer</DataType>
+			<Prompt>Movie</Prompt>
+			<ValidValues>
+				<DataSetReference>
+					<DataSetName>MovieListDataSet</DataSetName>
+					<LabelField>Title</LabelField>
+					<ValueField>MovieID</ValueField>
+				</DataSetReference>
+			</ValidValues>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="ReelsDataSource">
+			<ConnectionProperties>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Reels.mdb</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="MovieDataSet">
+			<Fields>
+				<Field Name="MovieID">
+					<DataField>MovieID</DataField>
+				</Field>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="Length">
+					<DataField>Length</DataField>
+				</Field>
+				<Field Name="YearReleased">
+					<DataField>YearReleased</DataField>
+				</Field>
+				<Field Name="UserRating">
+					<DataField>UserRating</DataField>
+				</Field>
+				<Field Name="MPAA">
+					<DataField>MPAA</DataField>
+				</Field>
+				<Field Name="Image">
+					<DataField>Image</DataField>
+				</Field>
+				<Field Name="MoviePersonID">
+					<DataField>MoviePersonID</DataField>
+				</Field>
+				<Field Name="CastName">
+					<DataField>CastName</DataField>
+				</Field>
+				<Field Name="LastName">
+					<DataField>LastName</DataField>
+				</Field>
+				<Field Name="CrewTitleID">
+					<DataField>CrewTitleID</DataField>
+				</Field>
+				<Field Name="CrewTitle">
+					<DataField>CrewTitle</DataField>
+				</Field>
+				<Field Name="GenreID">
+					<DataField>GenreID</DataField>
+				</Field>
+				<Field Name="GenreName">
+					<DataField>GenreName</DataField>
+				</Field>
+				<Field Name="ProductionID">
+					<DataField>ProductionID</DataField>
+				</Field>
+				<Field Name="Name">
+					<DataField>Name</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT Movie.MovieID, Movie.Title, Movie.Length, Movie.YearReleased, Movie.UserRating, Movie.MPAA, Movie.Image, MoviePerson.MoviePersonID, [MoviePerson].[FirstName]+" "+[MoviePerson].[LastName] AS CastName, MoviePerson.LastName, CrewTitle.CrewTitleID, CrewTitle.Title AS CrewTitle, Genre.GenreID, Genre.GenreName, Producers.ProductionID, Producers.Name
+FROM (CrewTitle INNER JOIN ((Genre INNER JOIN (Movie INNER JOIN MovieGenres ON Movie.MovieID = MovieGenres.MovieID) ON Genre.GenreID = MovieGenres.GenreID) INNER JOIN (MoviePerson INNER JOIN MovieCrew ON MoviePerson.MoviePersonID = MovieCrew.CastID) ON Movie.MovieID = MovieCrew.MovieID) ON CrewTitle.CrewTitleID = MovieCrew.TitleID) INNER JOIN (Producers INNER JOIN MovieProducers ON Producers.ProductionID = MovieProducers.ProductionID) ON Movie.MovieID = MovieProducers.MovieID
+WHERE Movie.MovieID = ?
+ORDER BY Movie.MovieID, MoviePerson.MoviePersonID, CrewTitle.CrewTitleID, Genre.GenreID, Producers.ProductionID;</CommandText>
+				<DataSourceName>ReelsDataSource</DataSourceName>
+				<QueryParameters>
+					<QueryParameter Name="MovieID">
+						<Value>=Parameters!MovieID.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+			</Query>
+		</DataSet>
+		<DataSet Name="MovieListDataSet">
+			<Fields>
+				<Field Name="MovieID">
+					<DataField>MovieID</DataField>
+				</Field>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT Movie.MovieID, Movie.Title
+FROM Movie
+WHERE Movie.Title LIKE (? + "%")
+ORDER BY Movie.Title ASC</CommandText>
+				<DataSourceName>ReelsDataSource</DataSourceName>
+				<QueryParameters>
+					<QueryParameter Name="FirstLetter">
+						<Value>=Parameters!FirstLetter.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>Theme</Name>
+			<Value>Reels.rdlx-theme</Value>
+		</CustomProperty>
+	</CustomProperties>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Reels.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

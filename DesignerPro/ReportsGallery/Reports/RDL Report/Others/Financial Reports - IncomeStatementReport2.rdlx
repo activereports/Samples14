@@ -1,0 +1,1965 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Financial Reports - IncomeStatementReport2.rdlx</dd:Name>
+	<Body>
+		<Height>7.895833in</Height>
+		<ReportItems>
+			<Shape Name="Shape1">
+				<Height>0.7396in</Height>
+				<Left>0.1458333in</Left>
+				<Style>
+					<BackgroundColor>#f1f1f1</BackgroundColor>
+					<BorderStyle>
+						<Default>Solid</Default>
+					</BorderStyle>
+				</Style>
+				<Top>0.1354167in</Top>
+				<Width>7.7083in</Width>
+				<dd:ShapeStyle xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Rectangle</dd:ShapeStyle>
+			</Shape>
+			<Textbox Name="TextBox1">
+				<CanGrow>true</CanGrow>
+				<Height>0.3854in</Height>
+				<Left>0.2291667in</Left>
+				<Value>Income Statement</Value>
+				<Style>
+					<Color>#5b2664</Color>
+					<FontFamily>Arial</FontFamily>
+					<FontSize>22pt</FontSize>
+					<FontStyle>Normal</FontStyle>
+					<FontWeight>400</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.28125in</Top>
+				<Width>2.5729in</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+			<Image Name="Image1">
+				<Height>0.6042in</Height>
+				<Left>5.010417in</Left>
+				<Sizing>Fit</Sizing>
+				<Source>Embedded</Source>
+				<Top>0.2083333in</Top>
+				<Value>AcmeLogo-vertical-500px</Value>
+				<Width>2.7604in</Width>
+				<ZIndex>2</ZIndex>
+			</Image>
+			<Table Name="Table1">
+				<DataSetName>DataSet1</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.322918in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox6">
+											<CanGrow>true</CanGrow>
+											<Value>Sales</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox8">
+											<CanGrow>true</CanGrow>
+											<Value>Current Period</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox15">
+											<CanGrow>true</CanGrow>
+											<Value>Year To Date</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox9">
+											<CanGrow>true</CanGrow>
+											<Value>  Product A</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox11">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['CurrentPeriod_Sales_ProductA']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox16">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['YearToDate_Sales_ProductA']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox18">
+											<CanGrow>true</CanGrow>
+											<Value>  Product B</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox20">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['CurrentPeriod_Sales_ProductB']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox21">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['YearToDate_Sales_ProductB']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox22">
+											<CanGrow>true</CanGrow>
+											<Value>  Frieght Income</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox24">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['CurrentPeriod_Sales_FreightIncome']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox25">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['YearToDate_Sales_FreightIncome']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Footer>
+					<TableRows>
+						<TableRow>
+							<Height>0.406254in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox12">
+											<CanGrow>true</CanGrow>
+											<Value>Total Sales</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>18pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox14">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['CurrentPeriod_Sales_TotalSales']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox17">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['YearToDate_Sales_TotalSales']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Footer>
+				<Height>1.479172in</Height>
+				<Left>0.2291667in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>3.625in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>2.156256in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.843759in</Width>
+					</TableColumn>
+				</TableColumns>
+				<Top>1.166667in</Top>
+				<Width>7.625015in</Width>
+				<ZIndex>7</ZIndex>
+			</Table>
+			<Table Name="Table2">
+				<DataSetName>DataSet1</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.322918in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox2">
+											<CanGrow>true</CanGrow>
+											<Value>Cost Of Sales</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox4">
+											<CanGrow>true</CanGrow>
+											<Value>Current Period</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox5">
+											<CanGrow>true</CanGrow>
+											<Value>Year To Date</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox26">
+											<CanGrow>true</CanGrow>
+											<Value>  Product A</Value>
+											<Style>
+												<FontSize>14pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox28">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['CurrentPeriod_CostOfSales_ProductA']").Value</Value>
+											<Style>
+												<FontSize>14pt</FontSize>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox29">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['YearToDate_CostOfSales_ProductA']").Value</Value>
+											<Style>
+												<FontSize>14pt</FontSize>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox30">
+											<CanGrow>true</CanGrow>
+											<Value>  Product B</Value>
+											<Style>
+												<FontSize>14pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox32">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['CurrentPeriod_CostOfSales_ProductB']").Value</Value>
+											<Style>
+												<FontSize>14pt</FontSize>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox33">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['YearToDate_CostOfSales_ProductB']").Value</Value>
+											<Style>
+												<FontSize>14pt</FontSize>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox34">
+											<CanGrow>true</CanGrow>
+											<Value>  COS Adjustments</Value>
+											<Style>
+												<FontSize>14pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox36">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['CurrentPeriod_CostOfSales_COSIncome']").Value</Value>
+											<Style>
+												<FontSize>14pt</FontSize>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox37">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['YearToDate_CostOfSales_COSIncome']").Value</Value>
+											<Style>
+												<FontSize>14pt</FontSize>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Footer>
+					<TableRows>
+						<TableRow>
+							<Height>0.406254in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox38">
+											<CanGrow>true</CanGrow>
+											<Value>Total Cost of Sales</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>18pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox40">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['CurrentPeriod_CostOfSales_TotalCostOfSales']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox41">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['YearToDate_CostOfSales_TotalCostOfSales']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Footer>
+				<Height>1.479172in</Height>
+				<Left>0.2291667in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>3.625in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>2.156256in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.843759in</Width>
+					</TableColumn>
+				</TableColumns>
+				<Top>2.822917in</Top>
+				<Width>7.625015in</Width>
+				<ZIndex>7</ZIndex>
+			</Table>
+			<Table Name="Table3">
+				<DataSetName>DataSet1</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.322918in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox42">
+											<CanGrow>true</CanGrow>
+											<Value>Gross Profit</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox44">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['CurrentPeriod_GrossProfit']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox45">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['YearToDate_GrossProfit']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Height>0.322918in</Height>
+				<Left>0.2291667in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>3.625in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>2.156256in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.843759in</Width>
+					</TableColumn>
+				</TableColumns>
+				<Top>4.416667in</Top>
+				<Width>7.625015in</Width>
+				<ZIndex>7</ZIndex>
+			</Table>
+			<Table Name="Table4">
+				<DataSetName>DataSet1</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.322918in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox46">
+											<CanGrow>true</CanGrow>
+											<Value>Expenses</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox48">
+											<CanGrow>true</CanGrow>
+											<Value>Current Period</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox49">
+											<CanGrow>true</CanGrow>
+											<Value>Year To Date</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox50">
+											<CanGrow>true</CanGrow>
+											<Value>  Selling Expenses</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox52">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['CurrentPeriod_Expenses_SellingExpenses']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox53">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['YearToDate_Expenses_SellingExpenses']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox54">
+											<CanGrow>true</CanGrow>
+											<Value>  Overhead Expenses</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox56">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['CurrentPeriod_Expenses_OverheadExpenses']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox57">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['YearToDate_Expenses_OverheadExpenses']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox58">
+											<CanGrow>true</CanGrow>
+											<Value>  Administrative Expenses</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox60">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['CurrentPeriod_Expenses_AdministrativeExpenses']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox61">
+											<CanGrow>true</CanGrow>
+											<Value>=Fields.Item("['YearToDate_Expenses_AdministrativeExpenses']").Value</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Footer>
+					<TableRows>
+						<TableRow>
+							<Height>0.406254in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox62">
+											<CanGrow>true</CanGrow>
+											<Value>Total Cost of Sales</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>18pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox64">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['CurrentPeriod_Expenses_TotalExpenses']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox65">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['YearToDate_Expenses_TotalExpenses']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Footer>
+				<Height>1.479172in</Height>
+				<Left>0.2291667in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>3.625in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>2.156256in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.843759in</Width>
+					</TableColumn>
+				</TableColumns>
+				<Top>4.864583in</Top>
+				<Width>7.625015in</Width>
+				<ZIndex>7</ZIndex>
+			</Table>
+			<Table Name="Table5">
+				<DataSetName>DataSet1</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.322918in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox66">
+											<CanGrow>true</CanGrow>
+											<Value>Net Profit</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontSize>18pt</FontSize>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox68">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['CurrentPeriod_NetProfit']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox69">
+											<CanGrow>true</CanGrow>
+											<Value>=Sum(Fields.Item("['YearToDate_NetProfit']").Value)</Value>
+											<Style>
+												<BackgroundColor>#f1f1f1</BackgroundColor>
+												<Color>#5b2664</Color>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>400</FontWeight>
+												<Format>$#,##0.00</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Right</TextAlign>
+												<BorderColor>
+													<Default>LightGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Height>0.322918in</Height>
+				<Left>0.2291667in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>3.625in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>2.156256in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.843759in</Width>
+					</TableColumn>
+				</TableColumns>
+				<Top>6.510417in</Top>
+				<Width>7.625015in</Width>
+				<ZIndex>7</ZIndex>
+			</Table>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<PageHeight>10in</PageHeight>
+	<PageWidth>10in</PageWidth>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>9.916667in</Width>
+	<EmbeddedImages>
+		<EmbeddedImage Name="AcmeLogo-vertical-500px">
+			<ImageData>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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>jsondata={
+	"IncomeStatementSummary":[{
+        "CurrentPeriod_Sales_ProductA":4978.88,
+        "CurrentPeriod_Sales_ProductB":6641.22,
+        "CurrentPeriod_Sales_FreightIncome":242.00,
+        "CurrentPeriod_Sales_TotalSales":11862.10,
+        "CurrentPeriod_CostOfSales_ProductA":1728.00,
+        "CurrentPeriod_CostOfSales_ProductB":2328.00,
+        "CurrentPeriod_CostOfSales_COSIncome":152.12,
+        "CurrentPeriod_CostOfSales_TotalCostOfSales":4211.12,
+        "CurrentPeriod_GrossProfit":7650.98,
+        "CurrentPeriod_Expenses_SellingExpenses":1240.75,
+        "CurrentPeriod_Expenses_OverheadExpenses":529.25,
+        "CurrentPeriod_Expenses_AdministrativeExpenses":2857.37,
+        "CurrentPeriod_Expenses_TotalExpenses":4627.37,
+        "CurrentPeriod_NetProfit":3023.61,
+        "YearToDate_Sales_ProductA":8237.39,
+        "YearToDate_Sales_ProductB":8892.82,
+        "YearToDate_Sales_FreightIncome":466.80,
+        "YearToDate_Sales_TotalSales":17597.01,
+        "YearToDate_CostOfSales_ProductA":3024.00,
+        "YearToDate_CostOfSales_ProductB":3301.00,
+        "YearToDate_CostOfSales_COSIncome":155.12,
+        "YearToDate_CostOfSales_TotalCostOfSales":6480.12,
+        "YearToDate_GrossProfit":11116.89,
+        "YearToDate_Expenses_SellingExpenses":2210.60,
+        "YearToDate_Expenses_OverheadExpenses":1344.02,
+        "YearToDate_Expenses_AdministrativeExpenses":3971.37,
+        "YearToDate_Expenses_TotalExpenses":7525.99,
+        "YearToDate_NetProfit":3590.90
+    }]
+    
+};schemadata={
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "properties": {
+      "IncomeStatementSummary": {
+        "$id": "/properties/IncomeStatementSummary",
+        "type": "array",
+        "items": {
+          "$id": "/properties/IncomeStatementSummary/items",
+          "type": "object",
+          "properties": {
+            "CurrentPeriod_Sales_ProductA": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_Sales_ProductA",
+              "type": "number",
+              "title": "The Currentperiod_sales_producta Schema ",
+              "default": 0,
+              "examples": [
+                4978.8798828125
+              ]
+            },
+            "CurrentPeriod_Sales_ProductB": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_Sales_ProductB",
+              "type": "number",
+              "title": "The Currentperiod_sales_productb Schema ",
+              "default": 0,
+              "examples": [
+                6641.22021484375
+              ]
+            },
+            "CurrentPeriod_Sales_FreightIncome": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_Sales_FreightIncome",
+              "type": "integer",
+              "title": "The Currentperiod_sales_freightincome Schema ",
+              "default": 0,
+              "examples": [
+                242
+              ]
+            },
+            "CurrentPeriod_Sales_TotalSales": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_Sales_TotalSales",
+              "type": "number",
+              "title": "The Currentperiod_sales_totalsales Schema ",
+              "default": 0,
+              "examples": [
+                11862.099609375
+              ]
+            },
+            "CurrentPeriod_CostOfSales_ProductA": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_CostOfSales_ProductA",
+              "type": "integer",
+              "title": "The Currentperiod_costofsales_producta Schema ",
+              "default": 0,
+              "examples": [
+                1728
+              ]
+            },
+            "CurrentPeriod_CostOfSales_ProductB": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_CostOfSales_ProductB",
+              "type": "integer",
+              "title": "The Currentperiod_costofsales_productb Schema ",
+              "default": 0,
+              "examples": [
+                2328
+              ]
+            },
+            "CurrentPeriod_CostOfSales_COSIncome": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_CostOfSales_COSIncome",
+              "type": "number",
+              "title": "The Currentperiod_costofsales_cosincome Schema ",
+              "default": 0,
+              "examples": [
+                152.1199951171875
+              ]
+            },
+            "CurrentPeriod_CostOfSales_TotalCostOfSales": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_CostOfSales_TotalCostOfSales",
+              "type": "number",
+              "title": "The Currentperiod_costofsales_totalcostofsales Schema ",
+              "default": 0,
+              "examples": [
+                4211.1201171875
+              ]
+            },
+            "CurrentPeriod_GrossProfit": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_GrossProfit",
+              "type": "number",
+              "title": "The Currentperiod_grossprofit Schema ",
+              "default": 0,
+              "examples": [
+                7650.97998046875
+              ]
+            },
+            "CurrentPeriod_Expenses_SellingExpenses": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_Expenses_SellingExpenses",
+              "type": "number",
+              "title": "The Currentperiod_expenses_sellingexpenses Schema ",
+              "default": 0,
+              "examples": [
+                1240.75
+              ]
+            },
+            "CurrentPeriod_Expenses_OverheadExpenses": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_Expenses_OverheadExpenses",
+              "type": "number",
+              "title": "The Currentperiod_expenses_overheadexpenses Schema ",
+              "default": 0,
+              "examples": [
+                529.25
+              ]
+            },
+            "CurrentPeriod_Expenses_AdministrativeExpenses": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_Expenses_AdministrativeExpenses",
+              "type": "number",
+              "title": "The Currentperiod_expenses_administrativeexpenses Schema ",
+              "default": 0,
+              "examples": [
+                2857.3701171875
+              ]
+            },
+            "CurrentPeriod_Expenses_TotalExpenses": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_Expenses_TotalExpenses",
+              "type": "number",
+              "title": "The Currentperiod_expenses_totalexpenses Schema ",
+              "default": 0,
+              "examples": [
+                4627.3701171875
+              ]
+            },
+            "CurrentPeriod_NetProfit": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/CurrentPeriod_NetProfit",
+              "type": "number",
+              "title": "The Currentperiod_netprofit Schema ",
+              "default": 0,
+              "examples": [
+                3023.610107421875
+              ]
+            },
+            "YearToDate_Sales_ProductA": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_Sales_ProductA",
+              "type": "number",
+              "title": "The Yeartodate_sales_producta Schema ",
+              "default": 0,
+              "examples": [
+                8237.3896484375
+              ]
+            },
+            "YearToDate_Sales_ProductB": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_Sales_ProductB",
+              "type": "number",
+              "title": "The Yeartodate_sales_productb Schema ",
+              "default": 0,
+              "examples": [
+                8892.8203125
+              ]
+            },
+            "YearToDate_Sales_FreightIncome": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_Sales_FreightIncome",
+              "type": "number",
+              "title": "The Yeartodate_sales_freightincome Schema ",
+              "default": 0,
+              "examples": [
+                466.79998779296875
+              ]
+            },
+            "YearToDate_Sales_TotalSales": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_Sales_TotalSales",
+              "type": "number",
+              "title": "The Yeartodate_sales_totalsales Schema ",
+              "default": 0,
+              "examples": [
+                17597.009765625
+              ]
+            },
+            "YearToDate_CostOfSales_ProductA": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_CostOfSales_ProductA",
+              "type": "integer",
+              "title": "The Yeartodate_costofsales_producta Schema ",
+              "default": 0,
+              "examples": [
+                3024
+              ]
+            },
+            "YearToDate_CostOfSales_ProductB": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_CostOfSales_ProductB",
+              "type": "integer",
+              "title": "The Yeartodate_costofsales_productb Schema ",
+              "default": 0,
+              "examples": [
+                3301
+              ]
+            },
+            "YearToDate_CostOfSales_COSIncome": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_CostOfSales_COSIncome",
+              "type": "number",
+              "title": "The Yeartodate_costofsales_cosincome Schema ",
+              "default": 0,
+              "examples": [
+                155.1199951171875
+              ]
+            },
+            "YearToDate_CostOfSales_TotalCostOfSales": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_CostOfSales_TotalCostOfSales",
+              "type": "number",
+              "title": "The Yeartodate_costofsales_totalcostofsales Schema ",
+              "default": 0,
+              "examples": [
+                6480.1201171875
+              ]
+            },
+            "YearToDate_GrossProfit": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_GrossProfit",
+              "type": "number",
+              "title": "The Yeartodate_grossprofit Schema ",
+              "default": 0,
+              "examples": [
+                11116.8896484375
+              ]
+            },
+            "YearToDate_Expenses_SellingExpenses": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_Expenses_SellingExpenses",
+              "type": "number",
+              "title": "The Yeartodate_expenses_sellingexpenses Schema ",
+              "default": 0,
+              "examples": [
+                2210.60009765625
+              ]
+            },
+            "YearToDate_Expenses_OverheadExpenses": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_Expenses_OverheadExpenses",
+              "type": "number",
+              "title": "The Yeartodate_expenses_overheadexpenses Schema ",
+              "default": 0,
+              "examples": [
+                1344.02001953125
+              ]
+            },
+            "YearToDate_Expenses_AdministrativeExpenses": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_Expenses_AdministrativeExpenses",
+              "type": "number",
+              "title": "The Yeartodate_expenses_administrativeexpenses Schema ",
+              "default": 0,
+              "examples": [
+                3971.3701171875
+              ]
+            },
+            "YearToDate_Expenses_TotalExpenses": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_Expenses_TotalExpenses",
+              "type": "number",
+              "title": "The Yeartodate_expenses_totalexpenses Schema ",
+              "default": 0,
+              "examples": [
+                7525.990234375
+              ]
+            },
+            "YearToDate_NetProfit": {
+              "$id": "/properties/IncomeStatementSummary/items/properties/YearToDate_NetProfit",
+              "type": "number",
+              "title": "The Yeartodate_netprofit Schema ",
+              "default": 0,
+              "examples": [
+                3590.89990234375
+              ]
+            }
+          }
+        }
+      }
+    }
+  }</ConnectString>
+				<DataProvider>JSON</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="['CurrentPeriod_Sales_ProductA']">
+					<DataField>['CurrentPeriod_Sales_ProductA']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_Sales_ProductB']">
+					<DataField>['CurrentPeriod_Sales_ProductB']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_Sales_FreightIncome']">
+					<DataField>['CurrentPeriod_Sales_FreightIncome']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_Sales_TotalSales']">
+					<DataField>['CurrentPeriod_Sales_TotalSales']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_CostOfSales_ProductA']">
+					<DataField>['CurrentPeriod_CostOfSales_ProductA']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_CostOfSales_ProductB']">
+					<DataField>['CurrentPeriod_CostOfSales_ProductB']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_CostOfSales_COSIncome']">
+					<DataField>['CurrentPeriod_CostOfSales_COSIncome']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_CostOfSales_TotalCostOfSales']">
+					<DataField>['CurrentPeriod_CostOfSales_TotalCostOfSales']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_GrossProfit']">
+					<DataField>['CurrentPeriod_GrossProfit']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_Expenses_SellingExpenses']">
+					<DataField>['CurrentPeriod_Expenses_SellingExpenses']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_Expenses_OverheadExpenses']">
+					<DataField>['CurrentPeriod_Expenses_OverheadExpenses']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_Expenses_AdministrativeExpenses']">
+					<DataField>['CurrentPeriod_Expenses_AdministrativeExpenses']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_Expenses_TotalExpenses']">
+					<DataField>['CurrentPeriod_Expenses_TotalExpenses']</DataField>
+				</Field>
+				<Field Name="['CurrentPeriod_NetProfit']">
+					<DataField>['CurrentPeriod_NetProfit']</DataField>
+				</Field>
+				<Field Name="['YearToDate_Sales_ProductA']">
+					<DataField>['YearToDate_Sales_ProductA']</DataField>
+				</Field>
+				<Field Name="['YearToDate_Sales_ProductB']">
+					<DataField>['YearToDate_Sales_ProductB']</DataField>
+				</Field>
+				<Field Name="['YearToDate_Sales_FreightIncome']">
+					<DataField>['YearToDate_Sales_FreightIncome']</DataField>
+				</Field>
+				<Field Name="['YearToDate_Sales_TotalSales']">
+					<DataField>['YearToDate_Sales_TotalSales']</DataField>
+				</Field>
+				<Field Name="['YearToDate_CostOfSales_ProductA']">
+					<DataField>['YearToDate_CostOfSales_ProductA']</DataField>
+				</Field>
+				<Field Name="['YearToDate_CostOfSales_ProductB']">
+					<DataField>['YearToDate_CostOfSales_ProductB']</DataField>
+				</Field>
+				<Field Name="['YearToDate_CostOfSales_COSIncome']">
+					<DataField>['YearToDate_CostOfSales_COSIncome']</DataField>
+				</Field>
+				<Field Name="['YearToDate_CostOfSales_TotalCostOfSales']">
+					<DataField>['YearToDate_CostOfSales_TotalCostOfSales']</DataField>
+				</Field>
+				<Field Name="['YearToDate_GrossProfit']">
+					<DataField>['YearToDate_GrossProfit']</DataField>
+				</Field>
+				<Field Name="['YearToDate_Expenses_SellingExpenses']">
+					<DataField>['YearToDate_Expenses_SellingExpenses']</DataField>
+				</Field>
+				<Field Name="['YearToDate_Expenses_OverheadExpenses']">
+					<DataField>['YearToDate_Expenses_OverheadExpenses']</DataField>
+				</Field>
+				<Field Name="['YearToDate_Expenses_AdministrativeExpenses']">
+					<DataField>['YearToDate_Expenses_AdministrativeExpenses']</DataField>
+				</Field>
+				<Field Name="['YearToDate_Expenses_TotalExpenses']">
+					<DataField>['YearToDate_Expenses_TotalExpenses']</DataField>
+				</Field>
+				<Field Name="['YearToDate_NetProfit']">
+					<DataField>['YearToDate_NetProfit']</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>$.IncomeStatementSummary[*]</CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

@@ -1,0 +1,773 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<PageHeader>
+		<Height>1in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Image Name="Image1">
+				<Height>1in</Height>
+				<MIMEType>=Theme.Images!Logo.MIMEType</MIMEType>
+				<Sizing>FitProportional</Sizing>
+				<Source>Database</Source>
+				<Value>=Theme.Images!Logo.ImageData</Value>
+				<Width>1.5in</Width>
+			</Image>
+			<Textbox Name="TextBox6">
+				<CanGrow>true</CanGrow>
+				<Height>0.625in</Height>
+				<Left>1.625in</Left>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>24pt</FontSize>
+					<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+					<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Top>0.125in</Top>
+				<Value>="Overview of Store #" &amp; Parameters!StoreID.Value</Value>
+				<Width>4.8125in</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+		</ReportItems>
+	</PageHeader>
+	<Body>
+		<Height>5.375in</Height>
+		<ReportItems>
+			<Table Name="table2">
+				<DataSetName>Employees</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ColSpan>3</ColSpan>
+									<ReportItems>
+										<Textbox Name="textbox5">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+												<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+												<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+											<Value>Employee List</Value>
+											<ZIndex>9</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox2">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+												<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+												<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+											<Value>Name</Value>
+											<ZIndex>8</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox3">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+												<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+												<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+											<Value>Department</Value>
+											<ZIndex>7</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox4">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<BorderColor>
+													<Default>DarkGray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Bottom>Solid</Bottom>
+												</BorderStyle>
+												<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+												<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+												<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+											<Value>Title</Value>
+											<ZIndex>6</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<Grouping Name="detailGroup">
+						<GroupExpressions>
+							<GroupExpression>=Fields!EmployeeID.Value</GroupExpression>
+						</GroupExpressions>
+						<Parent>=Fields!Supervisor.Value</Parent>
+					</Grouping>
+					<Sorting>
+						<SortBy>
+							<Direction>Ascending</Direction>
+							<SortExpression>=Fields!Supervisor.Value</SortExpression>
+						</SortBy>
+					</Sorting>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="FirstName">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+												<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>=(Level() * 15) &amp; "pt"</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value>=Fields!LastName.Value &amp; ", " &amp;Fields!FirstName.Value</Value>
+											<ZIndex>2</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="Department">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+												<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value>=Fields!Department.Value</Value>
+											<ZIndex>1</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="Title">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+												<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+												<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+												<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value>=Fields!Title.Value</Value>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+							<Visibility>
+								<Hidden>=Fields!Supervisor.Value &lt;&gt; 0</Hidden>
+								<ToggleItem>FirstName</ToggleItem>
+							</Visibility>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Footer>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox9">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>5</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox10">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>4</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="textbox11">
+											<CanGrow>true</CanGrow>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Value />
+											<ZIndex>3</ZIndex>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Footer>
+				<Height>1in</Height>
+				<Left>0.125in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>1.697917in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.239583in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.333333in</Width>
+					</TableColumn>
+				</TableColumns>
+				<Top>1.625in</Top>
+				<Width>4.270833in</Width>
+				<ZIndex>3</ZIndex>
+			</Table>
+			<List Name="list1">
+				<DataSetName>StoreData</DataSetName>
+				<Height>1.375in</Height>
+				<Left>0.125in</Left>
+				<ReportItems>
+					<Textbox Name="Phone1">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>2.125in</Left>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>1.125in</Top>
+						<Value>="Ph. " &amp; Fields!Phone1.Value</Value>
+						<Width>1.875in</Width>
+						<ZIndex>6</ZIndex>
+					</Textbox>
+					<Textbox Name="Region">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>2.09375in</Left>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Value>="Region: " &amp; Fields!RegionName.Value</Value>
+						<Width>1.75in</Width>
+						<ZIndex>5</ZIndex>
+					</Textbox>
+					<Textbox Name="District">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.1354167in</Left>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Value>="District: " &amp; Fields!District.Value</Value>
+						<Width>1.875in</Width>
+						<ZIndex>4</ZIndex>
+					</Textbox>
+					<Textbox Name="Country">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.125in</Left>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>1.125in</Top>
+						<Value>=Fields!Country.Value</Value>
+						<Width>1.75in</Width>
+						<ZIndex>3</ZIndex>
+					</Textbox>
+					<Textbox Name="City">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.125in</Left>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.875in</Top>
+						<Value>=Fields!City.Value &amp; ", " &amp; Fields!Region.Value &amp; "  " &amp; Fields!PostalCode.Value</Value>
+						<Width>4.125in</Width>
+						<ZIndex>2</ZIndex>
+					</Textbox>
+					<Textbox Name="Address1">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.125in</Left>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.625in</Top>
+						<Value>=Fields!Address1.Value &amp; IIf( Fields!Address2.Value Is Nothing, "", vbCrLf &amp; Fields!Address2.Value )</Value>
+						<Width>4.125in</Width>
+						<ZIndex>1</ZIndex>
+					</Textbox>
+					<Textbox Name="StoreName">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>0.125in</Left>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Top>0.375in</Top>
+						<Value>=Fields!StoreName.Value</Value>
+						<Width>4.125in</Width>
+					</Textbox>
+				</ReportItems>
+				<Style>
+					<BorderColor>
+						<Default>DarkGray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>Solid</Default>
+					</BorderStyle>
+				</Style>
+				<Width>4.322917in</Width>
+				<ZIndex>2</ZIndex>
+			</List>
+			<Chart Name="chart1">
+				<CategoryAxis>
+					<Axis>
+						<MajorGridLines>
+							<Style>
+								<BorderStyle>
+									<Default>Solid</Default>
+								</BorderStyle>
+							</Style>
+						</MajorGridLines>
+						<MajorTickMarks>Outside</MajorTickMarks>
+						<Min>0</Min>
+						<MinorGridLines>
+							<Style>
+								<BorderStyle>
+									<Default>Solid</Default>
+								</BorderStyle>
+							</Style>
+						</MinorGridLines>
+						<Style>
+							<BorderColor>
+								<Default>DarkGray</Default>
+							</BorderColor>
+							<BorderStyle>
+								<Default>Solid</Default>
+							</BorderStyle>
+							<BorderWidth>
+								<Default>0.25pt</Default>
+							</BorderWidth>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>8pt</FontSize>
+						</Style>
+						<Title />
+						<Visible>true</Visible>
+					</Axis>
+				</CategoryAxis>
+				<CategoryGroupings>
+					<CategoryGrouping>
+						<DynamicCategories>
+							<Grouping Name="chart1_CategoryGroup1">
+								<GroupExpressions>
+									<GroupExpression>=Fields!EmployeeID.Value</GroupExpression>
+								</GroupExpressions>
+							</Grouping>
+							<Label>=Fields!EmployeeName.Value</Label>
+						</DynamicCategories>
+					</CategoryGrouping>
+				</CategoryGroupings>
+				<ChartData>
+					<ChartSeries>
+						<DataPoints>
+							<DataPoint>
+								<DataLabel />
+								<DataValues>
+									<DataValue>
+										<Value>=Sum(Fields!NetSales.Value)</Value>
+									</DataValue>
+								</DataValues>
+								<Marker />
+								<Style>
+									<BackgroundColor>DarkGray</BackgroundColor>
+									<BorderColor>
+										<Default>Black</Default>
+									</BorderColor>
+								</Style>
+							</DataPoint>
+						</DataPoints>
+					</ChartSeries>
+				</ChartData>
+				<DataSetName>SalesData</DataSetName>
+				<Height>2.625in</Height>
+				<Legend>
+					<Layout>Row</Layout>
+					<Position>BottomCenter</Position>
+					<Style>
+						<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+						<FontSize>8pt</FontSize>
+					</Style>
+				</Legend>
+				<Palette>Default</Palette>
+				<SeriesGroupings>
+					<SeriesGrouping>
+						<StaticSeries>
+							<StaticMember>
+								<Label>Net Sales</Label>
+							</StaticMember>
+						</StaticSeries>
+					</SeriesGrouping>
+				</SeriesGroupings>
+				<Style>
+					<BackgroundColor>White</BackgroundColor>
+				</Style>
+				<Subtype>Plain</Subtype>
+				<ThreeDProperties>
+					<Inclination>30</Inclination>
+					<Rotation>30</Rotation>
+					<Shading>Simple</Shading>
+					<WallThickness>50</WallThickness>
+				</ThreeDProperties>
+				<Title />
+				<Top>2.75in</Top>
+				<Type>Bar</Type>
+				<ValueAxis>
+					<Axis>
+						<MajorGridLines>
+							<Style>
+								<BorderStyle>
+									<Default>Solid</Default>
+								</BorderStyle>
+							</Style>
+						</MajorGridLines>
+						<MajorTickMarks>Outside</MajorTickMarks>
+						<Margin>true</Margin>
+						<Min>0</Min>
+						<MinorGridLines>
+							<Style>
+								<BorderStyle>
+									<Default>Solid</Default>
+								</BorderStyle>
+							</Style>
+						</MinorGridLines>
+						<Scalar>true</Scalar>
+						<Style>
+							<BorderColor>
+								<Default>DarkGray</Default>
+							</BorderColor>
+							<BorderStyle>
+								<Default>Solid</Default>
+							</BorderStyle>
+							<BorderWidth>
+								<Default>0.25pt</Default>
+							</BorderWidth>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>8pt</FontSize>
+							<Format>$#0</Format>
+						</Style>
+						<Title>
+							<Caption>Net Sales</Caption>
+							<Style>
+								<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+								<FontSize>8pt</FontSize>
+							</Style>
+						</Title>
+						<Visible>true</Visible>
+					</Axis>
+				</ValueAxis>
+				<Width>6.5in</Width>
+			</Chart>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>6.5in</Width>
+	<ReportParameters>
+		<ReportParameter Name="StoreID">
+			<AllowBlank>true</AllowBlank>
+			<DataType>Integer</DataType>
+			<Prompt>Store Number</Prompt>
+			<Hidden>true</Hidden>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="Reels">
+			<ConnectionProperties>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Reels.mdb</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="SalesData">
+			<Fields>
+				<Field Name="StoreID">
+					<DataField>StoreID</DataField>
+				</Field>
+				<Field Name="PositionID">
+					<DataField>PositionID</DataField>
+				</Field>
+				<Field Name="EmployeeID">
+					<DataField>EmployeeID</DataField>
+				</Field>
+				<Field Name="EmployeeName">
+					<DataField>EmployeeName</DataField>
+				</Field>
+				<Field Name="NumSales">
+					<DataField>NumSales</DataField>
+				</Field>
+				<Field Name="SaleDate">
+					<DataField>SaleDate</DataField>
+				</Field>
+				<Field Name="SalesID">
+					<DataField>SalesID</DataField>
+				</Field>
+				<Field Name="UnitsSold">
+					<DataField>UnitsSold</DataField>
+				</Field>
+				<Field Name="GrossSales">
+					<DataField>GrossSales</DataField>
+				</Field>
+				<Field Name="NetSales">
+					<DataField>NetSales</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SalesDataForStore ?</CommandText>
+				<DataSourceName>Reels</DataSourceName>
+				<CommandType>StoredProcedure</CommandType>
+				<QueryParameters>
+					<QueryParameter Name="@StoreID">
+						<Value>=Parameters!StoreID.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+			</Query>
+		</DataSet>
+		<DataSet Name="StoreData">
+			<Fields>
+				<Field Name="StoreID">
+					<DataField>StoreID</DataField>
+				</Field>
+				<Field Name="StoreName">
+					<DataField>StoreName</DataField>
+				</Field>
+				<Field Name="Address1">
+					<DataField>Address1</DataField>
+				</Field>
+				<Field Name="Address2">
+					<DataField>Address2</DataField>
+				</Field>
+				<Field Name="City">
+					<DataField>City</DataField>
+				</Field>
+				<Field Name="Region">
+					<DataField>Region</DataField>
+				</Field>
+				<Field Name="PostalCode">
+					<DataField>PostalCode</DataField>
+				</Field>
+				<Field Name="Country">
+					<DataField>Country</DataField>
+				</Field>
+				<Field Name="DistrictID">
+					<DataField>DistrictID</DataField>
+				</Field>
+				<Field Name="District">
+					<DataField>District</DataField>
+				</Field>
+				<Field Name="RegionID">
+					<DataField>RegionID</DataField>
+				</Field>
+				<Field Name="RegionName">
+					<DataField>RegionName</DataField>
+				</Field>
+				<Field Name="Phone1">
+					<DataField>Phone1</DataField>
+				</Field>
+				<Field Name="Phone2">
+					<DataField>Phone2</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>StoreDataForStore ?</CommandText>
+				<DataSourceName>Reels</DataSourceName>
+				<CommandType>StoredProcedure</CommandType>
+				<QueryParameters>
+					<QueryParameter Name="@StoreID">
+						<Value>=Parameters!StoreID.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+			</Query>
+		</DataSet>
+		<DataSet Name="Employees">
+			<Fields>
+				<Field Name="EmployeeID">
+					<DataField>EmployeeID</DataField>
+				</Field>
+				<Field Name="Supervisor">
+					<DataField>Supervisor</DataField>
+				</Field>
+				<Field Name="FirstName">
+					<DataField>FirstName</DataField>
+				</Field>
+				<Field Name="MiddleInitial">
+					<DataField>MiddleInitial</DataField>
+				</Field>
+				<Field Name="LastName">
+					<DataField>LastName</DataField>
+				</Field>
+				<Field Name="PositionID">
+					<DataField>PositionID</DataField>
+				</Field>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="Department">
+					<DataField>Department</DataField>
+				</Field>
+				<Field Name="Interests">
+					<DataField>Interests</DataField>
+				</Field>
+				<Field Name="BackgroundColor">
+					<Value>=Choose( 1 + ( (Fields!PositionID.Value - 10) \ 2), "Red", "Green", "White" )</Value>
+				</Field>
+				<Field Name="Color">
+					<Value>=Choose( 1 + ( (Fields!PositionID.Value - 10) \ 2), "White", "Black", "Black" )</Value>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>EmployeesForStore ?</CommandText>
+				<DataSourceName>Reels</DataSourceName>
+				<CommandType>StoredProcedure</CommandType>
+				<QueryParameters>
+					<QueryParameter Name="@StoreID">
+						<Value>=Parameters!StoreID.Value</Value>
+					</QueryParameter>
+				</QueryParameters>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Reels.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

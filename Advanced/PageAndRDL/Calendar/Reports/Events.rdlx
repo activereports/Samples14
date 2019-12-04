@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Body>
+		<Height>3.625in</Height>
+		<ReportItems>
+			<CustomReportItem Name="MyEventCalendar">
+				<Type>Calendar</Type>
+				<Width>6.4062in</Width>
+				<Height>3.5625in</Height>
+				<CustomProperties>
+					<CustomProperty>
+						<Name>calendar:MonthTitle.Format</Name>
+						<Value>MMMM yyyy</Value>
+					</CustomProperty>
+					<CustomProperty>
+						<Name>calendar:DayHeaders.BorderColor</Name>
+						<Value>Black</Value>
+					</CustomProperty>
+					<CustomProperty>
+						<Name>calendar:DayHeaders.FontColor</Name>
+						<Value>White</Value>
+					</CustomProperty>
+					<CustomProperty>
+						<Name>calendar:DayHeaders.Backcolor</Name>
+						<Value>RoyalBlue</Value>
+					</CustomProperty>
+				</CustomProperties>
+				<CustomData>
+					<DataSetName>DataSet1</DataSetName>
+					<DataRowGroupings>
+						<DataGroupings>
+							<DataGrouping>
+								<CustomProperties>
+									<CustomProperty>
+										<Name>calendar:Event.StartDate</Name>
+										<Value>=Fields!EventDate.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.Value</Name>
+										<Value>=Fields!Title.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.FontFamily</Name>
+										<Value>Microsoft Sans Serif</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>calendar:Event.Backcolor</Name>
+										<Value>LightSkyBlue</Value>
+									</CustomProperty>
+								</CustomProperties>
+							</DataGrouping>
+						</DataGroupings>
+					</DataRowGroupings>
+				</CustomData>
+			</CustomReportItem>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<PageHeight>11in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>6.5in</Width>
+	<DataSources>
+		<DataSource Name="Events">
+			<ConnectionProperties>
+				<ConnectString>XmlData = &lt;Events&gt;  &lt;Event&gt;    &lt;Title&gt;Bethabara Concert Band and Family Evening&lt;/Title&gt;    &lt;EventType&gt;Family events&lt;/EventType&gt;    &lt;EventDate&gt;2015-08-14&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Boise State University Annual Family Holiday Concert&lt;/Title&gt;    &lt;EventType&gt;Family events&lt;/EventType&gt;    &lt;EventDate&gt;2015-12-07&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Dogwood Jamboree Country Music Concert&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-03-01&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;An Irish Celebration - A Celtic Concert in the Green&lt;/Title&gt;    &lt;EventType&gt;Cultural events&lt;/EventType&gt;    &lt;EventDate&gt;2015-03-15&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Third Thursday Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-06-19&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Appalachian Evening Music Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-08-23&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Independence Day Concert on The Square&lt;/Title&gt;    &lt;EventType&gt;Family events&lt;/EventType&gt;    &lt;EventDate&gt;2015-06-30&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;South Lawn Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-05-18&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Fall Starlight Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-10-14&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Alive After Five Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-07-24&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Summer Nights Concert Series&lt;/Title&gt;    &lt;EventType&gt;Family events&lt;/EventType&gt;    &lt;EventDate&gt;2015-05-22&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Lions Club Barbeque, Concert and Fireworks&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-08-08&lt;/EventDate&gt;  &lt;/Event&gt;&lt;/Events&gt;</ConnectString>
+				<DataProvider>XML</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="EventType">
+					<DataField>EventType</DataField>
+				</Field>
+				<Field Name="EventDate">
+					<DataField>EventDate</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>//Event</CommandText>
+				<DataSourceName>Events</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="9360" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+	<StyleSheet>
+		<Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+		<Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+		<Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+		<Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+	</StyleSheet>
+	<Sections>
+		<Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215" />
+		<Section Type="GroupHeader" Name="ghCustomers" Height="570" DataField="../../@id" BackStyle="1" BackColor="12648447" KeepTogether="1">
+			<Control Type="AR.Field" Name="txtName" DataField="../../NAME" Left="1440" Top="270" Width="7830" Height="270" Text="NAME" Style="color: #000000; ddo-char-set: 0" />
+			<Control Type="AR.Field" Name="txtID" DataField="../../@id" Left="1440" Top="0" Width="720" Height="270" Text="id" Style="color: #000000; text-align: right; ddo-char-set: 0" />
+			<Control Type="AR.Label" Name="lblID" Left="0" Top="0" Width="1350" Height="270" Caption="ID" Style="font-weight: bold; ddo-char-set: 0" />
+			<Control Type="AR.Label" Name="lblEMail" Left="2880" Top="0" Width="1395.36" Height="270" Caption="E-Mail" Style="font-weight: bold; ddo-char-set: 0" />
+			<Control Type="AR.Field" Name="txtEMail" DataField="../../@email" Left="4275.36" Top="0" Width="4994.64" Height="270" Text="email" Style="color: #000000; ddo-char-set: 0" />
+			<Control Type="AR.Label" Name="lblName" Left="0" Top="270" Width="1350" Height="270" Caption="Name" Style="font-weight: bold; ddo-char-set: 0" />
+		</Section>
+		<Section Type="GroupHeader" Name="ghOrders" Height="689" DataField="../NUMBER" BackStyle="1" BackColor="12648384" KeepTogether="1">
+			<Control Type="AR.Field" Name="txtOrderNumber" DataField="../NUMBER" Left="0" Top="0" Width="1440" Height="270" Text="NUMBER" Style="background-color: #C0FFC0; color: #000000; ddo-char-set: 0" />
+			<Control Type="AR.Field" Name="txtOrderDate" DataField="../DATE" Left="1620" Top="0" Width="4140" Height="270" Text="DATE" Style="background-color: #C0FFC0; color: #000000; ddo-char-set: 0" />
+			<Control Type="AR.Label" Name="lblISBN" Left="0" Top="360" Width="2790" Height="270" Caption="ISBN" Style="font-weight: bold; ddo-char-set: 0" />
+			<Control Type="AR.Label" Name="lblTitle" Left="2880" Top="360" Width="4320" Height="270" Caption="Title" Style="font-weight: bold; ddo-char-set: 0" />
+			<Control Type="AR.Line" Name="lneSep" X1="0" Y1="630" X2="8730" Y2="630" />
+			<Control Type="AR.Label" Name="lblPrice" Left="7380" Top="360" Width="1350" Height="270" Caption="Price" Style="font-weight: bold; ddo-char-set: 0" />
+		</Section>
+		<Section Type="Detail" Name="Detail" Height="270" BackColor="16777215" KeepTogether="1">
+			<Control Type="AR.Field" Name="txtISBN" DataField="@isbn" Left="0" Top="0" Width="2790" Height="270" Text="isbn" Style="color: #000000; ddo-char-set: 0" />
+			<Control Type="AR.Field" Name="txtTitle" DataField="TITLE" Left="2880" Top="0" Width="4320" Height="270" Text="TITLE" Style="color: #000000; ddo-char-set: 0" />
+			<Control Type="AR.Field" Name="txtPRICE" DataField="PRICE" Left="7380" Top="0" Width="1350" Height="270" Text="Price" Style="color: #000000; ddo-char-set: 0" />
+		</Section>
+		<Section Type="GroupFooter" Name="gfOrders" Height="270" BackStyle="1" BackColor="12648384" KeepTogether="1">
+			<Control Type="AR.Label" Name="lblOrderTotal" Left="2880" Top="0" Width="4320" Height="270" Caption="Order Total" Style="font-style: italic; font-weight: bold; text-align: right; ddo-char-set: 0" />
+			<Control Type="AR.Field" Name="txtOrderTotal" DataField="PRICE" Left="7380" Top="0" Width="1350" Height="270" Text="Order Total" Style="color: #000000; ddo-char-set: 0" SummaryType="3" SummaryGroup="ghOrders" />
+		</Section>
+		<Section Type="GroupFooter" Name="gfCustomers" Height="360" BackStyle="1" BackColor="12648447" NewPage="2" KeepTogether="1">
+			<Control Type="AR.Label" Name="lblCustomerTotal" Left="2880" Top="0" Width="4320" Height="270" Caption="Customer Total" Style="font-style: italic; font-weight: bold; text-align: right; ddo-char-set: 0" />
+			<Control Type="AR.Field" Name="txtCustomerTotal" DataField="PRICE" Left="7380" Top="0" Width="1350" Height="270" Text="Customer Total" OutputFormat="$#,##0.00" Style="color: #000000; ddo-char-set: 0" SummaryType="3" SummaryGroup="ghCustomers" />
+		</Section>
+		<Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215" />
+	</Sections>
+	<DataSources>
+		<XmlDataSource FileURL="..\..\..\..\..\Data\customer.xml" Pattern="//ITEM" />
+	</DataSources>
+	<PageSettings />
+	<Parameters />
+</ActiveReportsLayout>

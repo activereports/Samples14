@@ -1,0 +1,157 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Body>
+		<Height>7cm</Height>
+		<ReportItems>
+			<Chart Name="Chart1">
+				<CategoryAxis>
+					<Axis>
+						<Title>
+							<Caption>Axis X</Caption>
+						</Title>
+					</Axis>
+				</CategoryAxis>
+				<CategoryGroupings>
+					<CategoryGrouping>
+						<DynamicCategories>
+							<Grouping Name="Chart1_CategoryGroup1">
+								<GroupExpressions>
+									<GroupExpression>=Fields!CompanyName.Value</GroupExpression>
+								</GroupExpressions>
+							</Grouping>
+							<Label>=Fields!CompanyName.Value</Label>
+						</DynamicCategories>
+					</CategoryGrouping>
+				</CategoryGroupings>
+				<ChartData>
+					<ChartSeries>
+						<DataPoints>
+							<DataPoint>
+								<DataLabel>
+									<Style>
+										<Format>$#,##0.00</Format>
+									</Style>
+									<Value>=Sum(Fields!UnitPrice.Value * Fields!Quantity.Value)</Value>
+									<Visible>true</Visible>
+								</DataLabel>
+								<DataValues>
+									<DataValue>
+										<Value>=Sum(Fields!UnitPrice.Value * Fields!Quantity.Value)</Value>
+									</DataValue>
+								</DataValues>
+								<Marker />
+							</DataPoint>
+						</DataPoints>
+					</ChartSeries>
+				</ChartData>
+				<DataSetName>DataSet1</DataSetName>
+				<Height>6.985cm</Height>
+				<Legend>
+					<Position>RightCenter</Position>
+					<Style>
+						<FontSize>8pt</FontSize>
+					</Style>
+					<Visible>true</Visible>
+				</Legend>
+				<Palette>Default</Palette>
+				<PlotArea>
+					<Style>
+						<BackgroundColor>Transparent</BackgroundColor>
+					</Style>
+				</PlotArea>
+				<SeriesGroupings>
+					<SeriesGrouping>
+						<StaticSeries>
+							<StaticMember>
+								<Label>Sales</Label>
+							</StaticMember>
+						</StaticSeries>
+					</SeriesGrouping>
+				</SeriesGroupings>
+				<Style>
+					<Language>en</Language>
+					<NumeralLanguage>en</NumeralLanguage>
+				</Style>
+				<Subtype>Exploded</Subtype>
+				<ThreeDProperties>
+					<Enabled>true</Enabled>
+					<Inclination>20</Inclination>
+					<Rotation>43</Rotation>
+					<Shading>Real</Shading>
+					<WallThickness>0</WallThickness>
+				</ThreeDProperties>
+				<Title>
+					<Caption>=Parameters!Country.Value &amp; " Companies Sales amount"</Caption>
+					<Style>
+						<TextAlign>Center</TextAlign>
+					</Style>
+				</Title>
+				<Type>Doughnut</Type>
+				<ValueAxis>
+					<Axis>
+						<Title>
+							<Caption>Axis Y</Caption>
+						</Title>
+					</Axis>
+				</ValueAxis>
+				<Width>19.5cm</Width>
+			</Chart>
+		</ReportItems>
+	</Body>
+	<Width>19.5cm</Width>
+	<ReportParameters>
+		<ReportParameter Name="Country">
+			<DataType>String</DataType>
+			<Prompt>Country</Prompt>
+			<DefaultValue>
+				<Values>
+					<Value>Argentina</Value>
+				</Values>
+			</DefaultValue>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="CountrySalesDS">
+			<ConnectionProperties>
+				<ConnectString>xmldoc=</ConnectString>
+				<DataProvider>XML</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="CompanyName">
+					<DataField>CompanyName</DataField>
+				</Field>
+				<Field Name="Country">
+					<DataField>Country</DataField>
+				</Field>
+				<Field Name="UnitPrice">
+					<DataField>UnitPrice</DataField>
+				</Field>
+				<Field Name="Quantity">
+					<DataField>Quantity</DataField>
+				</Field>
+			</Fields>
+			<Filters>
+				<Filter>
+					<FilterExpression>=Fields!Country.Value</FilterExpression>
+					<FilterValues>
+						<FilterValue>=Parameters!Country.Value</FilterValue>
+					</FilterValues>
+					<Operator>Equal</Operator>
+				</Filter>
+			</Filters>
+			<Query>
+				<CommandText>//Customer</CommandText>
+				<DataSourceName>CountrySalesDS</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>MasterReport</Name>
+			<Value>=""</Value>
+		</CustomProperty>
+	</CustomProperties>
+</Report>

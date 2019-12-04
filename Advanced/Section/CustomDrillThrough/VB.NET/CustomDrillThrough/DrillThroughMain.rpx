@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="9360" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215" CanShrink="1">
+      <Control Type="AR.Label" Name="lblCustomer" Left="0" Top="0" Width="1620" Height="360" Caption="Customer ID" Style="color: Purple; font-size: 12pt; font-weight: bold; vertical-align: middle" PaddingLeft="2" />
+      <Control Type="AR.Label" Name="lblCompanyName" Left="1710" Top="0" Width="3150" Height="360" Caption="Company Name" Style="color: Purple; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblContactName" Left="5130" Top="0" Width="2070" Height="360" Caption="Contact Name" Style="color: Purple; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.CrossSectionBox" Name="cscBorder" Left="0" Top="360" Right="9360" Bottom="0" LineColor="8388736" LineWeight="3" BackColor="-2572328" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="344" RepeatToFill="1" BackColor="16777215">
+      <Control Type="AR.Field" Name="txtCustomerID" DataField="CustomerID" Left="0" Top="0" Width="1440" Height="288" Text="CustomerID" Style="color: Blue; font-size: 9.75pt; text-align: left; text-decoration: underline; vertical-align: middle" PaddingLeft="2" />
+      <Control Type="AR.Field" Name="txtCompanyName" DataField="CompanyName" Left="1710" Top="0" Width="3150" Height="288" Text="CompanyName" Style="vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtContactName" DataField="ContactName" Left="5130" Top="0" Width="2070" Height="288" Text="ContactName" Style="vertical-align: middle" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="0" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[''' <summary>
+''' DataInitialize Event
+''' Use it to add custom fields to the report's Fields collection.
+''' Custom fields can be added to a bound report (one that uses a Data Control to connect and retrieve records)
+''' or an unbound report (one that does not depend on a data control to get its records).
+''' </summary>
+Public Sub ActiveReport_DataInitialize()
+	'Connect to the sample database
+
+	Dim dS As New GrapeCity.ActiveReports.Data.OleDBDataSource()
+	dS.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.MDB"
+	dS.SQL = "Select * from customers order by customerID"
+	rpt.DataSource = dS
+End Sub
+
+''' <summary>
+''' BeforePrint Event
+''' ActiveReports raises this event before the section is rendered to a page.
+''' Use this event to modify the control's values before printing.
+''' The changes made here do not effect the height of the section.
+''' </summary>
+Public Sub Detail_BeforePrint()
+	'Assign the hyperlink value to the Text value
+	txtCustomerID.HyperLink = "DrillThrough1:" + txtCustomerID.Text
+End Sub
+]]></Script>
+  <PageSettings PaperSize="1" PaperWidth="12240" PaperHeight="15840" PaperName="" />
+  <Parameters />
+</ActiveReportsLayout>

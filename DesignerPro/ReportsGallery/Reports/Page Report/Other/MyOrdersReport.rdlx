@@ -1,0 +1,420 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MyOrdersReport.rdlx</dd:Name>
+	<Body>
+		<Height>11in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Table Name="Table1">
+								<DataSetName>DataSet1</DataSetName>
+								<Header>
+									<RepeatOnNewPage>true</RepeatOnNewPage>
+									<TableRows>
+										<TableRow>
+											<Height>0.25001in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox1">
+															<Value>Customer Name</Value>
+															<Style>
+																<BackgroundColor>LightSkyBlue</BackgroundColor>
+																<FontFamily>Arial</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontStyle>Normal</FontStyle>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox2">
+															<Value>Unit Price</Value>
+															<Style>
+																<BackgroundColor>LightSkyBlue</BackgroundColor>
+																<FontFamily>Arial</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontStyle>Normal</FontStyle>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox3">
+															<Value>Total</Value>
+															<Style>
+																<BackgroundColor>LightSkyBlue</BackgroundColor>
+																<FontFamily>Arial</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontStyle>Normal</FontStyle>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.25001in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Value>=Fields!Customer.Value</Value>
+															<Style>
+																<BackgroundColor>=""</BackgroundColor>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox5">
+															<Value>=Fields!UnitPrice.Value</Value>
+															<Style>
+																<BackgroundColor>=""</BackgroundColor>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox6">
+															<Value>=Fields!Total.Value</Value>
+															<Style>
+																<BackgroundColor>=""</BackgroundColor>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<Footer>
+									<TableRows>
+										<TableRow>
+											<Height>0.24996in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox9">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox13">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox14">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Footer>
+								<Height>1.25in</Height>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">9in</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">6.5in</dd:FixedWidth>
+								<TableColumns>
+									<TableColumn>
+										<Width>2.166667in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.166667in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.166666in</Width>
+									</TableColumn>
+								</TableColumns>
+								<TableGroups>
+									<TableGroup>
+										<Header>
+											<TableRows>
+												<TableRow>
+													<Height>0.25001in</Height>
+													<TableCells>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox7">
+																	<Value>Order Number:</Value>
+																	<Style>
+																		<BackgroundColor>LightCyan</BackgroundColor>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																		<TextAlign>Right</TextAlign>
+																		<TextDecoration>None</TextDecoration>
+																		<BorderStyle>
+																			<Default>None</Default>
+																		</BorderStyle>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+														<TableCell>
+															<ColSpan>2</ColSpan>
+															<ReportItems>
+																<Textbox Name="TextBox8">
+																	<Value>=Fields!OrderNumber.Value</Value>
+																	<Style>
+																		<BackgroundColor>LightCyan</BackgroundColor>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																		<TextAlign>Left</TextAlign>
+																		<TextDecoration>None</TextDecoration>
+																		<BorderStyle>
+																			<Default>None</Default>
+																		</BorderStyle>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+													</TableCells>
+												</TableRow>
+											</TableRows>
+										</Header>
+										<Footer>
+											<TableRows>
+												<TableRow>
+													<Height>0.25001in</Height>
+													<TableCells>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox10">
+																	<Value />
+																	<Style>
+																		<BackgroundColor>=""</BackgroundColor>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox11">
+																	<Value>Order Total:</Value>
+																	<Style>
+																		<BackgroundColor>=""</BackgroundColor>
+																		<FontFamily>Arial</FontFamily>
+																		<FontSize>10pt</FontSize>
+																		<FontStyle>Normal</FontStyle>
+																		<FontWeight>700</FontWeight>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																		<TextAlign>Right</TextAlign>
+																		<BorderStyle>
+																			<Top>Solid</Top>
+																		</BorderStyle>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox12">
+																	<Value>=Sum(Fields!Total.Value)</Value>
+																	<Style>
+																		<BackgroundColor>=""</BackgroundColor>
+																		<FontFamily>Arial</FontFamily>
+																		<FontSize>10pt</FontSize>
+																		<FontStyle>Normal</FontStyle>
+																		<FontWeight>700</FontWeight>
+																		<Format>$#,##0.00</Format>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																		<TextAlign>Right</TextAlign>
+																		<BorderStyle>
+																			<Top>Solid</Top>
+																		</BorderStyle>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+													</TableCells>
+												</TableRow>
+											</TableRows>
+										</Footer>
+										<Grouping Name="Table1_Group1">
+											<GroupExpressions>
+												<GroupExpression>=Fields!OrderNumber.Value</GroupExpression>
+											</GroupExpressions>
+										</Grouping>
+									</TableGroup>
+								</TableGroups>
+								<Width>6.5in</Width>
+								<ZIndex>1</ZIndex>
+							</Table>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>DataSet1</DataSetName>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<PageHeight>11in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>8.5in</Width>
+	<ReportParameters>
+		<ReportParameter Name="OrderCity">
+			<DataType>String</DataType>
+			<Prompt>Choose Order City</Prompt>
+			<MultiValue>true</MultiValue>
+			<ValidValues>
+				<ParameterValues>
+					<ParameterValue>
+						<Label>New York</Label>
+						<Value>New York</Value>
+					</ParameterValue>
+					<ParameterValue>
+						<Label>Raleigh</Label>
+						<Value>Raleigh</Value>
+					</ParameterValue>
+				</ParameterValues>
+			</ValidValues>
+			<DefaultValue>
+				<Values>
+					<Value>Raleigh</Value>
+				</Values>
+			</DefaultValue>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>Path=..\..\..\..\..\Data\MyOrders.csv;Locale=en-US;TextQualifier=";ColumnsSeparator=,;RowsSeparator=\r\n;Columns=ID,Product,Customer,OrderNumber,Stock,Total,UnitPrice,City,ProductLine,Discount;JoinRowsSeparators=True;JoinColumnsSeparators=True;HasHeaders=True</ConnectString>
+				<DataProvider>CSV</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="ID">
+					<DataField>ID</DataField>
+				</Field>
+				<Field Name="Product">
+					<DataField>Product</DataField>
+				</Field>
+				<Field Name="Customer">
+					<DataField>Customer</DataField>
+				</Field>
+				<Field Name="OrderNumber">
+					<DataField>OrderNumber</DataField>
+				</Field>
+				<Field Name="Stock">
+					<DataField>Stock</DataField>
+				</Field>
+				<Field Name="Total">
+					<DataField>Total</DataField>
+				</Field>
+				<Field Name="UnitPrice">
+					<DataField>UnitPrice</DataField>
+				</Field>
+				<Field Name="City">
+					<DataField>City</DataField>
+				</Field>
+				<Field Name="ProductLine">
+					<DataField>ProductLine</DataField>
+				</Field>
+				<Field Name="Discount">
+					<DataField>Discount</DataField>
+				</Field>
+			</Fields>
+			<Filters>
+				<Filter>
+					<FilterExpression>=Fields!City.Value</FilterExpression>
+					<FilterValues>
+						<FilterValue>=Parameters!OrderCity.Value</FilterValue>
+					</FilterValues>
+					<Operator>In</Operator>
+				</Filter>
+			</Filters>
+			<Query>
+				<CommandText />
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

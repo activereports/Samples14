@@ -1,0 +1,167 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Author>Data Dynamics, Ltd.</Author>
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">CustomerMailingList.rdlx</dd:Name>
+	<Body>
+		<Columns>3</Columns>
+		<ColumnSpacing>0.25in</ColumnSpacing>
+		<Height>1in</Height>
+		<ReportItems>
+			<List Name="list">
+				<DataSetName>CustomerList</DataSetName>
+				<Height>1in</Height>
+				<ReportItems>
+					<Rectangle Name="Rectangle1">
+						<Height>1in</Height>
+						<Width>2.5in</Width>
+						<ZIndex>3</ZIndex>
+						<ReportItems>
+							<Textbox Name="FirstName">
+								<Height>0.25in</Height>
+								<Value>=Fields!FirstName.Value &amp; IIF( Fields!MiddleInitial.Value Is Nothing, "", " " &amp; Fields!MiddleInitial.Value ) &amp; " " &amp; Fields!LastName.Value</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Width>2.5in</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="CustomerAddress1">
+								<CanShrink>true</CanShrink>
+								<Height>0.25in</Height>
+								<Value>=Fields!Address1.Value</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.21875in</Top>
+								<Width>2.5in</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="CustomerCity">
+								<Height>0.25in</Height>
+								<Value>=Fields!City.Value &amp; ", " &amp; Fields!Region.Value &amp; "  " &amp; Fields!PostalCode.Value &amp; "   " &amp; IIf( Fields!Country.Value = "USA", "", Fields!Country.Value )</Value>
+								<Style>
+									<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+									<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>0.46875in</Top>
+								<Width>2.5in</Width>
+								<ZIndex>4</ZIndex>
+							</Textbox>
+						</ReportItems>
+					</Rectangle>
+					<CustomReportItem Name="Barcode1">
+						<Type>Barcode</Type>
+						<Top>0.75in</Top>
+						<Width>2.5in</Width>
+						<Height>0.25in</Height>
+						<ZIndex>4</ZIndex>
+						<Visibility>
+							<Hidden>=IIf( Fields!Country.Value = "USA", False, True )</Hidden>
+						</Visibility>
+						<CustomProperties>
+							<CustomProperty>
+								<Name>dd:Symbology</Name>
+								<Value>Postnet</Value>
+							</CustomProperty>
+							<CustomProperty>
+								<Name>dd:BarHeight</Name>
+								<Value>0.125in</Value>
+							</CustomProperty>
+							<CustomProperty>
+								<Name>dd:Value</Name>
+								<Value>=Code.GetPlusFour( Fields!Address1.Value, Fields!PostalCode.Value )</Value>
+							</CustomProperty>
+							<CustomProperty>
+								<Name>dd:QRCodeOptions.Encoding</Name>
+								<Value>65001</Value>
+							</CustomProperty>
+						</CustomProperties>
+						<DataElementName>Barcode1</DataElementName>
+					</CustomReportItem>
+				</ReportItems>
+				<Width>2.5in</Width>
+			</List>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<Code>Public Function GetPlusFour( address as String, postal As String ) As String
+	Dim hash As Integer = Math.Abs(address.GetHashCode())
+	Dim hashString As String = hash.ToString(",0000")
+	
+	If hashString.Length = 4 Then
+		Return postal &amp; hashString
+	else
+		Return postal &amp; hashString.SubString(0, 4)
+	End If
+End Function</Code>
+	<Description>Creates mailing labels for Reels customers</Description>
+	<LeftMargin>0.125in</LeftMargin>
+	<RightMargin>0.125in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>2.5in</Width>
+	<DataSources>
+		<DataSource Name="Reels">
+			<ConnectionProperties>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Reels.mdb</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="CustomerList">
+			<Fields>
+				<Field Name="FirstName">
+					<DataField>FirstName</DataField>
+				</Field>
+				<Field Name="MiddleInitial">
+					<DataField>MiddleInitial</DataField>
+				</Field>
+				<Field Name="LastName">
+					<DataField>LastName</DataField>
+				</Field>
+				<Field Name="Address1">
+					<DataField>Address1</DataField>
+				</Field>
+				<Field Name="Address2">
+					<DataField>Address2</DataField>
+				</Field>
+				<Field Name="City">
+					<DataField>City</DataField>
+				</Field>
+				<Field Name="Region">
+					<DataField>Region</DataField>
+				</Field>
+				<Field Name="PostalCode">
+					<DataField>PostalCode</DataField>
+				</Field>
+				<Field Name="Country">
+					<DataField>Country</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT TOP 100 * FROM CustomerMailingList
+UNION
+SELECT TOP 100 * FROM CustomerMailingList WHERE Country = "USA"
+ORDER BY 8 DESC</CommandText>
+				<DataSourceName>Reels</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<dd:LocalizationResources xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition" />
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Reels.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

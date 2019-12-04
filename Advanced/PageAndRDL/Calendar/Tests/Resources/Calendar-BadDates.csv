@@ -1,0 +1,4 @@
+StartTime(DateTime),EndTime(DateTime),Value(String)
+"2007-1205","2007-12-07","Appt#1 Text ..."
+"2007-12-05","2007-1207","Appt#2 Text ..."
+"2007-12-05","2007-12-07","Appt#3 Text ..."

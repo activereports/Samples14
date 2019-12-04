@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="9360" DocumentName="ActiveReports Document" ScriptLang="C#" ShowParamUI="0" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="groupHeader1" Height="360" RepeatStyle="1" BackColor="16777215">
+      <Control Type="AR.Label" Name="lblCustomerID" Left="0" Top="0" Width="1620" Height="360" Caption="Customer ID" Style="color: Maroon; font-size: 12pt; font-weight: bold; vertical-align: middle" PaddingLeft="2" />
+      <Control Type="AR.Label" Name="lblOrderID" Left="1710" Top="0" Width="1440" Height="360" Caption="Order ID" Style="color: Maroon; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblEmployeeID" Left="3510" Top="0" Width="1620" Height="360" Caption="Employee ID" Style="color: Maroon; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblOrderDate" Left="5220" Top="0" Width="1440" Height="360" Caption="Order Date" Style="color: Maroon; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblShippedDate" Left="6930" Top="0" Width="1800" Height="360" Caption="Shipped Date" Style="color: Maroon; font-size: 12pt; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.CrossSectionBox" Name="cscBorder" Left="0" Top="360" Right="0" Bottom="0" LineColor="8388736" LineWeight="3" BackColor="-4419697" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="288" BackStyle="1" BackColor="9408444">
+      <Control Type="AR.Field" Name="txtCustomerID" DataField="CustomerID" Left="0" Top="0" Width="1440" Height="288" Text="CustomerID" Style="vertical-align: middle" PaddingLeft="2" />
+      <Control Type="AR.Field" Name="txtOrderID" DataField="OrderID" Left="1710" Top="0" Width="1440" Height="288" Text="OrderID" Style="color: Blue; font-size: 9.75pt; text-decoration: underline; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtEmployeeID" DataField="EmployeeID" Left="3510" Top="0" Width="1440" Height="288" Text="EmployeeID" Style="vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtOrderDate" DataField="OrderDate" Left="5220" Top="0" Width="1440" Height="288" Text="OrderDate" OutputFormat="MM/dd/yyyy" Style="vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtShippedDate" DataField="ShippedDate" Left="6930" Top="0" Width="1440" Height="288" Text="ShippedDate" OutputFormat="MM/dd/yyyy" Style="vertical-align: middle" />
+    </Section>
+    <Section Type="GroupFooter" Name="groupFooter1" Height="15" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.MDB" SQL="Select * from orders where customerID = '&lt;%customerID%&gt;' order by orderdate" />
+  </DataSources>
+  <Script><![CDATA[/// <summary>
+/// BeforePrint Event
+/// ActiveReports raises this event before the section is rendered to a page.
+/// Use this event to modify the control's values before printing.
+/// The changes made here do not effect the height of the section.
+/// </summary>
+public void Detail_BeforePrint()
+{
+	//Assign the hyperlink value to the Text value
+	txtOrderID.HyperLink = "DrillThrough2:" + txtOrderID.Text;
+}
+
+
+]]></Script>
+  <PageSettings PaperSize="1" PaperWidth="12240" PaperHeight="15840" PaperName="" />
+  <Parameters />
+</ActiveReportsLayout>

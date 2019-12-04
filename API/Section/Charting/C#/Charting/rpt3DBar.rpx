@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="Detail" Name="Detail" Height="6192" BackColor="16777215">
+      <Control Type="AR.ChartControl" Name="ChartControl1" Left="0" Top="0" Width="8496" Height="5760" ImageType="0">
+        <AccessibleDescription special-value="null" />
+        <AccessibleName special-value="null" />
+        <AccessibleRole>Default</AccessibleRole>
+        <AutoRefresh>True</AutoRefresh>
+        <BackColor>Transparent</BackColor>
+        <Backdrop>
+          <ContextMenu special-value="null" />
+          <Style>Gradient</Style>
+          <Color>White</Color>
+          <Color2>SteelBlue</Color2>
+          <Gradient>Vertical</Gradient>
+          <Pattern>DottedGrid</Pattern>
+          <Picture special-value="null" />
+          <PictureAlignment>Stretched</PictureAlignment>
+          <Alpha>255</Alpha>
+          <AntiAliasMode>Auto</AntiAliasMode>
+        </Backdrop>
+        <BackgroundImage special-value="null" />
+        <Border>
+          <Line>
+            <Color>Transparent</Color>
+            <Weight>0</Weight>
+            <Style>None</Style>
+          </Line>
+          <ShadowWeight>0</ShadowWeight>
+          <ShadowColor>Black</ShadowColor>
+        </Border>
+        <CausesValidation>True</CausesValidation>
+        <ChartAreas>
+          <ChartArea id="c4ca8d44-5f1c-4d1f-ac21-d90eb29e16c4">
+            <Backdrop>
+              <ContextMenu special-value="null" />
+              <Style>Transparent</Style>
+              <Color>White</Color>
+              <Color2>White</Color2>
+              <Gradient>Vertical</Gradient>
+              <Pattern>DottedGrid</Pattern>
+              <Picture special-value="null" />
+              <PictureAlignment>Stretched</PictureAlignment>
+              <Alpha>255</Alpha>
+              <AntiAliasMode>Auto</AntiAliasMode>
+            </Backdrop>
+            <Border>
+              <Line>
+                <Color>Transparent</Color>
+                <Weight>0</Weight>
+                <Style>None</Style>
+              </Line>
+              <ShadowWeight>0</ShadowWeight>
+              <ShadowColor>Black</ShadowColor>
+            </Border>
+            <Padding>12, 12, 12, 12</Padding>
+            <ZDepthRatio>1</ZDepthRatio>
+            <WallXZ>
+              <Width>0</Width>
+              <Backdrop>
+                <Style>Solid</Style>
+                <Color>White</Color>
+                <Color2>Black</Color2>
+                <Gradient>Vertical</Gradient>
+                <Pattern>DottedGrid</Pattern>
+                <Picture special-value="null" />
+                <PictureAlignment>Stretched</PictureAlignment>
+                <Alpha>255</Alpha>
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Backdrop>
+              <Visible>True</Visible>
+              <ContextMenu special-value="null" />
+              <AntiAliasMode>Auto</AntiAliasMode>
+            </WallXZ>
+            <WallXY>
+              <Width>0</Width>
+              <Backdrop>
+                <Style>Solid</Style>
+                <Color>White</Color>
+                <Color2>Black</Color2>
+                <Gradient>Vertical</Gradient>
+                <Pattern>DottedGrid</Pattern>
+                <Picture special-value="null" />
+                <PictureAlignment>Stretched</PictureAlignment>
+                <Alpha>255</Alpha>
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Backdrop>
+              <Visible>True</Visible>
+              <ContextMenu special-value="null" />
+              <AntiAliasMode>Auto</AntiAliasMode>
+            </WallXY>
+            <WallYZ>
+              <Width>0</Width>
+              <Backdrop>
+                <Style>Solid</Style>
+                <Color>White</Color>
+                <Color2>Black</Color2>
+                <Gradient>Vertical</Gradient>
+                <Pattern>DottedGrid</Pattern>
+                <Picture special-value="null" />
+                <PictureAlignment>Stretched</PictureAlignment>
+                <Alpha>255</Alpha>
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Backdrop>
+              <Visible>True</Visible>
+              <ContextMenu special-value="null" />
+              <AntiAliasMode>Auto</AntiAliasMode>
+            </WallYZ>
+            <Projection>
+              <ProjectionType>Orthogonal</ProjectionType>
+              <ProjectionDX>0.1</ProjectionDX>
+              <ProjectionDY>0.1</ProjectionDY>
+              <HorizontalRotation>0</HorizontalRotation>
+              <VerticalRotation>0</VerticalRotation>
+              <PerspectiveRatioPct>50</PerspectiveRatioPct>
+            </Projection>
+            <Light>
+              <Type>InfiniteDirectional</Type>
+              <Source>
+                <X>10</X>
+                <Y>40</Y>
+                <Z>20</Z>
+              </Source>
+              <DirectionalRatio>0.3</DirectionalRatio>
+            </Light>
+            <Axes>
+              <Axis id="6055069a-bf43-4fda-b231-e3d94218fa3c">
+                <TickOffset>NaN</TickOffset>
+                <Position>NaN</Position>
+                <SmartLabels>True</SmartLabels>
+                <Arrow>None</Arrow>
+                <AxisType>Categorical</AxisType>
+                <Min>NaN</Min>
+                <Max>NaN</Max>
+                <Title>Name</Title>
+                <TitleFont>
+                  <Color>Black</Color>
+                  <Angle>0</Angle>
+                  <Font>Arial, 12pt</Font>
+                </TitleFont>
+                <MajorTick>
+                  <Line>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>1</Step>
+                  <Length>0</Length>
+                  <Visible>False</Visible>
+                </MajorTick>
+                <MinorTick>
+                  <Line>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>0</Step>
+                  <Length>0</Length>
+                  <Visible>False</Visible>
+                </MinorTick>
+                <Line>
+                  <Color>Black</Color>
+                  <Weight>1</Weight>
+                  <Style>Solid</Style>
+                </Line>
+                <LabelFont>
+                  <Color>Black</Color>
+                  <Angle>0</Angle>
+                  <Font>Arial, 8pt</Font>
+                </LabelFont>
+                <LabelsGap>1</LabelsGap>
+                <LabelFormat>{0}</LabelFormat>
+                <Labels />
+                <LabelsInside>False</LabelsInside>
+                <LabelsAtBottom>False</LabelsAtBottom>
+                <LabelsVisible>True</LabelsVisible>
+                <Scale>1</Scale>
+                <DisplayScale>False</DisplayScale>
+                <Visible>True</Visible>
+                <StaggerLabels>False</StaggerLabels>
+                <ContextMenu special-value="null" />
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Axis>
+              <Axis id="e9f003ce-06bb-4362-9839-a975fc2d2c85">
+                <TickOffset>0</TickOffset>
+                <Position>0</Position>
+                <SmartLabels>True</SmartLabels>
+                <Arrow>None</Arrow>
+                <AxisType>Numerical</AxisType>
+                <Min>NaN</Min>
+                <Max>NaN</Max>
+                <Title>
+                </Title>
+                <TitleFont>
+                  <Color>Black</Color>
+                  <Angle>0</Angle>
+                  <Font>Microsoft Sans Serif, 8pt</Font>
+                </TitleFont>
+                <MajorTick>
+                  <Line>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>0</Step>
+                  <Length>0</Length>
+                  <Visible>False</Visible>
+                </MajorTick>
+                <MinorTick>
+                  <Line>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>0</Step>
+                  <Length>0</Length>
+                  <Visible>False</Visible>
+                </MinorTick>
+                <Line>
+                  <Color>Transparent</Color>
+                  <Weight>0</Weight>
+                  <Style>None</Style>
+                </Line>
+                <LabelFont>
+                  <Color>Black</Color>
+                  <Angle>0</Angle>
+                  <Font>Microsoft Sans Serif, 8pt</Font>
+                </LabelFont>
+                <LabelsGap>0</LabelsGap>
+                <LabelFormat>{0}</LabelFormat>
+                <Labels />
+                <LabelsInside>False</LabelsInside>
+                <LabelsAtBottom>False</LabelsAtBottom>
+                <LabelsVisible>False</LabelsVisible>
+                <Scale>1</Scale>
+                <DisplayScale>False</DisplayScale>
+                <Visible>False</Visible>
+                <StaggerLabels>False</StaggerLabels>
+                <ContextMenu special-value="null" />
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Axis>
+              <Axis id="4e071112-6e70-4ebd-a00b-668f42390b5d">
+                <TickOffset>NaN</TickOffset>
+                <Position>0</Position>
+                <SmartLabels>True</SmartLabels>
+                <Arrow>None</Arrow>
+                <AxisType>Numerical</AxisType>
+                <Min>NaN</Min>
+                <Max>NaN</Max>
+                <Title>Sales Amount (Dollar)</Title>
+                <TitleFont>
+                  <Color>Black</Color>
+                  <Angle>-90</Angle>
+                  <Font>Arial, 12pt</Font>
+                </TitleFont>
+                <MajorTick>
+                  <Line>
+                    <Color>Black</Color>
+                    <Weight>1</Weight>
+                    <Style>Solid</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>1</Step>
+                  <Length>5</Length>
+                  <Visible>True</Visible>
+                </MajorTick>
+                <MinorTick>
+                  <Line>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>0</Step>
+                  <Length>0</Length>
+                  <Visible>False</Visible>
+                </MinorTick>
+                <Line>
+                  <Color>Black</Color>
+                  <Weight>1</Weight>
+                  <Style>Solid</Style>
+                </Line>
+                <LabelFont>
+                  <Color>Black</Color>
+                  <Angle>0</Angle>
+                  <Font>Arial, 8pt</Font>
+                </LabelFont>
+                <LabelsGap>1</LabelsGap>
+                <LabelFormat>{0}</LabelFormat>
+                <Labels />
+                <LabelsInside>False</LabelsInside>
+                <LabelsAtBottom>False</LabelsAtBottom>
+                <LabelsVisible>True</LabelsVisible>
+                <Scale>1</Scale>
+                <DisplayScale>False</DisplayScale>
+                <Visible>True</Visible>
+                <StaggerLabels>False</StaggerLabels>
+                <ContextMenu special-value="null" />
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Axis>
+              <Axis id="e6a5e1b1-660b-46b3-80c9-362d21c57426">
+                <TickOffset>NaN</TickOffset>
+                <Position>NaN</Position>
+                <SmartLabels>True</SmartLabels>
+                <Arrow>None</Arrow>
+                <AxisType>Numerical</AxisType>
+                <Min>NaN</Min>
+                <Max>NaN</Max>
+                <Title>
+                </Title>
+                <TitleFont>
+                  <Color>Black</Color>
+                  <Angle>0</Angle>
+                  <Font>Microsoft Sans Serif, 8pt</Font>
+                </TitleFont>
+                <MajorTick>
+                  <Line>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>0</Step>
+                  <Length>0</Length>
+                  <Visible>False</Visible>
+                </MajorTick>
+                <MinorTick>
+                  <Line>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>0</Step>
+                  <Length>0</Length>
+                  <Visible>False</Visible>
+                </MinorTick>
+                <Line>
+                  <Color>Transparent</Color>
+                  <Weight>0</Weight>
+                  <Style>None</Style>
+                </Line>
+                <LabelFont>
+                  <Color>Black</Color>
+                  <Angle>0</Angle>
+                  <Font>Microsoft Sans Serif, 8pt</Font>
+                </LabelFont>
+                <LabelsGap>1</LabelsGap>
+                <LabelFormat>{0}</LabelFormat>
+                <Labels />
+                <LabelsInside>False</LabelsInside>
+                <LabelsAtBottom>False</LabelsAtBottom>
+                <LabelsVisible>False</LabelsVisible>
+                <Scale>1</Scale>
+                <DisplayScale>False</DisplayScale>
+                <Visible>False</Visible>
+                <StaggerLabels>False</StaggerLabels>
+                <ContextMenu special-value="null" />
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Axis>
+              <Axis id="37bbe85f-0ce4-410e-95a0-277119befc65">
+                <TickOffset>0</TickOffset>
+                <Position>0</Position>
+                <SmartLabels>True</SmartLabels>
+                <Arrow>None</Arrow>
+                <AxisType>Numerical</AxisType>
+                <Min>NaN</Min>
+                <Max>NaN</Max>
+                <Title>
+                </Title>
+                <TitleFont>
+                  <Color>Black</Color>
+                  <Angle>0</Angle>
+                  <Font>Microsoft Sans Serif, 8pt</Font>
+                </TitleFont>
+                <MajorTick>
+                  <Line>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>0</Step>
+                  <Length>0</Length>
+                  <Visible>False</Visible>
+                </MajorTick>
+                <MinorTick>
+                  <Line>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </Line>
+                  <GridLine>
+                    <Color>Transparent</Color>
+                    <Weight>0</Weight>
+                    <Style>None</Style>
+                  </GridLine>
+                  <Step>0</Step>
+                  <Length>0</Length>
+                  <Visible>False</Visible>
+                </MinorTick>
+                <Line>
+                  <Color>Transparent</Color>
+                  <Weight>0</Weight>
+                  <Style>None</Style>
+                </Line>
+                <LabelFont>
+                  <Color>Black</Color>
+                  <Angle>0</Angle>
+                  <Font>Microsoft Sans Serif, 8pt</Font>
+                </LabelFont>
+                <LabelsGap>0</LabelsGap>
+                <LabelFormat>{0}</LabelFormat>
+                <Labels />
+                <LabelsInside>False</LabelsInside>
+                <LabelsAtBottom>False</LabelsAtBottom>
+                <LabelsVisible>False</LabelsVisible>
+                <Scale>1</Scale>
+                <DisplayScale>False</DisplayScale>
+                <Visible>False</Visible>
+                <StaggerLabels>False</StaggerLabels>
+                <ContextMenu special-value="null" />
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Axis>
+            </Axes>
+            <WallRanges />
+            <SwapAxesDirection>False</SwapAxesDirection>
+            <SeriesLine>
+              <Color>Black</Color>
+              <Weight>1</Weight>
+              <Style>None</Style>
+            </SeriesLine>
+            <Name>defaultArea</Name>
+            <AntiAliasMode>Graphics</AntiAliasMode>
+          </ChartArea>
+        </ChartAreas>
+        <ColorPalette>Default</ColorPalette>
+        <CurrentDesigner special-value="null" />
+        <Cursor>Default</Cursor>
+        <DataSourceDirect special-value="null" />
+        <DeviceMode>None</DeviceMode>
+        <Font>Arial, 9pt</Font>
+        <ForeColor>ControlText</ForeColor>
+        <GridLayout>
+          <Columns>1</Columns>
+          <Rows>1</Rows>
+        </GridLayout>
+        <ImeMode>NoControl</ImeMode>
+        <IsDesignMode>True</IsDesignMode>
+        <Legends>
+          <Legend id="baeac21a-75e1-42dc-a196-957c37cee470">
+            <Backdrop>
+              <ContextMenu special-value="null" />
+              <Style>Solid</Style>
+              <Color>White</Color>
+              <Color2>Black</Color2>
+              <Gradient>Vertical</Gradient>
+              <Pattern>DottedGrid</Pattern>
+              <Picture special-value="null" />
+              <PictureAlignment>Stretched</PictureAlignment>
+              <Alpha>128</Alpha>
+              <AntiAliasMode>Auto</AntiAliasMode>
+            </Backdrop>
+            <Border>
+              <Line>
+                <Color>Black</Color>
+                <Weight>1</Weight>
+                <Style>Solid</Style>
+              </Line>
+              <ShadowWeight>0</ShadowWeight>
+              <ShadowColor>Black</ShadowColor>
+            </Border>
+            <Visible>False</Visible>
+            <Header id="16125182-f41b-4c8b-8e21-dbb988f673d5">
+              <Text>Legend</Text>
+              <Backdrop>
+                <Style>Solid</Style>
+                <Color>White</Color>
+                <Color2>Black</Color2>
+                <Gradient>Vertical</Gradient>
+                <Pattern>DottedGrid</Pattern>
+                <Picture special-value="null" />
+                <PictureAlignment>Stretched</PictureAlignment>
+                <Alpha>255</Alpha>
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Backdrop>
+              <Visible>True</Visible>
+              <Docking>Top</Docking>
+              <DockArea special-value="null" />
+              <Border>
+                <Line>
+                  <Color>White</Color>
+                  <Weight>2</Weight>
+                  <Style>Solid</Style>
+                </Line>
+                <ShadowWeight>0</ShadowWeight>
+                <ShadowColor>Black</ShadowColor>
+              </Border>
+              <Font>
+                <Color>Black</Color>
+                <Angle>0</Angle>
+                <Font>Microsoft Sans Serif, 8pt</Font>
+              </Font>
+              <Alignment>TopLeft</Alignment>
+              <Name>
+              </Name>
+              <CustomBorderDrawer special-value="null" />
+              <ContextMenu special-value="null" />
+              <AntiAliasMode>Auto</AntiAliasMode>
+            </Header>
+            <Footer id="7aee8046-591f-4e3e-8866-20ef908a8fff">
+              <Text>
+              </Text>
+              <Backdrop>
+                <Style>Transparent</Style>
+                <Color>White</Color>
+                <Color2>White</Color2>
+                <Gradient>Vertical</Gradient>
+                <Pattern>DottedGrid</Pattern>
+                <Picture special-value="null" />
+                <PictureAlignment>Stretched</PictureAlignment>
+                <Alpha>255</Alpha>
+                <AntiAliasMode>Auto</AntiAliasMode>
+              </Backdrop>
+              <Visible>True</Visible>
+              <Docking>Top</Docking>
+              <DockArea special-value="null" />
+              <Border>
+                <Line>
+                  <Color>Transparent</Color>
+                  <Weight>0</Weight>
+                  <Style>None</Style>
+                </Line>
+                <ShadowWeight>0</ShadowWeight>
+                <ShadowColor>Black</ShadowColor>
+              </Border>
+              <Font>
+                <Color>Black</Color>
+                <Angle>0</Angle>
+                <Font>Microsoft Sans Serif, 8pt</Font>
+              </Font>
+              <Alignment>TopLeft</Alignment>
+              <Name>
+              </Name>
+              <CustomBorderDrawer special-value="null" />
+              <ContextMenu special-value="null" />
+              <AntiAliasMode>Auto</AntiAliasMode>
+            </Footer>
+            <LabelsFont>
+              <Color>Black</Color>
+              <Angle>0</Angle>
+              <Font>Microsoft Sans Serif, 8pt</Font>
+            </LabelsFont>
+            <LegendItems />
+            <Alignment>Right</Alignment>
+            <MarginX>0</MarginX>
+            <MarginY>0</MarginY>
+            <CustomBorderDrawer special-value="null" />
+            <DockArea reference-id="c4ca8d44-5f1c-4d1f-ac21-d90eb29e16c4" />
+            <DockInsideArea>False</DockInsideArea>
+            <GridLayout>
+              <Columns>1</Columns>
+              <Rows>0</Rows>
+            </GridLayout>
+            <Name>defaultLegend</Name>
+            <AntiAliasMode>Auto</AntiAliasMode>
+          </Legend>
+        </Legends>
+        <RightToLeft>No</RightToLeft>
+        <Series>
+          <Series id="592985b8-25d4-4042-93fc-d3cb8cead944">
+            <ValueMemberX special-value="null" />
+            <ValueMembersY special-value="null" />
+            <Type>Bar3D</Type>
+            <AxisX reference-id="6055069a-bf43-4fda-b231-e3d94218fa3c" />
+            <AxisY reference-id="4e071112-6e70-4ebd-a00b-668f42390b5d" />
+            <ZOrder>NaN</ZOrder>
+            <Visible>True</Visible>
+            <ChartArea reference-id="c4ca8d44-5f1c-4d1f-ac21-d90eb29e16c4" />
+            <Legend reference-id="baeac21a-75e1-42dc-a196-957c37cee470" />
+            <Properties />
+            <Points />
+            <Annotations />
+            <ColorPalette>None</ColorPalette>
+            <LegendItemsMode>Auto</LegendItemsMode>
+            <DisplayInLegend>True</DisplayInLegend>
+            <LegendText>
+            </LegendText>
+            <Name>Series 1</Name>
+            <ContextMenu special-value="null" />
+            <AntiAliasMode>Auto</AntiAliasMode>
+          </Series>
+        </Series>
+        <Text>
+        </Text>
+        <Titles>
+          <Title id="a2210be0-384c-417c-8afe-bd3cdd37c44a">
+            <Text>3D Bar Chart</Text>
+            <Backdrop>
+              <Style>Solid</Style>
+              <Color>White</Color>
+              <Color2>Black</Color2>
+              <Gradient>Vertical</Gradient>
+              <Pattern>DottedGrid</Pattern>
+              <Picture special-value="null" />
+              <PictureAlignment>Stretched</PictureAlignment>
+              <Alpha>255</Alpha>
+              <AntiAliasMode>Auto</AntiAliasMode>
+            </Backdrop>
+            <Visible>True</Visible>
+            <Docking>Top</Docking>
+            <DockArea special-value="null" />
+            <Border>
+              <Line>
+                <Color>Transparent</Color>
+                <Weight>0</Weight>
+                <Style>None</Style>
+              </Line>
+              <ShadowWeight>0</ShadowWeight>
+              <ShadowColor>Black</ShadowColor>
+            </Border>
+            <Font>
+              <Color>Black</Color>
+              <Angle>0</Angle>
+              <Font>Arial, 14pt</Font>
+            </Font>
+            <Alignment>Center</Alignment>
+            <Name>header</Name>
+            <CustomBorderDrawer special-value="null" />
+            <ContextMenu special-value="null" />
+            <AntiAliasMode>Auto</AntiAliasMode>
+          </Title>
+        </Titles>
+        <UIOptions>ForceHitTesting</UIOptions>
+      </Control>
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[public void ActiveReport_ReportStart()
+{
+	// Create a series.
+	GrapeCity.ActiveReports.Chart.Series s = new GrapeCity.ActiveReports.Chart.Series();
+	s.Type = GrapeCity.ActiveReports.Chart.ChartType.Bar3D;
+
+	// If the path of the mdb is different, please change below.
+	string m_cnnString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.MDB;Persist Security Info=False";
+			
+	System.Data.OleDb.OleDbDataAdapter oDBAdapter;
+
+	//Create a DataSet.
+	System.Data.DataSet oDS;
+	oDBAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT * from Orders WHERE OrderDate < #08/17/1994#", m_cnnString);
+	oDS = new System.Data.DataSet();
+	oDBAdapter.Fill(oDS, "Orders");
+
+	//Setting each of the properties for DataSource, ValueMembersY and ValueMembersX.
+	ChartControl1.DataSource = oDS;
+	ChartControl1.Series.Add(s);
+	ChartControl1.Series[0].ValueMembersY = oDS.Tables["Orders"].Columns[7].ColumnName;
+	ChartControl1.Series[0].ValueMemberX = oDS.Tables["Orders"].Columns[8].ColumnName;
+
+	//Set the angle on the label to avoid overlapping.
+	ChartControl1.ChartAreas[0].Axes[0].LabelFont.Angle = -90;
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

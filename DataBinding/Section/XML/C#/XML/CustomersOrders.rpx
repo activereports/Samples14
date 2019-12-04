@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="9360" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215" />
+    <Section Type="Detail" Name="Detail" Height="1170" BackColor="16777215" KeepTogether="1">
+      <Control Type="AR.Field" Name="txtName" DataField="NAME" Left="1440" Top="270" Width="7830" Height="270" Text="NAME" Style="color: #000000; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="txtID" DataField="@id" Left="1440" Top="0" Width="720" Height="270" Text="id" Style="color: #000000; text-align: right; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="lblID" Left="0" Top="0" Width="1350" Height="270" Caption="ID" Style="font-weight: bold; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="lblEMail" Left="2880" Top="0" Width="1380.96" Height="270" Caption="E-Mail" Style="font-weight: bold; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="txtEMail" DataField="@email" Left="4260.96" Top="0" Width="5009.04" Height="270" Text="Field1" Style="color: #000000; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="lblName" Left="0" Top="270" Width="1350" Height="270" Caption="Name" Style="font-weight: bold; ddo-char-set: 0" />
+      <Control Type="AR.Subreport" Name="srptOrders" DataField="ORDER" Left="0" Top="810" Width="9270" Height="360" />
+      <Control Type="AR.Label" Name="lblOrders" Left="0" Top="540" Width="1350" Height="270" Caption="Orders" Style="font-weight: bold; ddo-char-set: 0" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <XmlDataSource FileURL="..\..\..\..\..\Data\customer.xml" Pattern="//CUSTOMER" />
+  </DataSources>
+  <Script><![CDATA[/// <summary>
+/// ReportStart Event
+/// Use this event to initialize any objects or variables needed while running a report.
+/// Also use this event to set any Subreport control objects to a new instance 
+/// of the report assigned to the Subreport control.
+/// </summary>
+public void ActiveReport_ReportStart()
+{
+	//Create the subrepot in this event instead of 
+	//setting it in the Detail Format Event everytime.
+	var orders = new GrapeCity.ActiveReports.SectionReport();
+	orders.LoadLayout(System.IO.Path.GetFullPath("..\\..\\Orders.rpx"));
+	srptOrders.Report = orders;
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

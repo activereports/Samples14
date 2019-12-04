@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IListBinding", "IListBinding\IListBinding.csproj", "{27688B5B-04C2-4C19-8306-5D05A9196BAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IListBinding.DataLayer", "IListBinding.DataLayer\IListBinding.DataLayer.csproj", "{58674C59-60B7-4336-A510-DA84087C78FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27688B5B-04C2-4C19-8306-5D05A9196BAE}.Debug|x86.ActiveCfg = Debug|x86
+		{27688B5B-04C2-4C19-8306-5D05A9196BAE}.Debug|x86.Build.0 = Debug|x86
+		{27688B5B-04C2-4C19-8306-5D05A9196BAE}.Release|x86.ActiveCfg = Release|x86
+		{27688B5B-04C2-4C19-8306-5D05A9196BAE}.Release|x86.Build.0 = Release|x86
+		{58674C59-60B7-4336-A510-DA84087C78FC}.Debug|x86.ActiveCfg = Debug|x86
+		{58674C59-60B7-4336-A510-DA84087C78FC}.Debug|x86.Build.0 = Debug|x86
+		{58674C59-60B7-4336-A510-DA84087C78FC}.Release|x86.ActiveCfg = Release|x86
+		{58674C59-60B7-4336-A510-DA84087C78FC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8F29442-2448-413B-84A6-EE5DC897FDAC}
+	EndGlobalSection
+EndGlobal

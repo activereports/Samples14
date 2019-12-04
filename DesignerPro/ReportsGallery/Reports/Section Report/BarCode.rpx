@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="8957.48" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0" culture="en-US">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; text-align: left; vertical-align: top; ddo-char-set: 1" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="1545.12" BackColor="16777215">
+      <Control Type="AR.Line" Name="Line8" X1="4335.84" Y1="825.12" X2="4335.84" Y2="1545.12" />
+      <Control Type="AR.Field" Name="TextBox41" Left="765.3544" Top="839.0552" Width="3548.976" Height="697.3229" Text="BarCode Symbol" Style="background-color: SeaShell; font-family: Segoe UI Light; font-size: 16pt; font-weight: bold; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Field" Name="TextBox42" Left="4354.016" Top="839.0552" Width="4025.197" Height="697.3229" Text="BarCode" Style="background-color: SeaShell; font-family: Segoe UI Light; font-size: 16pt; font-weight: bold; text-align: center; vertical-align: middle" />
+      <Control Type="AR.Shape" Name="Shape1" Left="741.6" Top="825.12" Width="7643.52" Height="720" BackColor="16777215" RoundingRadius="9.999999" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="89829.29" BackColor="16777215" CanGrow="0">
+      <Control Type="AR.Barcode" Name="Barcode1" Left="5286.615" Top="253.4291" Width="2160" Height="915" Text="1234ABZ%" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode2" Left="5286.615" Top="1670.752" Width="2160" Height="915" BarStyle="2" Text="11023OPA" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode3" Left="5286.615" Top="3088.075" Width="2160" Height="915" BarStyle="16" Text="A4016B" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode4" Left="5286.615" Top="4505.398" Width="2160" Height="915" BarStyle="8" Text="MOU12DEF" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode5" Left="5286.615" Top="5922.721" Width="2160" Height="915" BarStyle="9" Text="MOU11DEX" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode6" Left="5286.615" Top="7340.043" Width="2160" Height="915" BarStyle="10" Text="1143493" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode7" Left="5286.615" Top="10174.69" Width="2160" Height="915" BarStyle="3" Text="3661239" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode8" Left="5286.615" Top="11592.01" Width="2160" Height="915" BarStyle="12" Text="MSU 09382" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode9" Left="5286.615" Top="13140.29" Width="2160" Height="915" BarStyle="4" Text="102339221" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode10" Left="5286.615" Top="14426.66" Width="2160" Height="915" BarStyle="6" Text="AUI%89032" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode11" Left="5286.615" Top="15843.98" Width="2160" Height="915" BarStyle="7" Text="BAR92112234" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode12" Left="5286.615" Top="17172.3" Width="2518" Height="1274" BarStyle="25" Text="1293829ABJlSSH92K234" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode13" Left="5286.615" Top="18678.63" Width="2160" Height="915" BarStyle="13" Text="CODE349101%" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode14" Left="5537.615" Top="20433.11" Width="1658" Height="1658" BarStyle="36" Text="BARCODE29102902_453F" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode15" Left="5286.615" Top="22930.6" Width="2160" Height="915" BarStyle="18" Text="145273620123" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode16" Left="5286.615" Top="25765.24" Width="2160" Height="915" BarStyle="17" Text="298273600426" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode17" Left="4540.115" Top="27182.56" Width="3653" Height="915" BarStyle="28" Text="(01)01228(15)0231" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode18" Left="4851.36" Top="28697.39" Width="3111.84" Height="720" BarStyle="64" Text="0323456709498765432101234567891" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode19" Left="4566.615" Top="30396.21" Width="3600" Height="157" BarStyle="26" Text="154-0023-1-3-2-A507" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode20" Left="5286.615" Top="31434.53" Width="2160" Height="915" BarStyle="5" Text="790022312" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode21" Left="5564.115" Top="33135.02" Width="1605" Height="1766" BarStyle="37" Text="INVOICE #010264783" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode22" Left="5286.615" Top="38272.47" Width="2160" Height="915" BarStyle="14" Text="80523" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode23" Left="5486.115" Top="39638.79" Width="1761" Height="1017" BarStyle="27" Text="ABARCD2332322" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode24" Left="5286.615" Top="41182.11" Width="2160" Height="765" BarStyle="15" Text="555100282" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode25" Left="5609.615" Top="42933.6" Width="1514" Height="1514" BarStyle="24" Text="www.google.com" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode26" Left="4851.36" Top="45434.09" Width="2953.44" Height="765" BarStyle="22" Text="B31HQY1" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode27" Left="5386.615" Top="46896.91" Width="1960" Height="674" BarStyle="29" Text="01339382122890" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode29" Left="5286.615" Top="48370.73" Width="2160" Height="561" BarStyle="31" Text="00393938212289" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode30" Left="5374.615" Top="50825.04" Width="1984" Height="2737" BarStyle="32" Text="00133938212289" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode31" Left="4769.615" Top="54104.52" Width="3194" Height="432" BarStyle="30" Text="3094438233289" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode32" Left="4769.615" Top="55519.86" Width="3194" Height="436" BarStyle="33" Text="8110100706401002003100110120" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode33" Left="4769.28" Top="56797.65" Width="3289" Height="501" BarStyle="34" Text="8110100706401002003100110120" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode34" Left="4928.614" Top="58378.48" Width="2876" Height="388" BarStyle="35" Text="00656923221" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode35" Left="5076" Top="59640.21" Width="2370.615" Height="768.8483" BarStyle="35" Text="00656923221" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" GS1CompositeType="1" GS1CompositeValue="1" />
+      <Control Type="AR.Barcode" Name="Barcode36" Left="5286.615" Top="61047.13" Width="2160" Height="720" BarStyle="23" Text="BARCODE2312" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode37" Left="5286.615" Top="62366.96" Width="2160" Height="915" BarStyle="19" Text="88008725991" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode38" Left="5286.615" Top="65201.6" Width="2160" Height="915" BarStyle="20" Text="53472903812" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Barcode" Name="Barcode39" Left="5286.615" Top="68036.25" Width="2160" Height="915" BarStyle="21" Text="09867231172" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Field" Name="TextBox1" Left="1133.858" Top="566.9291" Width="1440" Height="288" Text="Ansi39" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox2" Left="1133.858" Top="1984.252" Width="1440" Height="288" Text="Ansi39x" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox3" Left="1133.858" Top="3401.575" Width="1440" Height="288" Text="Codabar" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox4" Left="1133.858" Top="4818.898" Width="1440" Height="288" Text="Code_128_A" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox5" Left="1133.858" Top="6236.22" Width="1440" Height="288" Text="Code_128_B" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox6" Left="1133.858" Top="7653.543" Width="1440" Height="288" Text="Code_128_C" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox7" Left="1133.858" Top="9070.866" Width="1440" Height="288" Text="Code_128auto" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode40" Left="5286.615" Top="8757.366" Width="2160" Height="915" BarStyle="11" Text="1143493" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Field" Name="TextBox8" Left="1133.858" Top="10488.19" Width="1440" Height="288" Text="Code_2_of_5" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox9" Left="1133.858" Top="11905.51" Width="1440" Height="288" Text="Code_93" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox10" Left="1133.858" Top="13453.8" Width="1440" Height="288" Text="Code25intlv" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox11" Left="1133.858" Top="14740.16" Width="1440" Height="288" Text="Code39" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox12" Left="1133.858" Top="16157.48" Width="1440" Height="288" Text="Code39x" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox13" Left="1133.858" Top="17574.8" Width="1440" Height="288" Text="Code49" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox14" Left="1133.858" Top="18992.13" Width="1440" Height="288" Text="Code93x" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox15" Left="1133.858" Top="21118.11" Width="1440" Height="288" Text="DataMatrix" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox16" Left="1133.858" Top="23244.1" Width="1440" Height="288" Text="EAN_13" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox17" Left="1133.858" Top="26078.74" Width="1440" Height="288" Text="EAN_8" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox18" Left="1133.858" Top="27496.06" Width="1440" Height="288" Text="EAN128FNC1" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox19" Left="1133.858" Top="28913.39" Width="1440" Height="288" Text="IntelligentMail" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox20" Left="1133.858" Top="30330.71" Width="1889.28" Height="288" Text="JapanesePostal" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox21" Left="1133.858" Top="31748.03" Width="1889.28" Height="288" Text="Matrix_2_of_5" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox22" Left="1133.858" Top="33874.02" Width="1889.28" Height="288" Text="MicroPDF417" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox23" Left="1133.858" Top="38585.97" Width="1889.28" Height="288" Text="MSI" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox24" Left="1133.858" Top="40003.29" Width="1889.28" Height="288" Text="Pdf417" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox25" Left="1133.858" Top="41420.61" Width="1889.28" Height="288" Text="PostNet" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox26" Left="1133.858" Top="43546.6" Width="1889.28" Height="288" Text="QRCode" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox27" Left="1133.858" Top="45672.59" Width="1440" Height="288" Text="RM4SCC" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox28" Left="1133.858" Top="47089.91" Width="1889.28" Height="288" Text="RSS14" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox29" Left="1133.858" Top="48507.24" Width="1889.28" Height="288" Text="RSS14Stacked" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox30" Left="1133.858" Top="49924.55" Width="1889.28" Height="288" Text="RSS14Stacked CCA" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox31" Left="1133.858" Top="52050.54" Width="3044.16" Height="288" Text="RSS14StackedOmnidirectional" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox32" Left="1133.858" Top="54176.52" Width="1889.28" Height="288" Text="RSS14Truncated" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox33" Left="1133.858" Top="55593.85" Width="1889.28" Height="288" Text="RSSExpanded" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox34" Left="1133.858" Top="57011.17" Width="2489.76" Height="288" Text="RSSExpandedStacked" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox35" Left="1133.858" Top="58428.48" Width="2489.76" Height="288" Text="RSSLimited" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox36" Left="1133.858" Top="59845.81" Width="2489.76" Height="288" Text="RSSLimited CCA" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox37" Left="1133.858" Top="61263.13" Width="2489.76" Height="288" Text="UCCEAN128" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox38" Left="1133.858" Top="62680.46" Width="2489.76" Height="288" Text="UPC_A" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox39" Left="1133.858" Top="65515.09" Width="2489.76" Height="288" Text="UPC_E0" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox40" Left="1133.858" Top="68349.76" Width="2489.76" Height="288" Text="UPC_E1" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Line" Name="Line2" X1="747.3601" Y1="1417.323" X2="8380.8" Y2="1417.323" />
+      <Control Type="AR.Line" Name="Line1" X1="747.3601" Y1="2834.646" X2="8380.8" Y2="2834.646" />
+      <Control Type="AR.Line" Name="Line3" X1="748.8" Y1="4251.969" X2="8382.239" Y2="4251.969" />
+      <Control Type="AR.Line" Name="Line4" X1="747.3601" Y1="5669.292" X2="8380.8" Y2="5669.292" />
+      <Control Type="AR.Line" Name="Line5" X1="747.3601" Y1="7086.614" X2="8380.8" Y2="7086.614" />
+      <Control Type="AR.Line" Name="Line6" X1="748.8" Y1="8503.938" X2="8382.239" Y2="8503.938" />
+      <Control Type="AR.Line" Name="Line7" X1="748.8" Y1="9921.26" X2="8382.239" Y2="9921.26" />
+      <Control Type="AR.Line" Name="Line9" X1="747.3601" Y1="12755.91" X2="8380.798" Y2="12755.91" />
+      <Control Type="AR.Line" Name="Line10" X1="747.3601" Y1="14173.23" X2="8380.798" Y2="14173.23" />
+      <Control Type="AR.Line" Name="Line11" X1="747.3601" Y1="15590.55" X2="8380.798" Y2="15590.55" />
+      <Control Type="AR.Line" Name="Line12" X1="748.8" Y1="17007.88" X2="8382.238" Y2="17007.88" />
+      <Control Type="AR.Line" Name="Line13" X1="747.3601" Y1="18425.2" X2="8380.798" Y2="18425.2" />
+      <Control Type="AR.Line" Name="Line14" X1="748.8" Y1="19842.52" X2="8382.238" Y2="19842.52" />
+      <Control Type="AR.Line" Name="Line16" X1="747.3601" Y1="24094.49" X2="8380.798" Y2="24094.49" />
+      <Control Type="AR.Line" Name="Line17" X1="748.8" Y1="26929.13" X2="8382.238" Y2="26929.13" />
+      <Control Type="AR.Line" Name="Line18" X1="748.8" Y1="28346.46" X2="8382.238" Y2="28346.46" />
+      <Control Type="AR.Line" Name="Line19" X1="747.3601" Y1="29763.78" X2="8380.798" Y2="29763.78" />
+      <Control Type="AR.Line" Name="Line20" X1="747.3601" Y1="31181.1" X2="8380.798" Y2="31181.1" />
+      <Control Type="AR.Line" Name="Line21" X1="747.3601" Y1="32598.43" X2="8380.798" Y2="32598.43" />
+      <Control Type="AR.Line" Name="Line23" X1="747.3601" Y1="39436.36" X2="8380.798" Y2="39436.36" />
+      <Control Type="AR.Line" Name="Line24" X1="747.3601" Y1="40853.69" X2="8380.798" Y2="40853.69" />
+      <Control Type="AR.Line" Name="Line25" X1="747.3601" Y1="42271.01" X2="8380.798" Y2="42271.01" />
+      <Control Type="AR.Line" Name="Line26" X1="747.3601" Y1="44928" X2="8380.798" Y2="44928" />
+      <Control Type="AR.Line" Name="Line28" X1="747.3601" Y1="47940.3" X2="8380.798" Y2="47940.3" />
+      <Control Type="AR.Line" Name="Line29" X1="747.3601" Y1="49357.63" X2="8380.798" Y2="49357.63" />
+      <Control Type="AR.Line" Name="Line30" X1="747.3601" Y1="50774.95" X2="8380.798" Y2="50774.95" />
+      <Control Type="AR.Line" Name="Line31" X1="747.3601" Y1="53609.59" X2="8380.798" Y2="53609.59" />
+      <Control Type="AR.Line" Name="Line32" X1="747.3601" Y1="55026.92" X2="8380.798" Y2="55026.92" />
+      <Control Type="AR.Line" Name="Line35" X1="747.3601" Y1="59278.88" X2="8380.798" Y2="59278.88" />
+      <Control Type="AR.Line" Name="Line36" X1="747.3601" Y1="60696.21" X2="8380.798" Y2="60696.21" />
+      <Control Type="AR.Line" Name="Line37" X1="748.8" Y1="62113.53" X2="8382.238" Y2="62113.53" />
+      <Control Type="AR.Line" Name="Line38" X1="748.8" Y1="63530.86" X2="8382.238" Y2="63530.86" />
+      <Control Type="AR.Line" Name="Line39" X1="748.8" Y1="64948.18" X2="8382.238" Y2="64948.18" />
+      <Control Type="AR.Line" Name="Line22" X1="747.2126" Y1="22677.17" X2="8382.047" Y2="22677.17" />
+      <Control Type="AR.Line" Name="Line27" X1="747.2126" Y1="35433.07" X2="8380.913" Y2="35433.07" />
+      <Control Type="AR.Line" Name="Line33" X1="747.2126" Y1="46522.98" X2="8380.913" Y2="46522.98" />
+      <Control Type="AR.Line" Name="Line34" X1="747.2126" Y1="56444.24" X2="8380.913" Y2="56444.24" />
+      <Control Type="AR.Line" Name="Line40" X1="745.5118" Y1="57861.56" X2="8378.95" Y2="57861.56" />
+      <Control Type="AR.Line" Name="Line41" X1="747.2126" Y1="25511.81" X2="8380.913" Y2="25511.81" />
+      <Control Type="AR.Field" Name="TextBox43" Left="1133.858" Top="24661.42" Width="2670.236" Height="288" Text="EAN_13 with Add on Code" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode41" Left="5286.615" Top="24347.92" Width="2160" Height="915" BarStyle="18" Text="4910011197698" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" SupplementCaptionPos="2" SupplementText="01500" SupplementSpacing="0.1" />
+      <Control Type="AR.Line" Name="Line42" X1="747.2126" Y1="66365.5" X2="8382.047" Y2="66365.5" />
+      <Control Type="AR.Line" Name="Line43" X1="747.2126" Y1="67782.83" X2="8380.913" Y2="67782.83" />
+      <Control Type="AR.Line" Name="Line44" X1="747.2126" Y1="69200.14" X2="8380.913" Y2="69200.14" />
+      <Control Type="AR.Barcode" Name="Barcode42" Left="5286.24" Top="63784.54" Width="2160" Height="915" BarStyle="19" Text="88008725991" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" SupplementText="24" />
+      <Control Type="AR.Field" Name="TextBox44" Left="1133.858" Top="64097.78" Width="2489.76" Height="288" Text="UPC_A with Add on Code" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode43" Left="5286.615" Top="66618.94" Width="2160" Height="915" BarStyle="20" Text="53472903812" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" SupplementText="21826" />
+      <Control Type="AR.Field" Name="TextBox45" Left="1133.858" Top="66932.43" Width="2489.76" Height="288" Text="UPC_E0 with Add on Code" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Field" Name="TextBox46" Left="1133.858" Top="69767.07" Width="2489.76" Height="288" Text="UPC_E1 with Add on Code" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode44" Left="5286.615" Top="69453.57" Width="2160" Height="915" BarStyle="21" Text="09867231172" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" SupplementText="36" />
+      <Control Type="AR.PageBreak" Name="PageBreak2" Top="22685" Left="0" Width="0" Height="0" />
+      <Control Type="AR.PageBreak" Name="PageBreak3" Top="32602" Left="0" Width="0" Height="0" />
+      <Control Type="AR.PageBreak" Name="PageBreak4" Top="42277" Left="0" Width="0" Height="0" />
+      <Control Type="AR.PageBreak" Name="PageBreak5" Top="53616" Left="0" Width="0" Height="0" />
+      <Control Type="AR.PageBreak" Name="PageBreak6" Top="64955" Left="0" Width="0" Height="0" />
+      <Control Type="AR.Line" Name="Line45" X1="747.2126" Y1="0" X2="764.64" Y2="89745.13" />
+      <Control Type="AR.Line" Name="Line46" X1="8380.913" Y1="0" X2="8379.36" Y2="89745.13" />
+      <Control Type="AR.Line" Name="Line47" X1="4335.874" Y1="0" X2="4314.24" Y2="89745.13" />
+      <Control Type="AR.Line" Name="Line15" X1="748.9133" Y1="11338.58" X2="8382.047" Y2="11338.58" />
+      <Control Type="AR.PageBreak" Name="PageBreak1" Top="11345" Left="0" Width="0" Height="0" />
+      <Control Type="AR.Line" Name="Line48" X1="744.378" Y1="70617.48" X2="8379.211" Y2="70617.48" />
+      <Control Type="AR.Barcode" Name="Barcode28" Left="5286.24" Top="49571.73" Width="2160" Height="909.4738" BarStyle="31" Text="00033938213289" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" GS1CompositeType="1" GS1CompositeValue="1" />
+      <Control Type="AR.Line" Name="Line49" X1="747.36" Y1="37635" X2="8380.8" Y2="37634.4" />
+      <Control Type="AR.Field" Name="TextBox47" Left="1133.28" Top="36411.84" Width="1889.28" Height="288" Text="MicroQRCode" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode45" Left="5564.16" Top="35856" Width="1440" Height="1440" BarStyle="38" Text="1234567890" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Field" Name="TextBox48" Left="1133.28" Top="71112.96" Width="2489.76" Height="288" Text="Code11" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode46" Left="4769.28" Top="70862.41" Width="3288.96" Height="695.52" BarStyle="66" Text="122-456-7890" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line50" X1="744.4799" Y1="71717.76" X2="8379.313" Y2="71717.76" />
+      <Control Type="AR.Line" Name="Line51" X1="750.2401" Y1="72948.97" X2="8385.073" Y2="72948.97" />
+      <Control Type="AR.Field" Name="TextBox49" Left="1133.28" Top="72240.48" Width="2489.76" Height="288" Text="SSCC-18" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode47" Left="4769.28" Top="72089.28" Width="3288.96" Height="696.12" BarStyle="67" Text="12345678901234567" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line52" X1="750.2401" Y1="74190.24" X2="8385.601" Y2="74190.24" />
+      <Control Type="AR.Field" Name="TextBox50" Left="1133.28" Top="73362.24" Width="2489.76" Height="288" Text="Telepen (alphanumeric)" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode48" Left="4769.28" Top="73247.04" Width="3288.96" Height="695.52" BarStyle="68" Text="IBM_1000123" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Field" Name="TextBox51" Left="1133.28" Top="74567.52" Width="2489.76" Height="288" Text="PZN" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode49" Left="4769.28" Top="74400.48" Width="3288.96" Height="695.52" BarStyle="70" Text="12345678" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line53" X1="750.2401" Y1="75314.88" X2="8379.36" Y2="75314.88" />
+      <Control Type="AR.Field" Name="TextBox52" Left="1133.28" Top="75647.52" Width="2489.76" Height="288" Text="ISSN" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode50" Left="4769.28" Top="75509.28" Width="3288.96" Height="695.52" BarStyle="74" Text="123456789" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line54" X1="750.2401" Y1="76466.88" X2="8388.001" Y2="76466.88" />
+      <Control Type="AR.Field" Name="TextBox53" Left="1133.28" Top="76818.24" Width="2489.76" Height="288" Text="BC412" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode51" Left="4769.28" Top="76665.6" Width="3288.96" Height="695.52" BarStyle="77" Text="BC412" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line55" X1="750.2401" Y1="77490.73" X2="8388.001" Y2="77490.73" />
+      <Control Type="AR.Field" Name="TextBox54" Left="1133.28" Top="77912.64" Width="2489.76" Height="288" Text="ISBN" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode52" Left="4769.28" Top="77721.13" Width="3288.96" Height="695.52" BarStyle="73" Text="123456789" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line56" X1="750.2401" Y1="78540.48" X2="8385" Y2="78540" />
+      <Control Type="AR.Field" Name="TextBox55" Left="1133.28" Top="78827.04" Width="2489.76" Height="288" Text="ISMN" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode53" Left="4769.28" Top="78674.4" Width="3288.96" Height="695.52" BarStyle="75" Text="123456789" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line57" X1="750.2401" Y1="79574.4" X2="8385" Y2="79575" />
+      <Control Type="AR.Field" Name="TextBox56" Left="1133.28" Top="79891.2" Width="2489.76" Height="288" Text="ITF-14" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode54" Left="4769.28" Top="79724.16" Width="3288.96" Height="695.52" BarStyle="65" Text="1234567890123" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line58" X1="750.2401" Y1="80595.36" X2="8385" Y2="80595" />
+      <Control Type="AR.Field" Name="TextBox57" Left="1133.28" Top="80942.41" Width="2489.76" Height="288" Text="PharmaCode" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode55" Left="4769.28" Top="80791.2" Width="3288.96" Height="695.52" BarStyle="69" Text="123-ABC-123" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line59" X1="764.64" Y1="81659.52" X2="8385.12" Y2="81659.52" />
+      <Control Type="AR.Field" Name="TextBox58" Left="1133.28" Top="82005.13" Width="2489.76" Height="288" Text="HIBC Code 128" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode56" Left="4769.28" Top="81839.52" Width="3288.96" Height="695.52" BarStyle="71" Text="+A99912345/$$520001510X36" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line60" X1="764.64" Y1="82693.45" X2="8385.12" Y2="82693.45" />
+      <Control Type="AR.Field" Name="TextBox59" Left="1133.28" Top="83013.13" Width="2489.76" Height="288" Text="HIBC Code 39" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode57" Left="4769.28" Top="82919.52" Width="3288.96" Height="695.52" BarStyle="72" Text="+A99912345/$$520001510X36" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.PageBreak" Name="PageBreak7" Top="76475" Left="0" Width="0" Height="0" />
+      <Control Type="AR.Line" Name="Line61" X1="750.2401" Y1="83760.48" X2="8385" Y2="83760" />
+      <Control Type="AR.Field" Name="TextBox60" Left="1133.28" Top="84121.92" Width="2489.76" Height="288" Text="IATA 2 of 5" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode58" Left="4769.28" Top="83988" Width="3288.96" Height="695.52" BarStyle="76" Text="ABC_12345" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line62" X1="750.2401" Y1="84854.88" X2="8385.121" Y2="84854.88" />
+      <Control Type="AR.Field" Name="TextBox61" Left="1133.28" Top="85561.92" Width="2489.76" Height="288" Text="UPS Maxicode" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode59" Left="5610.24" Top="85065.13" Width="1548" Height="1548" BarStyle="39" Text="1234567" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line63" X1="750.2401" Y1="86729.77" X2="8385.12" Y2="86729.76" />
+      <Control Type="AR.Field" Name="TextBox62" Left="1133.28" Top="87032.16" Width="2489.76" Height="288" Text="IntelligentMailPackage" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode60" Left="4769.28" Top="86940.01" Width="3288.96" Height="695.52" BarStyle="79" Text="(94203) 5149 0100 1346 1234 5" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="Line64" X1="750.2401" Y1="87811.2" X2="8385.121" Y2="87811.2" />
+      <Control Type="AR.Line" Name="Line65" X1="764.64" Y1="89745.13" X2="8402.4" Y2="89745.13" />
+      <Control Type="AR.Field" Name="TextBox63" Left="1238.4" Top="88682.41" Width="2489.76" Height="288" Text="GS1QRCode" Style="font-family: Segoe UI Light" />
+      <Control Type="AR.Barcode" Name="Barcode61" Left="5600.16" Top="88058.88" Width="1596" Height="1596" BarStyle="40" Text="0123456789012345" CaptionPos="2" Font="Segoe UI Light" FontSize="10" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.PageBreak" Name="PageBreak8" Top="87817" Left="0" Width="0" Height="0" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="0" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

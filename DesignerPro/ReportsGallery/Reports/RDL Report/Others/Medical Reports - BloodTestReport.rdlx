@@ -1,0 +1,982 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Medical Reports - BloodTestReport.rdlx</dd:Name>
+	<Body>
+		<Height>5in</Height>
+		<ReportItems>
+			<Textbox Name="TextBox1">
+				<Height>0.9167in</Height>
+				<Value>Blood Test Report</Value>
+				<Style>
+					<BackgroundColor>#f1f1f1</BackgroundColor>
+					<Color>#551e5f</Color>
+					<FontSize>24pt</FontSize>
+					<FontWeight>100</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<VerticalAlign>Middle</VerticalAlign>
+				</Style>
+				<Width>6.375in</Width>
+				<ZIndex>22</ZIndex>
+			</Textbox>
+			<Image Name="Image1">
+				<Height>0.9167in</Height>
+				<Left>3.625in</Left>
+				<Sizing>FitProportional</Sizing>
+				<Source>Embedded</Source>
+				<Value>AcmeLogo-vertical-500px</Value>
+				<Width>2.75in</Width>
+				<ZIndex>29</ZIndex>
+			</Image>
+			<Textbox Name="TextBox21">
+				<Height>0.25in</Height>
+				<Left>3.375in</Left>
+				<Value>=Now</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<Format>D</Format>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>1.09375in</Top>
+				<Width>3in</Width>
+			</Textbox>
+			<Textbox Name="TextBox7">
+				<Height>0.25in</Height>
+				<Left>1.052083in</Left>
+				<Value>Patient ID</Value>
+				<Style>
+					<Color>#551e5f</Color>
+					<FontSize>12pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderColor>
+						<Default>Gray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+						<Bottom>None</Bottom>
+						<Left>Solid</Left>
+						<Right>None</Right>
+						<Top>None</Top>
+					</BorderStyle>
+				</Style>
+				<Top>1.979167in</Top>
+				<Width>0.8229in</Width>
+				<ZIndex>10</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox8">
+				<Height>0.25in</Height>
+				<Left>1.885417in</Left>
+				<Value>Control No.</Value>
+				<Style>
+					<Color>#551e5f</Color>
+					<FontSize>12pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderColor>
+						<Default>Gray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+						<Bottom>None</Bottom>
+						<Left>Solid</Left>
+						<Right>None</Right>
+						<Top>None</Top>
+					</BorderStyle>
+				</Style>
+				<Top>1.979167in</Top>
+				<Width>1.0104in</Width>
+				<ZIndex>8</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox9">
+				<Height>0.25in</Height>
+				<Left>2.895833in</Left>
+				<Value>Date Collected</Value>
+				<Style>
+					<Color>#551e5f</Color>
+					<FontSize>10pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderColor>
+						<Default>Gray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+						<Bottom>None</Bottom>
+						<Left>Solid</Left>
+						<Right>None</Right>
+						<Top>None</Top>
+					</BorderStyle>
+				</Style>
+				<Top>1.979167in</Top>
+				<Width>1.0104in</Width>
+				<ZIndex>3</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox3">
+				<Height>0.2604in</Height>
+				<Left>4.53125in</Left>
+				<Value>Specimen Number</Value>
+				<Style>
+					<Color>#551e5f</Color>
+					<FontSize>14pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderColor>
+						<Default>Gray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+						<Bottom>None</Bottom>
+						<Left>None</Left>
+						<Right>Solid</Right>
+						<Top>Solid</Top>
+					</BorderStyle>
+				</Style>
+				<Top>1.458333in</Top>
+				<Width>1.8438in</Width>
+				<ZIndex>12</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox11">
+				<Height>0.25in</Height>
+				<Left>4.916667in</Left>
+				<Value>Sex</Value>
+				<Style>
+					<Color>#551e5f</Color>
+					<FontSize>12pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderColor>
+						<Default>Gray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+						<Bottom>None</Bottom>
+						<Left>Solid</Left>
+						<Right>None</Right>
+						<Top>None</Top>
+					</BorderStyle>
+				</Style>
+				<Top>1.979167in</Top>
+				<Width>0.4167in</Width>
+				<ZIndex>21</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox6">
+				<Height>0.25in</Height>
+				<Value>Account No.</Value>
+				<Style>
+					<Color>#551e5f</Color>
+					<FontSize>12pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderColor>
+						<Default>Gray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+						<Bottom>None</Bottom>
+						<Left>Solid</Left>
+						<Right>None</Right>
+						<Top>None</Top>
+					</BorderStyle>
+				</Style>
+				<Top>1.979167in</Top>
+				<Width>1.052in</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox10">
+				<Height>0.25in</Height>
+				<Left>3.90625in</Left>
+				<Value>Date Reported</Value>
+				<Style>
+					<Color>#551e5f</Color>
+					<FontSize>10pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderColor>
+						<Default>Gray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+						<Bottom>None</Bottom>
+						<Left>Solid</Left>
+						<Right>None</Right>
+						<Top>None</Top>
+					</BorderStyle>
+				</Style>
+				<Top>1.979167in</Top>
+				<Width>1.0063in</Width>
+				<ZIndex>18</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox2">
+				<Height>0.2604in</Height>
+				<Value>Patient Name
+</Value>
+				<Style>
+					<Color>#551e5f</Color>
+					<FontSize>14pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<BorderColor>
+						<Default>Gray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+						<Bottom>None</Bottom>
+						<Left>Solid</Left>
+						<Right>Solid</Right>
+						<Top>Solid</Top>
+					</BorderStyle>
+				</Style>
+				<Top>1.458333in</Top>
+				<Width>4.5311in</Width>
+				<ZIndex>15</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox12">
+				<Height>0.25in</Height>
+				<Left>5.333333in</Left>
+				<Value>DOB</Value>
+				<Style>
+					<Color>#551e5f</Color>
+					<FontSize>12pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderColor>
+						<Default>Gray</Default>
+					</BorderColor>
+					<BorderStyle>
+						<Default>None</Default>
+						<Bottom>None</Bottom>
+						<Left>Solid</Left>
+						<Right>Solid</Right>
+						<Top>None</Top>
+					</BorderStyle>
+				</Style>
+				<Top>1.979167in</Top>
+				<Width>1.0416in</Width>
+				<ZIndex>27</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox4">
+				<CanGrow>true</CanGrow>
+				<Height>0.2604in</Height>
+				<Value>=First(Fields!PatientLName.Value, "PatientInfo") + ", " + First(Fields!PatientFName.Value, "PatientInfo")</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Left>Solid</Left>
+						<Right>Solid</Right>
+					</BorderStyle>
+				</Style>
+				<Top>1.71875in</Top>
+				<Width>4.5312in</Width>
+				<ZIndex>30</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox5">
+				<CanGrow>true</CanGrow>
+				<Height>0.2604in</Height>
+				<Left>4.53125in</Left>
+				<Value>=First(Fields!SpecimanNo.Value, "PatientInfo")</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Right>Solid</Right>
+					</BorderStyle>
+				</Style>
+				<Top>1.71875in</Top>
+				<Width>1.8438in</Width>
+				<ZIndex>31</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox13">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>=First(Fields!AccountNo.Value, "PatientInfo")</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Left>Solid</Left>
+					</BorderStyle>
+				</Style>
+				<Top>2.229167in</Top>
+				<Width>1.0521in</Width>
+				<ZIndex>32</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox14">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>1.052083in</Left>
+				<Value>=First(Fields!PatientID.Value, "PatientInfo")</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Left>Solid</Left>
+					</BorderStyle>
+				</Style>
+				<Top>2.229167in</Top>
+				<Width>0.8229in</Width>
+				<ZIndex>33</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox15">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>1.885417in</Left>
+				<Value>=First(Fields!ControlNo.Value, "PatientInfo")</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Left>Solid</Left>
+					</BorderStyle>
+				</Style>
+				<Top>2.229167in</Top>
+				<Width>1.0104in</Width>
+				<ZIndex>34</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox16">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>2.895833in</Left>
+				<Value>=First(Fields!DateCollected.Value)</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<Format>d</Format>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Left>Solid</Left>
+					</BorderStyle>
+				</Style>
+				<Top>2.229167in</Top>
+				<Width>1in</Width>
+				<ZIndex>34</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox18">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>4.916667in</Left>
+				<Value>=First(Fields!PatientSex.Value, "PatientInfo")</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Left>Solid</Left>
+					</BorderStyle>
+				</Style>
+				<Top>2.229167in</Top>
+				<Width>0.4167in</Width>
+				<ZIndex>34</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox17">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>3.90625in</Left>
+				<Value>=First(Fields!DateReported.Value)</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<Format>d</Format>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Left>Solid</Left>
+					</BorderStyle>
+				</Style>
+				<Top>2.229167in</Top>
+				<Width>1.0104in</Width>
+				<ZIndex>34</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox19">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>5.333333in</Left>
+				<Value>=First(Fields!DOB.Value)</Value>
+				<Style>
+					<FontSize>11pt</FontSize>
+					<Format>d</Format>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<BorderStyle>
+						<Bottom>Solid</Bottom>
+						<Left>Solid</Left>
+						<Right>Solid</Right>
+					</BorderStyle>
+				</Style>
+				<Top>2.229167in</Top>
+				<Width>1.0417in</Width>
+				<ZIndex>35</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox22">
+				<Height>0.4792in</Height>
+				<Left>2.125in</Left>
+				<Value>Result</Value>
+				<Style>
+					<BackgroundColor>#f1f1f1</BackgroundColor>
+					<Color>#551e5f</Color>
+					<FontFamily>Arial</FontFamily>
+					<FontSize>18pt</FontSize>
+					<FontStyle>Normal</FontStyle>
+					<FontWeight>100</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<VerticalAlign>Middle</VerticalAlign>
+					<BorderStyle>
+						<Bottom>None</Bottom>
+					</BorderStyle>
+				</Style>
+				<Top>2.625in</Top>
+				<Width>2in</Width>
+				<ZIndex>9</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox20">
+				<Height>0.4792in</Height>
+				<Value>Tests</Value>
+				<Style>
+					<BackgroundColor>#f1f1f1</BackgroundColor>
+					<Color>#551e5f</Color>
+					<FontFamily>Arial</FontFamily>
+					<FontSize>18pt</FontSize>
+					<FontStyle>Normal</FontStyle>
+					<FontWeight>100</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<VerticalAlign>Middle</VerticalAlign>
+					<BorderStyle>
+						<Bottom>None</Bottom>
+					</BorderStyle>
+				</Style>
+				<Top>2.625in</Top>
+				<Width>2.125in</Width>
+				<ZIndex>5</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox23">
+				<Height>0.4792in</Height>
+				<Left>4.125in</Left>
+				<Value>Reference Interval</Value>
+				<Style>
+					<BackgroundColor>#f1f1f1</BackgroundColor>
+					<Color>#551e5f</Color>
+					<FontSize>18pt</FontSize>
+					<FontWeight>100</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+					<VerticalAlign>Middle</VerticalAlign>
+					<BorderStyle>
+						<Bottom>None</Bottom>
+					</BorderStyle>
+				</Style>
+				<Top>2.625in</Top>
+				<Width>2.25in</Width>
+				<ZIndex>4</ZIndex>
+			</Textbox>
+			<List Name="List1">
+				<DataSetName>Results</DataSetName>
+				<Grouping Name="List1_Detail_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!TestGroup.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+				<Height>0.6458in</Height>
+				<ReportItems>
+					<Table Name="Table1">
+						<DataSetName>Results</DataSetName>
+						<Header>
+							<TableRows>
+								<TableRow>
+									<Height>0.375in</Height>
+									<TableCells>
+										<TableCell>
+											<ColSpan>3</ColSpan>
+											<ReportItems>
+												<Textbox Name="TextBox24">
+													<CanGrow>true</CanGrow>
+													<Value>=First(Fields!TestGroup.Value)</Value>
+													<Style>
+														<BackgroundColor>#f1f1f1</BackgroundColor>
+														<Color>Black</Color>
+														<FontSize>16pt</FontSize>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+									</TableCells>
+								</TableRow>
+							</TableRows>
+						</Header>
+						<Details>
+							<TableRows>
+								<TableRow>
+									<Height>0.25in</Height>
+									<TableCells>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="TextBox27">
+													<CanGrow>true</CanGrow>
+													<Value>=Fields!Test.Value</Value>
+													<Style>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="TextBox28">
+													<CanGrow>true</CanGrow>
+													<Value>=Fields!Result.Value + Fields!Units.Value</Value>
+													<Style>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+										<TableCell>
+											<ReportItems>
+												<Textbox Name="TextBox29">
+													<CanGrow>true</CanGrow>
+													<Value>=Fields!ReferenceInterval.Value</Value>
+													<Style>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Textbox>
+											</ReportItems>
+										</TableCell>
+									</TableCells>
+								</TableRow>
+							</TableRows>
+						</Details>
+						<Height>0.625in</Height>
+						<TableColumns>
+							<TableColumn>
+								<Width>2.125in</Width>
+							</TableColumn>
+							<TableColumn>
+								<Width>2.125in</Width>
+							</TableColumn>
+							<TableColumn>
+								<Width>2.125in</Width>
+							</TableColumn>
+						</TableColumns>
+						<Width>6.375in</Width>
+					</Table>
+				</ReportItems>
+				<Top>3.104167in</Top>
+				<Width>6.375in</Width>
+				<ZIndex>36</ZIndex>
+			</List>
+			<Textbox Name="TextBox25">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>=First(Fields!Comments.Value, "PatientInfo")</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Top>3.875in</Top>
+				<Width>6.375in</Width>
+				<ZIndex>37</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox26">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>FINAL REPORT</Value>
+				<Style>
+					<FontWeight>700</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Top>4.125in</Top>
+				<Width>6.375in</Width>
+				<ZIndex>37</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox30">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>This document contains private and confidential health information protected by state and federal law. If you have received this document in error, please call (123) 456-7890.</Value>
+				<Style>
+					<FontWeight>700</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Top>4.375in</Top>
+				<Width>6.375in</Width>
+				<ZIndex>37</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox31">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>5.375in</Left>
+				<Value>="Page " &amp; Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+				<Style>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>4.75in</Top>
+				<Width>1in</Width>
+				<ZIndex>38</ZIndex>
+			</Textbox>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<PageHeight>11in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>6.37505in</Width>
+	<EmbeddedImages>
+		<EmbeddedImage Name="AcmeLogo-vertical-500px">
+			<ImageData>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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<DataSources>
+		<DataSource Name="PatientInfo">
+			<ConnectionProperties>
+				<ConnectString>xmldata=&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="BloodReport_PatientInfo.xsd" generated="2018-06-29T14:26:17"&gt;&lt;BloodReport_PatientInfo&gt;&lt;PatientID&gt;21111&lt;/PatientID&gt;&lt;PatientNo&gt;321-45-6785&lt;/PatientNo&gt;&lt;AccountNo&gt;534064505&lt;/AccountNo&gt;&lt;SpecimanNo&gt;585106140&lt;/SpecimanNo&gt;&lt;ControlNo&gt;851721045&lt;/ControlNo&gt;&lt;PatientFName&gt;Tim&lt;/PatientFName&gt;&lt;PatientLName&gt;Johnson&lt;/PatientLName&gt;&lt;PatientSex&gt;M&lt;/PatientSex&gt;&lt;Age&gt;27&lt;/Age&gt;&lt;Fasting&gt;Yes&lt;/Fasting&gt;&lt;PatientDoctor&gt;Kim Richard&lt;/PatientDoctor&gt;&lt;Fax&gt;(253)493-3934&lt;/Fax&gt;&lt;DoctorID&gt;890&lt;/DoctorID&gt;&lt;DataFile&gt;JA09904&lt;/DataFile&gt;&lt;Technician&gt;MO&lt;/Technician&gt;&lt;DateCollected&gt;2016-01-06&lt;/DateCollected&gt;&lt;DateEntered&gt;2016-01-04&lt;/DateEntered&gt;&lt;DateReported&gt;2016-01-05&lt;/DateReported&gt;&lt;DOB&gt;1983-02-10&lt;/DOB&gt;&lt;Comments&gt;Persistent reduction for 3 months or more in any eGFR &amp;lt;60 ml/min/1.73 m2 defines CKD. Patients with eGFR values &amp;gt;/=60 ml/min/1.73 m2 may also have CKD if evidence of persistent proteinuria is present. Additional information may be found at www.kdoqi.org&lt;/Comments&gt;&lt;/BloodReport_PatientInfo&gt;&lt;/dataroot&gt;</ConnectString>
+				<DataProvider>XML</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+		<DataSource Name="TestResults">
+			<ConnectionProperties>
+				<ConnectString>xmldata=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="BloodReport_Result.xsd" generated="2018-06-29T14:36:12"&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;30&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;Comp. Metabolic Panel (14)&lt;/TestGroup&gt;
+&lt;Test&gt;BUN&lt;/Test&gt;
+&lt;Result&gt;12.0&lt;/Result&gt;
+&lt;Units&gt;mg/dL&lt;/Units&gt;
+&lt;ReferenceInterval&gt;5.0 - 26.0&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;31&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;Comp. Metabolic Panel (14)&lt;/TestGroup&gt;
+&lt;Test&gt;Creatinine, Serum&lt;/Test&gt;
+&lt;Result&gt;1.02&lt;/Result&gt;
+&lt;Units&gt;mg/dL&lt;/Units&gt;
+&lt;ReferenceInterval&gt;0.76 - 1.27&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;32&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;Comp. Metabolic Panel (14)&lt;/TestGroup&gt;
+&lt;Test&gt;eGFR&lt;/Test&gt;
+&lt;Result&gt;&amp;gt;59&lt;/Result&gt;
+&lt;Units&gt;mL/min/1.73&lt;/Units&gt;
+&lt;ReferenceInterval&gt;&amp;gt;59&lt;/ReferenceInterval&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;33&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;Comp. Metabolic Panel (14)&lt;/TestGroup&gt;
+&lt;Test&gt;eGFR AfricanAmerican&lt;/Test&gt;
+&lt;Result&gt;&amp;gt;59&lt;/Result&gt;
+&lt;Units&gt;mL/min/1.73&lt;/Units&gt;
+&lt;ReferenceInterval&gt;&amp;gt;59&lt;/ReferenceInterval&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;1&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;CBC With Differential/Platelet&lt;/TestGroup&gt;
+&lt;Test&gt;WBC&lt;/Test&gt;
+&lt;Result&gt;5.1&lt;/Result&gt;
+&lt;Units&gt;x10E3/uL&lt;/Units&gt;
+&lt;ReferenceInterval&gt;4.0 - 10.5&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;9&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;CBC With Differential/Platelet&lt;/TestGroup&gt;
+&lt;Test&gt;RBC&lt;/Test&gt;
+&lt;Result&gt;4.94&lt;/Result&gt;
+&lt;Units&gt;x10E6/uL&lt;/Units&gt;
+&lt;ReferenceInterval&gt;4.10 - 5.60&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;10&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;CBC With Differential/Platelet&lt;/TestGroup&gt;
+&lt;Test&gt;Hemoglobin&lt;/Test&gt;
+&lt;Result&gt;15.1&lt;/Result&gt;
+&lt;Units&gt;g/dL&lt;/Units&gt;
+&lt;ReferenceInterval&gt;12.5 - 17.0&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;11&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;CBC With Differential/Platelet&lt;/TestGroup&gt;
+&lt;Test&gt;Hematocrit&lt;/Test&gt;
+&lt;Result&gt;46.2&lt;/Result&gt;
+&lt;Units&gt;%&lt;/Units&gt;
+&lt;ReferenceInterval&gt;36.0 - 50.0&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;12&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;CBC With Differential/Platelet&lt;/TestGroup&gt;
+&lt;Test&gt;MCV&lt;/Test&gt;
+&lt;Result&gt;94.0&lt;/Result&gt;
+&lt;Units&gt;fL&lt;/Units&gt;
+&lt;ReferenceInterval&gt;80.0 - 98.0&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;13&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;CBC With Differential/Platelet&lt;/TestGroup&gt;
+&lt;Test&gt;MCH&lt;/Test&gt;
+&lt;Result&gt;30.6&lt;/Result&gt;
+&lt;Units&gt;pg&lt;/Units&gt;
+&lt;ReferenceInterval&gt;27.0 - 34.0&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;14&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;CBC With Differential/Platelet&lt;/TestGroup&gt;
+&lt;Test&gt;MCHC&lt;/Test&gt;
+&lt;Result&gt;32.7&lt;/Result&gt;
+&lt;Units&gt;g/dL&lt;/Units&gt;
+&lt;ReferenceInterval&gt;32.0 - 36.0&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;BloodReport_Result&gt;
+&lt;ID&gt;29&lt;/ID&gt;
+&lt;PatientID&gt;21111&lt;/PatientID&gt;
+&lt;TestGroup&gt;Comp. Metabolic Panel (14)&lt;/TestGroup&gt;
+&lt;Test&gt;Glucose, Serum&lt;/Test&gt;
+&lt;Result&gt;95.0&lt;/Result&gt;
+&lt;Units&gt;mg/dL&lt;/Units&gt;
+&lt;ReferenceInterval&gt;65.0 - 99.0&lt;/ReferenceInterval&gt;
+&lt;Lab&gt;01&lt;/Lab&gt;
+&lt;/BloodReport_Result&gt;
+&lt;/dataroot&gt;
+</ConnectString>
+				<DataProvider>XML</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="PatientInfo">
+			<Fields>
+				<Field Name="BloodReport_PatientInfo">
+					<DataField>BloodReport_PatientInfo</DataField>
+				</Field>
+				<Field Name="PatientID">
+					<DataField>PatientID</DataField>
+				</Field>
+				<Field Name="PatientNo">
+					<DataField>PatientNo</DataField>
+				</Field>
+				<Field Name="AccountNo">
+					<DataField>AccountNo</DataField>
+				</Field>
+				<Field Name="SpecimanNo">
+					<DataField>SpecimanNo</DataField>
+				</Field>
+				<Field Name="ControlNo">
+					<DataField>ControlNo</DataField>
+				</Field>
+				<Field Name="PatientFName">
+					<DataField>PatientFName</DataField>
+				</Field>
+				<Field Name="PatientLName">
+					<DataField>PatientLName</DataField>
+				</Field>
+				<Field Name="PatientSex">
+					<DataField>PatientSex</DataField>
+				</Field>
+				<Field Name="Age">
+					<DataField>Age</DataField>
+				</Field>
+				<Field Name="Fasting">
+					<DataField>Fasting</DataField>
+				</Field>
+				<Field Name="PatientDoctor">
+					<DataField>PatientDoctor</DataField>
+				</Field>
+				<Field Name="Fax">
+					<DataField>Fax</DataField>
+				</Field>
+				<Field Name="DoctorID">
+					<DataField>DoctorID</DataField>
+				</Field>
+				<Field Name="DataFile">
+					<DataField>DataFile</DataField>
+				</Field>
+				<Field Name="Technician">
+					<DataField>Technician</DataField>
+				</Field>
+				<Field Name="DateCollected">
+					<DataField>DateCollected</DataField>
+				</Field>
+				<Field Name="DateEntered">
+					<DataField>DateEntered</DataField>
+				</Field>
+				<Field Name="DateReported">
+					<DataField>DateReported</DataField>
+				</Field>
+				<Field Name="DOB">
+					<DataField>DOB</DataField>
+				</Field>
+				<Field Name="Comments">
+					<DataField>Comments</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>dataroot/BloodReport_PatientInfo</CommandText>
+				<DataSourceName>PatientInfo</DataSourceName>
+			</Query>
+		</DataSet>
+		<DataSet Name="Results">
+			<Fields>
+				<Field Name="BloodReport_Result">
+					<DataField>BloodReport_Result</DataField>
+				</Field>
+				<Field Name="ID">
+					<DataField>ID</DataField>
+				</Field>
+				<Field Name="PatientID">
+					<DataField>PatientID</DataField>
+				</Field>
+				<Field Name="TestGroup">
+					<DataField>TestGroup</DataField>
+				</Field>
+				<Field Name="Test">
+					<DataField>Test</DataField>
+				</Field>
+				<Field Name="Result">
+					<DataField>Result</DataField>
+				</Field>
+				<Field Name="Units">
+					<DataField>Units</DataField>
+				</Field>
+				<Field Name="ReferenceInterval">
+					<DataField>ReferenceInterval</DataField>
+				</Field>
+				<Field Name="Lab">
+					<DataField>Lab</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>dataroot/BloodReport_Result</CommandText>
+				<DataSourceName>TestResults</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

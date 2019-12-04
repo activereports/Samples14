@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215">
+      <Control Type="AR.Field" Name="textBox1" Left="0" Top="0" Width="4635.36" Height="288" Text="Bookmark in Sub-Report" Style="background-color: LavenderBlush; font-size: 12pt; font-weight: bold" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="2579" BackColor="16777215" KeepTogether="1">
+      <Control Type="AR.Label" Name="lblProducts" Left="1440" Top="465.12" Width="1440" Height="360" Caption="Product List" Style="font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lbllblCategoryName" BorderBottomStyle="1" Left="0" Top="105.12" Width="1664.64" Height="360" Caption="Category Name:" Style="color: Navy; font-weight: bold; vertical-align: middle" />
+      <Control Type="AR.Subreport" Name="ctlSubreport" Left="1440" Top="825.12" Width="7200" Height="1620" />
+      <Control Type="AR.Field" Name="txtCategoryName" DataField="CategoryName" BorderBottomStyle="1" Left="1681.92" Top="105.12" Width="1440" Height="360" Text="CategoryName" Style="color: Navy; vertical-align: middle" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215">
+      <Control Type="AR.ReportInfo" Name="reportInfo1" Left="2880" Top="72" Width="3029.76" Height="288" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[GrapeCity.ActiveReports.SectionReport _subRpt;
+string _categoryID;
+
+public bool ActiveReport_FetchData(bool eof)
+{
+	_categoryID = rpt.Fields["CategoryID"].Value.ToString();
+	return eof;
+}
+
+
+public void Detail_Format()
+{
+	GrapeCity.ActiveReports.Data.OleDBDataSource subDS = new GrapeCity.ActiveReports.Data.OleDBDataSource();
+
+	subDS.ConnectionString = ((GrapeCity.ActiveReports.Data.OleDBDataSource) rpt.DataSource).ConnectionString;
+	subDS.SQL = "Select * from products where categoryID = " + _categoryID;
+	_subRpt.DataSource = subDS;
+	ctlSubreport.Report = _subRpt;
+	Detail.AddBookmark(txtCategoryName.Text);
+}
+
+
+public void ActiveReport_ReportStart()
+{
+	_subRpt = new GrapeCity.ActiveReports.SectionReport();
+	_subRpt.LoadLayout(System.IO.Path.GetFullPath(@"..\..\rptBookmarkSub.rpx"));
+
+	GrapeCity.ActiveReports.Data.OleDBDataSource dS = new GrapeCity.ActiveReports.Data.OleDBDataSource();
+	dS.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\Nwind.mdb;Persist Security Info=False";
+	dS.SQL = "Select * from categories";
+	rpt.DataSource = dS;
+	reportInfo1.FormatString = "{PageNumber} / {PageCount}";
+}
+
+
+]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

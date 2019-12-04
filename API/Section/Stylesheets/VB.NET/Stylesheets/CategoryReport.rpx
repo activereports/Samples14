@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="9480.189" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+	<StyleSheet>
+		<Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 204" />
+		<Style Name="Heading1" Value="font-size: 16pt; font-weight: bold; ddo-char-set: 204" />
+		<Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: italic; ddo-char-set: 204" />
+		<Style Name="Heading3" Value="font-weight: bold; ddo-char-set: 204; font-size: 10pt" />
+		<Style Name="DetailRecord" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; color: Black; ddo-char-set: 204; font-size: 8pt" />
+		<Style Name="ReportTitle" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; color: Black; ddo-char-set: 204; font-size: 22pt" />
+	</StyleSheet>
+	<Sections>
+		<Section Type="ReportHeader" Name="ReportHeader" Height="0" BackColor="16777215" />
+		<Section Type="PageHeader" Name="PageHeader" Height="1728" BackColor="16777215" CanGrow="0">
+			<Control Type="AR.Label" Name="label1" Left="7560" Top="1440" Width="1920.19" Height="288" Caption="Product Count" ClassName="Heading3" Style="text-align: right; vertical-align: middle" PaddingRight="2" />
+			<Control Type="AR.Label" Name="lblUnitPrice" Left="5624.503" Top="1440" Width="1934.929" Height="288" Caption="Avg Unit Price" ClassName="Heading3" Style="text-align: right; vertical-align: middle" PaddingRight="2" />
+			<Control Type="AR.Label" Name="lblProductName" Left="0.5669118" Top="1440" Width="5624.503" Height="288" Caption="Category Name" ClassName="Heading3" Style="vertical-align: middle" PaddingLeft="2" />
+			<Control Type="AR.Label" Name="lblTitle" Left="0" Top="90.14173" Width="9480.189" Height="540" Caption="Categories Listing" ClassName="ReportTitle" />
+			<Control Type="AR.Line" Name="lnePageHeader1" X1="0" Y1="1440" X2="9480.189" Y2="1440" LineWeight="2" />
+			<Control Type="AR.Line" Name="lnePageHeader2" X1="0" Y1="1728" X2="9480.189" Y2="1728" LineWeight="2" />
+		</Section>
+		<Section Type="Detail" Name="Detail" Height="288" BackColor="16777215" KeepTogether="1">
+			<Control Type="AR.Field" Name="txtAvgUnitPrice" DataField="AvgUnitPrice" Left="5624.503" Top="0" Width="1935.498" Height="288" Text="UnitPrice" OutputFormat="$#,##0.00" CanShrink="1" Style="text-align: right" PaddingRight="4" />
+			<Control Type="AR.Field" Name="txtCategory" DataField="CategoryName" Left="0" Top="0" Width="5624.503" Height="288" Text="Category" CanShrink="1" />
+			<Control Type="AR.Field" Name="textBox1" DataField="ProductCount" Left="7560" Top="0" Width="1919.622" Height="288" Text="Count" OutputFormat="#0" CanShrink="1" Style="text-align: right" PaddingRight="4" />
+		</Section>
+		<Section Type="PageFooter" Name="PageFooter" Height="288" BackColor="16777215" CanGrow="0">
+			<Control Type="AR.ReportInfo" Name="reportInfo1" Left="3780" Top="0" Width="3420" Height="288" FormatString="{PageNumber} / {PageCount}" />
+		</Section>
+		<Section Type="ReportFooter" Name="ReportFooter" Height="1333" BackColor="16777215" KeepTogether="1">
+			<Control Type="AR.Label" Name="lblTotalNumber" Left="4385.764" Top="58.96063" Width="3174.237" Height="360" Caption="Total Number of Categories" ClassName="Heading3" Style="text-align: right; vertical-align: middle" />
+			<Control Type="AR.Field" Name="txtProductCount" DataField="CategoryID" Left="7634.88" Top="59.04" Width="1770.003" Height="360" Text="CategoriesCount" ClassName="Heading3" Style="text-align: right; vertical-align: middle" SummaryType="1" SummaryFunc="2" />
+			<Control Type="AR.Line" Name="lneReportFooter" X1="0" Y1="0" X2="9555.023" Y2="0" LineWeight="2" />
+		</Section>
+	</Sections>
+	<DataSources>
+		<OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.MDB;Persist Security Info=False" SQL="Select Categories.CategoryID, categories.CategoryName, Avg(Products.UnitPrice) as AvgUnitPrice, Count(Categories.CategoryID) as ProductCount FROM Products, Categories WHERE Products.CategoryID = Categories.CategoryID GROUP BY Categories.CategoryID, categories.CategoryName;" />
+	</DataSources>
+	<PageSettings RightMargin="720" PaperSize="1" PaperWidth="11909" PaperHeight="16834" PaperName="" />
+	<Parameters />
+</ActiveReportsLayout>

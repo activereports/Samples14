@@ -1,0 +1,142 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<Author>Data Dynamics, Ltd.</Author>
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">ReelsConfidential.rdlx-master</dd:Name>
+	<PageHeader>
+		<Height>1in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Image Name="Image1">
+				<Height>1in</Height>
+				<Left>5in</Left>
+				<MIMEType>=Theme.Images!Logo.MIMEType</MIMEType>
+				<Sizing>FitProportional</Sizing>
+				<Source>Database</Source>
+				<Value>=Theme.Images!Logo.ImageData</Value>
+				<Width>1.5in</Width>
+			</Image>
+			<CustomReportItem Name="ContentPlaceHolder1">
+				<Type>ContentPlaceHolder</Type>
+				<Width>4.875in</Width>
+				<Height>1in</Height>
+				<ZIndex>1</ZIndex>
+				<CustomProperties>
+					<CustomProperty>
+						<Name>ID</Name>
+						<Value>2</Value>
+					</CustomProperty>
+					<CustomProperty>
+						<Name>Text</Name>
+						<Value>Add page header</Value>
+					</CustomProperty>
+				</CustomProperties>
+			</CustomReportItem>
+		</ReportItems>
+	</PageHeader>
+	<Body>
+		<Height>2.5in</Height>
+		<ReportItems>
+			<CustomReportItem Name="mainContent">
+				<Type>ContentPlaceHolder</Type>
+				<Width>6.5in</Width>
+				<Height>2.5in</Height>
+				<CustomProperties>
+					<CustomProperty>
+						<Name>Text</Name>
+						<Value>Add content here</Value>
+					</CustomProperty>
+					<CustomProperty>
+						<Name>ID</Name>
+						<Value>1</Value>
+					</CustomProperty>
+				</CustomProperties>
+			</CustomReportItem>
+		</ReportItems>
+	</Body>
+	<PageFooter>
+		<Height>0.25in</Height>
+		<PrintOnFirstPage>true</PrintOnFirstPage>
+		<PrintOnLastPage>true</PrintOnLastPage>
+		<ReportItems>
+			<Textbox Name="confidential">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>1.875in</Left>
+				<Value>Confidential</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+					<FontWeight>700</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Width>2.75in</Width>
+			</Textbox>
+			<Textbox Name="TextBox1">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>4.875in</Left>
+				<Value>=Globals!ExecutionTime</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+					<FontWeight>=Theme.Fonts!MinorFont.Weight</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Right</TextAlign>
+				</Style>
+				<Width>1.625in</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+			<Textbox Name="TextBox2">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>Reels, Ltd.</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Width>1.75in</Width>
+				<ZIndex>2</ZIndex>
+			</Textbox>
+		</ReportItems>
+	</PageFooter>
+	<BottomMargin>0.75in</BottomMargin>
+	<Description>Sets up a report for outputing confidential on the report surface.</Description>
+	<Language>en-US</Language>
+	<LeftMargin>0.75in</LeftMargin>
+	<RightMargin>0.75in</RightMargin>
+	<TopMargin>0.75in</TopMargin>
+	<Width>6.5in</Width>
+	<DataSources>
+		<DataSource Name="Reels">
+			<ConnectionProperties>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Reels.mdb</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<dd:LocalizationResources xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition" />
+	<CustomProperties>
+		<CustomProperty>
+			<Name>IsMaster</Name>
+			<Value>True</Value>
+		</CustomProperty>
+		<CustomProperty>
+			<Name>Theme</Name>
+			<Value>Reels.rdlx-theme</Value>
+		</CustomProperty>
+	</CustomProperties>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Reels.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

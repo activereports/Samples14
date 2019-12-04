@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Report1</dd:Name>
+	<Body>
+		<Height>11.2713cm</Height>
+		<ReportItems>
+			<CustomReportItem Name="BandedList1">
+				<Type>BandedList</Type>
+				<Width>19.6cm</Width>
+				<Height>11.2713cm</Height>
+				<CustomProperties>
+					<CustomProperty>
+						<Name>ConsumeWhiteSpace</Name>
+						<Value>True</Value>
+					</CustomProperty>
+				</CustomProperties>
+				<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+					<ReportItems>
+						<Textbox Name="TextBox8">
+							<CanGrow>true</CanGrow>
+							<Height>0.9525cm</Height>
+							<Left>0.3175cm</Left>
+							<Value>="Total Northwind Customers: " &amp; Count(Fields!CompanyName.Value)</Value>
+							<Style>
+								<BackgroundColor>Gold</BackgroundColor>
+								<FontSize>18pt</FontSize>
+								<FontWeight>700</FontWeight>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<TextAlign>Center</TextAlign>
+							</Style>
+							<Top>0.3175cm</Top>
+							<Width>19.05cm</Width>
+						</Textbox>
+					</ReportItems>
+				</dd:Container>
+				<CustomData>
+					<DataSetName>DataSet1</DataSetName>
+					<DataRowGroupings>
+						<DataGroupings>
+							<DataGrouping>
+								<Grouping Name="BandedList1_Group2">
+									<GroupExpressions>
+										<GroupExpression>=Fields!Country.Value</GroupExpression>
+									</GroupExpressions>
+								</Grouping>
+								<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+									<ReportItems>
+										<Textbox Name="TextBox1">
+											<CanGrow>true</CanGrow>
+											<Height>1.5875cm</Height>
+											<Value>=First(Fields!Country.Value)</Value>
+											<Style>
+												<BackgroundColor>Brown</BackgroundColor>
+												<FontSize>22pt</FontSize>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+											<Width>19.6cm</Width>
+										</Textbox>
+										<Textbox Name="TextBox7">
+											<CanGrow>true</CanGrow>
+											<Height>0.9525cm</Height>
+											<Value>="Total Customers In " &amp; Fields!Country.Value &amp; ": " &amp; Count(Fields!CompanyName.Value)</Value>
+											<Style>
+												<BackgroundColor>DarkGray</BackgroundColor>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+											</Style>
+											<Top>2.725208cm</Top>
+											<Width>19.6cm</Width>
+										</Textbox>
+										<Subreport Name="Subreport1">
+											<Height>2.5cm</Height>
+											<Parameters>
+												<Parameter Name="Country">
+													<Value>=Fields!Country.Value</Value>
+												</Parameter>
+											</Parameters>
+											<ReportName>CountrySales</ReportName>
+											<Top>0.1852083cm</Top>
+											<Width>2.5cm</Width>
+											<ZIndex>1</ZIndex>
+										</Subreport>
+									</ReportItems>
+								</dd:Container>
+								<DataGroupings>
+									<DataGrouping>
+										<Grouping Name="BandedList1_Group1">
+											<GroupExpressions>
+												<GroupExpression>=Fields!City.Value</GroupExpression>
+											</GroupExpressions>
+										</Grouping>
+										<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+											<ReportItems>
+												<Textbox Name="TextBox2">
+													<CanGrow>true</CanGrow>
+													<Height>1.1906cm</Height>
+													<Value>="City: " &amp; Fields!City.Value</Value>
+													<Style>
+														<BackgroundColor>Lavender</BackgroundColor>
+														<FontSize>14pt</FontSize>
+														<FontWeight>700</FontWeight>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Top>0.079375cm</Top>
+													<Width>19.6cm</Width>
+													<ZIndex>2</ZIndex>
+												</Textbox>
+												<Textbox Name="TextBox6">
+													<CanGrow>true</CanGrow>
+													<Height>0.7144cm</Height>
+													<Left>9.525cm</Left>
+													<Value>="Total customers in " &amp;  Fields!City.Value &amp; ": " &amp; CountDistinct(Fields!CompanyName.Value)</Value>
+													<Style>
+														<BackgroundColor>Gainsboro</BackgroundColor>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Top>0.238125cm</Top>
+													<Width>10.075cm</Width>
+												</Textbox>
+											</ReportItems>
+										</dd:Container>
+										<DataGroupings>
+											<DataGrouping>
+												<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+													<ReportItems>
+														<Textbox Name="TextBox3">
+															<CanGrow>true</CanGrow>
+															<Height>0.6614583cm</Height>
+															<HideDuplicates>BandedList1_Group1</HideDuplicates>
+															<Left>0.635cm</Left>
+															<Value>=Fields!CompanyName.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+															<Top>0.2910417cm</Top>
+															<Width>6.35cm</Width>
+														</Textbox>
+														<Textbox Name="TextBox4">
+															<CanGrow>true</CanGrow>
+															<Height>0.6614583cm</Height>
+															<Left>7.9375cm</Left>
+															<Value>=Fields!Phone.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+															<Top>0.2910417cm</Top>
+															<Width>6.0325cm</Width>
+															<ZIndex>1</ZIndex>
+														</Textbox>
+													</ReportItems>
+												</dd:Container>
+											</DataGrouping>
+										</DataGroupings>
+									</DataGrouping>
+								</DataGroupings>
+							</DataGrouping>
+						</DataGroupings>
+					</DataRowGroupings>
+				</CustomData>
+				<BandedListConfig xmlns="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition/">
+	<KeepTogether>true</KeepTogether>
+	<PreventOrphanedHeader>true</PreventOrphanedHeader>
+	<PreventOrphanedFooter>true</PreventOrphanedFooter>
+	<HeaderBand>
+		<Height>0cm</Height>
+		<Style>
+			<BackgroundColor>Inherit</BackgroundColor>
+		</Style>
+	</HeaderBand>
+	<FooterBand>
+		<Height>1.27893cm</Height>
+		<ReportItems>
+			<ReportItemReference Name="TextBox8" />
+		</ReportItems>
+		<Style>
+			<BackgroundColor>Inherit</BackgroundColor>
+		</Style>
+	</FooterBand>
+	<Groups>
+		<Group Name="BandedList1_Group2">
+			<KeepTogether>true</KeepTogether>
+			<PreventOrphanedHeader>true</PreventOrphanedHeader>
+			<PreventOrphanedFooter>true</PreventOrphanedFooter>
+			<HeaderBand>
+				<Height>1.616795cm</Height>
+				<ReportItems>
+					<ReportItemReference Name="TextBox1" />
+				</ReportItems>
+				<Style>
+					<BackgroundColor>Inherit</BackgroundColor>
+				</Style>
+			</HeaderBand>
+			<FooterBand>
+				<Height>3.816698cm</Height>
+				<ReportItems>
+					<ReportItemReference Name="TextBox7" />
+					<ReportItemReference Name="Subreport1" />
+				</ReportItems>
+				<Style>
+					<BackgroundColor>Inherit</BackgroundColor>
+				</Style>
+			</FooterBand>
+			<Visibility>
+				<Hidden>False</Hidden>
+			</Visibility>
+		</Group>
+		<Group Name="BandedList1_Group1">
+			<KeepTogether>true</KeepTogether>
+			<PreventOrphanedHeader>true</PreventOrphanedHeader>
+			<PreventOrphanedFooter>true</PreventOrphanedFooter>
+			<HeaderBand>
+				<Height>2.226404cm</Height>
+				<ReportItems>
+					<ReportItemReference Name="TextBox2" />
+				</ReportItems>
+				<Style>
+					<BackgroundColor>Inherit</BackgroundColor>
+				</Style>
+			</HeaderBand>
+			<FooterBand>
+				<Height>1.060192cm</Height>
+				<ReportItems>
+					<ReportItemReference Name="TextBox6" />
+				</ReportItems>
+				<Style>
+					<BackgroundColor>Inherit</BackgroundColor>
+				</Style>
+			</FooterBand>
+			<Visibility>
+				<Hidden>False</Hidden>
+			</Visibility>
+		</Group>
+	</Groups>
+	<Details>
+		<Height>1.272232cm</Height>
+		<ReportItems>
+			<ReportItemReference Name="TextBox3" />
+			<ReportItemReference Name="TextBox4" />
+		</ReportItems>
+		<Style>
+			<BackgroundColor>Inherit</BackgroundColor>
+		</Style>
+	</Details>
+</BandedListConfig>
+			</CustomReportItem>
+		</ReportItems>
+	</Body>
+	<PageHeight>29.5cm</PageHeight>
+	<PageWidth>19.6cm</PageWidth>
+	<Width>7.755906in</Width>
+	<ConsumeContainerWhitespace>True</ConsumeContainerWhitespace>
+	<ReportParameters>
+		<ReportParameter Name="Year">
+			<DataType>Integer</DataType>
+			<Prompt>Chart Year</Prompt>
+			<Hidden>true</Hidden>
+			<DefaultValue>
+				<Values>
+					<Value>1997</Value>
+				</Values>
+			</DefaultValue>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="BandedListDS">
+			<ConnectionProperties>
+				<ConnectString>xmldoc=</ConnectString>
+				<DataProvider>XML</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="CompanyName">
+					<DataField>CompanyName</DataField>
+				</Field>
+				<Field Name="Country">
+					<DataField>Country</DataField>
+				</Field>
+				<Field Name="ContactName">
+					<DataField>ContactName</DataField>
+				</Field>
+				<Field Name="City">
+					<DataField>City</DataField>
+				</Field>
+				<Field Name="Phone">
+					<DataField>Phone</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>//Customer</CommandText>
+				<DataSourceName>BandedListDS</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SubReport", "SubReport\SubReport.vbproj", "{906E2981-248C-4EAF-814A-F775EA447C22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{906E2981-248C-4EAF-814A-F775EA447C22}.Debug|x86.ActiveCfg = Debug|x86
+		{906E2981-248C-4EAF-814A-F775EA447C22}.Debug|x86.Build.0 = Debug|x86
+		{906E2981-248C-4EAF-814A-F775EA447C22}.Release|x86.ActiveCfg = Release|x86
+		{906E2981-248C-4EAF-814A-F775EA447C22}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

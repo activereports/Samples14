@@ -1,0 +1,671 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">ResourceConsumptionByYear.rdlx</dd:Name>
+	<Body>
+		<Height>8.5in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Chart Name="Chart1">
+								<CategoryAxis>
+									<Axis>
+										<Title>
+											<Caption>Year</Caption>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>14pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+											</Style>
+										</Title>
+										<Visible>true</Visible>
+									</Axis>
+								</CategoryAxis>
+								<CategoryGroupings>
+									<CategoryGrouping>
+										<DynamicCategories>
+											<Grouping Name="Chart1_CategoryGroup1">
+												<GroupExpressions>
+													<GroupExpression>=Fields.Item("@recordYear").Value</GroupExpression>
+												</GroupExpressions>
+												<Label>=Fields.Item("@recordYear").Value</Label>
+												<Parent>=Fields.Item("@name").Value</Parent>
+											</Grouping>
+											<Label>=Fields.Item("@recordYear").Value</Label>
+										</DynamicCategories>
+									</CategoryGrouping>
+								</CategoryGroupings>
+								<ChartData>
+									<ChartSeries>
+										<DataPoints>
+											<DataPoint>
+												<DataLabel />
+												<DataValues>
+													<DataValue>
+														<Value>=Fields!KGOilPerCapita.Value</Value>
+													</DataValue>
+												</DataValues>
+												<Marker />
+											</DataPoint>
+										</DataPoints>
+										<dd:ValueAxisName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">NaturalResConsumption</dd:ValueAxisName>
+									</ChartSeries>
+									<ChartSeries>
+										<DataPoints>
+											<DataPoint>
+												<DataLabel />
+												<DataValues>
+													<DataValue>
+														<Value>=Fields!ElectrickwhPerCapita.Value</Value>
+													</DataValue>
+												</DataValues>
+												<Marker />
+											</DataPoint>
+										</DataPoints>
+										<dd:ValueAxisName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">NaturalResConsumption</dd:ValueAxisName>
+									</ChartSeries>
+									<ChartSeries>
+										<DataPoints>
+											<DataPoint>
+												<DataLabel />
+												<DataValues>
+													<DataValue>
+														<Value>=Fields!Population.Value</Value>
+													</DataValue>
+												</DataValues>
+												<Marker>
+													<Type>Diamond</Type>
+												</Marker>
+											</DataPoint>
+										</DataPoints>
+										<dd:Type xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Line</dd:Type>
+										<dd:ValueAxisName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Population</dd:ValueAxisName>
+									</ChartSeries>
+								</ChartData>
+								<DataSetName>NaturalResources</DataSetName>
+								<Height>6.5in</Height>
+								<Legend>
+									<Layout>Row</Layout>
+									<Position>BottomCenter</Position>
+									<Style>
+										<FontSize>8pt</FontSize>
+									</Style>
+									<Visible>true</Visible>
+								</Legend>
+								<Palette>Pastel</Palette>
+								<PlotArea>
+									<Style>
+										<BackgroundColor>Transparent</BackgroundColor>
+									</Style>
+								</PlotArea>
+								<SeriesGroupings>
+									<SeriesGrouping>
+										<StaticSeries>
+											<StaticMember>
+												<Label>KGOil Per Capita</Label>
+											</StaticMember>
+											<StaticMember>
+												<Label>Electrickwh Per Capita</Label>
+											</StaticMember>
+											<StaticMember>
+												<Label>Population</Label>
+											</StaticMember>
+										</StaticSeries>
+									</SeriesGrouping>
+								</SeriesGroupings>
+								<Subtype>Plain</Subtype>
+								<ThreeDProperties>
+									<Inclination>20</Inclination>
+									<ProjectionMode>Orthographic</ProjectionMode>
+									<Rotation>20</Rotation>
+									<Shading>Real</Shading>
+								</ThreeDProperties>
+								<Title>
+									<Caption>Natural Resource Consumption</Caption>
+									<Style>
+										<Color>SteelBlue</Color>
+										<FontFamily>Arial</FontFamily>
+										<FontSize>18pt</FontSize>
+										<FontStyle>Normal</FontStyle>
+										<FontWeight>700</FontWeight>
+										<TextAlign>Center</TextAlign>
+										<TextDecoration>Underline</TextDecoration>
+									</Style>
+								</Title>
+								<Type>Column</Type>
+								<ValueAxis>
+									<Axis>
+										<Title>
+											<Caption>Axis Y</Caption>
+										</Title>
+										<Visible>true</Visible>
+									</Axis>
+								</ValueAxis>
+								<Width>9in</Width>
+								<ZIndex>1</ZIndex>
+								<dd:ChartAreas xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+									<ChartArea>
+										<ChartValueAxes>
+											<ChartAxis>
+												<Axis>
+													<MajorGridLines>
+														<ShowGridLines>true</ShowGridLines>
+														<Style>
+															<BorderColor>
+																<Default>Gainsboro</Default>
+															</BorderColor>
+															<BorderStyle>
+																<Default>Solid</Default>
+															</BorderStyle>
+															<BorderWidth>
+																<Default>0.25pt</Default>
+															</BorderWidth>
+														</Style>
+													</MajorGridLines>
+													<Style>
+														<Color>Black</Color>
+														<FontSize>8pt</FontSize>
+														<TextDecoration>None</TextDecoration>
+														<BorderColor>
+															<Default>DarkGray</Default>
+														</BorderColor>
+														<BorderStyle>
+															<Default>Solid</Default>
+														</BorderStyle>
+														<BorderWidth>
+															<Default>0.25pt</Default>
+														</BorderWidth>
+													</Style>
+													<Title>
+														<Caption>Natural Resource Consumption</Caption>
+														<Style>
+															<FontFamily>Arial</FontFamily>
+															<FontSize>14pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>700</FontWeight>
+														</Style>
+													</Title>
+													<Visible>true</Visible>
+													<dd:Name>NaturalResConsumption</dd:Name>
+												</Axis>
+											</ChartAxis>
+											<ChartAxis>
+												<Axis>
+													<Style>
+														<FontSize>8pt</FontSize>
+														<Format>n0</Format>
+														<BorderColor>
+															<Default>DarkGray</Default>
+														</BorderColor>
+														<BorderStyle>
+															<Default>Solid</Default>
+														</BorderStyle>
+														<BorderWidth>
+															<Default>0.25pt</Default>
+														</BorderWidth>
+													</Style>
+													<Title>
+														<Caption>Population</Caption>
+														<Style>
+															<FontFamily>Arial</FontFamily>
+															<FontSize>14pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>700</FontWeight>
+														</Style>
+													</Title>
+													<Visible>true</Visible>
+													<dd:Location>Opposite</dd:Location>
+													<dd:Name>Population</dd:Name>
+													<dd:Offset>0.5in</dd:Offset>
+												</Axis>
+											</ChartAxis>
+										</ChartValueAxes>
+									</ChartArea>
+								</dd:ChartAreas>
+							</Chart>
+						</ReportItems>
+					</Page>
+					<Page>
+						<ReportItems>
+							<Table Name="Table1">
+								<DataSetName>CountryList</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>0.25in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox1">
+															<Value>country</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox2">
+															<Value>@name</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox3">
+															<Value>Year</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox10">
+															<Value>@record Year</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox13">
+															<Value>Population</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox16">
+															<Value>KGOil Per Capita</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox19">
+															<Value>Electrickwh Per Capita</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.25in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Value>=Fields!country.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox5">
+															<Value>=Fields.Item("@name").Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox6">
+															<Value>=Fields!Year.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox11">
+															<Value>=Fields.Item("@recordYear").Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox14">
+															<Value>=Fields!Population.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox17">
+															<Value>=Fields!KGOilPerCapita.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox20">
+															<Value>=Fields!ElectrickwhPerCapita.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<Footer>
+									<TableRows>
+										<TableRow>
+											<Height>0.25in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox7">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox8">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox9">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox12">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox15">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox18">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox21">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Footer>
+								<Height>0.75in</Height>
+								<Left>0.125in</Left>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">5.75in</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">8.375in</dd:FixedWidth>
+								<TableColumns>
+									<TableColumn>
+										<Width>0.6666667in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>0.6666667in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>0.666666in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>0.666666in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>0.666666in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>0.666666in</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>0.666666in</Width>
+									</TableColumn>
+								</TableColumns>
+								<Top>0.375in</Top>
+								<Width>4.666664in</Width>
+								<ZIndex>1</ZIndex>
+							</Table>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>NaturalResources</DataSetName>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<PageHeight>8.5in</PageHeight>
+	<PageWidth>11in</PageWidth>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>11in</Width>
+	<ReportParameters>
+		<ReportParameter Name="CountryParam">
+			<DataType>String</DataType>
+			<Prompt>Country</Prompt>
+			<ValidValues>
+				<DataSetReference>
+					<DataSetName>CountryList</DataSetName>
+					<LabelField>@name</LabelField>
+					<ValueField>@name</ValueField>
+				</DataSetReference>
+			</ValidValues>
+		</ReportParameter>
+	</ReportParameters>
+	<DataSources>
+		<DataSource Name="ResourceConsumption">
+			<ConnectionProperties>
+				<DataProvider>XML</DataProvider>
+				<ConnectString>XmlDoc=..\..\..\..\..\Data\MostPopulatedCountriesEnergyUsageByYear.xml</ConnectString>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="NaturalResources">
+			<Fields>
+				<Field Name="Year">
+					<DataField>Year</DataField>
+				</Field>
+				<Field Name="@recordYear">
+					<DataField>@recordYear</DataField>
+				</Field>
+				<Field Name="Population">
+					<DataField>Population</DataField>
+				</Field>
+				<Field Name="KGOilPerCapita">
+					<DataField>KGOilPerCapita</DataField>
+				</Field>
+				<Field Name="ElectrickwhPerCapita">
+					<DataField>ElectrickwhPerCapita</DataField>
+				</Field>
+				<Field Name="Country">
+					<DataField>../@name</DataField>
+				</Field>
+			</Fields>
+			<Filters>
+				<Filter>
+					<FilterExpression>=Fields!Country.Value</FilterExpression>
+					<FilterValues>
+						<FilterValue>=Parameters!CountryParam.Value</FilterValue>
+					</FilterValues>
+					<Operator>Equal</Operator>
+				</Filter>
+			</Filters>
+			<Query>
+				<CommandText>countries/country/Year</CommandText>
+				<DataSourceName>ResourceConsumption</DataSourceName>
+			</Query>
+		</DataSet>
+		<DataSet Name="CountryList">
+			<Fields>
+				<Field Name="country">
+					<DataField>country</DataField>
+				</Field>
+				<Field Name="@name">
+					<DataField>@name</DataField>
+				</Field>
+				<Field Name="Year">
+					<DataField>Year</DataField>
+				</Field>
+				<Field Name="@recordYear">
+					<DataField>@recordYear</DataField>
+				</Field>
+				<Field Name="Population">
+					<DataField>Population</DataField>
+				</Field>
+				<Field Name="KGOilPerCapita">
+					<DataField>KGOilPerCapita</DataField>
+				</Field>
+				<Field Name="ElectrickwhPerCapita">
+					<DataField>ElectrickwhPerCapita</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>countries/country</CommandText>
+				<DataSourceName>ResourceConsumption</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>PaperOrientation</Name>
+			<Value>Landscape</Value>
+		</CustomProperty>
+	</CustomProperties>
+</Report>

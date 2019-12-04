@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="360" BackColor="16777215">
+      <Control Type="AR.Field" Name="textBox1" Left="0" Top="0" Width="8290.081" Height="288" Text="Sub report using the data set that contains relationship" Style="background-color: LavenderBlush; font-size: 12pt; font-weight: bold" />
+    </Section>
+    <Section Type="GroupHeader" Name="groupHeader1" Height="360" GroupKeepTogether="2" RepeatStyle="1" BackColor="16777215">
+      <Control Type="AR.Label" Name="lblCategoryName" Left="0" Top="0" Width="1800" Height="270" Caption="Category Name" Style="background-color: Navy; color: White; font-family: Arial; font-size: 9.75pt; font-weight: bold; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="lblProduct" BorderLeftStyle="1" BorderLeftColor="16777215" Left="1800" Top="0" Width="2145.6" Height="270" Caption="Product Name" Style="background-color: Navy; color: White; font-family: Arial; font-size: 9.75pt; font-weight: bold; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="lblOrderDetails" BorderLeftStyle="1" BorderLeftColor="16777215" Left="3945.6" Top="0" Width="4479" Height="270" Caption="Order Details" Style="background-color: Navy; color: White; font-family: Arial; font-size: 9.75pt; font-weight: bold; ddo-char-set: 0" />
+    </Section>
+    <Section Type="GroupHeader" Name="ghCategories" Height="360" DataField="CategoryName" GroupKeepTogether="2" BackColor="16777215">
+      <Control Type="AR.Field" Name="txtCategoryName" DataField="CategoryName" Left="0" Top="0" Width="1800" Height="270" Text="Category Name" Style="color: Navy; font-family: Arial; font-size: 9.75pt; font-weight: bold; ddo-char-set: 0" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="765" BackColor="16777215">
+      <Control Type="AR.Subreport" Name="SubReport1" Left="1800" Top="0" Width="6624" Height="630" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Visible="0" Height="360" BackColor="16777215" />
+    <Section Type="GroupFooter" Name="groupFooter2" Height="360" BackColor="16777215" />
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215">
+      <Control Type="AR.ReportInfo" Name="reportInfo1" Left="2894.4" Top="72" Width="2564.64" Height="288" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[Private _cnt As Integer
+Private _subRpt As GrapeCity.ActiveReports.SectionReport = Nothing
+Public Sub Detail_Format()
+	'The tables in DataSet ("Categories") to get the DataRow included.
+	'The number of minutes that included DataRow Detail section, this is kept in the output.
+	Dim drCategories As System.Data.DataRow = Nothing
+	If CType(rpt.DataSource, System.Data.DataSet).Tables("Categories").Rows.Count > _cnt Then
+		drCategories = CType(rpt.DataSource, System.Data.DataSet).Tables("Categories").Rows(_cnt)
+		_cnt += 1
+	End If
+	'Gets an array of child DataRow objects that are associated with the name of that relationship "CategoriesProducts" and sets the DataSource of the sub-report.
+	_subRpt.DataSource = drCategories.GetChildRows(CType(rpt.DataSource, DataSet).Relations("CategoriesProducts"))
+	SubReport1.Report = _subRpt
+End Sub
+
+
+
+
+Public Sub ActiveReport_ReportStart()
+	_cnt = 0
+	_subRpt = New GrapeCity.ActiveReports.SectionReport()
+	_subRpt.LoadLayout(System.IO.Path.GetFullPath("..\..\rptDSRelationChildMain.rpx"))
+
+	reportInfo1.FormatString = "Page {PageNumber} of {PageCount}"
+
+End Sub]]></Script>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>

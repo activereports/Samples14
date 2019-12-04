@@ -1,0 +1,168 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Top10CountriesByGDP.rdlx</dd:Name>
+	<Body>
+		<Height>1.125in</Height>
+		<ReportItems>
+			<List Name="List1">
+				<DataSetName>GDPDataSet</DataSetName>
+				<Height>0.25in</Height>
+				<Left>0.125in</Left>
+				<ReportItems>
+					<Textbox Name="TextBox1">
+						<Action>
+							<Drillthrough>
+								<Parameters>
+									<Parameter Name="CountryID">
+										<Value>=Fields!CountryID.Value</Value>
+									</Parameter>
+								</Parameters>
+								<ReportName>CountryFacts</ReportName>
+							</Drillthrough>
+						</Action>
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Value>=Fields!CountryName.Value</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+							<TextAlign>Right</TextAlign>
+						</Style>
+						<Width>1.25in</Width>
+					</Textbox>
+					<Textbox Name="TextBox2">
+						<CanGrow>true</CanGrow>
+						<Height>0.25in</Height>
+						<Left>1.25in</Left>
+						<Value>=Fields!GDPPPP.Value / 1000</Value>
+						<Style>
+							<FontFamily>=Theme.Fonts!MinorFont.Family</FontFamily>
+							<FontSize>=Theme.Fonts!MinorFont.Size</FontSize>
+							<FontStyle>=Theme.Fonts!MinorFont.Style</FontStyle>
+							<Format>$#0</Format>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<Width>1in</Width>
+					</Textbox>
+					<Image Name="Image1">
+						<Height>0.25in</Height>
+						<Left>2.5in</Left>
+						<MIMEType>image/png</MIMEType>
+						<Sizing>AutoSize</Sizing>
+						<Source>Database</Source>
+						<Value>=RangeBar( 0, Max( Fields!GDPPPP.Value ), Theme.Colors( 0, 2 ), "0.25in", "1.875in", 0, Fields!GDPPPP.Value )</Value>
+						<Width>1.875in</Width>
+						<ZIndex>1</ZIndex>
+					</Image>
+				</ReportItems>
+				<Sorting>
+					<SortBy>
+						<Direction>Descending</Direction>
+						<SortExpression>=Fields!GDPPPP.Value</SortExpression>
+					</SortBy>
+				</Sorting>
+				<Top>0.75in</Top>
+				<Width>6.375in</Width>
+			</List>
+			<Textbox Name="TextBox3">
+				<CanGrow>true</CanGrow>
+				<Height>0.375in</Height>
+				<Left>0.125in</Left>
+				<Value>Top 10 Countries by Gross Domestic Product</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>18pt</FontSize>
+					<FontWeight>700</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Width>6.375in</Width>
+			</Textbox>
+			<Textbox Name="TextBox4">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Left>0.125in</Left>
+				<Value>(in Billions of US dollars)</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>12pt</FontSize>
+					<FontWeight>700</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Top>0.375in</Top>
+				<Width>6.375in</Width>
+				<ZIndex>1</ZIndex>
+			</Textbox>
+		</ReportItems>
+	</Body>
+	<Width>6.625in</Width>
+	<DataSources>
+		<DataSource Name="FactBookDataSource">
+			<ConnectionProperties>
+				<DataProvider>XML</DataProvider>
+				<ConnectString>XmlDoc=..\..\..\..\..\Data\Factbook.xml;TransformationDoc=..\..\..\..\..\Data\SortByRegionGdp.xsl</ConnectString>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="GDPDataSet">
+			<Collation>Default</Collation>
+			<Fields>
+				<Field Name="CountryName">
+					<DataField>./name</DataField>
+				</Field>
+				<Field Name="CountryID">
+					<DataField>./id</DataField>
+				</Field>
+				<Field Name="MapCode">
+					<DataField>./mapcode</DataField>
+				</Field>
+				<Field Name="GDPPurchasingPowerParity">
+					<DataField>./GDPPurchasingPowerParity</DataField>
+				</Field>
+				<Field Name="GDPPerCapita">
+					<DataField>./GDPPerCapita</DataField>
+				</Field>
+				<Field Name="GDPPPP">
+					<Value>=System.Convert.ToDouble(Fields!GDPPurchasingPowerParity.Value) * 0.000001</Value>
+				</Field>
+			</Fields>
+			<Filters>
+				<Filter>
+					<FilterExpression>=Fields!GDPPPP.Value</FilterExpression>
+					<FilterValues>
+						<FilterValue>=10</FilterValue>
+					</FilterValues>
+					<Operator>TopN</Operator>
+				</Filter>
+			</Filters>
+			<Query>
+				<CommandText>//country[name != 'World']</CommandText>
+				<DataSourceName>FactBookDataSource</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>Theme</Name>
+			<Value>Factbook.rdlx-theme</Value>
+		</CustomProperty>
+	</CustomProperties>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Factbook.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

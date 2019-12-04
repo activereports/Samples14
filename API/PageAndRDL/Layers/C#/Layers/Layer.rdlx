@@ -1,0 +1,522 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Layer.rdlx</dd:Name>
+	<Body>
+		<Height>13.5cm</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Image Name="Image1">
+								<Height>11.4035cm</Height>
+								<Left>0.013301cm</Left>
+								<Sizing>Fit</Sizing>
+								<Source>Embedded</Source>
+								<Top>0.0965cm</Top>
+								<Value>index2</Value>
+								<Width>19.8967cm</Width>
+								<ZIndex>85</ZIndex>
+								<dd:LayerName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">PrePrintPaper</dd:LayerName>
+							</Image>
+							<Textbox Name="txtSalary1_6">
+								<Height>0.75cm</Height>
+								<Left>8.347633cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,6),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.465495cm</Top>
+								<Width>0.35cm</Width>
+								<ZIndex>99</ZIndex>
+							</Textbox>
+							<Textbox Name="txtName1">
+								<Height>0.7111cm</Height>
+								<Left>1.124479cm</Left>
+								<Value>=Fields!Name.Value</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>9.75pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+								</Style>
+								<Top>6.316927cm</Top>
+								<Width>7.1cm</Width>
+								<ZIndex>101</ZIndex>
+							</Textbox>
+							<Textbox Name="txtCompany2">
+								<Height>1.1cm</Height>
+								<Left>12.18737cm</Left>
+								<Value>=Fields!Company.Value</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>11.2pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.265495cm</Top>
+								<Width>4cm</Width>
+								<ZIndex>110</ZIndex>
+							</Textbox>
+							<Textbox Name="txtPhone2">
+								<Height>0.4cm</Height>
+								<Left>12.18737cm</Left>
+								<Value>=Fields!Phone.Value</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>9pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+								</Style>
+								<Top>4.7625cm</Top>
+								<Width>4cm</Width>
+								<ZIndex>90</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary1_2">
+								<Height>0.75cm</Height>
+								<Left>10.25cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,2),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.465495cm</Top>
+								<Width>0.35cm</Width>
+								<ZIndex>100</ZIndex>
+							</Textbox>
+							<Textbox Name="txtCompany3">
+								<Height>0.9223cm</Height>
+								<Left>16.6026cm</Left>
+								<Value>=Fields!Company.Value</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>9pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.677708cm</Top>
+								<Width>2.8cm</Width>
+								<ZIndex>103</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary1_4">
+								<Height>0.75cm</Height>
+								<Left>9.3cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,4),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.465495cm</Top>
+								<Width>0.35cm</Width>
+								<ZIndex>97</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary2_6">
+								<Height>0.7cm</Height>
+								<Left>12.25cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,6),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.85cm</Top>
+								<Width>0.5cm</Width>
+								<ZIndex>86</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary2_5">
+								<Height>0.7cm</Height>
+								<Left>12.9cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,5),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.85cm</Top>
+								<Width>0.5cm</Width>
+								<ZIndex>89</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary2_1">
+								<Height>0.7cm</Height>
+								<Left>15.58cm</Left>
+								<Value>=Right("******"&amp;Fields!Salary.Value,1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.85cm</Top>
+								<Width>0.5cm</Width>
+								<ZIndex>87</ZIndex>
+							</Textbox>
+							<Textbox Name="txtAddress1">
+								<Height>2.0775cm</Height>
+								<Left>1.124479cm</Left>
+								<Value>=" "&amp;Fields!Address.Value</Value>
+								<Style>
+									<FontFamily>MS PGothic</FontFamily>
+									<FontSize>9.75pt</FontSize>
+									<PaddingTop>3pt</PaddingTop>
+									<TextAlign>Left</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>4.150651cm</Top>
+								<Width>7.1cm</Width>
+								<ZIndex>108</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary1_1">
+								<Height>0.75cm</Height>
+								<Left>10.75cm</Left>
+								<Value>=Right("******"&amp;Fields!Salary.Value,1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.465495cm</Top>
+								<Width>0.35cm</Width>
+								<ZIndex>96</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary3">
+								<Height>0.5842cm</Height>
+								<Left>16.71836cm</Left>
+								<Value>=Fields!Salary.Value</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>9.75pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<Format>$#,##0.00</Format>
+									<TextAlign>Right</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>5.159375cm</Top>
+								<Width>2.4816cm</Width>
+								<ZIndex>109</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary2_2">
+								<Height>0.7cm</Height>
+								<Left>14.9cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,2),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.85cm</Top>
+								<Width>0.5cm</Width>
+								<ZIndex>107</ZIndex>
+							</Textbox>
+							<Textbox Name="txtPhone1">
+								<Height>0.3638cm</Height>
+								<Left>1.124479cm</Left>
+								<Value>=Fields!Phone.Value</Value>
+								<Style>
+									<FontFamily>MS PGothic</FontFamily>
+									<FontSize>9.75pt</FontSize>
+								</Style>
+								<Top>3.671094cm</Top>
+								<Width>3.7cm</Width>
+								<ZIndex>106</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary1_3">
+								<Height>0.75cm</Height>
+								<Left>9.8cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,3),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.465495cm</Top>
+								<Width>0.35cm</Width>
+								<ZIndex>102</ZIndex>
+							</Textbox>
+							<Textbox Name="txtBarcode">
+								<Height>0.7cm</Height>
+								<Left>1.124479cm</Left>
+								<Value>="("&amp;Left(Fields!BarCode.Value,2)&amp;")"&amp;Left(Fields!BarCode.Value,6)&amp;"-"&amp;Right(Left(Fields!BarCode.Value,22),8)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>9pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+								</Style>
+								<Top>9.525cm</Top>
+								<Width>5.4cm</Width>
+								<ZIndex>92</ZIndex>
+							</Textbox>
+							<Textbox Name="txtAddress2">
+								<Height>1.2898cm</Height>
+								<Left>12.18737cm</Left>
+								<Value>=" "&amp;Fields!Address.Value</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>9pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Left</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>5.258594cm</Top>
+								<Width>4cm</Width>
+								<ZIndex>111</ZIndex>
+							</Textbox>
+							<Textbox Name="txtName2">
+								<Height>0.5953cm</Height>
+								<Left>12.18737cm</Left>
+								<Value>=Fields!Name.Value</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>9.75pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>6.796484cm</Top>
+								<Width>4cm</Width>
+								<ZIndex>93</ZIndex>
+							</Textbox>
+							<CustomReportItem Name="Barcode1">
+								<Type>Barcode</Type>
+								<Top>8.284765cm</Top>
+								<Left>1.124479cm</Left>
+								<Width>5.23cm</Width>
+								<Height>1.11cm</Height>
+								<ZIndex>95</ZIndex>
+								<Style>
+									<FontFamily>Courier New</FontFamily>
+									<FontSize>8pt</FontSize>
+								</Style>
+								<CustomProperties>
+									<CustomProperty>
+										<Name>dd:QuietZone.Left</Name>
+										<Value>0cm</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>dd:QuietZone.Right</Name>
+										<Value>0cm</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>dd:Symbology</Name>
+										<Value>Ean128Fnc1</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>dd:Value</Name>
+										<Value>=Fields!BarCode.Value</Value>
+									</CustomProperty>
+									<CustomProperty>
+										<Name>dd:QRCodeOptions.Encoding</Name>
+										<Value>65001</Value>
+									</CustomProperty>
+								</CustomProperties>
+							</CustomReportItem>
+							<Textbox Name="txtSalary2_3">
+								<Height>0.7cm</Height>
+								<Left>14.25cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,3),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.85cm</Top>
+								<Width>0.5cm</Width>
+								<ZIndex>105</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary2_4">
+								<Height>0.7cm</Height>
+								<Left>13.6cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,4),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>3.85cm</Top>
+								<Width>0.5cm</Width>
+								<ZIndex>98</ZIndex>
+							</Textbox>
+							<Textbox Name="txtSalary1_5">
+								<Height>0.75cm</Height>
+								<Left>8.831042cm</Left>
+								<Value>=Left(Right("******"&amp;Fields!Salary.Value,5),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>1.465495cm</Top>
+								<Width>0.35cm</Width>
+								<ZIndex>88</ZIndex>
+							</Textbox>
+							<Textbox Name="txtCompany1">
+								<Height>0.9922cm</Height>
+								<Left>1.008724cm</Left>
+								<Value>=Fields!Company.Value</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>14.25pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<Top>2.38125cm</Top>
+								<Width>10.2cm</Width>
+								<ZIndex>104</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox33">
+								<Height>0.6118cm</Height>
+								<Left>16.6026cm</Left>
+								<Value>=Fields!Name.Value</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>9.75pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<TextAlign>Right</TextAlign>
+									<VerticalAlign>Bottom</VerticalAlign>
+								</Style>
+								<Top>2.563151cm</Top>
+								<Width>2.2655cm</Width>
+								<ZIndex>94</ZIndex>
+							</Textbox>
+							<Textbox Name="txtBarcode2">
+								<Height>0.6cm</Height>
+								<Left>1.11125cm</Left>
+								<Value>=Right(Left(Fields!BarCode.Value,30),6)&amp;"-"&amp;Right(Left(Fields!BarCode.Value,36),1)&amp;"-"&amp;Right(Left(Fields!BarCode.Value,37),6)&amp;"-"&amp;Right(Left(Fields!BarCode.Value,43),1)</Value>
+								<Style>
+									<FontFamily>Microsoft Sans Serif</FontFamily>
+									<FontSize>9pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+								</Style>
+								<Top>10cm</Top>
+								<Width>5.4cm</Width>
+								<ZIndex>92</ZIndex>
+							</Textbox>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>DataSet1</DataSetName>
+				<Grouping Name="FixedPage1_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!ID.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1cm</BottomMargin>
+	<LeftMargin>0.6cm</LeftMargin>
+	<PageHeight>13.5cm</PageHeight>
+	<PageWidth>21.01cm</PageWidth>
+	<RightMargin>0.5cm</RightMargin>
+	<TopMargin>1cm</TopMargin>
+	<Width>21.01cm</Width>
+	<EmbeddedImages>
+		<EmbeddedImage Name="index2">
+			<ImageData>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9U9vDKKS6ikeYUQhj8gJAOTbs6dH5mzNy1SdD2a01ie9/umNQVRSPcUjjCjkETkBgHxZe3qLU3k+qM4HMzrSJ3qLTEn1FI8wopBH5AQA8u3Z0yNztuZlqs4HM1rrk17/9MYgKqme4hFGFPKInABAvj17emTO1rxM1flgRmt90uuf3hhEJdVTPMKIQh6REwDIl7WntziV54PqfDCjtT7p9U8bc7mi1yO9sYB4hKTEISNyAgD5svb0FqfyfFCdD2a01ie9/umNQVRSPcUjjCjkETkBgHx79vTInK15marzwYzW+qTXP70xiEqqp3iEEYU8IicAkC9rT29xKs8H1flgRkf6RG+RKame4hFGFPKInABAvqw9vcWpPB9U54MZHekTvUWmpHqKRxhRyCNyAgD59uzpkTlb8zJV54MZrfVJr396YxCVVE/xCCMKeUROACDfnj09MmdrXqbqfDCjtT7p9U9vDKKS6ikeYUQhj8gJAOTL2tNbnMrzQXU+mNFan/T6pzcGUUn1FI8wopBH5AQA8u3Z0yNztuZlqs4HM1rrk17/9MYgKqme4hFGFPKInABAvj17emTO1rxM1flgRmt90uuf3hhEJdVTPMKIQh6REwDIl7WntziV54PqfDCjI32it8iUVE/xCCMKeUROACBf1p7e4lSeD6rzwYyO9IneIlNSPcUjjCjkETkBgHx79vTInK15marzwYzW+qTXP70xiEqqp3iEEYU8IicAkC9rT29xKs8H1flgRmt90uuf3hhEJdVTPMKIQh6REwDIl7WntziV54PqfDCjtT7p9U9vDKKS6ikeYUQhj8gJAOTbs6dH5mzNy1SdD2a01ie9/umNQVRSPcUjjCjkETkBgHx79vTInK15marzwYzW+qTXP70xiEqqp3iEEYU8IicAkC9rT29xKs8H1flgRkf6RG+RKame4hFGFPKInABAvj17emTO1rxM1flgRmt90uuf3hhEJdVTPMKIQh6REwDIt2dPj8zZmpepOh/MaK1Pev3TG4OopHqKRxhRyCNyAgD5svb0FqfyfFCdD2a01ie9/umNQVRSPcUjjCjkETkBgHxZe3qLU3k+qM4HM1rrk17/9MYgKqme4hFGFPKInABAvj17emTO1rxM1flgRmt90uuf3hhEJdVTPMKIQh6REwDIl7WntziV54PqfDCjI32it8iUVE/xCCMK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nK15marzwYzW+qTXP70xiEqqp3iEEYU8IicAkC9rT29xKs8H1flgRkf6RG+RKame4hFGFPKInABAvqw9vcWpPB9U54MZHekTvUWmpHqKRxhRyCNyAgD59uzpkTlb8zJV54MZrfVJr396YxCVVE/xCCMKeUROACBf1p7e4lSeD6rzwYzW+qTXP70xiEqqp3iEEYU8IicAkC9rT29xKs8H1flgRmt90uuf3hhEJdVTPMKIQh6REwDIt2dPj8zZmpepOh/MaK1Pev3TG4OopHqKRxhRyCNyAgD59uzpkTlb8zJV54MZrfVJr396YxCVVE/xCCMKeUROACBf1p7e4lSeD6rzwYyO9IneIlNSPcUjjCjkETkBgHx79vTInK15marzwYzW+qTXP70xiEqqp3iEEYU8IicAkG/Pnh6ZszUvU3U+mNFan/T6pzcGUUn1FI8wopBH5AQA8mXt6S1O5fmgOh/MaK1Pev3TG4OopHqKRxhRyCNyAgD5svb0FqfyfFCdD2a01ie9/umNQVRSPcUjjCjkETkBgHx79vTInK15marzwYzW+qTXP70xiEqqp3iEEYU8IicAkC9rT29xKs8H1flgRkf6RG+RKame4hFGFPKInABsa9+fXa7o9XFlxtqrOh/M6Eif6C0yJdVTPMKIQh6RE4A+35s5Yk/dROZszctUnQ9mtNYnvf7pjUFUUj3FI4wo5BE5AejzvZkj9tRNZM7WvEzV+WBGa33S65/eGEQl1VM8wohCHpETgD7fmzkiq25anMoarM4HM1rrk17/9MYgKqme4hFGFPKInAD0+d7MEXvqJjJna16m6nwwo7U+6fVPbwyikuopHmFEIY/ICUCf780csaduInO25mWqzgczWuuTXv/0xiAqqZ7iEUYU8oicAPT53swRWXXT4lTWYHU+mNGRPtFbZEqqp3iEEYU8IicAfb43c0RW3bQ4lTVYnQ9mdKRP9BaZkuopHmFEIY/ICUCf780csaduInO25mWqzgczWuuTXv/0xiAqqZ7iEUYU8oicAPT53swRWXXT4lTWYHU+mNFan/T6pzcGUUn1FI8wopBH5ASgz/dmjsiqmxansgar88GM1vqk1z+9MYhKqqd4hBGFPCInAH2+N3PEnrqJzNmal6k6H8xorU96/dMbg6ikeopHGFHII3IC0Od7M0fsqZvInK15marzwYzW+qTX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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\BILL.mdb;provider=Microsoft.Jet.OLEDB.4.0;</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="ID">
+					<DataField>ID</DataField>
+				</Field>
+				<Field Name="Name">
+					<DataField>Name</DataField>
+				</Field>
+				<Field Name="Phone">
+					<DataField>Phone</DataField>
+				</Field>
+				<Field Name="Address">
+					<DataField>Address</DataField>
+				</Field>
+				<Field Name="Company">
+					<DataField>Company</DataField>
+				</Field>
+				<Field Name="Salary">
+					<DataField>Salary</DataField>
+				</Field>
+				<Field Name="BarCode">
+					<DataField>BarCode</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>Select * from Billconveni ORDER BY ID</CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<dd:DefaultLayer xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<dd:DesignerTransparency>0.6</dd:DesignerTransparency>
+	</dd:DefaultLayer>
+	<dd:Layers xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<dd:Layer>
+			<dd:Name>PrePrintPaper</dd:Name>
+		</dd:Layer>
+	</dd:Layers>
+</Report>

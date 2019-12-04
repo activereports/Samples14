@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+  <Body>
+    <Height>11.69in</Height>
+    <ReportItems>
+      <FixedPage Name="FixedPage1">
+        <Pages>
+          <Page>
+            <ReportItems>
+              <Image Name="Image1">
+                <Height>15.24cm</Height>
+                <Left>0.3175cm</Left>
+                <MIMEType>=Parameters!MimeType.Value</MIMEType>
+                <Sizing>Fit</Sizing>
+                <Source>External</Source>
+                <Top>1.27cm</Top>
+                <Value>="MyPictures:" &amp; Parameters!PictureName.Value</Value>
+                <Width>16.51cm</Width>
+              </Image>
+              <Textbox Name="TextBox2">
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Left>0.125in</Left>
+                <Style>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <Top>0.25in</Top>
+                <Value>="MIME Type: """ &amp; Parameters!MimeType.Value &amp; """"</Value>
+                <Width>2.125in</Width>
+                <ZIndex>1</ZIndex>
+              </Textbox>
+              <Textbox Name="TextBox1">
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Left>0.125in</Left>
+                <Style>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <Value>="Image Value: ""MyPictures:" &amp; Parameters!PictureName.Value &amp; """"</Value>
+                <Width>4.125in</Width>
+                <ZIndex>1</ZIndex>
+              </Textbox>
+            </ReportItems>
+          </Page>
+        </Pages>
+        <Grouping Name="FixedPage1_Group">
+          <GroupExpressions>
+            <GroupExpression>=1</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+      </FixedPage>
+    </ReportItems>
+  </Body>
+  <PageHeight>11.69in</PageHeight>
+  <PageWidth>8.27in</PageWidth>
+  <Width>8.27in</Width>
+  <ReportParameters>
+    <ReportParameter Name="PictureName">
+      <DataType>String</DataType>
+      <Prompt>Specify the picture name:</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="MimeType">
+      <DataType>String</DataType>
+      <Prompt>Specify the mime type of the picture:</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Label>image/bmp</Label>
+            <Value>image/bmp</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Label>image/gif</Label>
+            <Value>image/gif</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Label>image/jpg</Label>
+            <Value>image/jpg</Value>
+          </ParameterValue>
+          <ParameterValue>
+            <Label>image/png</Label>
+            <Value>image/png</Value>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+</Report>

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDesignerPro", "TestDesignerPro\TestDesignerPro.csproj", "{6A49C545-2B5C-4565-8716-1368E183C977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OracleDataProvider", "OracleDataProvider\OracleDataProvider.csproj", "{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Designer-Debug|Mixed Platforms = Designer-Debug|Mixed Platforms
+		Designer-Debug|x86 = Designer-Debug|x86
+		Designer-Release|Mixed Platforms = Designer-Release|Mixed Platforms
+		Designer-Release|x86 = Designer-Release|x86
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Debug|x86.ActiveCfg = Debug|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Debug|x86.Build.0 = Debug|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Designer-Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Designer-Debug|Mixed Platforms.Build.0 = Debug|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Designer-Debug|x86.ActiveCfg = Debug|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Designer-Debug|x86.Build.0 = Debug|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Designer-Release|Mixed Platforms.ActiveCfg = Release|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Designer-Release|Mixed Platforms.Build.0 = Release|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Designer-Release|x86.ActiveCfg = Release|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Designer-Release|x86.Build.0 = Release|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Release|Mixed Platforms.Build.0 = Release|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Release|x86.ActiveCfg = Release|x86
+		{6A49C545-2B5C-4565-8716-1368E183C977}.Release|x86.Build.0 = Release|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Debug|x86.ActiveCfg = Debug|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Debug|x86.Build.0 = Debug|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Designer-Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Designer-Debug|Mixed Platforms.Build.0 = Debug|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Designer-Debug|x86.ActiveCfg = Debug|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Designer-Debug|x86.Build.0 = Debug|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Designer-Release|Mixed Platforms.ActiveCfg = Release|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Designer-Release|Mixed Platforms.Build.0 = Release|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Designer-Release|x86.ActiveCfg = Release|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Designer-Release|x86.Build.0 = Release|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Release|Mixed Platforms.Build.0 = Release|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Release|x86.ActiveCfg = Release|x86
+		{FF29E953-82A2-4337-ADCC-5D6DE6EA1A4A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A689946-55BD-46CD-AE41-1D0BB8FC3A98}
+	EndGlobalSection
+EndGlobal

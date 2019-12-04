@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="11281.89" DocumentName="ARNet Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-style: normal; text-decoration: none; font-weight: normal; color: Black; font-size: 10pt; vertical-align: top; font-family: &quot;Arial&quot;; ddo-char-set: 186" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="GroupHeader1" Height="0" BackColor="16777215" />
+    <Section Type="Detail" Name="Detail" Height="6591.361" BackColor="16777215" KeepTogether="1">
+      <Control Type="AR.Field" Name="txtCompany" DataField="Company" Left="453.5433" Top="1190.551" Width="5782.676" Height="623.6221" Text="Company Limited" CanGrow="0" Style="font-family: Arial Unicode MS; font-size: 14.25pt; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Shape" Name="Shape1" Left="9871.201" Top="4705.512" Width="1127.225" Height="1247.244" BackColor="16777215" LineStyle="2" LineWeight="2" Shape="1" RoundingRadius="0.1" />
+      <Control Type="AR.Label" Name="Label33" Left="10035.36" Top="5045.76" Width="907.087" Height="907.0865" Caption="GC Direct Stamp Seal" Style="color: LightGrey; font-family: Arial Narrow; font-size: 8.25pt; text-align: left; ddo-char-set: 1" />
+      <Control Type="AR.Line" Name="Line4" X1="6349.607" Y1="1870.865" X2="0" Y2="1870.865" />
+      <Control Type="AR.Label" Name="Label2" Left="56.6929" Top="1927.56" Width="283.1471" Height="2664.567" Caption="Address" Style="color: Black; font-family: Arial Narrow; font-size: 10pt; text-align: left; vertical-align: middle; white-space: inherit; ddo-char-set: 1; ddo-font-vertical: true; ddo-wrap-mode: inherit" />
+      <Control Type="AR.Label" Name="Label1" Left="56.6929" Top="1133.858" Width="226.7716" Height="737.0077" Caption="" Style="color: Black; font-family: Arial Narrow; font-size: 7pt; text-align: left; vertical-align: middle; ddo-char-set: 1; ddo-font-vertical: true" />
+      <Control Type="AR.Line" Name="Line1" X1="6462.994" Y1="56.6929" X2="6462.994" Y2="6406.3" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line3" X1="9411.024" Y1="56.6929" X2="9411.024" Y2="6406.3" LineStyle="2" />
+      <Control Type="AR.Label" Name="Label3" Left="56.16" Top="56.16001" Width="3684.96" Height="397.44" Caption="Salary Payment Slip" Style="color: Black; font-family: Arial Unicode MS; font-size: 11.25pt; text-align: justify; text-justify: distribute-all-lines; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label4" Left="1133.858" Top="566.929" Width="2721.26" Height="317.231" Caption="(For Official Use Only)" Style="color: Black; font-family: Arial Unicode MS; font-size: 9.75pt; text-align: center" />
+      <Control Type="AR.Line" Name="Line5" X1="4648.818" Y1="4195.276" X2="6349.607" Y2="4195.276" />
+      <Control Type="AR.Line" Name="Line6" X1="6066.142" Y1="453.5433" X2="6066.142" Y2="1133.858" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line7" X1="4648.818" Y1="680.315" X2="6349.607" Y2="680.315" />
+      <Control Type="AR.Line" Name="Line8" X1="5782.676" Y1="453.5433" X2="5782.676" Y2="1133.858" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line9" X1="5499.213" Y1="453.5433" X2="5499.213" Y2="1133.858" />
+      <Control Type="AR.Line" Name="Line10" X1="5215.748" Y1="453.5433" X2="5215.748" Y2="1133.858" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line11" X1="4932.284" Y1="453.5433" X2="4932.284" Y2="1133.858" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line12" X1="4648.818" Y1="453.5433" X2="4648.818" Y2="1133.858" />
+      <Control Type="AR.Line" Name="Line13" X1="6349.607" Y1="453.5433" X2="6349.607" Y2="6179.527" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line14" X1="4170.24" Y1="453.6" X2="6349.607" Y2="453.5433" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line15" X1="6349.607" Y1="6179.527" X2="0" Y2="6179.527" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line16" X1="6349.607" Y1="1133.858" X2="0" Y2="1133.858" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line17" X1="0" Y1="1133.858" X2="8.447901E-06" Y2="6179.527" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line18" X1="4648.818" Y1="4478.74" X2="6349.607" Y2="4478.74" />
+      <Control Type="AR.Line" Name="Line19" X1="4648.818" Y1="4195.276" X2="4648.818" Y2="6179.527" />
+      <Control Type="AR.Line" Name="Line20" X1="339.84" Y1="1143.36" X2="339.84" Y2="4658.32" />
+      <Control Type="AR.Line" Name="Line21" X1="0" Y1="4648.818" X2="340.1575" Y2="4648.818" />
+      <Control Type="AR.Line" Name="Line22" X1="4170.24" Y1="453.6" X2="4170.24" Y2="1143.995" LineWeight="3" />
+      <Control Type="AR.Label" Name="Label5" Left="4170.24" Top="453.6" Width="478.0457" Height="623.5651" Caption="Amt" Style="color: Black; font-family: Arial Unicode MS; font-size: 8.25pt; text-align: left; vertical-align: middle" />
+      <Control Type="AR.Label" Name="Label6" Left="4705.512" Top="4251.969" Width="1587.403" Height="226.431" Caption="Signature" Style="color: Black; font-family: Arial Unicode MS; font-size: 7pt; text-align: center; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label7" Left="56.6929" Top="6236.221" Width="2762.827" Height="235.1397" Caption="（For Official Use）" Style="color: Black; font-family: Arial Unicode MS; font-size: 7pt; text-align: center; ddo-char-set: 1" />
+      <Control Type="AR.Line" Name="Line23" X1="6576.376" Y1="1133.858" X2="9297.638" Y2="1133.858" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line24" X1="6576.376" Y1="1133.858" X2="6576.376" Y2="6179.527" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line25" X1="9297.638" Y1="1133.858" X2="9297.638" Y2="6179.527" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line26" X1="6576.376" Y1="6179.527" X2="9297.638" Y2="6179.527" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line27" X1="6576.376" Y1="1870.865" X2="9297.638" Y2="1870.865" />
+      <Control Type="AR.Line" Name="Line28" X1="6916.536" Y1="1133.858" X2="6916.536" Y2="6179.527" />
+      <Control Type="AR.Line" Name="Line29" X1="6576.376" Y1="2607.875" X2="9297.638" Y2="2607.875" />
+      <Control Type="AR.Line" Name="Line30" X1="6916.536" Y1="2097.638" X2="9297.638" Y2="2097.638" />
+      <Control Type="AR.Label" Name="Label8" Left="4648.818" Top="453.5433" Width="283.4649" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label9" Left="4932.284" Top="453.5433" Width="283.4644" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label10" Left="5215.748" Top="453.5433" Width="283.4649" Height="226.7716" Caption="" Style="color: Black; font-family: Microsoft Sans Serif; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label11" Left="5499.213" Top="453.5433" Width="283.4644" Height="226.7716" Caption="" Style="color: Black; font-family: ＭＳ 明朝; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label12" Left="5782.676" Top="453.5433" Width="283.4649" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label13" Left="6066.142" Top="453.5433" Width="283.4649" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Line" Name="Line31" X1="8900.785" Y1="1870.865" X2="8900.785" Y2="2607.875" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line32" X1="8503.938" Y1="1870.865" X2="8503.938" Y2="2607.875" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line33" X1="8107.086" Y1="1870.865" X2="8107.086" Y2="2607.875" />
+      <Control Type="AR.Line" Name="Line34" X1="7710.237" Y1="1870.865" X2="7710.237" Y2="2607.875" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line35" X1="7313.387" Y1="1870.865" X2="7313.387" Y2="2607.875" LineStyle="2" />
+      <Control Type="AR.Field" Name="txtBarcode" DataField="BarCode" Left="680.315" Top="5442.52" Width="3061.417" Height="396.8502" Text="(91)912345-0123456789012345678901 031221-0-123000-3" Style="font-family: ＭＳ ゴシック; font-size: 9pt; white-space: inherit" />
+      <Control Type="AR.Label" Name="Label14" Left="6642.721" Top="567.36" Width="2597.76" Height="395.7848" Caption="Payment and Receipt " Style="color: Black; font-family: Arial Unicode MS; font-size: 12pt; text-align: center; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label15" Left="6916.536" Top="1870.865" Width="396.8502" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label16" Left="7313.387" Top="1870.865" Width="396.8509" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label17" Left="7710.237" Top="1870.865" Width="396.8502" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label18" Left="8107.086" Top="1870.865" Width="396.8502" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label19" Left="8503.938" Top="1870.865" Width="396.8502" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label20" Left="8900.785" Top="1870.865" Width="396.8502" Height="226.7716" Caption="" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label21" Left="6643.07" Top="1143.858" Width="226.7716" Height="737.0077" Caption="" Style="color: Black; font-family: Arial Narrow; font-size: 7.5pt; text-align: left; vertical-align: middle; ddo-char-set: 1; ddo-font-vertical: true" />
+      <Control Type="AR.Label" Name="Label22" Left="6643.07" Top="2674.567" Width="226.7716" Height="1747.48" Caption="Address" Style="color: Black; font-family: Arial Narrow; font-size: 8pt; text-align: left; vertical-align: middle; white-space: inherit; ddo-char-set: 1; ddo-font-vertical: true; ddo-wrap-mode: inherit" />
+      <Control Type="AR.Line" Name="Line36" X1="6576.376" Y1="4478.74" X2="9297.638" Y2="4478.74" />
+      <Control Type="AR.Label" Name="Label24" Left="6643.07" Top="1937.559" Width="226.7715" Height="623.6218" Caption="Amt" Style="color: Black; font-family: Arial Narrow; font-size: 8pt; text-align: left; vertical-align: middle; white-space: inherit; ddo-char-set: 1; ddo-font-vertical: true; ddo-wrap-mode: inherit" />
+      <Control Type="AR.Line" Name="Line37" X1="9524.409" Y1="1133.858" X2="9524.409" Y2="6179.527" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line38" X1="9524.409" Y1="6179.527" X2="11225.2" Y2="6179.527" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line39" X1="9524.409" Y1="1133.858" X2="11225.2" Y2="1133.858" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line40" X1="11225.2" Y1="1133.858" X2="11225.2" Y2="6179.527" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line41" X1="9524.409" Y1="4478.74" X2="11225.2" Y2="4478.74" />
+      <Control Type="AR.Label" Name="Label23" Left="6643.07" Top="4535.433" Width="226.7716" Height="1587.403" Caption="Signature" Style="color: Black; font-family: Arial Narrow; font-size: 9pt; text-align: left; text-justify: distribute-all-lines; vertical-align: middle; white-space: inherit; ddo-char-set: 1; ddo-font-vertical: true; ddo-wrap-mode: inherit" />
+      <Control Type="AR.Label" Name="Label25" Left="9524.409" Top="4592.125" Width="227.2714" Height="1474.016" Caption="Stamp" Style="color: Black; font-family: Arial Narrow; font-size: 8pt; text-align: left; vertical-align: middle; ddo-char-set: 1; ddo-font-vertical: true" />
+      <Control Type="AR.Label" Name="Label26" Left="11055.12" Top="4592.125" Width="170.0793" Height="1474.016" Caption="" Style="color: Black; font-family: Arial; font-size: 6.75pt; text-align: left; vertical-align: middle; ddo-char-set: 1; ddo-font-vertical: true" />
+      <Control Type="AR.Label" Name="Label27" Left="9751.681" Top="567.36" Width="1247.245" Height="362.88" Caption="Payment" Style="color: Black; font-family: Arial Unicode MS; font-size: 12pt; text-align: center; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label28" Left="6802.562" Top="6236.641" Width="1831.68" Height="234.7195" Caption="（For Official Use）" Style="color: Black; font-family: Microsoft Sans Serif; font-size: 7pt; text-align: center; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label29" Left="9524.16" Top="6236.641" Width="1644.48" Height="234.7198" Caption="（For Employee）" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: center; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label30" Left="9524.409" Top="1133.858" Width="1190.551" Height="215.4219" Caption="Name" Style="color: Black; font-family: Arial Narrow; font-size: 8pt; text-align: left; ddo-char-set: 1" PaddingLeft="2" />
+      <Control Type="AR.Line" Name="Line42" X1="9534.41" Y1="1880.866" X2="11235.2" Y2="1880.866" />
+      <Control Type="AR.Line" Name="Line43" X1="9524.409" Y1="2721.26" X2="11225.2" Y2="2721.26" />
+      <Control Type="AR.Label" Name="Label31" Left="9524.409" Top="1870.865" Width="1474.311" Height="227.2151" Caption="Company" Style="color: Black; font-family: Arial Narrow; font-size: 7.5pt; text-align: left; ddo-char-set: 1" PaddingLeft="2" />
+      <Control Type="AR.Line" Name="Line44" X1="9524.409" Y1="3231.497" X2="11225.2" Y2="3231.497" />
+      <Control Type="AR.Label" Name="Label32" Left="9524.409" Top="2721.26" Width="1190.551" Height="284.02" Caption="Amt" Style="color: Black; font-family: Arial; font-size: 8.25pt; text-align: left; ddo-char-set: 1" PaddingLeft="2" />
+      <Control Type="AR.Field" Name="txtSalary1_1" DataField="Salary" Left="6066.142" Top="680.315" Width="283.4644" Height="453.5433" Text="0" Style="font-family: Arial Unicode MS; font-size: 12pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary1_2" Left="5782.676" Top="680.315" Width="283.4644" Height="453.5433" Text="0" Style="font-family: Arial Unicode MS; font-size: 12pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary1_6" Left="4648.818" Top="680.315" Width="283.4649" Height="453.5433" Text="0" Style="font-family: Arial Unicode MS; font-size: 12pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary1_5" Left="4932.284" Top="680.315" Width="283.4644" Height="453.5433" Text="0" Style="font-family: Arial Unicode MS; font-size: 12pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary1_4" Left="5215.748" Top="680.315" Width="283.4649" Height="453.5433" Text="0" Style="font-family: Arial Unicode MS; font-size: 12pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary1_3" Left="5499.213" Top="680.315" Width="283.4644" Height="453.5433" Text="0" Style="font-family: Arial Unicode MS; font-size: 12pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary2_6" Left="6973.229" Top="2154.331" Width="283.4644" Height="396.8505" Text="0" Style="font-family: Arial Unicode MS; font-size: 14.25pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary2_5" Left="7369.92" Top="2154.24" Width="283.4644" Height="396.8505" Text="0" Style="font-family: Arial Unicode MS; font-size: 14.25pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary2_4" Left="7766.931" Top="2154.331" Width="283.4651" Height="396.8505" Text="0" Style="font-family: Arial Unicode MS; font-size: 14.25pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary2_3" Left="8163.779" Top="2154.331" Width="283.4644" Height="396.8505" Text="0" Style="font-family: Arial Unicode MS; font-size: 14.25pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary2_2" Left="8560.63" Top="2154.331" Width="283.4651" Height="396.8505" Text="0" Style="font-family: Arial Unicode MS; font-size: 14.25pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary2_1" Left="8957.479" Top="2154.331" Width="283.4637" Height="396.8505" Text="0" Style="font-family: Arial Unicode MS; font-size: 14.25pt; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtCompany2" DataField="Company" Left="6973.229" Top="1190.551" Width="2267.716" Height="623.6221" Text="Company" CanGrow="0" Style="font-family: Arial Unicode MS; font-size: 11.25pt; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtPhone1" DataField="Phone" Left="566.929" Top="2097.638" Width="2097.638" Height="283.4649" Text="〒981-3205" Style="font-family: Arial Unicode MS; font-size: 9.75pt; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtAddress1" DataField="Address" Left="566.929" Top="2437.795" Width="4023.071" Height="1133.858" Text="Address" Style="font-family: Arial Unicode MS; font-size: 9.75pt; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label34" Left="10998.43" Top="1644.096" Width="226.7709" Height="226.7716" Caption="" Style="font-family: Microsoft Sans Serif; font-size: 8.25pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtCompany3" DataField="Company" Left="9581.102" Top="2154.24" Width="1587.403" Height="510.327" Text="Company" CanGrow="0" Style="font-family: Arial; font-size: 9pt; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label35" Left="10998.43" Top="3004.726" Width="226.7709" Height="226.7712" Caption="" Style="font-family: Arial; font-size: 8.25pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtName3" DataField="Name" Left="9581.761" Top="1349.28" Width="1417.322" Height="392.8933" Text="Name" Style="font-family: Arial Unicode MS; font-size: 9.75pt; text-align: right; vertical-align: middle; ddo-char-set: 1; ddo-shrink-to-fit: none" MinCondenseRate="80" />
+      <Control Type="AR.Field" Name="txtName1" DataField="Name" Left="566.929" Top="3628.346" Width="4023.071" Height="510.2362" Text="Name" Style="font-family: Arial Unicode MS; font-size: 9.75pt; text-align: left; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtSalary3" DataField="Salary" Left="9581.102" Top="3005.28" Width="1360.629" Height="226.216" Text="0" OutputFormat="$#,##0" Style="font-family: Arial; font-size: 9.75pt; text-align: right; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="txtPhone2" DataField="Phone" Left="6973.229" Top="2664.567" Width="2267.716" Height="226.7716" Text="〒981-3205" Style="font-family: Arial Unicode MS; font-size: 9pt; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtAddress2" DataField="Address" Left="7030.082" Top="2891.52" Width="2267.716" Height="963.7798" Text="Address" Style="font-family: Arial Unicode MS; font-size: 9pt; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="txtName2" DataField="Name" Left="6973.92" Top="3968.64" Width="2267.716" Height="453.5434" Text="Name" Style="font-family: Arial Unicode MS; font-size: 9.75pt; text-align: left; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Line" Name="Line2" X1="8.447901E-06" Y1="6471.361" X2="11225.2" Y2="6471.361" LineStyle="3" />
+      <Control Type="AR.Barcode" Name="Barcode1" DataField="BarCode" Left="705" Top="4815" Width="2966.4" Height="630.72" BackColor="16777215" BarStyle="28" Text="91912345012345678901234567890104123100000003" AutoSize="0" Font="Courier New" FontSize="8" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="0" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\BILL.mdb;Persist Security Info=False" SQL="Select * from Billconveni ORDER BY ID" />
+  </DataSources>
+  <Script><![CDATA[public void ActiveReport_ReportStart()
+{
+	// Set the color orange in bulk, the color of the fixed portion.
+	System.Drawing.Color clr = System.Drawing.Color.Orange;
+	// If the fixed portion has been already printed on mount, the
+	// By setting the Color.Transparent,
+	// It is also possible to (without output) transparency.
+	int i;
+
+	// Sets the color of the Line.
+	for (i = 1; i <= 44; i++)
+	{
+		((GrapeCity.ActiveReports.SectionReportModel.Line) (rpt.Sections["Detail"].Controls["Line" + i.ToString()])).LineColor = clr;
+	}
+	// Sets the color of the Label.
+	for (i = 1; i <= 35; i++)
+	{
+		((GrapeCity.ActiveReports.SectionReportModel.Label) (rpt.Sections["Detail"].Controls["Label" + i.ToString()])).ForeColor = clr;
+	}
+	// Sets the color of the Shape.
+	this.Shape1.LineColor = clr;
+}
+
+
+public void Detail_Format()
+{
+	int i;
+	string strSalary = "******" + txtSalary1_1.Text;
+	string strData;
+	// Set the digit by one in the amount in the TextBox.
+	// No digit numbers, filled with "*".
+	for (i = 1; i <= 6; i++)
+	{
+		strData = strSalary.Substring(strSalary.Length - i, 1);
+		((GrapeCity.ActiveReports.SectionReportModel.TextBox) (rpt.Sections["Detail"].Controls["txtSalary1_" + i.ToString()])).Text = strData;
+		((GrapeCity.ActiveReports.SectionReportModel.TextBox) (rpt.Sections["Detail"].Controls["txtSalary2_" + i.ToString()])).Text = strData;
+	}
+	// Create a caption for the bar code,
+	// Then re-set to the TextBox.
+	
+	strData = "(" + txtBarcode.Text.Substring(0, 2) + ")";
+	// Manufacturer Code
+	strData += txtBarcode.Text.Substring(2, 6) + "-";
+	// Free use of field
+	strData += txtBarcode.Text.Substring(8, 22) + "\r\n";
+	//Payment deadline date
+	strData += txtBarcode.Text.Substring(30, 6) + "-";
+	// Cornerstone of  stamp
+	strData += txtBarcode.Text.Substring(36, 1) + "-";
+	//  Amount
+	strData += txtBarcode.Text.Substring(37, 6) + "-";
+	// Check digit
+	strData += txtBarcode.Text.Substring(43, 1);
+	txtBarcode.Text = strData;
+	//
+		// Sets the bar code.
+		//
+
+		// * ---Note------------------------------------------ - -*
+		// Bar code based on the "Guidelines for standard housing agency charged with UCC/EAN-128"
+		// In order to output, use the printer with the output resolution of 300dpi or more
+		// You need. It is desired that at least 600dpi and to consider the accuracy of reading.
+		// Also, can significantly affect the accuracy of reading and bleeding of the ink, such as reflectance also.
+		// If the bar code can not be read successfully, please try the black dot correction of the bar.
+		// * ------------------------------------------------------*
+
+		// Do black dot correction of the bar.
+		// Specify the module size and the minimum resolution of the printer to do the actual printing,
+		// The dot correction in units of the minimum width module.
+
+		// Minimum recommended value of module size and resolution are as follows.
+		// ---------------------------------
+		// Resolution | minimum width module
+	// 1200 | 8
+		// 720 | 5 4 or
+		// 600 | 4
+		// 480 | 3
+		// 400 | 3
+		// 360 | 2
+		// 300 | 2
+		// ---------------------------------
+
+		// Set to disable the automatic adjustment of size
+	this.Barcode1.AutoSize = false;
+
+	// Specifies the (dpi) resolution of the printer.
+	this.Barcode1.Code128.Dpi = 600;
+
+	// Specifies the minimum width module. If the 600dpi specifies the four dots.
+	this.Barcode1.Code128.ModuleSize = 4;
+
+	// -1 To compensate for dot the black bar.
+	this.Barcode1.Code128.BarAdjust = -1;
+}
+
+
+public void Detail_BeforePrint()
+{
+	
+}
+
+
+public void Detail_AfterPrint()
+{
+	int i;
+	// Add the Mr after the name.
+	for (i = 1; i <= 2; i++)
+	{
+		((GrapeCity.ActiveReports.SectionReportModel.TextBox) (rpt.Sections["Detail"].Controls["txtName" + i.ToString()])).Text += "　Mr.";
+	}
+}
+
+
+]]></Script>
+  <PageSettings LeftMargin="340" RightMargin="283" TopMargin="567" BottomMargin="567" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" Orientation="1" />
+  <Parameters />
+</ActiveReportsLayout>

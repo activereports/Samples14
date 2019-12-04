@@ -1,0 +1,465 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DistrictSales.rdlx</dd:Name>
+	<Body>
+		<Height>3.375in</Height>
+		<ReportItems>
+			<CustomReportItem Name="BandedList1">
+				<Type>BandedList</Type>
+				<Top>0.875in</Top>
+				<Width>4.625in</Width>
+				<Height>1.75in</Height>
+				<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+					<ReportItems>
+						<Textbox Name="TextBox3">
+							<CanGrow>true</CanGrow>
+							<Height>0.25in</Height>
+							<HideDuplicates>"StoreSales"</HideDuplicates>
+							<Left>2.625in</Left>
+							<Value>Total Sales</Value>
+							<Style>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<TextAlign>Right</TextAlign>
+								<BorderColor>
+									<Default>Gainsboro</Default>
+								</BorderColor>
+								<BorderStyle>
+									<Bottom>Solid</Bottom>
+								</BorderStyle>
+							</Style>
+							<Width>1in</Width>
+						</Textbox>
+						<Textbox Name="TextBox15">
+							<CanGrow>true</CanGrow>
+							<Height>0.25in</Height>
+							<HideDuplicates>"StoreSales"</HideDuplicates>
+							<Left>3.625in</Left>
+							<Value>Total Profit</Value>
+							<Style>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<TextAlign>Right</TextAlign>
+								<BorderColor>
+									<Default>Gainsboro</Default>
+								</BorderColor>
+								<BorderStyle>
+									<Bottom>Solid</Bottom>
+								</BorderStyle>
+							</Style>
+							<Width>1in</Width>
+						</Textbox>
+						<Textbox Name="TextBox9">
+							<CanGrow>true</CanGrow>
+							<Height>0.25in</Height>
+							<Left>2.625in</Left>
+							<Value>=Sum(Fields!TotalSales.Value)</Value>
+							<Style>
+								<FontWeight>700</FontWeight>
+								<Format>$#0</Format>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<BorderColor>
+									<Default>Gainsboro</Default>
+								</BorderColor>
+								<BorderStyle>
+									<Top>Double</Top>
+								</BorderStyle>
+							</Style>
+							<Width>1in</Width>
+						</Textbox>
+						<Textbox Name="TextBox14">
+							<CanGrow>true</CanGrow>
+							<Height>0.25in</Height>
+							<Left>3.625in</Left>
+							<Value>=Sum(Fields!TotalProfit.Value)</Value>
+							<Style>
+								<FontWeight>700</FontWeight>
+								<Format>$#0</Format>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<BorderColor>
+									<Default>Gainsboro</Default>
+								</BorderColor>
+								<BorderStyle>
+									<Top>Solid</Top>
+								</BorderStyle>
+							</Style>
+							<Width>1in</Width>
+						</Textbox>
+					</ReportItems>
+				</dd:Container>
+				<CustomData>
+					<DataSetName>StoreSales</DataSetName>
+					<DataRowGroupings>
+						<DataGroupings>
+							<DataGrouping>
+								<Grouping Name="BandedList1_Group3">
+									<GroupExpressions>
+										<GroupExpression>=Fields!SaleYear.Value</GroupExpression>
+									</GroupExpressions>
+								</Grouping>
+								<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+									<ReportItems>
+										<Textbox Name="TextBox8">
+											<CanGrow>true</CanGrow>
+											<Height>0.25in</Height>
+											<Value>="Year " &amp; Fields!SaleYear.Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Left</TextAlign>
+											</Style>
+											<Width>2.375in</Width>
+										</Textbox>
+										<Textbox Name="TextBox10">
+											<CanGrow>true</CanGrow>
+											<Height>0.25in</Height>
+											<Left>2.625in</Left>
+											<Value>=Sum(Fields!TotalSales.Value)</Value>
+											<Style>
+												<Format>$#0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>Gainsboro</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Top>Solid</Top>
+												</BorderStyle>
+											</Style>
+											<Width>1in</Width>
+										</Textbox>
+										<Textbox Name="TextBox13">
+											<CanGrow>true</CanGrow>
+											<Height>0.25in</Height>
+											<Left>3.625in</Left>
+											<Value>=Sum(Fields!TotalProfit.Value)</Value>
+											<Style>
+												<Format>$#0</Format>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<BorderColor>
+													<Default>Gainsboro</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Top>Solid</Top>
+												</BorderStyle>
+											</Style>
+											<Width>1in</Width>
+										</Textbox>
+									</ReportItems>
+								</dd:Container>
+								<DataGroupings>
+									<DataGrouping>
+										<Grouping Name="BandedList1_Group1">
+											<GroupExpressions>
+												<GroupExpression>=Fields!RegionID.Value</GroupExpression>
+											</GroupExpressions>
+										</Grouping>
+										<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+											<ReportItems>
+												<Textbox Name="TextBox4">
+													<CanGrow>true</CanGrow>
+													<Height>0.25in</Height>
+													<Value>="Region: " &amp; Fields!Region.Value</Value>
+													<Style>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>15pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+													</Style>
+													<Width>2.375in</Width>
+												</Textbox>
+												<Textbox Name="TextBox7">
+													<CanGrow>true</CanGrow>
+													<Height>0.25in</Height>
+													<Left>2.625in</Left>
+													<Value>=Sum(Fields!TotalSales.Value)</Value>
+													<Style>
+														<Format>$#0</Format>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<BorderColor>
+															<Default>Gainsboro</Default>
+														</BorderColor>
+														<BorderStyle>
+															<Top>Solid</Top>
+														</BorderStyle>
+													</Style>
+													<Width>1in</Width>
+												</Textbox>
+												<Textbox Name="TextBox12">
+													<CanGrow>true</CanGrow>
+													<Height>0.25in</Height>
+													<Left>3.625in</Left>
+													<Value>=Sum(Fields!TotalProfit.Value)</Value>
+													<Style>
+														<Format>$#0</Format>
+														<PaddingBottom>2pt</PaddingBottom>
+														<PaddingLeft>2pt</PaddingLeft>
+														<PaddingRight>2pt</PaddingRight>
+														<PaddingTop>2pt</PaddingTop>
+														<BorderColor>
+															<Default>Gainsboro</Default>
+														</BorderColor>
+														<BorderStyle>
+															<Top>Solid</Top>
+														</BorderStyle>
+													</Style>
+													<Width>1in</Width>
+												</Textbox>
+											</ReportItems>
+										</dd:Container>
+										<DataGroupings>
+											<DataGrouping>
+												<Grouping Name="BandedList1_Group2">
+													<GroupExpressions>
+														<GroupExpression>=Fields!DistrictID.Value</GroupExpression>
+													</GroupExpressions>
+												</Grouping>
+												<dd:Container xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+													<ReportItems>
+														<Textbox Name="TextBox5">
+															<CanGrow>true</CanGrow>
+															<Height>0.25in</Height>
+															<Value>="District: " &amp; Fields!District.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>30pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+															<Width>2.375in</Width>
+														</Textbox>
+														<Textbox Name="TextBox6">
+															<CanGrow>true</CanGrow>
+															<Height>0.25in</Height>
+															<Left>2.625in</Left>
+															<Value>=Sum(Fields!TotalSales.Value)</Value>
+															<Style>
+																<Format>$#0</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<BorderStyle>
+																	<Top>None</Top>
+																</BorderStyle>
+															</Style>
+															<Width>1in</Width>
+														</Textbox>
+														<Textbox Name="TextBox11">
+															<CanGrow>true</CanGrow>
+															<Height>0.25in</Height>
+															<Left>3.625in</Left>
+															<Value>=Sum(Fields!TotalProfit.Value)</Value>
+															<Style>
+																<Format>$#0</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+															<Width>1in</Width>
+															<ZIndex>1</ZIndex>
+														</Textbox>
+													</ReportItems>
+												</dd:Container>
+												<DataGroupings>
+													<DataGrouping />
+												</DataGroupings>
+											</DataGrouping>
+										</DataGroupings>
+									</DataGrouping>
+								</DataGroupings>
+							</DataGrouping>
+						</DataGroupings>
+					</DataRowGroupings>
+				</CustomData>
+				<BandedListConfig xmlns="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition/">
+          <HeaderBand>
+            <Height>0.25in</Height>
+            <ReportItems>
+              <ReportItemReference Name="TextBox3" />
+              <ReportItemReference Name="TextBox15" />
+            </ReportItems>
+          </HeaderBand>
+          <FooterBand>
+            <Height>0.25in</Height>
+            <ReportItems>
+              <ReportItemReference Name="TextBox9" />
+              <ReportItemReference Name="TextBox14" />
+            </ReportItems>
+          </FooterBand>
+          <Groups>
+            <Group Name="BandedList1_Group3">
+              <HeaderBand>
+                <Height>0.25in</Height>
+                <ReportItems>
+                  <ReportItemReference Name="TextBox8" />
+                </ReportItems>
+              </HeaderBand>
+              <FooterBand>
+                <Height>0.25in</Height>
+                <ReportItems>
+                  <ReportItemReference Name="TextBox10" />
+                  <ReportItemReference Name="TextBox13" />
+                </ReportItems>
+              </FooterBand>
+              <Visibility>
+                <Hidden>False</Hidden>
+              </Visibility>
+            </Group>
+            <Group Name="BandedList1_Group1">
+              <HeaderBand>
+                <Height>0.25in</Height>
+                <ReportItems>
+                  <ReportItemReference Name="TextBox4" />
+                </ReportItems>
+              </HeaderBand>
+              <FooterBand>
+                <Height>0.25in</Height>
+                <ReportItems>
+                  <ReportItemReference Name="TextBox7" />
+                  <ReportItemReference Name="TextBox12" />
+                </ReportItems>
+              </FooterBand>
+              <Visibility>
+                <Hidden>False</Hidden>
+              </Visibility>
+            </Group>
+            <Group Name="BandedList1_Group2">
+              <HeaderBand>
+                <Height>0.25in</Height>
+                <ReportItems>
+                  <ReportItemReference Name="TextBox5" />
+                  <ReportItemReference Name="TextBox6" />
+                  <ReportItemReference Name="TextBox11" />
+                </ReportItems>
+              </HeaderBand>
+              <Visibility>
+                <Hidden>False</Hidden>
+              </Visibility>
+            </Group>
+          </Groups>
+          <Details>
+            <Height>0in</Height>
+          </Details>
+        </BandedListConfig>
+			</CustomReportItem>
+			<Textbox Name="TextBox1">
+				<CanGrow>true</CanGrow>
+				<Height>0.375in</Height>
+				<Value>District Sales</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+					<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+					<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Width>2in</Width>
+			</Textbox>
+			<Textbox Name="TextBox2">
+				<CanGrow>true</CanGrow>
+				<Height>0.25in</Height>
+				<Value>Years 2004 and 2005</Value>
+				<Style>
+					<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+					<FontSize>12pt</FontSize>
+					<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+					<PaddingBottom>2pt</PaddingBottom>
+					<PaddingLeft>2pt</PaddingLeft>
+					<PaddingRight>2pt</PaddingRight>
+					<PaddingTop>2pt</PaddingTop>
+				</Style>
+				<Top>0.375in</Top>
+				<Width>2in</Width>
+			</Textbox>
+			<Image Name="Image1">
+				<Height>0.625in</Height>
+				<Left>3.833333in</Left>
+				<MIMEType>image/gif</MIMEType>
+				<Sizing>FitProportional</Sizing>
+				<Source>Database</Source>
+				<Value>=Theme.Images!Logo.ImageData</Value>
+				<Width>0.875in</Width>
+			</Image>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>5.5in</Width>
+	<DataSources>
+		<DataSource Name="ReelsDataSource">
+			<ConnectionProperties>
+				<ConnectString>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\Data\\Reels.mdb</ConnectString>
+				<DataProvider>OLEDB</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="StoreSales">
+			<Fields>
+				<Field Name="SaleYear">
+					<DataField>SaleYear</DataField>
+				</Field>
+				<Field Name="RegionID">
+					<DataField>RegionID</DataField>
+				</Field>
+				<Field Name="Region">
+					<DataField>Region</DataField>
+				</Field>
+				<Field Name="DistrictID">
+					<DataField>DistrictID</DataField>
+				</Field>
+				<Field Name="District">
+					<DataField>District</DataField>
+				</Field>
+				<Field Name="StoreID">
+					<DataField>StoreID</DataField>
+				</Field>
+				<Field Name="StoreName">
+					<DataField>StoreName</DataField>
+				</Field>
+				<Field Name="TotalSales">
+					<DataField>TotalSales</DataField>
+				</Field>
+				<Field Name="TotalProfit">
+					<DataField>TotalProfit</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>StoreSalesByYear</CommandText>
+				<DataSourceName>ReelsDataSource</DataSourceName>
+				<CommandType>StoredProcedure</CommandType>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Reels.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

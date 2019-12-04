@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.2" PrintWidth="6624" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
+    <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-size: 14pt; font-style: italic; font-weight: bold" />
+    <Style Name="Heading3" Value="font-family: Arial; font-size: 13pt; font-style: normal; font-weight: bold" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="groupHeader1" Height="360" BackColor="16777215">
+      <Control Type="AR.Label" Name="label1" Left="1856.16" Top="5.364418E-06" Width="1680.48" Height="360" Caption="Product Name" Style="font-family: Arial; font-size: 12pt; font-weight: bold; vertical-align: middle; ddo-char-set: 1" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="704.4001" BackStyle="1" BackColor="16775408">
+      <Control Type="AR.Field" Name="txtProductName" DataField="ProductName" Left="1766.88" Top="82.08" Width="4544.64" Height="363.6" Text="ProductName" Style="font-family: Arial; font-size: 12pt; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Barcode" Name="barcode1" DataField="ProductName" Left="0" Top="82.08" Width="1692" Height="362.88" Text="barcode1" Font="Courier New" FontSize="8" QRCode="EncodingCodePage=65001" MicroQRCode="EncodingCodePage=65001" PDF417="EncodingCodePage=65001" MicroPDF417="EncodingCodePage=65001" CODE128="0;0;0" DataMatrix="EncodingCodePage=65001" />
+      <Control Type="AR.Line" Name="line1" X1="0" Y1="643.68" X2="6624" Y2="643.68" LineColor="16436871" />
+    </Section>
+    <Section Type="GroupFooter" Name="groupFooter1" Height="360" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <DataSources>
+    <OleDbDataSource Connect="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\..\\..\\..\\..\\..\\Data\\Nwind.mdb;Persist Security Info=False" SQL="Select * from" />
+  </DataSources>
+  <PageSettings />
+  <Parameters />
+</ActiveReportsLayout>
