@@ -1,0 +1,8 @@
+# Automatically detect text files and perform LF normalization
+
+* text=auto
+
+# The line above will process all files that are not in the list below.
+
+*.csv -text
+*.json -text
