@@ -380,7 +380,7 @@
 				<CanGrow>true</CanGrow>
 				<Height>0.625in</Height>
 				<Left>0.125in</Left>
-				<Value>Google made some changes to Google maps API Standard Plan starting from Jun 22, 2016 and now keyless access is not supported. Hence, error is appearing on report below. To remove this error add the code present in 'Google' heading in Point #6 in the help link http://help.grapecity.com/activereports/webhelp/AR14/webframe.html#CreateAMapUsingTileLayer.html</Value>
+				<Value>Google made some changes to Google maps API Standard Plan starting from Jun 22, 2016 and now keyless access is not supported. Hence, error is appearing on report below. To remove this error add the code present in 'Google' heading in Point #6 in the help link http://www.grapecity.com/activereports/docs/v14/online/create-a-map-using-tile-layer.html</Value>
 				<Style>
 					<PaddingBottom>2pt</PaddingBottom>
 					<PaddingLeft>2pt</PaddingLeft>
