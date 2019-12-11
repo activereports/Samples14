@@ -150,19 +150,19 @@ as the End User Designer Sample executable.
 
 
 Documentation Link :
-http://arhelp.grapecity.com/webhelp/AR14/webframe.html#AddACustomTileProvider.html
+http://www.grapecity.com/activereports/docs/v14/online/add-a-custom-tile-provider.html
 
 Step 3: Adding a Map with a Custom Tile Provider .
 
 3.1) Create Page Report with map.
 3.2) Add tile layer and select custom provider created in Step 1
 
-Documentation Link: http://arhelp.grapecity.com/webhelp/AR14/webframe.html#CreateAMapUsingTileLayer.html
+Documentation Link: http://www.grapecity.com/activereports/docs/v14/online/create-a-map-using-tile-layer.html
 
 Note -
 
 1) The Microsoft Bing Map server &amp; CloudMade server offers static map images. This requires an Application key for authentication. The default key provided by ActiveReports is for demo purpose and can not be used by 3rd party applications. In order to obtain application key for the Tile providers, see  -
-http://arhelp.grapecity.com/webhelp/AR14/webframe.html#CreateAMapUsingTileLayer.html
+http://www.grapecity.com/activereports/docs/v14/online/create-a-map-using-tile-layer.html
 
 2)  To change the existing tile provider, double-click on the Map control to display the existing tile layer and right click to select Edit. In the Map Tile Properties - General dialog that appears, click the Provider drop-down to select the tile provider you want to apply to the Map control. You can choose from the following tile provider options:
       2.1) Built-in Tile Providers - Bing, Google, MapQuest
