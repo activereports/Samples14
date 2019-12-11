@@ -44,16 +44,16 @@
       <HintPath>..\packages\Gcef.Data.VBFunctionLib.2.0.183\lib\net40\Gcef.Data.VBFunctionLib.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.DataProviders, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.DataProviders.1.5.3000-beta-2699\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.DataProviders.1.5.3000\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Rdl, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rdl.1.5.3000-beta-2699\lib\net462\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rdl.1.5.3000\lib\net462\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.1.5.3000-beta-2699\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.1.5.3000\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
     </Reference>
     <Reference Include="Grapecity.DataVisualization, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
-      <HintPath>..\packages\Grapecity.DataVisualization.0.1.226\lib\net462\Grapecity.DataVisualization.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.DataVisualization.0.1.226\lib\net462\Grapecity.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

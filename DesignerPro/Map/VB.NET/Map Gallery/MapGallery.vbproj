@@ -56,49 +56,49 @@
       <HintPath>..\packages\Gcef.Data.VBFunctionLib.2.0.183\lib\net40\Gcef.Data.VBFunctionLib.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.14.0.18985-beta\lib\net462\GrapeCity.ActiveReports.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.14.0.19026\lib\net462\GrapeCity.ActiveReports.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Chart, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Chart.14.0.18985-beta\lib\net462\GrapeCity.ActiveReports.Chart.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Chart.14.0.19026\lib\net462\GrapeCity.ActiveReports.Chart.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.DataProviders, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.DataProviders.1.5.3000-beta-2699\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.DataProviders.1.5.3000\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gc, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.5.3000-beta-2699\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gc.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.5.3000\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gc.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.5.3000-beta-2699\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.5.3000\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Pdf.Page.1.5.3000-beta-2699\lib\net462\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Pdf.Page.1.5.3000\lib\net462\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Rdl, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rdl.1.5.3000-beta-2699\lib\net462\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rdl.1.5.3000\lib\net462\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.1.5.3000-beta-2699\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.1.5.3000\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Design.Win.14.0.18985-beta\lib\net462\GrapeCity.ActiveReports.Design.Win.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Design.Win.14.0.19026\lib\net462\GrapeCity.ActiveReports.Design.Win.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Document, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Document.14.0.18985-beta\lib\net462\GrapeCity.ActiveReports.Document.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Document.14.0.19026\lib\net462\GrapeCity.ActiveReports.Document.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Export.Image, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Image.14.0.18985-beta\lib\net462\GrapeCity.ActiveReports.Export.Image.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Image.14.0.19026\lib\net462\GrapeCity.ActiveReports.Export.Image.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Export.Pdf, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Pdf.14.0.18985-beta\lib\net462\GrapeCity.ActiveReports.Export.Pdf.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Pdf.14.0.19026\lib\net462\GrapeCity.ActiveReports.Export.Pdf.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Export.Rdf, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Rdf.14.0.18985-beta\lib\net462\GrapeCity.ActiveReports.Export.Rdf.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Export.Rdf.14.0.19026\lib\net462\GrapeCity.ActiveReports.Export.Rdf.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Viewer.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Viewer.Win.14.0.18985-beta\lib\net462\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Viewer.Win.14.0.19026\lib\net462\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
     </Reference>
     <Reference Include="Grapecity.DataVisualization, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
-      <HintPath>..\packages\Grapecity.DataVisualization.0.1.226\lib\net462\Grapecity.DataVisualization.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.DataVisualization.0.1.226\lib\net462\Grapecity.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.Documents.Common, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.Documents.Common.2.2.0.319\lib\net461\GrapeCity.Documents.Common.dll</HintPath>
