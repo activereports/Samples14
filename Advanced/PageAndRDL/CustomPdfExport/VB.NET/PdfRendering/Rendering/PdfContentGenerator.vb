@@ -80,6 +80,7 @@ Partial Friend NotInheritable Class PdfContentGenerator
 		Dim resultRect = _graphics.MeasureString(value, xFont, GetFormat(format))
 		If (format.WrapMode = WrapMode.NoWrap AndAlso Not value.Contains(ControlChars.Lf)) OrElse (resultRect.Width * PdfConverter.TwipsPerPoint <= rect.Width) Then
 			_graphics.DrawString(value, xFont, CType(brush, BrushBase), xRect, GetFormat(format))
+			_graphics.EndContainer(clipState)
 			Return
 		End If
 
@@ -94,6 +95,7 @@ Partial Friend NotInheritable Class PdfContentGenerator
 				y += resultRect.Height
 				i += 1
 			End While
+			_graphics.EndContainer(clipState)
 			Return
 		End If
 
