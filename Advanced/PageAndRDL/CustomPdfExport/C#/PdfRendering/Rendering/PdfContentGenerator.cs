@@ -84,6 +84,8 @@ namespace GrapeCity.ActiveReports.Samples.Export.Rendering.PdfSharp
 
 		void IDrawingCanvas.DrawString(string value, FontInfo font, BrushEx brush, RectangleF rect, StringFormatEx format)
 		{
+			if (string.IsNullOrEmpty(value)) return;
+
 			XGraphicsContainer clipState = _graphics.BeginContainer();
 			var xRect = PdfConverter.Convert(rect);
 			var xFont = _fonts.GetPdfFont(font);
@@ -93,6 +95,7 @@ namespace GrapeCity.ActiveReports.Samples.Export.Rendering.PdfSharp
 				(resultRect.Width * PdfConverter.TwipsPerPoint <= rect.Width))
 			{
 				_graphics.DrawString(value, xFont, (BrushBase)brush, xRect, GetFormat(format));
+				_graphics.EndContainer(clipState);
 				return;
 			}
 
@@ -106,6 +109,7 @@ namespace GrapeCity.ActiveReports.Samples.Export.Rendering.PdfSharp
 					_graphics.DrawString(line, xFont, (BrushBase)brush, new XRect(xRect.X, y, xRect.Width, resultRect.Height), GetFormat(format));
 					y += resultRect.Height;
 				}
+				_graphics.EndContainer(clipState);
 				return;
 			}
 
