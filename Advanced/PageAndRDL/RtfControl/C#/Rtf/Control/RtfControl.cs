@@ -49,10 +49,20 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Control
 		private IPropertyBag _properties;
 		private IDataScope _dataScope;
 
-		public string Rtf => _properties.GetValue("Rtf").ToString();
-		public bool CanGrow => Convert.ToBoolean(_properties.GetValue("CanGrow"));
+		public string Rtf
+		{
+			get { return _properties.GetValue("Rtf").ToString(); }
+		}
 
-		public bool CanShrink => Convert.ToBoolean(_properties.GetValue("CanShrink"));
+		public bool CanGrow
+		{
+			get { return Convert.ToBoolean(_properties.GetValue("CanGrow")); }
+		}
+
+		public bool CanShrink
+		{
+			get { return Convert.ToBoolean(_properties.GetValue("CanShrink")); }
+		}
 
 		Extensibility.Rendering.CustomData ICustomReportItem.CustomData
 		{

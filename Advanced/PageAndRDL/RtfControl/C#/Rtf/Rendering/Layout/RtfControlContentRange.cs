@@ -29,11 +29,17 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 			return newContent;
 		}
 
-		public bool isLastPage => EndVertRange >= Info.TotalSize.Height;
+		public bool isLastPage
+		{
+			get { return EndVertRange >= Info.TotalSize.Height; }
+		}
 			
 		#region ContentRange members
 
-		public override IReportItem Owner => _owner;
+		public override IReportItem Owner
+		{
+			get { return _owner; }
+		}
 
 		#endregion
 
@@ -50,33 +56,46 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 
 		public float StartVertRange
 		{
-			get => Info.Area.Top;
-			set => Info.Area.Top = Math.Min(value, Info.TotalSize.Height);
+			get { return Info.Area.Top; }
+			set { Info.Area.Top = Math.Min(value, Info.TotalSize.Height); }
 		}
 
 		public float EndVertRange
 		{
-			get => Info.Area.Bottom;
-			set => Info.Area.Bottom = Math.Min(value, Info.TotalSize.Height);
+			get { return Info.Area.Bottom; }
+			set { Info.Area.Bottom = Math.Min(value, Info.TotalSize.Height); }
 		}
 
 		public float StartHorzRange
 		{
-			get => Info.Area.Left;
-			set => Info.Area.Left = Math.Min(value, Info.TotalSize.Width);
+			get { return Info.Area.Left; }
+			set { Info.Area.Left = Math.Min(value, Info.TotalSize.Width); }
 		}
 
 		public float EndHorzRange
 		{
-			get => Info.Area.Right;
-			set => Info.Area.Right = Math.Min(value, Info.TotalSize.Width);
+			get { return Info.Area.Right; }
+			set { Info.Area.Right = Math.Min(value, Info.TotalSize.Width); }
 		}
 
-		public bool CompleteItemHorizontally => StartHorzRange >= EndHorzRange;
-		public bool CompleteItemVertically => StartVertRange >= EndVertRange;
+		public bool CompleteItemHorizontally
+		{
+			get { return StartHorzRange >= EndHorzRange; }
+		}
+
+		public bool CompleteItemVertically
+		{
+			get { return StartVertRange >= EndVertRange; }
+		}
 		
-		public int ItemWidth { get; }
-		public int ItemHeight { get; }
+		public int ItemWidth
+		{
+			get { return (int)Math.Round(EndHorzRange - StartHorzRange); }
+		}
+		public int ItemHeight
+		{
+			get { return (int)Math.Round(EndVertRange - StartVertRange); }
+		}
 
 		#endregion
 	}
@@ -86,8 +105,8 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 	public class RtfContentInfo
 	{
 		public readonly string Rtf;
-		public Range Area { get; }
-		public SizeF TotalSize { get; }
+		public readonly Range Area;
+		public readonly SizeF TotalSize;
 
 		public RtfContentInfo(string rtf, Range range, SizeF totalSize)
 		{
