@@ -207,9 +207,6 @@
     <Compile Include="Design\SmartPanels\Controls\ControlGroupHeadingLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Design\SmartPanels\Controls\DataGridComboBoxColumn.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Design\SmartPanels\Controls\DesignImageStyleEditor.cs">
       <SubType>Component</SubType>
     </Compile>
