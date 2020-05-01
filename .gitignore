@@ -1,7 +1,8 @@
-*\bin
-*\obj
-*\packages
-*\.vs
+ARConverterBackup*/
+bin/
+obj/
+packages/
+.vs/
 *.user
 .suo
 *.lock
