@@ -28,7 +28,10 @@ namespace GrapeCity.ActiveReports.Samples.Rtf
 
 		private DesignerVerbCollection _designerVerbCollection;
 		private readonly RtfEditor _editor;
-		private bool IsActive => _editor.IsActive;
+		private bool IsActive
+		{
+			get { return _editor.IsActive; }
+		}
 
 		public RtfDesigner()
 		{
@@ -142,15 +145,15 @@ namespace GrapeCity.ActiveReports.Samples.Rtf
 		[DefaultValue(false)]
 		public bool CanGrow
 		{
-			get => ReportItem.GetCustomPropertyAsBoolean(CAN_GROW_FIELD_NAME, false);
-			set => ReportItem.SetCustomProperty(CAN_GROW_FIELD_NAME, value.ToString());
+			get { return ReportItem.GetCustomPropertyAsBoolean(CAN_GROW_FIELD_NAME, false); }
+			set { ReportItem.SetCustomProperty(CAN_GROW_FIELD_NAME, value.ToString()); }
 		}
 
 		[DefaultValue(false)]
 		public bool CanShrink
 		{
-			get => ReportItem.GetCustomPropertyAsBoolean(CAN_SHRINK_FIELD_NAME, false);
-			set => ReportItem.SetCustomProperty(CAN_SHRINK_FIELD_NAME, value.ToString());
+			get { return ReportItem.GetCustomPropertyAsBoolean(CAN_SHRINK_FIELD_NAME, false); }
+			set { ReportItem.SetCustomProperty(CAN_SHRINK_FIELD_NAME, value.ToString()); }
 		}
 		
 		#endregion
