@@ -332,6 +332,7 @@
   <ItemGroup>
     <Compile Include="Export\ExportViewer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\licenses.licx" />	
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExportViewerFactory.cs" />
