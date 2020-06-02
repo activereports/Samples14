@@ -77,11 +77,17 @@
     <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll</HintPath>
     </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Image.Page, Version=1.7.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Image.Page.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Image.Page.dll</HintPath>
+    </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Rdl, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rdl.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\lib\net462\GrapeCity.ActiveReports.Design.Win.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Document, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.ActiveReports.Document.14.1.19970\lib\net462\GrapeCity.ActiveReports.Document.dll</HintPath>
@@ -91,6 +97,9 @@
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Export.Rdf, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.ActiveReports.Export.Rdf.14.1.19970\lib\net462\GrapeCity.ActiveReports.Export.Rdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Serializer, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\GrapeCity.ActiveReports.Serializer.14.1.19970\lib\net462\GrapeCity.ActiveReports.Serializer.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Viewer.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\lib\net462\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
@@ -112,6 +121,9 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualStudio.DpiAwareness, Version=6.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.DpiAwareness.6.1.28916\lib\net46\Microsoft.VisualStudio.DpiAwareness.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -142,6 +154,7 @@
     <Reference Include="System.Drawing.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Drawing.Common.4.5.0\lib\net461\System.Drawing.Common.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
@@ -157,6 +170,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
     </Reference>
