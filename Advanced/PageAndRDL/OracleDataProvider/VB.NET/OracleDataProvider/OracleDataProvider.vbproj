@@ -45,13 +45,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GrapeCity.ActiveReports, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.14.0.19026\lib\net462\GrapeCity.ActiveReports.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.14.2.20458\lib\net462\GrapeCity.ActiveReports.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.1.8.0\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.DataProviders, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.3\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.4\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
