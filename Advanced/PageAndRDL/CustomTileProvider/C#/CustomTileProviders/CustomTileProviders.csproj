@@ -53,7 +53,7 @@
       <HintPath>..\packages\GrapeCity.ActiveReports.Core.Rendering.1.8.0\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
     </Reference>
     <Reference Include="Grapecity.DataVisualization, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.DataVisualization.0.1.241\lib\net462\Grapecity.DataVisualization.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.DataVisualization.0.1.245\lib\net462\Grapecity.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
