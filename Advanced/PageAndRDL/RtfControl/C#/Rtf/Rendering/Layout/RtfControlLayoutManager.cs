@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -19,7 +19,10 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 		
 		#region ILayoutManager members
 
-		public LayoutCapabilities Capabilities => LayoutCapabilities.CanGrowVertically | LayoutCapabilities.CanShrinkVertically;
+		public LayoutCapabilities Capabilities
+		{
+			get { return LayoutCapabilities.CanGrowVertically | LayoutCapabilities.CanShrinkVertically; }
+		}
 		
 		public void Initialize(IReportItem forReportItem, ITargetDevice targetDevice)
 		{
@@ -37,7 +40,7 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 			
 			if (ctx.VerticalLayout)
 			{
-				if (content is null)
+				if (content == null)
 				{
 					var fitHeight = Math.Min(ctx.AvailableSize.Height, _computedSize.Height);
 					var range = new Range(0, fitHeight, 0, -1);

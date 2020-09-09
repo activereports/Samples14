@@ -58,20 +58,26 @@ namespace GrapeCity.ActiveReports.Sample.Inheritance
 
 		protected void BaseReport_FetchData(object sender, FetchEventArgs eArgs)
 		{
-			
-			
 			try
 			{
-				//Read a line from the stream, and creats an array string.
-				string _currentLine = _invoiceFileStream.ReadLine();
-				string[] _currentArray = _currentLine.Split(new char[] { ',' });
+				if (_invoiceFileStream.Peek() >= 0)
+				{
+					//Read a line from the stream, and creats an array string.
+					string _currentLine = _invoiceFileStream.ReadLine();
+					string[] _currentArray = _currentLine.Split(new char[] { ',' });
 
-				//Store the Value property of Field object number of the array.
-				for (int i = 0; i < _currentArray.Length; i++)
-					Fields[_fieldNameArray[i]].Value = _currentArray[i];
+					//Store the Value property of Field object number of the array.
+					for (int i = 0; i < _currentArray.Length; i++)
+						Fields[_fieldNameArray[i]].Value = _currentArray[i];
 
-				//Set EOF to false and continue to read the data.
-				eArgs.EOF = false;
+					//Set EOF to false and continue to read the data.
+					eArgs.EOF = false;
+				}
+				else
+				{
+					_invoiceFileStream.Close();
+					eArgs.EOF = true;
+				}
 			}
 			catch
 			{

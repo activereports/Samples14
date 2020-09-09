@@ -50,18 +50,23 @@ Public Class rptInheritBase
 
 	Protected Sub BaseReport_FetchData(ByVal sender As Object, ByVal eArgs As GrapeCity.ActiveReports.SectionReport.FetchEventArgs) Handles MyBase.FetchData
 		Try
-			'Read a line from the stream, and creats an array string.
-			Dim _currentLine As String = _invoiceFileStream.ReadLine()
-			Dim _currentArray As String() = _currentLine.Split(New Char() {","c})
+			If _invoiceFileStream.Peek() >= 0 Then
+				'Read a line from the stream, and creats an array string.
+				Dim _currentLine As String = _invoiceFileStream.ReadLine()
+				Dim _currentArray As String() = _currentLine.Split(New Char() {","c})
 
-			'Store the Value property of Field object number of the array.
-			Dim i As Integer
-			For i = 0 To _currentArray.Length - 1
-				Fields(_fieldNameArray(i).ToString()).Value = _currentArray(i).ToString()
-			Next i
+				'Store the Value property of Field object number of the array.
+				Dim i As Integer
+				For i = 0 To _currentArray.Length - 1
+					Fields(_fieldNameArray(i).ToString()).Value = _currentArray(i).ToString()
+				Next i
 
-			'Set EOF to false and continue to read the data.
-			eArgs.EOF = False
+				'Set EOF to false and continue to read the data.
+				eArgs.EOF = False
+			Else
+				_invoiceFileStream.Close()
+				eArgs.EOF = True
+			End If
 		Catch
 			'Close the stream when the it has exceeded the time to read the last line.
 			_invoiceFileStream.Close()
