@@ -67,7 +67,7 @@
       <HintPath>..\packages\GrapeCity.ActiveReports.Document.14.2.20458\lib\net462\GrapeCity.ActiveReports.Document.dll</HintPath>
     </Reference>
     <Reference Include="Grapecity.DataVisualization, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
-      <HintPath>..\packages\GrapeCity.DataVisualization.0.1.241\lib\net462\Grapecity.DataVisualization.dll</HintPath>
+      <HintPath>..\packages\GrapeCity.DataVisualization.0.1.245\lib\net462\Grapecity.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.Documents.Common, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.Documents.Common.3.2.0.550\lib\net461\GrapeCity.Documents.Common.dll</HintPath>
