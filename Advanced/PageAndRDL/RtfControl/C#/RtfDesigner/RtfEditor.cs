@@ -2,8 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-using GrapeCity.ActiveReports.Samples.Rtf.Control;
 using GrapeCity.ActiveReports.Samples.Rtf.Native;
+using GrapeCity.ActiveReports.Samples.Rtf.Control;
 
 namespace GrapeCity.ActiveReports.Samples.Rtf
 {
@@ -42,12 +42,10 @@ namespace GrapeCity.ActiveReports.Samples.Rtf
 
 			if (save)
 			{
-				_designer.SetRtf(Rtf);
+				_designer.SetRtf(Text.TrimStart().StartsWith("=") ? Text : Rtf);
 			}
 			else
 			{
-				_designer.SetRtf(_designer.GetRtf()); // force redraw without saving
-
 				while (CanUndo)
 					Undo();
 			}
@@ -119,7 +117,8 @@ namespace GrapeCity.ActiveReports.Samples.Rtf
 
 		private void SyncWithSource()
 		{
-			Rtf = _designer.GetRtf();
+			this.SetRtfOrText(_designer.GetRtf());
+			
 			Size = _designer.Size;
 			Location = Point.Empty;
 			Margin = Padding.Empty;

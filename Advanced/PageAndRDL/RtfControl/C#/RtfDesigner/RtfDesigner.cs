@@ -12,6 +12,7 @@ using GrapeCity.ActiveReports.Drawing.Gdi;
 using GrapeCity.ActiveReports.PageReportModel;
 using GrapeCity.ActiveReports.Design.DdrDesigner.Behavior;
 using GrapeCity.ActiveReports.Design.DdrDesigner.Designers;
+using GrapeCity.ActiveReports.Design.DdrDesigner.Tools;
 using GrapeCity.ActiveReports.Samples.Rtf.Rendering;
 using GrapeCity.Enterprise.Data.DataEngine.Expressions;
 
@@ -39,8 +40,7 @@ namespace GrapeCity.ActiveReports.Samples.Rtf
 				CategoryAttribute.Data,
 				new DisplayNameAttribute(Properties.Resources.PropertyRtf),
 				new DescriptionAttribute(Properties.Resources.PropertyRtfDescription),
-				new EditorAttribute(typeof(MultilineStringEditor),
-				typeof(UITypeEditor))
+				new EditorAttribute(typeof(ExpressionInfoUITypeEditor), typeof(UITypeEditor))
 			);
 			
 			AddProperty(this, x => x.CanGrow,
@@ -118,17 +118,14 @@ namespace GrapeCity.ActiveReports.Samples.Rtf
 
 		#region Public properties
 		
-		public string Rtf { get; set; }
+		public ExpressionInfo Rtf { get; set; } = ExpressionInfo.EmptyString;
 		
 		public string GetRtf()
 		{
 			var prop = TypeDescriptor.GetProperties(Component)[RTF_FIELD_NAME];
-			var rtf = prop.GetValue(Component);
+			var rtf = (ExpressionInfo) prop.GetValue(Component);
 
-			if (rtf != null)
-				return rtf.ToString();
-
-			return string.Empty;
+			return rtf.IsEmptyString ? string.Empty : rtf.ToString();
 		}
 
 		public void SetRtf(string rtf)
@@ -138,7 +135,7 @@ namespace GrapeCity.ActiveReports.Samples.Rtf
 			var prop = TypeDescriptor.GetProperties(Component)[RTF_FIELD_NAME];
 			var result = string.Equals(rtf, ExpressionInfo.EmptyString.ToString()) ? string.Empty : rtf;
 			
-			prop.SetValue(Component, result);
+			prop.SetValue(Component, ExpressionInfo.FromString(result));
 			ReportItem.CustomProperties[RTF_FIELD_NAME].Value = result;
 		}
 		
@@ -167,7 +164,7 @@ namespace GrapeCity.ActiveReports.Samples.Rtf
 		{
 			get
 			{
-				if (string.IsNullOrWhiteSpace(Rtf))
+				if (Rtf.IsEmptyString)
 					return null;
 
 				if (_metafile != null)

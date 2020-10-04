@@ -87,14 +87,13 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 		
 		private SizeF GetNeededSize()
 		{
-			var rtf = _control.Rtf;
 			var width = TwipsToPixels(_computedSize.Width);
 
 			using (var box = new RichTextBoxFixed())
 			{
 				box.ContentsResized += ResizeBoxToContent;
 				box.Width = width;
-				box.Rtf = rtf;
+				box.SetRtfOrText(_control.Rtf);
 
 				return new SizeF(PixelsToTwips(box.Size.Width), PixelsToTwips(box.Size.Height));
 			}
@@ -132,7 +131,7 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 			{
 				rtb.ContentsResized += ResizeBoxToContent;
 				rtb.Width = TwipsToPixels(_computedSize.Width);
-				rtb.Rtf = _control.Rtf;
+				rtb.SetRtfOrText(_control.Rtf ?? string.Empty);
 
 				_lastChar = rtb.GetCharIndexFromPosition(new Point(0, bottom + rtb.PreferredHeight));
 				rtb.Select(_firstChar, _lastChar - _firstChar);
