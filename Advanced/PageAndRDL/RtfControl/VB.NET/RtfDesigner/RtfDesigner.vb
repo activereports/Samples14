@@ -10,6 +10,7 @@ Imports GrapeCity.ActiveReports.Drawing.Gdi
 Imports GrapeCity.ActiveReports.PageReportModel
 Imports GrapeCity.ActiveReports.Design.DdrDesigner.Behavior
 Imports GrapeCity.ActiveReports.Design.DdrDesigner.Designers
+Imports GrapeCity.ActiveReports.Design.DdrDesigner.Tools
 Imports GrapeCity.ActiveReports.Samples.Rtf.Rendering
 Imports GrapeCity.Enterprise.Data.DataEngine.Expressions
 
@@ -39,7 +40,7 @@ Public NotInheritable Class RtfDesigner
 					CategoryAttribute.Data,
 					New DisplayNameAttribute(My.Resources.PropertyRtf),
 					New DescriptionAttribute(My.Resources.PropertyRtfDescription),
-					New EditorAttribute(GetType(MultilineStringEditor), GetType(UITypeEditor)))
+					New EditorAttribute(GetType(ExpressionInfoUITypeEditor), GetType(UITypeEditor)))
 
 		AddProperty(Me, Function(x) x.CanGrow,
 					CategoryAttribute.Layout,
@@ -98,13 +99,13 @@ Public NotInheritable Class RtfDesigner
 		SetRtf(ReportItem.GetCustomPropertyAsString(RTF_FIELD_NAME))
 	End Sub
 
-	Public Property Rtf As String
+	Public Property Rtf As ExpressionInfo = ExpressionInfo.EmptyString
 
 	Public Function GetRtf() As String
 		Dim prop = TypeDescriptor.GetProperties(Component)(RTF_FIELD_NAME)
-		Dim rtf = prop.GetValue(Component)
-		If rtf IsNot Nothing Then Return rtf.ToString()
-		Return String.Empty
+		Dim rtf As ExpressionInfo = prop.GetValue(Component)
+		
+		Return If (rtf.IsEmptyString, string.Empty, rtf.ToString())
 	End Function
 
 	Public Sub SetRtf(rtf As String)
@@ -113,7 +114,7 @@ Public NotInheritable Class RtfDesigner
 		Dim prop = TypeDescriptor.GetProperties(Component)(RTF_FIELD_NAME)
 		Dim result = If (String.Equals(rtf, ExpressionInfo.EmptyString.ToString()), String.Empty, rtf)
 		
-		prop.SetValue(Component, result)
+		prop.SetValue(Component, ExpressionInfo.FromString(result))
 		ReportItem.CustomProperties(RTF_FIELD_NAME).Value = result
 	End Sub
 	
@@ -149,7 +150,7 @@ Public NotInheritable Class RtfDesigner
 
 	Friend ReadOnly Property RenderedRtf As System.Drawing.Image
 		Get
-			If String.IsNullOrWhiteSpace(Rtf) Then Return Nothing
+			If Rtf.IsEmptyString Then Return Nothing
 
 			If _metafile IsNot Nothing Then Return _metafile
 

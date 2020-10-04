@@ -1,4 +1,5 @@
-﻿Imports System.Text
+﻿Imports System.Runtime.CompilerServices
+Imports System.Text
 Imports System.Windows.Forms
 
 Imports GrapeCity.ActiveReports.Samples.Rtf.Native
@@ -49,4 +50,15 @@ Namespace Control
 			Return UnsafeNativeMethods.SendMessage(Handle, EM_GETTEXTLENGTHEX, getLength, 0)
 		End Function
 	End Class
+
+	Public Module RichTextBoxExtensions
+		<Extension()>
+		Sub SetRtfOrText(ByVal rtb As RichTextBox, ByVal rtf As String)
+			Try
+				rtb.Rtf = rtf
+			Catch ex As ArgumentException
+				rtb.Text = rtf
+			End Try
+		End Sub
+	End Module
 End NameSpace

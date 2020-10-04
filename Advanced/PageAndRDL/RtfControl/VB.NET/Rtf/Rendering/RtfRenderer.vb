@@ -3,6 +3,7 @@ Imports System.Drawing
 Imports System.Drawing.Imaging
 Imports System.Windows.Forms
 Imports System.Runtime.InteropServices
+Imports GrapeCity.ActiveReports.Samples.Rtf.Control
 
 Imports GrapeCity.ActiveReports.Samples.Rtf.Native
 
@@ -24,7 +25,7 @@ Namespace Rendering
 
 		Private Function RenderImage(rtfContent As String, sizeInInches As SizeF, createImage As Func(Of IntPtr, Size, Image)) As Image
 			Using richText = New RichTextBox()
-				richText.Rtf = rtfContent
+				richText.SetRtfOrText(rtfContent)
 				richText.CreateControl()
 
 				Using g = richText.CreateGraphics()
