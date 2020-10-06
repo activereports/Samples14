@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using System.Windows.Forms;
 
 using GrapeCity.ActiveReports.Samples.Rtf.Native;
@@ -50,6 +51,21 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Control
 			getLength.flags = gtl;
 			getLength.codepage = 1200;
 			return UnsafeNativeMethods.SendMessage(Handle, NativeMethods.EM_GETTEXTLENGTHEX, ref getLength, 0);
+		}
+	}
+
+	public static class RichTextBoxExtensions
+	{
+		public static void SetRtfOrText(this RichTextBox rtb, string rtf)
+		{
+			try
+			{
+				rtb.Rtf = rtf;
+			}
+			catch (ArgumentException)
+			{
+				rtb.Text = rtf;
+			}
 		}
 	}
 }

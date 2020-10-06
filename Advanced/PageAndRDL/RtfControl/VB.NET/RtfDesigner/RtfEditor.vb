@@ -32,10 +32,8 @@ Public Class RtfEditor
 		_isDeactivating = True
 
 		If save Then
-			_designer.SetRtf(Rtf)
+			_designer.SetRtf(If (Text.TrimStart().StartsWith("="), Text, Rtf))
 		Else
-			_designer.SetRtf(_designer.GetRtf())
-
 			While CanUndo
 				Undo()
 			End While
@@ -91,7 +89,8 @@ Public Class RtfEditor
 	End Sub
 
 	Private Sub SyncWithSource()
-		Rtf = _designer.GetRtf()
+		SetRtfOrText(_designer.GetRtf())
+		
 		Size = _designer.Size
 		Location = Point.Empty
 		Margin = Padding.Empty

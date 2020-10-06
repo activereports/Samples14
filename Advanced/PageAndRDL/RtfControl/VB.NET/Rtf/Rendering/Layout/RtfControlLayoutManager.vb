@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
+Imports DataVisualization.core
 
 Imports GrapeCity.ActiveReports.Drawing.Gdi
 Imports GrapeCity.ActiveReports.Extensibility.Layout
@@ -74,13 +75,12 @@ Namespace Rendering.Layout
         End Sub
         
         Private Function GetNeededSize() As SizeF
-            Dim rtf = _control.Rtf
             Dim width = TwipsToPixels(_computedSize.Width)
             Dim box = New RichTextBoxFixed
             
             AddHandler box.ContentsResized, AddressOf ResizeBoxToContent
             box.Width = width
-            box.Rtf = rtf
+            box.SetRtfOrText(_control.Rtf)
             
             Return New SizeF(PixelsToTwips(box.Size.Width), PixelsToTwips(box.Size.Height))
         End Function
@@ -116,7 +116,7 @@ Namespace Rendering.Layout
             
             AddHandler rtb.ContentsResized, AddressOf ResizeBoxToContent
             rtb.Width = TwipsToPixels(_computedSize.Width)
-            rtb.Rtf = _control.Rtf
+            rtb.SetRtfOrText(_control.Rtf)
             
             _lastChar = rtb.GetCharIndexFromPosition(New Point(0, (bottom + rtb.PreferredHeight)))
             rtb.Select(_firstChar, _lastChar - _firstChar)

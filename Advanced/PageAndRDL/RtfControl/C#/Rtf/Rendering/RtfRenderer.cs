@@ -4,7 +4,9 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+
 using GrapeCity.ActiveReports.Samples.Rtf.Native;
+using GrapeCity.ActiveReports.Samples.Rtf.Control;
 
 namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering
 {
@@ -29,7 +31,7 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering
 		{
 			using (var richText = new RichTextBox())
 			{
-				richText.Rtf = rtfContent;
+				richText.SetRtfOrText(rtfContent);
 				richText.CreateControl();
 
 				using (var g = richText.CreateGraphics())
