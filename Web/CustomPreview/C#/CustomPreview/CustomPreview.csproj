@@ -74,7 +74,7 @@
     <Reference Include="GrapeCity.ActiveReports.Core.Export.Html.Page, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Html.Page.1.8.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Html.Page.dll</HintPath>
     </Reference>
-    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page, Version=1.7.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
       <HintPath>..\packages\GrapeCity.ActiveReports.Core.Export.Pdf.Page.1.8.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
     </Reference>
     <Reference Include="GrapeCity.ActiveReports.Core.Export.Svg.Page, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
