@@ -58,7 +58,7 @@
   </Sections>
   <ReportComponentTray />
   <DataSources>
-    <CsvDataSource ConnectionString="Path=..\..\..\..\..\Data\NWindInvoicesUSA.csv;Locale=en-US;TextQualifier=&quot;;ColumnsSeparator=,;RowsSeparator=\r\n;HasHeaders=True" />
+    <CsvDataSource ConnectionString="Path=..\..\..\..\..\Data\NWindInvoicesUSA.csv;Locale=en-US;TextQualifier=&quot;;ColumnsSeparator=,;RowsSeparator=\r\n;Columns=ShipName,ShipAddress,ShipCity,ShipRegion,ShipPostalCode,ShipCountry,CustomerID,Customers.CompanyName,Address,City,Region,PostalCode,Country,Salesperson,OrderID,OrderDate(DateTime),RequiredDate(DateTime),ShippedDate(DateTime),Shippers.CompanyName,ProductID,ProductName,UnitPrice(Float),Quantity(Integer),Discount(Float),ExtendedPrice(Float),Freight(Float);HasHeaders=True" />
   </DataSources>
   <CalculatedFields>
     <Field Name="BillingAddress" Formula="Customers.CompanyName + &quot;&#xA;&quot; + Address + &quot;&#xA;&quot; + City + &quot;, &quot; + Region + &quot;  &quot; + PostalCode" FieldType="None" />
@@ -70,7 +70,9 @@ using System.Drawing;
 
 public void GFOrderID_BeforePrint()
 {
-((TextBox)rpt.Sections["GFOrderID"].Controls["txtTotal"]).Value = (System.Double)((TextBox)rpt.Sections["GFOrderID"].Controls["txtFreight"]).Value + (System.Double)((TextBox)rpt.Sections["GFOrderID"].Controls["txtSubTotal"]).Value;
+	((TextBox) rpt.Sections["GFOrderID"].Controls["txtTotal"]).Value = 
+		(System.Double) ((TextBox) rpt.Sections["GFOrderID"].Controls["txtFreight"]).Value + 
+		(System.Double) ((TextBox) rpt.Sections["GFOrderID"].Controls["txtSubTotal"]).Value;
 }
 
 //Create member variables for alternating colors of detail rows
@@ -83,7 +85,7 @@ public void customerGroupFooter_Format()
 	//Calculate the total based on values from textboxes in the group footer.
 	double subtotal = Convert.ToDouble(subtotalTextBox.Value);
 	double freight = Convert.ToDouble(freightTextBox.Value);
-	grandTotalTextBox.Value = String.Format("{0:C}", subtotal + freight);
+	grandTotalTextBox.Value = String.Format("{0:$#,##0.00}", subtotal + freight);
 }
 
 

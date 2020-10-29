@@ -58,7 +58,7 @@
   </Sections>
   <ReportComponentTray />
   <DataSources>
-    <CsvDataSource ConnectionString="Path=..\..\..\..\..\Data\NWindInvoicesUSA.csv;Locale=en-US;TextQualifier=&quot;;ColumnsSeparator=,;RowsSeparator=\r\n;HasHeaders=True" />
+    <CsvDataSource ConnectionString="Path=..\..\..\..\..\Data\NWindInvoicesUSA.csv;Locale=en-US;TextQualifier=&quot;;ColumnsSeparator=,;RowsSeparator=\r\n;Columns=ShipName,ShipAddress,ShipCity,ShipRegion,ShipPostalCode,ShipCountry,CustomerID,Customers.CompanyName,Address,City,Region,PostalCode,Country,Salesperson,OrderID,OrderDate(DateTime),RequiredDate(DateTime),ShippedDate(DateTime),Shippers.CompanyName,ProductID,ProductName,UnitPrice(Float),Quantity(Integer),Discount(Float),ExtendedPrice(Float),Freight(Float);HasHeaders=True" />
   </DataSources>
   <CalculatedFields>
     <Field Name="BillingAddress" Formula="Customers.CompanyName + &quot;&#xA;&quot; + Address + &quot;&#xA;&quot; + City + &quot;, &quot; + Region + &quot;  &quot; + PostalCode" FieldType="None" />
@@ -82,7 +82,7 @@ Imports System.Drawing
 		'Calculate the total based on values from textboxes in the group footer.
 		Dim subtotal As Double = Convert.ToDouble(subtotalTextBox.Value)
 		Dim freight As Double = Convert.ToDouble(freightTextBox.Value)
-		grandTotalTextBox.Value = [String].Format("{0:C}", subtotal + freight)
+		grandTotalTextBox.Value = [String].Format("{0:$#,##0.00}", subtotal + freight)
 	End Sub
 
 	Public Sub Detail_Format()
