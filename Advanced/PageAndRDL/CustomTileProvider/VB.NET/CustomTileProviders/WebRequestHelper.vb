@@ -27,9 +27,15 @@ Namespace GrapeCity.ActiveReports.Samples.CustomTileProviders
 		''' </summary>
 		''' <param name="url">Data source Url</param>
 		''' <param name="timeoutMilliseconds">Timeout in milliseconds. If -1 the default timeout will  used.</param>
+		''' <param name="userAgent">User-Agent for request.</param>
 		''' <returns></returns>
-		Public Shared Function DownloadData(url As String, timeoutMilliseconds As Integer) As Stream
-			Dim request = WebRequest.Create(url)
+		Public Shared Function DownloadData(url As String, timeoutMilliseconds As Integer, [userAgent] As String) As Stream
+			Dim request = WebRequest.CreateHttp(url)
+
+			If Not String.IsNullOrEmpty(userAgent) Then
+				request.UserAgent = userAgent
+			End If
+
 			If timeoutMilliseconds > 0 Then
 				request.Timeout = timeoutMilliseconds
 			End If
@@ -47,9 +53,17 @@ Namespace GrapeCity.ActiveReports.Samples.CustomTileProviders
 		''' </summary>
 		''' <param name="url">Data source Url</param>
 		''' <param name="timeoutMilliseconds">Timeout in milliseconds. If -1 the default timeout will  used.</param>
+		''' <param name="success">Success callback handler.</param>
+		''' <param name="error">Error callback handler.</param>
+		''' <param name="userAgent">User-Agent for request.</param>
 
-		Public Shared Sub DownloadDataAsync(url As String, timeoutMilliseconds As Integer, success As Action(Of MemoryStream), [error] As Action(Of Exception))
-			Dim request = WebRequest.Create(url)
+		Public Shared Sub DownloadDataAsync(url As String, timeoutMilliseconds As Integer, success As Action(Of MemoryStream), [error] As Action(Of Exception), Optional userAgent As String = Nothing)
+			Dim request = WebRequest.CreateHttp(url)
+
+			If Not String.IsNullOrEmpty(userAgent) Then
+				request.UserAgent = userAgent
+			End If
+
 			If timeoutMilliseconds > 0 Then
 				request.Timeout = timeoutMilliseconds
 			End If

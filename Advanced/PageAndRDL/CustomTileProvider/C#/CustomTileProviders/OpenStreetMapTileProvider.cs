@@ -29,8 +29,9 @@ namespace GrapeCity.ActiveReports.Samples.CustomTileProviders
 		{
 			var url = string.Format(UrlTemplate, key.LevelOfDetail, key.Col, key.Row);
 			var timeout = !string.IsNullOrEmpty(Settings["Timeout"]) ? int.Parse(Settings["Timeout"]) : -1;
+			string userAgent = $"ActiveReports Core {typeof(IMapTile).Assembly.GetName().Version} contact ActiveReports.Sales@grapecity.com";
 
-			WebRequestHelper.DownloadDataAsync(url, timeout, stream => success(new MapTile(key, new ImageInfo(stream, null))), error);
+			WebRequestHelper.DownloadDataAsync(url, timeout, stream => success(new MapTile(key, new ImageInfo(stream, null))), error, userAgent);
 		}
 
 		private const string _copyright = "© 2015 OpenStreetMap contributors. Please see http://www.openstreetmap.org/copyright for more details.";

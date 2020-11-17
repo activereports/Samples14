@@ -30,8 +30,9 @@ Namespace GrapeCity.ActiveReports.Samples.CustomTileProviders
 		Public Sub GetTile(key As MapTileKey, success As Action(Of IMapTile), [error] As Action(Of Exception)) Implements IMapTileProvider.GetTile
 			Dim url = String.Format(UrlTemplate, key.LevelOfDetail, key.Col, key.Row)
 			Dim timeout = If(Not String.IsNullOrEmpty(Settings("Timeout")), Integer.Parse(Settings("Timeout")), -1)
+			Dim userAgent = $"ActiveReports Core {GetType(IMapTile).Assembly.GetName().Version} contact ActiveReports.Sales@grapecity.com"
 
-			WebRequestHelper.DownloadDataAsync(url, timeout, Sub(stream) success(New MapTile(key, New ImageInfo(stream, Nothing))), [error])
+			WebRequestHelper.DownloadDataAsync(url, timeout, Sub(stream) success(New MapTile(key, New ImageInfo(stream, Nothing))), [error], userAgent)
 			'WebRequestHelper.DownloadDataAsync(url, timeout, success(New MapTile(key, stream)), [error])
 		End Sub
 
