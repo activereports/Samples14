@@ -11,10 +11,15 @@ namespace GrapeCity.ActiveReports.Samples.CustomTileProviders
 		/// </summary>
 		/// <param name="url">Data source Url</param>
 		/// <param name="timeoutMilliseconds">Timeout in milliseconds. If -1 the default timeout will  used.</param>
+		/// <param name="userAgent">User-Agent for request.</param>
 		/// <returns></returns>
-		public static Stream DownloadData(string url, int timeoutMilliseconds)
+		public static Stream DownloadData(string url, int timeoutMilliseconds, string userAgent = null)
 		{
-			var request = WebRequest.Create(url);
+			var request = WebRequest.CreateHttp(url);
+
+			if (!string.IsNullOrEmpty(userAgent))
+				request.UserAgent = userAgent;
+
 			if (timeoutMilliseconds > 0)
 			{
 				request.Timeout = timeoutMilliseconds;
@@ -33,10 +38,17 @@ namespace GrapeCity.ActiveReports.Samples.CustomTileProviders
 		/// </summary>
 		/// <param name="url">Data source Url</param>
 		/// <param name="timeoutMilliseconds">Timeout in milliseconds. If -1 the default timeout will  used.</param>
+		/// <param name="success">Success callback handler.</param>
+		/// <param name="error">Error callback handler.</param>
+		/// <param name="userAgent">User-Agent for request.</param>
 		/// <returns></returns>
-		public static void DownloadDataAsync(string url, int timeoutMilliseconds, Action<MemoryStream> success, Action<Exception> error)
+		public static void DownloadDataAsync(string url, int timeoutMilliseconds, Action<MemoryStream> success, Action<Exception> error, string userAgent = null)
 		{
-			var request = WebRequest.Create(url);
+			var request = WebRequest.CreateHttp(url);
+
+			if (!string.IsNullOrEmpty(userAgent))
+				request.UserAgent = userAgent;
+
 			if (timeoutMilliseconds > 0)
 			{
 				request.Timeout = timeoutMilliseconds;
