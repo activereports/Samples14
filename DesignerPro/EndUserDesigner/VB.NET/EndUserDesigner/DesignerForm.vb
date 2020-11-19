@@ -180,7 +180,7 @@ Public Class DesignerForm
 				If GetIsMaster() Then
 					Dim extansion = Path.GetExtension(_reportName)
 					If Not String.IsNullOrEmpty(extansion) AndAlso (extansion.ToLowerInvariant() = ".rdl" OrElse extansion.ToLowerInvariant() = ".rdlx") Then
-						_reportName = _reportName.Substring(0, _reportName.Length - extansion.Length) + ".rdlx-master"
+						_reportName = Path.GetFileNameWithoutExtension(_reportName) + ".rdlx-master"
 
 						' if file with this name already exists - set dirty flag
 						_isDirty = File.Exists(_reportName)
