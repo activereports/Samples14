@@ -27,15 +27,18 @@ Namespace Rendering.Layout
         Public Sub Initialize(forReportItem As IReportItem, targetDevice As ITargetDevice) Implements ILayoutManager.Initialize
             _item = forReportItem
             _control = CType(_item, RtfControl)
-            _computedSize = New SizeF(_item.Width.ToTwips, _item.Height.ToTwips)
-            
+            _computedSize = New SizeF(CType(_item.Width.ToTwips, Integer), CType(_item.Height.ToTwips, Integer))
+
             ProcessGrow()
             ProcessShrink()
         End Sub
         
         Public Function Measure(ctx As LayoutContext) As LayoutResult Implements ILayoutManager.Measure
             Dim content = CType(ctx.ContentRange, RtfControlContentRange)
-            
+
+            If _computedSize.Width = 0 Then _computedSize.Width = ctx.AvailableSize.Width
+            If _computedSize.Height = 0 Then _computedSize.Height = ctx.AvailableSize.Height
+
             If ctx.VerticalLayout Then
                 If (content Is Nothing) Then
                     Dim fitHeight = Math.Min(ctx.AvailableSize.Height, _computedSize.Height)
@@ -117,8 +120,11 @@ Namespace Rendering.Layout
             AddHandler rtb.ContentsResized, AddressOf ResizeBoxToContent
             rtb.Width = TwipsToPixels(_computedSize.Width)
             rtb.SetRtfOrText(_control.Rtf)
-            
-            _lastChar = rtb.GetCharIndexFromPosition(New Point(0, (bottom + rtb.PreferredHeight)))
+
+            Dim lastCharPoint = rtb.GetPositionFromCharIndex(rtb.TextLength - 1)
+            Dim neededPoint = New Point(lastCharPoint.X, Math.Min(lastCharPoint.Y, bottom + rtb.PreferredHeight))
+            _lastChar = rtb.GetCharIndexFromPosition(neededPoint)
+
             rtb.Select(_firstChar, _lastChar - _firstChar)
             _firstChar = _lastChar
             
