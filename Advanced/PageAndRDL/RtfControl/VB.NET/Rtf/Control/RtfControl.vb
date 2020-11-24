@@ -39,7 +39,7 @@ Namespace Control
 		
 		Public ReadOnly Property Rtf As String
 			Get
-				Return _properties.GetValue("Rtf").ToString()
+				Return If(_properties.GetValue("Rtf")?.ToString(), String.Empty)
 			End Get
 		End Property
 

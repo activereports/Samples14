@@ -137,7 +137,7 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 			{
 				rtb.ContentsResized += ResizeBoxToContent;
 				rtb.Width = TwipsToPixels(_computedSize.Width);
-				rtb.SetRtfOrText(_control.Rtf ?? string.Empty);
+				rtb.SetRtfOrText(_control.Rtf);
 
 				var lastCharPoint = rtb.GetPositionFromCharIndex(rtb.TextLength - 1);
 				var neededPoint = new Point(lastCharPoint.X, Math.Min(lastCharPoint.Y, bottom + rtb.PreferredHeight));
