@@ -28,7 +28,7 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 		{
 			_item = forReportItem;
 			_control = _item as RtfControl;
-			_computedSize = new SizeF(_item.Width.ToTwips(), _item.Height.ToTwips());
+			_computedSize = new SizeF( (int) _item.Width.ToTwips(), (int) _item.Height.ToTwips());
 	
 			ProcessGrow();
 			ProcessShrink();
@@ -37,6 +37,12 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 		public LayoutResult Measure(LayoutContext ctx)
 		{
 			var content = ctx.ContentRange as RtfControlContentRange;
+
+			if (_computedSize.Width == 0)
+				_computedSize.Width = ctx.AvailableSize.Width;
+
+			if (_computedSize.Height == 0)
+				_computedSize.Height = ctx.AvailableSize.Height;
 			
 			if (ctx.VerticalLayout)
 			{
@@ -131,9 +137,11 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Rendering.Layout
 			{
 				rtb.ContentsResized += ResizeBoxToContent;
 				rtb.Width = TwipsToPixels(_computedSize.Width);
-				rtb.SetRtfOrText(_control.Rtf ?? string.Empty);
+				rtb.SetRtfOrText(_control.Rtf);
 
-				_lastChar = rtb.GetCharIndexFromPosition(new Point(0, bottom + rtb.PreferredHeight));
+				var lastCharPoint = rtb.GetPositionFromCharIndex(rtb.TextLength - 1);
+				var neededPoint = new Point(lastCharPoint.X, Math.Min(lastCharPoint.Y, bottom + rtb.PreferredHeight));
+				_lastChar = rtb.GetCharIndexFromPosition(neededPoint);
 				rtb.Select(_firstChar, _lastChar - _firstChar);
 
 				_firstChar = _lastChar;

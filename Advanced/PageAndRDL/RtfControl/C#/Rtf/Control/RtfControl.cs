@@ -51,7 +51,7 @@ namespace GrapeCity.ActiveReports.Samples.Rtf.Control
 
 		public string Rtf
 		{
-			get { return _properties.GetValue("Rtf").ToString(); }
+			get { return _properties.GetValue("Rtf")?.ToString() ?? string.Empty; }
 		}
 
 		public bool CanGrow
