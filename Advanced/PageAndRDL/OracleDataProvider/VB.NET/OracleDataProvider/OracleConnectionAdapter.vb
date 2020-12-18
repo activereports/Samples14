@@ -1,7 +1,7 @@
 ﻿Imports GrapeCity.BI.Data.DataProviders
-Imports System
+Imports Oracle.ManagedDataAccess.Client
+Imports System.Data.Common
 Imports System.Globalization
-Imports System.Linq
 
 Namespace GrapeCity.ActiveReports.Samples.OracleDataProvider
 	Public NotInheritable Class OracleConnectionAdapter
@@ -17,5 +17,14 @@ Namespace GrapeCity.ActiveReports.Samples.OracleDataProvider
 			If Not name.StartsWith(":") Then name = String.Format(":{0}", name)
 			Return MyBase.CreateParameterNamePattern(name)
 		End Function
+
+		Public Overrides Sub SetParameters(queryParameters As IEnumerable(Of DbCommandParameter), command As DbCommand)
+			If TypeOf command Is OracleCommand Then
+				Dim oracleCommand As OracleCommand = command
+				oracleCommand.BindByName = True
+			End If
+
+			MyBase.SetParameters(queryParameters, command)
+		End Sub
 	End Class
 End Namespace

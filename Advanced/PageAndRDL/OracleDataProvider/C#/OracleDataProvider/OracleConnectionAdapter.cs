@@ -1,5 +1,8 @@
 ﻿using GrapeCity.BI.Data.DataProviders;
+using Oracle.ManagedDataAccess.Client;
 using System;
+using System.Collections.Generic;
+using System.Data.Common;
 using System.Globalization;
 using System.Linq;
 
@@ -28,6 +31,19 @@ namespace GrapeCity.ActiveReports.Samples.OracleDataProvider
 			if (!name.StartsWith(":"))
 				name = string.Format(":{0}", name);
 			return base.CreateParameterNamePattern(name);
+		}
+
+		/// <summary>
+		/// Adds parameter values in to the command.
+		/// </summary>
+		/// <param name="queryParameters"></param>
+		/// <param name="command"></param>
+		public override void SetParameters(IEnumerable<DbCommandParameter> queryParameters, DbCommand command)
+		{
+			if (command is OracleCommand oracleCommand)
+				oracleCommand.BindByName = true;
+
+			base.SetParameters(queryParameters, command);
 		}
 	}
 }
