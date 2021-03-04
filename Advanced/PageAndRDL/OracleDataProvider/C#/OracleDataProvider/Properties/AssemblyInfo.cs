@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Oracle Data Provider")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("Oracle Data Provider")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 
 [assembly: AssemblyVersion("1.0.0.0")]
 

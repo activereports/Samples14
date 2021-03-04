@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ObjectDataSource")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("ObjectDataSource")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 
 
 // Setting ComVisible to false makes the types in this assembly not visible

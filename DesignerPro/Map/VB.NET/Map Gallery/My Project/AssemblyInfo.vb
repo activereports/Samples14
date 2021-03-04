@@ -9,6 +9,6 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitleAttribute("MapGallery")> 
 <Assembly: AssemblyCompanyAttribute("GrapeCity")> 
 <Assembly: AssemblyProductAttribute("MapGallery")> 
-<Assembly: AssemblyCopyrightAttribute("_ArCopyright_")> 
+<Assembly: AssemblyCopyrightAttribute("Copyright(c) 2021 GrapeCity, inc")> 
 <Assembly: AssemblyVersionAttribute("1.0.0.0")> 
 <Assembly: AssemblyFileVersionAttribute("1.0.0.0")>

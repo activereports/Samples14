@@ -15,7 +15,7 @@ Imports System.Security.Permissions
 <Assembly: AssemblyTitle("BoundDataSample")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("BoundData")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("CD7F8DA9-7075-405A-8769-5699F4210BCE")> 
 

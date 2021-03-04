@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Use of CustomResourceLocator")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("CustomResourceLocator")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 
 <Assembly: ComVisible(False)>
 

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CrossTabSample")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("CrossTabSample")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 //Version information for an assembly consists of the following four values:
 
  //	 Major Version

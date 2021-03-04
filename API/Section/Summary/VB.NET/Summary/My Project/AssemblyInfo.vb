@@ -14,7 +14,7 @@ Imports System.Security.Permissions
 <Assembly: AssemblyTitle("CalculatedFields")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("CalculatedFields")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("4CA99AC8-B002-4089-9877-22786A50A04D")> 
 

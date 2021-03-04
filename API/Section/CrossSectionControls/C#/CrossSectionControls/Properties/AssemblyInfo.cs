@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CrossSectionControls")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("CrossSectionControls")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 //Version information for an assembly consists of the following four values:
 
  //	 Major Version

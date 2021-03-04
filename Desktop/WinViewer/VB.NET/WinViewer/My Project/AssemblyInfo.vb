@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("WinViewer")>
 <Assembly: AssemblyCompany("GrapeCity")>
 <Assembly: AssemblyProduct("WinViewer")>
-<Assembly: AssemblyCopyright("_ArCopyright_")>
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")>
 
 <Assembly: ComVisible(False)>
 

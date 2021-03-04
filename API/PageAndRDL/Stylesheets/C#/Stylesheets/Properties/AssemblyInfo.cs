@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("StyleSheets")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("StyleSheets")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 
 // FXCop Added attributes
 [assembly:CLSCompliant(true)]

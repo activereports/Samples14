@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("XML")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("XML")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 [assembly: ComVisible(false)]
 //Version information for an assembly consists of the following four values:
 

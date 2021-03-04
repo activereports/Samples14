@@ -12,7 +12,7 @@ Imports System.Security.Permissions
 <Assembly: AssemblyTitle("CustomDrillThrough")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("CustomDrillThrough")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 <Assembly: ComVisible(False)> 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("F8753821-77C3-4CFB-A9ED-6798C2F254AA")> 

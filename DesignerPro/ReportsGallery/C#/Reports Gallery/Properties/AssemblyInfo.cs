@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ReportsGallery")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("ReportsGallery")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 [assembly: Guid("dcf14767-671e-46e2-91fd-a6c2d440c431")]
 
  //Version information for an assembly consists of the following four values:

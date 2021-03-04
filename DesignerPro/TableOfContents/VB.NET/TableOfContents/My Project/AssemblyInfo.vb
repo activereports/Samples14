@@ -9,6 +9,6 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitleAttribute("TableOfContents")> 
 <Assembly: AssemblyCompanyAttribute("GrapeCity")> 
 <Assembly: AssemblyProductAttribute("TableOfContents")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 <Assembly: AssemblyVersionAttribute("1.0.0.0")> 
 <Assembly: AssemblyFileVersionAttribute("1.0.0.0")>

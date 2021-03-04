@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("EndUserDesigner")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("EndUserDesigner")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 
 //The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly:Guid("E550208B-1010-4F51-A488-2E05F64E3AD1")]

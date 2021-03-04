@@ -8,7 +8,7 @@
 [assembly: AssemblyTitle("PrintMultiplePagesPerSheet")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("PrintMultiplePagesPerSheet")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 
 //
 //Version information for an assembly consists of the following four values:

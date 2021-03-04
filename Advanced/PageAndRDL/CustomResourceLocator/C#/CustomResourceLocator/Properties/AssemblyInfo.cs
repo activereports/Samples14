@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Use of CustomResourceLocator")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("CustomResourceLocator")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 
 
 [assembly: ComVisible(false)]
