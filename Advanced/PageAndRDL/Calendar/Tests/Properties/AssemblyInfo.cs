@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Test")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("Test")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from

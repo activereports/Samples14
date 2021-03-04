@@ -7,7 +7,7 @@
 [assembly: AssemblyTitle("Inheritance")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("Inheritance")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 [assembly: AssemblyVersion("1.0.0.0")]
 
 

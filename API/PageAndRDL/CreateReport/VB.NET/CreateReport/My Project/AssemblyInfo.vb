@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Create Report Through Code")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("CreateReport")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 <Assembly: ComVisible(False)>
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("fdf5a987-aecc-4c90-a36e-db578fe454fb")> 

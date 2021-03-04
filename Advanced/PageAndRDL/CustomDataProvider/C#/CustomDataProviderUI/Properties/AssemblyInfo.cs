@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CustomDataProviderUI")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("CustomDataProviderUI")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 
 [assembly: ComVisible(false)]
 

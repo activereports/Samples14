@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CustomPreview")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("CustomPreview")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 [assembly: Guid("57540f24-3044-44de-936d-e21ff5147347")]
 
 //Version information for an assembly consists of the following four values:

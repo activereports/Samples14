@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("ObjectDataSourceVB")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("ObjectDataSourceVB")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 
 <Assembly: ComVisible(False)>
 

@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("CustomPreview")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("CustomPreview")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 <Assembly: Guid("6FC49652-71B6-4400-832D-8D478F062404")> 
 
 'Version information for an assembly consists of the following four values:

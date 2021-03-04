@@ -5,7 +5,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("ReportWizard")>
 <Assembly: AssemblyCompany("GrapeCity")>
 <Assembly: AssemblyProduct("ReportWizard")>
-<Assembly: AssemblyCopyright("_ArCopyright_")>
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")>
 <Assembly: ComVisible(False)>
 <Assembly: Guid("7da81727-d310-4922-a0de-531c29f3c8a1")>
 <Assembly: AssemblyVersion("1.0.0.0")>

@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("EndUserDesigner")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("EndUserDesigner")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("CB03D058-4BFB-41C2-B21D-A836A4291476")> 
 

@@ -9,7 +9,7 @@ Imports System.Windows
 <Assembly: AssemblyTitle("WPFViewer")> 
 <Assembly: AssemblyCompany("GrapeCity")> 
 <Assembly: AssemblyProduct("WPFViewer")> 
-<Assembly: AssemblyCopyright("_ArCopyright_")> 
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")> 
 
 '
 <Assembly: AssemblyVersion("1.0.0.0")> 

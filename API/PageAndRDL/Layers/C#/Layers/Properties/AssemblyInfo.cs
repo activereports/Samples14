@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Layers")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("Layers")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]	
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]	
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM

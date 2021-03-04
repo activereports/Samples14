@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Viewer with opportunity to view reports with chart controls")]
 [assembly: AssemblyCompany("GrapeCity")]
 [assembly: AssemblyProduct("TestViewer")]
-[assembly: AssemblyCopyright("Copyright(c) 2019 GrapeCity, inc")]
+[assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from

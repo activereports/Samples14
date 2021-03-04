@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("OracleDataProvider")>
-<Assembly: AssemblyCopyright("Copyright ©  2019")>
+<Assembly: AssemblyCopyright("Copyright(c) 2021 GrapeCity, inc")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
