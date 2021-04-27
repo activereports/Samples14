@@ -1,5 +1,4 @@
 ﻿Imports GrapeCity.ActiveReports.Viewer.Win.Internal.Export
-Imports GrapeCity.ActiveReports.ReportsCore.Configuration
 Imports System.Reflection
 Imports System.IO
 Imports System.ComponentModel
@@ -82,8 +81,7 @@ Partial Friend Class ViewerForm
 	Private Sub ExportMenuItemHandler(sender As Object, e As EventArgs) Handles ExportToolStripMenuItem.Click
 		If _exportForm Is Nothing Then
 			Dim flag As Boolean?
-			flag = ConfigurationHelper.GetConfigFlag(ConfigurationHelper.UsePdfExportFilterKey)
-			_exportForm = New ExportForm(flag.HasValue AndAlso flag.Value = True)
+			_exportForm = New ExportForm()
 		End If
 
 		Dim reportType = If(_reportType, DetermineOpenedReportType())
