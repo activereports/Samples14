@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using GrapeCity.ActiveReports.ReportsCore.Configuration;
 using GrapeCity.ActiveReports.Viewer.Helper;
 using GrapeCity.ActiveReports.Viewer.Win.Internal.Export;
 using GrapeCity.ActiveReports.Win.Export;
@@ -91,7 +90,7 @@ namespace GrapeCity.ActiveReports.Viewer.Win
 		{
 			if (_exportForm == null)
 			{
-				_exportForm = new ExportForm(ConfigurationHelper.GetConfigFlag(ConfigurationHelper.UsePdfExportFilterKey) == true);
+				_exportForm = new ExportForm();
 			}
 
 			var reportType = _reportType ?? DetermineOpenedReportType();

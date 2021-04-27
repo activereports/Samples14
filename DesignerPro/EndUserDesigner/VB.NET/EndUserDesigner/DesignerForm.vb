@@ -7,7 +7,6 @@ Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports GrapeCity.ActiveReports.Viewer.Win.Internal.Export
 Imports GrapeCity.ActiveReports.Configuration
-Imports GrapeCity.ActiveReports.ReportsCore.Configuration
 Imports System.Reflection
 Imports GrapeCity.ActiveReports.Design.ReportsLibrary
 
@@ -378,7 +377,7 @@ Public Class DesignerForm
 
 	Private Sub PerformExport()
 		If _exportForm Is Nothing Then
-			_exportForm = New ExportForm(ConfigurationHelper.GetConfigFlag(ConfigurationHelper.UsePdfExportFilterKey).HasValue AndAlso ConfigurationHelper.GetConfigFlag(ConfigurationHelper.UsePdfExportFilterKey).Value = True)
+			_exportForm = New ExportForm()
 		End If
 		_exportForm.Show(Me, New ExportViewer(arDesigner.ReportViewer), _exportReportType)
 	End Sub

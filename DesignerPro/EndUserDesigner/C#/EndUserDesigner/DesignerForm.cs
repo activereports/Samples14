@@ -10,7 +10,6 @@ using GrapeCity.ActiveReports.Configuration;
 using GrapeCity.ActiveReports.Design.ReportsLibrary;
 using GrapeCity.ActiveReports.PageReportModel;
 using GrapeCity.ActiveReports.Design;
-using GrapeCity.ActiveReports.ReportsCore.Configuration;
 using GrapeCity.ActiveReports.Viewer.Win.Internal.Export;
 using GrapeCity.ActiveReports.Win.Export;
 using Image = System.Drawing.Image;
@@ -436,7 +435,7 @@ namespace GrapeCity.ActiveReports.Designer.Win
 		{
 			if (_exportForm == null)
 			{
-				_exportForm = new ExportForm(ConfigurationHelper.GetConfigFlag(ConfigurationHelper.UsePdfExportFilterKey) == true);
+				_exportForm = new ExportForm();
 			}
 			_exportForm.Show(this, new ExportViewer(arDesigner.ReportViewer), _exportReportType);
 		}
