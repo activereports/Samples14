@@ -80,7 +80,6 @@ Partial Friend Class ViewerForm
 
 	Private Sub ExportMenuItemHandler(sender As Object, e As EventArgs) Handles ExportToolStripMenuItem.Click
 		If _exportForm Is Nothing Then
-			Dim flag As Boolean?
 			_exportForm = New ExportForm()
 		End If
 
